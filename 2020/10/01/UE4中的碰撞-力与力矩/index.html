@@ -19,7 +19,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
   <meta name="description" content="本篇文章是我学习UE4的笔记 UE4 里面的碰撞分为简单碰撞和复杂碰撞两种. 简单碰撞复杂碰撞在细节面板里面搜complex 复杂就会出来. 然后启用的时候,有一个模拟物理和启动碰撞. 模拟物理顾名思义. 启动碰撞也是.不启用的话,这个东西就像幽灵一样,是可以漂浮的. Simulate Physics 就是启用碰撞. Enable Gravity 开启重力. 然后就是我们可以通过代码来实现相同的效">
@@ -333,9 +333,9 @@
 <p>力,可以实现推动的效果.</p>
 <p>力矩可以实现旋转效果的.</p>
 <p>下面看一段代码:</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">UPROPERTY(EditInstanceOnly, Category = <span class="string">&quot;My Actor Properties | Physics&quot;</span>)</span><br><span class="line">	FVector InitForce;		<span class="comment">//初始的力</span></span><br><span class="line"></span><br><span class="line">	UPROPERTY(EditInstanceOnly, Category = <span class="string">&quot;My Actor Properties | Physics&quot;</span>)</span><br><span class="line">	FVector InitTorque;		<span class="comment">//初始的力矩</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">UPROPERTY(EditInstanceOnly, Category = <span class="string">&quot;My Actor Properties | Physics&quot;</span>)</span><br><span class="line">	FVector InitForce;		<span class="comment">//初始的力</span></span><br><span class="line"></span><br><span class="line">	UPROPERTY(EditInstanceOnly, Category = <span class="string">&quot;My Actor Properties | Physics&quot;</span>)</span><br><span class="line">	FVector InitTorque;		<span class="comment">//初始的力矩</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">StaticMesh-&gt;AddForce(InitForce);</span><br><span class="line">	StaticMesh-&gt;AddTorque(InitTorque);</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">StaticMesh-&gt;AddForce(InitForce);</span><br><span class="line">	StaticMesh-&gt;AddTorque(InitTorque);</span><br></pre></td></tr></table></figure>
 
 <p>StaticMesh 就是我们设置的指针.</p>
 <p>在上几节课中,一直都没有用到.</p>
@@ -356,7 +356,7 @@
 <p>然后选择custom </p>
 <p>然后下面就是都看得懂的英文了.</p>
 <p>可以设置啥材质的可以通过.啥材质的不能通过.</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//FHitResult 击中物体的结构体.</span></span><br><span class="line">FHitResult HitResult;</span><br><span class="line"><span class="comment">//&amp;HitResult击中之后就有了自己的地址.</span></span><br><span class="line">AddActorLocalOffset(TickLocationOffset,<span class="literal">true</span>,&amp;HitResult);</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//FHitResult 击中物体的结构体.</span></span><br><span class="line">FHitResult HitResult;</span><br><span class="line"><span class="comment">//&amp;HitResult击中之后就有了自己的地址.</span></span><br><span class="line">AddActorLocalOffset(TickLocationOffset,<span class="literal">true</span>,&amp;HitResult);</span><br></pre></td></tr></table></figure>
 
 <p>如果这篇文章对你有张帮助的话,可以用你高贵的小手给我点一个免费的赞吗</p>
 <p>相信我，你也能变成光.</p>
