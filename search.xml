@@ -21,21 +21,6 @@
       </tags>
   </entry>
   <entry>
-    <title>C++判断类型的好用的函数</title>
-    <url>/2020/10/08/C++%E5%88%A4%E6%96%AD%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%A5%BD%E7%94%A8%E7%9A%84%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<h1 id="判断类型的好用的函数"><a href="#判断类型的好用的函数" class="headerlink" title="判断类型的好用的函数"></a>判断类型的好用的函数</h1><h2 id="isdigit-char-a"><a href="#isdigit-char-a" class="headerlink" title="isdigit(char a )"></a>isdigit(char a )</h2><p>判断是不是数字，其他的类推</p>
-<h2 id="isalnum-char-c"><a href="#isalnum-char-c" class="headerlink" title="isalnum(char c)"></a>isalnum(char c)</h2><p>判断是不是数字,大小写的字符</p>
-<h2 id="islower-char-c"><a href="#islower-char-c" class="headerlink" title="islower(char c)"></a>islower(char c)</h2><p>判断是不是小写字符</p>
-<h2 id="isupper-char-c"><a href="#isupper-char-c" class="headerlink" title="isupper(char c)"></a>isupper(char c)</h2><p>判断是不是大写字符</p>
-]]></content>
-      <categories>
-        <category>刷题小技巧</category>
-      </categories>
-      <tags>
-        <tag>类型判断</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C++二分里面好用的函数</title>
     <url>/2020/10/08/C++%E4%BA%8C%E5%88%86%E9%87%8C%E9%9D%A2%E5%A5%BD%E7%94%A8%E7%9A%84%E5%87%BD%E6%95%B0/</url>
     <content><![CDATA[<h1 id="二分里面好用的函数"><a href="#二分里面好用的函数" class="headerlink" title="二分里面好用的函数"></a>二分里面好用的函数</h1><h2 id="upper-bound-ForwardIterator-first-ForwardIterator-last-const-T-amp-val"><a href="#upper-bound-ForwardIterator-first-ForwardIterator-last-const-T-amp-val" class="headerlink" title="upper_bound(ForwardIterator first, ForwardIterator last,const T&amp; val))"></a>upper_bound(ForwardIterator first, ForwardIterator last,const T&amp; val))</h2><p>ForwardIterator first是一个</p>
@@ -65,17 +50,19 @@
       </tags>
   </entry>
   <entry>
-    <title>C++好用的逆置代码-逆置数组</title>
-    <url>/2020/10/08/C++%E5%A5%BD%E7%94%A8%E7%9A%84%E9%80%86%E7%BD%AE%E4%BB%A3%E7%A0%81-%E9%80%86%E7%BD%AE%E6%95%B0%E7%BB%84/</url>
-    <content><![CDATA[<h1 id="好用的逆置代码-逆置数组"><a href="#好用的逆置代码-逆置数组" class="headerlink" title="好用的逆置代码-逆置数组"></a>好用的逆置代码-逆置数组</h1><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; (sum - sum % k); i++)</span><br><span class="line">        <span class="comment">//i / k * k + k - 1 - i % k 这个代码,我是想不出来的.有点秀的.</span></span><br><span class="line">        result[i] = <span class="built_in">list</span>[i / k * k + k - <span class="number">1</span> - i % k];</span><br></pre></td></tr></table></figure>
-
-<p>sum是总长度 然后K是我们要逆置的段  打个比方</p>
-<p> 1 2 3 4 5 6 7   我们要每两个逆置</p>
-<p>2 1 4 3 6 5 7    这个2 就是 k</p>
+    <title>C++判断类型的好用的函数</title>
+    <url>/2020/10/08/C++%E5%88%A4%E6%96%AD%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%A5%BD%E7%94%A8%E7%9A%84%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<h1 id="判断类型的好用的函数"><a href="#判断类型的好用的函数" class="headerlink" title="判断类型的好用的函数"></a>判断类型的好用的函数</h1><h2 id="isdigit-char-a"><a href="#isdigit-char-a" class="headerlink" title="isdigit(char a )"></a>isdigit(char a )</h2><p>判断是不是数字，其他的类推</p>
+<h2 id="isalnum-char-c"><a href="#isalnum-char-c" class="headerlink" title="isalnum(char c)"></a>isalnum(char c)</h2><p>判断是不是数字,大小写的字符</p>
+<h2 id="islower-char-c"><a href="#islower-char-c" class="headerlink" title="islower(char c)"></a>islower(char c)</h2><p>判断是不是小写字符</p>
+<h2 id="isupper-char-c"><a href="#isupper-char-c" class="headerlink" title="isupper(char c)"></a>isupper(char c)</h2><p>判断是不是大写字符</p>
 ]]></content>
       <categories>
         <category>刷题小技巧</category>
       </categories>
+      <tags>
+        <tag>类型判断</tag>
+      </tags>
   </entry>
   <entry>
     <title>C++判断素数的函数</title>
@@ -89,6 +76,19 @@
       <tags>
         <tag>素数</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>C++好用的逆置代码-逆置数组</title>
+    <url>/2020/10/08/C++%E5%A5%BD%E7%94%A8%E7%9A%84%E9%80%86%E7%BD%AE%E4%BB%A3%E7%A0%81-%E9%80%86%E7%BD%AE%E6%95%B0%E7%BB%84/</url>
+    <content><![CDATA[<h1 id="好用的逆置代码-逆置数组"><a href="#好用的逆置代码-逆置数组" class="headerlink" title="好用的逆置代码-逆置数组"></a>好用的逆置代码-逆置数组</h1><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; (sum - sum % k); i++)</span><br><span class="line">        <span class="comment">//i / k * k + k - 1 - i % k 这个代码,我是想不出来的.有点秀的.</span></span><br><span class="line">        result[i] = <span class="built_in">list</span>[i / k * k + k - <span class="number">1</span> - i % k];</span><br></pre></td></tr></table></figure>
+
+<p>sum是总长度 然后K是我们要逆置的段  打个比方</p>
+<p> 1 2 3 4 5 6 7   我们要每两个逆置</p>
+<p>2 1 4 3 6 5 7    这个2 就是 k</p>
+]]></content>
+      <categories>
+        <category>刷题小技巧</category>
+      </categories>
   </entry>
   <entry>
     <title>C++字符串里面的一些好用的函数</title>
@@ -333,6 +333,40 @@
       </tags>
   </entry>
   <entry>
+    <title>PTA 1051 Pop Sequence (25分)</title>
+    <url>/2020/10/02/PTA%201051%20Pop%20Sequence%20(25%E5%88%86)/</url>
+    <content><![CDATA[<p>强烈推荐,刷PTA的朋友都认识一下柳神–PTA解法大佬</p>
+<p>本文由参考于柳神博客写成</p>
+<p><a href="https://blog.csdn.net/liuchuo">柳神的CSDN博客,这个可以搜索文章</a></p>
+<p><a href="https://www.liuchuo.net/">柳神的个人博客,这个没有广告,但是不能搜索</a></p>
+<p>PS 今天也要加油鸭</p>
+<p><img src="https://img-blog.csdnimg.cn/20200924160038229.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<h2 id="题目原文"><a href="#题目原文" class="headerlink" title="题目原文"></a>题目原文</h2><p>Given a stack which can keep <em>M</em> numbers at most. Push <em>N</em> numbers in the order of 1, 2, 3, …, <em>N</em> and pop randomly. You are supposed to tell if a given sequence of numbers is a possible pop sequence of the stack. For example, if <em>M</em> is 5 and <em>N</em> is 7, we can obtain 1, 2, 3, 4, 5, 6, 7 from the stack, but not 3, 2, 1, 7, 5, 6, 4.</p>
+<h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case. For each case, the first line contains 3 numbers (all no more than 1000): <em>M</em> (the maximum capacity of the stack), <em>N</em> (the length of push sequence), and <em>K</em> (the number of pop sequences to be checked). Then <em>K</em> lines follow, each contains a pop sequence of <em>N</em> numbers. All the numbers in a line are separated by a space.</p>
+<h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each pop sequence, print in one line “YES” if it is indeed a possible pop sequence of the stack, or “NO” if not.</p>
+<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">5 7 5</span><br><span class="line">1 2 3 4 5 6 7</span><br><span class="line">3 2 1 7 5 6 4</span><br><span class="line">7 6 5 4 3 2 1</span><br><span class="line">5 6 4 3 7 2 1</span><br><span class="line">1 7 6 5 4 3 2</span><br></pre></td></tr></table></figure>
+
+<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">YES</span><br><span class="line">NO</span><br><span class="line">NO</span><br><span class="line">YES</span><br><span class="line">NO</span><br></pre></td></tr></table></figure>
+
+<h2 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意:"></a>题目大意:</h2><p>就是给你一个长度为M的栈</p>
+<p>然后给你一个固定的1要N的入栈顺序,问你能不能得出特定的出栈顺序.</p>
+<h2 id="柳神的思路如下"><a href="#柳神的思路如下" class="headerlink" title="柳神的思路如下:"></a>柳神的思路如下:</h2><p><strong>分析：按照要求进行模拟。先把输入的序列接收进数组v。然后按顺序1~n把数字进栈，每进入一个数字，判断有没有超过最大范围，超过了就break。如果没超过，设current = 1，从数组的第一个数字开始，看看是否与栈顶元素相等，while相等就一直弹出栈，不相等就继续按顺序把数字压入栈～～最后根据变量flag的bool值输出yes或者no～</strong></p>
+<h2 id="柳神的代码如下"><a href="#柳神的代码如下" class="headerlink" title="柳神的代码如下:"></a>柳神的代码如下:</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> m, n, k;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d %d&quot;</span>, &amp;m, &amp;n, &amp;k);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">        <span class="keyword">bool</span> flag = <span class="literal">false</span>;</span><br><span class="line">        <span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; s;</span><br><span class="line">        <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">v</span><span class="params">(n + <span class="number">1</span>)</span></span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; j++)</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;v[j]);</span><br><span class="line">        <span class="keyword">int</span> current = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; j++) &#123;</span><br><span class="line">            s.push(j);</span><br><span class="line">            <span class="keyword">if</span>(s.size() &gt; m) <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">while</span>(!s.empty() &amp;&amp; s.top() == v[current]) &#123;</span><br><span class="line">                s.pop();</span><br><span class="line">                current++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(current == n + <span class="number">1</span>) flag = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">if</span>(flag) <span class="built_in">printf</span>(<span class="string">&quot;YES\n&quot;</span>);</span><br><span class="line">        <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">&quot;NO\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果这篇文章对你有张帮助的话,可以用你高贵的小手给我点一个免费的赞吗</p>
+<p>相信我，你也能变成光.</p>
+<p><img src="https://img-blog.csdnimg.cn/20200607184932978.bmp" alt="在这里插入图片描述"></p>
+<p>如果你有任何建议,或者是发现了我的错误,欢迎评论留言指出.</p>
+]]></content>
+      <categories>
+        <category>刷题</category>
+        <category>PAT</category>
+      </categories>
+      <tags>
+        <tag>栈</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>PTA 1056 Mice and Rice (25分)</title>
     <url>/2020/10/02/PTA%201052%20Linked%20List%20Sorting%20(25%E5%88%86)/</url>
     <content><![CDATA[<p>强烈推荐,刷PTA的朋友都认识一下柳神–PTA解法大佬</p>
@@ -478,40 +512,6 @@
       <tags>
         <tag>队列</tag>
         <tag>queue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>PTA 1051 Pop Sequence (25分)</title>
-    <url>/2020/10/02/PTA%201051%20Pop%20Sequence%20(25%E5%88%86)/</url>
-    <content><![CDATA[<p>强烈推荐,刷PTA的朋友都认识一下柳神–PTA解法大佬</p>
-<p>本文由参考于柳神博客写成</p>
-<p><a href="https://blog.csdn.net/liuchuo">柳神的CSDN博客,这个可以搜索文章</a></p>
-<p><a href="https://www.liuchuo.net/">柳神的个人博客,这个没有广告,但是不能搜索</a></p>
-<p>PS 今天也要加油鸭</p>
-<p><img src="https://img-blog.csdnimg.cn/20200924160038229.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<h2 id="题目原文"><a href="#题目原文" class="headerlink" title="题目原文"></a>题目原文</h2><p>Given a stack which can keep <em>M</em> numbers at most. Push <em>N</em> numbers in the order of 1, 2, 3, …, <em>N</em> and pop randomly. You are supposed to tell if a given sequence of numbers is a possible pop sequence of the stack. For example, if <em>M</em> is 5 and <em>N</em> is 7, we can obtain 1, 2, 3, 4, 5, 6, 7 from the stack, but not 3, 2, 1, 7, 5, 6, 4.</p>
-<h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case. For each case, the first line contains 3 numbers (all no more than 1000): <em>M</em> (the maximum capacity of the stack), <em>N</em> (the length of push sequence), and <em>K</em> (the number of pop sequences to be checked). Then <em>K</em> lines follow, each contains a pop sequence of <em>N</em> numbers. All the numbers in a line are separated by a space.</p>
-<h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each pop sequence, print in one line “YES” if it is indeed a possible pop sequence of the stack, or “NO” if not.</p>
-<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">5 7 5</span><br><span class="line">1 2 3 4 5 6 7</span><br><span class="line">3 2 1 7 5 6 4</span><br><span class="line">7 6 5 4 3 2 1</span><br><span class="line">5 6 4 3 7 2 1</span><br><span class="line">1 7 6 5 4 3 2</span><br></pre></td></tr></table></figure>
-
-<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">YES</span><br><span class="line">NO</span><br><span class="line">NO</span><br><span class="line">YES</span><br><span class="line">NO</span><br></pre></td></tr></table></figure>
-
-<h2 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意:"></a>题目大意:</h2><p>就是给你一个长度为M的栈</p>
-<p>然后给你一个固定的1要N的入栈顺序,问你能不能得出特定的出栈顺序.</p>
-<h2 id="柳神的思路如下"><a href="#柳神的思路如下" class="headerlink" title="柳神的思路如下:"></a>柳神的思路如下:</h2><p><strong>分析：按照要求进行模拟。先把输入的序列接收进数组v。然后按顺序1~n把数字进栈，每进入一个数字，判断有没有超过最大范围，超过了就break。如果没超过，设current = 1，从数组的第一个数字开始，看看是否与栈顶元素相等，while相等就一直弹出栈，不相等就继续按顺序把数字压入栈～～最后根据变量flag的bool值输出yes或者no～</strong></p>
-<h2 id="柳神的代码如下"><a href="#柳神的代码如下" class="headerlink" title="柳神的代码如下:"></a>柳神的代码如下:</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> m, n, k;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d %d&quot;</span>, &amp;m, &amp;n, &amp;k);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">        <span class="keyword">bool</span> flag = <span class="literal">false</span>;</span><br><span class="line">        <span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; s;</span><br><span class="line">        <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">v</span><span class="params">(n + <span class="number">1</span>)</span></span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; j++)</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;v[j]);</span><br><span class="line">        <span class="keyword">int</span> current = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; j++) &#123;</span><br><span class="line">            s.push(j);</span><br><span class="line">            <span class="keyword">if</span>(s.size() &gt; m) <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">while</span>(!s.empty() &amp;&amp; s.top() == v[current]) &#123;</span><br><span class="line">                s.pop();</span><br><span class="line">                current++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(current == n + <span class="number">1</span>) flag = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">if</span>(flag) <span class="built_in">printf</span>(<span class="string">&quot;YES\n&quot;</span>);</span><br><span class="line">        <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">&quot;NO\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>如果这篇文章对你有张帮助的话,可以用你高贵的小手给我点一个免费的赞吗</p>
-<p>相信我，你也能变成光.</p>
-<p><img src="https://img-blog.csdnimg.cn/20200607184932978.bmp" alt="在这里插入图片描述"></p>
-<p>如果你有任何建议,或者是发现了我的错误,欢迎评论留言指出.</p>
-]]></content>
-      <categories>
-        <category>刷题</category>
-        <category>PAT</category>
-      </categories>
-      <tags>
-        <tag>栈</tag>
       </tags>
   </entry>
   <entry>
@@ -694,62 +694,6 @@
       </tags>
   </entry>
   <entry>
-    <title>PTA 1091 Acute Stroke (30分)</title>
-    <url>/2020/10/08/PTA%201091-Acute-Stroke-30%E5%88%86/</url>
-    <content><![CDATA[<p>强烈推荐,刷PTA的朋友都认识一下柳神–PTA解法大佬</p>
-<p>本文由参考于柳神博客写成</p>
-<p><a href="https://blog.csdn.net/liuchuo">柳神的CSDN博客,这个可以搜索文章</a></p>
-<p><a href="https://www.liuchuo.net/">柳神的个人博客,这个没有广告,但是不能搜索</a></p>
-<p>还有就是非常非常有用的 算法笔记 全名是</p>
-<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">算法笔记  上级训练实战指南		<span class="regexp">//</span>这本都是PTA的题解</span><br><span class="line">算法笔记</span><br></pre></td></tr></table></figure>
-
-<p>PS 今天也要加油鸭</p>
-<p><img src="https://img-blog.csdnimg.cn/20200924160038229.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<h2 id="题目原文"><a href="#题目原文" class="headerlink" title="题目原文"></a>题目原文</h2><p>One important factor to identify acute stroke (急性脑卒中) is the volume of the stroke core. Given the results of image analysis in which the core regions are identified in each MRI slice, your job is to calculate the volume of the stroke core.</p>
-<h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case. For each case, the first line contains 4 positive integers: <em>M</em>, <em>N</em>, <em>L</em> and <em>T</em>, where <em>M</em> and <em>N</em> are the sizes of each slice (i.e. pixels of a slice are in an <em>M</em>×<em>N</em> matrix, and the maximum resolution is 1286 by 128); <em>L</em> (≤60) is the number of slices of a brain; and <em>T</em> is the integer threshold (i.e. if the volume of a connected core is less than <em>T</em>, then that core must not be counted).</p>
-<p>Then <em>L</em> slices are given. Each slice is represented by an <em>M</em>×<em>N</em> matrix of 0’s and 1’s, where 1 represents a pixel of stroke, and 0 means normal. Since the thickness of a slice is a constant, we only have to count the number of 1’s to obtain the volume. However, there might be several separated core regions in a brain, and only those with their volumes no less than <em>T</em> are counted. Two pixels are <strong>connected</strong> and hence belong to the same region if they share a common side, as shown by Figure 1 where all the 6 red pixels are connected to the blue one.</p>
-<p><img src="https://images.ptausercontent.com/f85c00cc-62ce-41ff-8dd0-d1c288d87409.jpg" alt="figstroke.jpg"></p>
-<p>Figure 1</p>
-<h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each case, output in a line the total volume of the stroke core.</p>
-<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">3 4 5 2</span><br><span class="line">1 1 1 1</span><br><span class="line">1 1 1 1</span><br><span class="line">1 1 1 1</span><br><span class="line">0 0 1 1</span><br><span class="line">0 0 1 1</span><br><span class="line">0 0 1 1</span><br><span class="line">1 0 1 1</span><br><span class="line">0 1 0 0</span><br><span class="line">0 0 0 0</span><br><span class="line">1 0 1 1</span><br><span class="line">0 0 0 0</span><br><span class="line">0 0 0 0</span><br><span class="line">1 0 0 0</span><br></pre></td></tr></table></figure>
-
-<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">26</span><br></pre></td></tr></table></figure>
-
-<h2 id="生词如下"><a href="#生词如下" class="headerlink" title="生词如下:"></a>生词如下:</h2><p>这题的英文是一点都不懂系列,讲的啥都不知道</p>
-<p>volume    量,卷,大</p>
-<p>matrix    矩阵</p>
-<p>slices    切片,图片,片段,割图区域</p>
-<p>Then L slices are given. Each slice is represented by an M×N matrix of 0’s and 1’s, where 1 represents a pixel of stroke </p>
-<p>这L个切片和m*n连接在一起.切片的个数只能是0 和1 </p>
-<h3 id="核心句子"><a href="#核心句子" class="headerlink" title="核心句子"></a>核心句子</h3><p>Then L slices are given    然后给了L个切片</p>
-<h2 id="题目大意："><a href="#题目大意：" class="headerlink" title="题目大意："></a>题目大意：</h2><p>就是给你一个三维的矩阵,要你求出一个块 .块的定义就是:</p>
-<p>如果矩阵中有若干个一是相邻的, (不必两两相邻) 那么称这些1构成了一个 “块” 求给定的矩阵中 “块” 的个数</p>
-<p>就是一个点和一个点是相邻的.</p>
-<p>然后要你输出符合要求的块数.</p>
-<h2 id="思路如下"><a href="#思路如下" class="headerlink" title="思路如下:"></a>思路如下:</h2><p>套算法笔记的模板   </p>
-<p>不过这个是三维的了.所以我们的和增量有关的数据都需要改变.</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> X[<span class="number">6</span>] = &#123; <span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">-1</span>,<span class="number">1</span> &#125;;</span><br><span class="line"><span class="keyword">int</span> Y[<span class="number">6</span>] = &#123; <span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">-1</span>,<span class="number">0</span>,<span class="number">0</span> &#125;;</span><br><span class="line"><span class="keyword">int</span> Z[<span class="number">6</span>] = &#123; <span class="number">1</span>,<span class="number">-1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span> &#125;;</span><br></pre></td></tr></table></figure>
-
-<p>其他的都差不多,就是改个增量,然后就是他输入时候的顺序我没有看懂.</p>
-<p>我copy的笔记.如果输入的那个看懂了</p>
-<p>这题柳神的代码也基本都是模板,就不放上来了.</p>
-<h2 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下:"></a>代码如下:</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line">	<span class="keyword">int</span> x, y, z;		<span class="comment">//位置 x,y,z</span></span><br><span class="line">	</span><br><span class="line">&#125;Node;</span><br><span class="line"><span class="keyword">int</span> N,M,L,T;							<span class="comment">//矩阵的大小</span></span><br><span class="line"><span class="keyword">int</span> matrix[<span class="number">1290</span>][<span class="number">130</span>][<span class="number">61</span>];				<span class="comment">//默认的最大矩阵</span></span><br><span class="line"><span class="keyword">bool</span> inq[<span class="number">1290</span>][<span class="number">130</span>][<span class="number">61</span>] = &#123; <span class="literal">false</span> &#125;;</span><br><span class="line"><span class="keyword">int</span> X[<span class="number">6</span>] = &#123; <span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">-1</span> &#125;;</span><br><span class="line"><span class="keyword">int</span> Y[<span class="number">6</span>] = &#123; <span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">-1</span>,<span class="number">0</span>,<span class="number">0</span> &#125;;</span><br><span class="line"><span class="keyword">int</span> Z[<span class="number">6</span>] = &#123; <span class="number">1</span>,<span class="number">-1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">judge</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> z)</span> </span>&#123;		<span class="comment">//判断坐标(x,y,z)合理不合理</span></span><br><span class="line">	<span class="comment">//越界返回false</span></span><br><span class="line">	<span class="keyword">if</span> (x &gt;= N || x &lt; <span class="number">0</span> || y &gt;= M || y &lt; <span class="number">0</span>||z&gt;=L||z&lt;<span class="number">0</span>)	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	<span class="comment">//当前位置为0,或(x,y)已入过对,返回false</span></span><br><span class="line">	<span class="keyword">if</span> (matrix[x][y][z] == <span class="number">0</span> || inq[x][y][z] == <span class="literal">true</span>)	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	<span class="comment">//以上条件都不满足,返回true</span></span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">BFS</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> z)</span> </span>&#123;</span><br><span class="line">	<span class="built_in">queue</span>&lt;node&gt; Q;							<span class="comment">//定义队列</span></span><br><span class="line">	Node.x = x, Node.y = y, Node.z = z;	<span class="comment">//当前队列的坐标为(x,y,z)</span></span><br><span class="line">	Q.push(Node);							<span class="comment">//将结点Node入列</span></span><br><span class="line">	inq[x][y][z] = <span class="literal">true</span>;					<span class="comment">//设置(x,y,z)已入队列</span></span><br><span class="line">	<span class="keyword">int</span> tot = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (!Q.empty()) &#123;</span><br><span class="line">		node top = Q.front();				<span class="comment">//取队首元素</span></span><br><span class="line">		Q.pop();	</span><br><span class="line">		tot++;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">6</span>; ++i) &#123;</span><br><span class="line">			<span class="keyword">int</span> newX = top.x + X[i];</span><br><span class="line">			<span class="keyword">int</span> newY = top.y + Y[i];</span><br><span class="line">			<span class="keyword">int</span> newZ = top.z + Z[i];</span><br><span class="line">			<span class="keyword">if</span> (judge(newX, newY, newZ)) &#123;</span><br><span class="line">				<span class="comment">//设置Node的坐标为(newX,newY,newZ)</span></span><br><span class="line">				Node.x = newX, Node.y = newY, Node.z = newZ;</span><br><span class="line">				Q.push(Node);</span><br><span class="line">				inq[newX][newY][newZ]=<span class="literal">true</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (tot &gt;= T)	<span class="keyword">return</span> tot;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d%d&quot;</span>, &amp;N, &amp;M, &amp;L, &amp;T);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> z = <span class="number">0</span>; z &lt; L; ++z) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> x = <span class="number">0</span>; x &lt; N; ++x) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> y = <span class="number">0</span>; y &lt; M; ++y)</span><br><span class="line">				<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;matrix[x][y][z]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> z = <span class="number">0</span>; z &lt; L; ++z) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> x = <span class="number">0</span>; x &lt; N; ++x) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> y = <span class="number">0</span>; y &lt; M; ++y)</span><br><span class="line">				<span class="keyword">if</span> (matrix[x][y][z] == <span class="number">1</span> &amp;&amp; inq[x][y][z]==<span class="literal">false</span>) &#123;</span><br><span class="line">					ans += BFS(x, y, z);</span><br><span class="line">				&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, ans);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>如果这篇文章对你有张帮助的话,可以用你高贵的小手给我点一个免费的赞吗</p>
-<p>相信我，你也能变成光.</p>
-<p><img src="https://img-blog.csdnimg.cn/20200607184932978.bmp" alt="在这里插入图片描述"></p>
-<p>如果你有任何建议,或者是发现了我的错误,欢迎评论留言指出.</p>
-]]></content>
-      <categories>
-        <category>刷题</category>
-        <category>PAT</category>
-      </categories>
-      <tags>
-        <tag>BFS</tag>
-        <tag>广度优先搜索</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>PTA 1056 Mice and Rice (25分)</title>
     <url>/2020/10/02/PTA%201074%20Reversing%20Linked%20List%20(25%E5%88%86)/</url>
     <content><![CDATA[<p>强烈推荐,刷PTA的朋友都认识一下柳神–PTA解法大佬</p>
@@ -819,6 +763,62 @@
       <tags>
         <tag>链表</tag>
         <tag>反转</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PTA 1091 Acute Stroke (30分)</title>
+    <url>/2020/10/08/PTA%201091-Acute-Stroke-30%E5%88%86/</url>
+    <content><![CDATA[<p>强烈推荐,刷PTA的朋友都认识一下柳神–PTA解法大佬</p>
+<p>本文由参考于柳神博客写成</p>
+<p><a href="https://blog.csdn.net/liuchuo">柳神的CSDN博客,这个可以搜索文章</a></p>
+<p><a href="https://www.liuchuo.net/">柳神的个人博客,这个没有广告,但是不能搜索</a></p>
+<p>还有就是非常非常有用的 算法笔记 全名是</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">算法笔记  上级训练实战指南		<span class="regexp">//</span>这本都是PTA的题解</span><br><span class="line">算法笔记</span><br></pre></td></tr></table></figure>
+
+<p>PS 今天也要加油鸭</p>
+<p><img src="https://img-blog.csdnimg.cn/20200924160038229.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<h2 id="题目原文"><a href="#题目原文" class="headerlink" title="题目原文"></a>题目原文</h2><p>One important factor to identify acute stroke (急性脑卒中) is the volume of the stroke core. Given the results of image analysis in which the core regions are identified in each MRI slice, your job is to calculate the volume of the stroke core.</p>
+<h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case. For each case, the first line contains 4 positive integers: <em>M</em>, <em>N</em>, <em>L</em> and <em>T</em>, where <em>M</em> and <em>N</em> are the sizes of each slice (i.e. pixels of a slice are in an <em>M</em>×<em>N</em> matrix, and the maximum resolution is 1286 by 128); <em>L</em> (≤60) is the number of slices of a brain; and <em>T</em> is the integer threshold (i.e. if the volume of a connected core is less than <em>T</em>, then that core must not be counted).</p>
+<p>Then <em>L</em> slices are given. Each slice is represented by an <em>M</em>×<em>N</em> matrix of 0’s and 1’s, where 1 represents a pixel of stroke, and 0 means normal. Since the thickness of a slice is a constant, we only have to count the number of 1’s to obtain the volume. However, there might be several separated core regions in a brain, and only those with their volumes no less than <em>T</em> are counted. Two pixels are <strong>connected</strong> and hence belong to the same region if they share a common side, as shown by Figure 1 where all the 6 red pixels are connected to the blue one.</p>
+<p><img src="https://images.ptausercontent.com/f85c00cc-62ce-41ff-8dd0-d1c288d87409.jpg" alt="figstroke.jpg"></p>
+<p>Figure 1</p>
+<h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each case, output in a line the total volume of the stroke core.</p>
+<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">3 4 5 2</span><br><span class="line">1 1 1 1</span><br><span class="line">1 1 1 1</span><br><span class="line">1 1 1 1</span><br><span class="line">0 0 1 1</span><br><span class="line">0 0 1 1</span><br><span class="line">0 0 1 1</span><br><span class="line">1 0 1 1</span><br><span class="line">0 1 0 0</span><br><span class="line">0 0 0 0</span><br><span class="line">1 0 1 1</span><br><span class="line">0 0 0 0</span><br><span class="line">0 0 0 0</span><br><span class="line">1 0 0 0</span><br></pre></td></tr></table></figure>
+
+<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">26</span><br></pre></td></tr></table></figure>
+
+<h2 id="生词如下"><a href="#生词如下" class="headerlink" title="生词如下:"></a>生词如下:</h2><p>这题的英文是一点都不懂系列,讲的啥都不知道</p>
+<p>volume    量,卷,大</p>
+<p>matrix    矩阵</p>
+<p>slices    切片,图片,片段,割图区域</p>
+<p>Then L slices are given. Each slice is represented by an M×N matrix of 0’s and 1’s, where 1 represents a pixel of stroke </p>
+<p>这L个切片和m*n连接在一起.切片的个数只能是0 和1 </p>
+<h3 id="核心句子"><a href="#核心句子" class="headerlink" title="核心句子"></a>核心句子</h3><p>Then L slices are given    然后给了L个切片</p>
+<h2 id="题目大意："><a href="#题目大意：" class="headerlink" title="题目大意："></a>题目大意：</h2><p>就是给你一个三维的矩阵,要你求出一个块 .块的定义就是:</p>
+<p>如果矩阵中有若干个一是相邻的, (不必两两相邻) 那么称这些1构成了一个 “块” 求给定的矩阵中 “块” 的个数</p>
+<p>就是一个点和一个点是相邻的.</p>
+<p>然后要你输出符合要求的块数.</p>
+<h2 id="思路如下"><a href="#思路如下" class="headerlink" title="思路如下:"></a>思路如下:</h2><p>套算法笔记的模板   </p>
+<p>不过这个是三维的了.所以我们的和增量有关的数据都需要改变.</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> X[<span class="number">6</span>] = &#123; <span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">-1</span>,<span class="number">1</span> &#125;;</span><br><span class="line"><span class="keyword">int</span> Y[<span class="number">6</span>] = &#123; <span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">-1</span>,<span class="number">0</span>,<span class="number">0</span> &#125;;</span><br><span class="line"><span class="keyword">int</span> Z[<span class="number">6</span>] = &#123; <span class="number">1</span>,<span class="number">-1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span> &#125;;</span><br></pre></td></tr></table></figure>
+
+<p>其他的都差不多,就是改个增量,然后就是他输入时候的顺序我没有看懂.</p>
+<p>我copy的笔记.如果输入的那个看懂了</p>
+<p>这题柳神的代码也基本都是模板,就不放上来了.</p>
+<h2 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下:"></a>代码如下:</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line">	<span class="keyword">int</span> x, y, z;		<span class="comment">//位置 x,y,z</span></span><br><span class="line">	</span><br><span class="line">&#125;Node;</span><br><span class="line"><span class="keyword">int</span> N,M,L,T;							<span class="comment">//矩阵的大小</span></span><br><span class="line"><span class="keyword">int</span> matrix[<span class="number">1290</span>][<span class="number">130</span>][<span class="number">61</span>];				<span class="comment">//默认的最大矩阵</span></span><br><span class="line"><span class="keyword">bool</span> inq[<span class="number">1290</span>][<span class="number">130</span>][<span class="number">61</span>] = &#123; <span class="literal">false</span> &#125;;</span><br><span class="line"><span class="keyword">int</span> X[<span class="number">6</span>] = &#123; <span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">-1</span> &#125;;</span><br><span class="line"><span class="keyword">int</span> Y[<span class="number">6</span>] = &#123; <span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">-1</span>,<span class="number">0</span>,<span class="number">0</span> &#125;;</span><br><span class="line"><span class="keyword">int</span> Z[<span class="number">6</span>] = &#123; <span class="number">1</span>,<span class="number">-1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">judge</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> z)</span> </span>&#123;		<span class="comment">//判断坐标(x,y,z)合理不合理</span></span><br><span class="line">	<span class="comment">//越界返回false</span></span><br><span class="line">	<span class="keyword">if</span> (x &gt;= N || x &lt; <span class="number">0</span> || y &gt;= M || y &lt; <span class="number">0</span>||z&gt;=L||z&lt;<span class="number">0</span>)	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	<span class="comment">//当前位置为0,或(x,y)已入过对,返回false</span></span><br><span class="line">	<span class="keyword">if</span> (matrix[x][y][z] == <span class="number">0</span> || inq[x][y][z] == <span class="literal">true</span>)	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	<span class="comment">//以上条件都不满足,返回true</span></span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">BFS</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> z)</span> </span>&#123;</span><br><span class="line">	<span class="built_in">queue</span>&lt;node&gt; Q;							<span class="comment">//定义队列</span></span><br><span class="line">	Node.x = x, Node.y = y, Node.z = z;	<span class="comment">//当前队列的坐标为(x,y,z)</span></span><br><span class="line">	Q.push(Node);							<span class="comment">//将结点Node入列</span></span><br><span class="line">	inq[x][y][z] = <span class="literal">true</span>;					<span class="comment">//设置(x,y,z)已入队列</span></span><br><span class="line">	<span class="keyword">int</span> tot = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (!Q.empty()) &#123;</span><br><span class="line">		node top = Q.front();				<span class="comment">//取队首元素</span></span><br><span class="line">		Q.pop();	</span><br><span class="line">		tot++;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">6</span>; ++i) &#123;</span><br><span class="line">			<span class="keyword">int</span> newX = top.x + X[i];</span><br><span class="line">			<span class="keyword">int</span> newY = top.y + Y[i];</span><br><span class="line">			<span class="keyword">int</span> newZ = top.z + Z[i];</span><br><span class="line">			<span class="keyword">if</span> (judge(newX, newY, newZ)) &#123;</span><br><span class="line">				<span class="comment">//设置Node的坐标为(newX,newY,newZ)</span></span><br><span class="line">				Node.x = newX, Node.y = newY, Node.z = newZ;</span><br><span class="line">				Q.push(Node);</span><br><span class="line">				inq[newX][newY][newZ]=<span class="literal">true</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (tot &gt;= T)	<span class="keyword">return</span> tot;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d%d&quot;</span>, &amp;N, &amp;M, &amp;L, &amp;T);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> z = <span class="number">0</span>; z &lt; L; ++z) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> x = <span class="number">0</span>; x &lt; N; ++x) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> y = <span class="number">0</span>; y &lt; M; ++y)</span><br><span class="line">				<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;matrix[x][y][z]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> z = <span class="number">0</span>; z &lt; L; ++z) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> x = <span class="number">0</span>; x &lt; N; ++x) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> y = <span class="number">0</span>; y &lt; M; ++y)</span><br><span class="line">				<span class="keyword">if</span> (matrix[x][y][z] == <span class="number">1</span> &amp;&amp; inq[x][y][z]==<span class="literal">false</span>) &#123;</span><br><span class="line">					ans += BFS(x, y, z);</span><br><span class="line">				&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, ans);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果这篇文章对你有张帮助的话,可以用你高贵的小手给我点一个免费的赞吗</p>
+<p>相信我，你也能变成光.</p>
+<p><img src="https://img-blog.csdnimg.cn/20200607184932978.bmp" alt="在这里插入图片描述"></p>
+<p>如果你有任何建议,或者是发现了我的错误,欢迎评论留言指出.</p>
+]]></content>
+      <categories>
+        <category>刷题</category>
+        <category>PAT</category>
+      </categories>
+      <tags>
+        <tag>BFS</tag>
+        <tag>广度优先搜索</tag>
       </tags>
   </entry>
   <entry>
