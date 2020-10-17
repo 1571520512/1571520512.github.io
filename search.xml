@@ -21,6 +21,21 @@
       </tags>
   </entry>
   <entry>
+    <title>C++判断类型的好用的函数</title>
+    <url>/2020/10/08/C++%E5%88%A4%E6%96%AD%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%A5%BD%E7%94%A8%E7%9A%84%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<h1 id="判断类型的好用的函数"><a href="#判断类型的好用的函数" class="headerlink" title="判断类型的好用的函数"></a>判断类型的好用的函数</h1><h2 id="isdigit-char-a"><a href="#isdigit-char-a" class="headerlink" title="isdigit(char a )"></a>isdigit(char a )</h2><p>判断是不是数字，其他的类推</p>
+<h2 id="isalnum-char-c"><a href="#isalnum-char-c" class="headerlink" title="isalnum(char c)"></a>isalnum(char c)</h2><p>判断是不是数字,大小写的字符</p>
+<h2 id="islower-char-c"><a href="#islower-char-c" class="headerlink" title="islower(char c)"></a>islower(char c)</h2><p>判断是不是小写字符</p>
+<h2 id="isupper-char-c"><a href="#isupper-char-c" class="headerlink" title="isupper(char c)"></a>isupper(char c)</h2><p>判断是不是大写字符</p>
+]]></content>
+      <categories>
+        <category>刷题小技巧</category>
+      </categories>
+      <tags>
+        <tag>类型判断</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++二分里面好用的函数</title>
     <url>/2020/10/08/C++%E4%BA%8C%E5%88%86%E9%87%8C%E9%9D%A2%E5%A5%BD%E7%94%A8%E7%9A%84%E5%87%BD%E6%95%B0/</url>
     <content><![CDATA[<h1 id="二分里面好用的函数"><a href="#二分里面好用的函数" class="headerlink" title="二分里面好用的函数"></a>二分里面好用的函数</h1><h2 id="upper-bound-ForwardIterator-first-ForwardIterator-last-const-T-amp-val"><a href="#upper-bound-ForwardIterator-first-ForwardIterator-last-const-T-amp-val" class="headerlink" title="upper_bound(ForwardIterator first, ForwardIterator last,const T&amp; val))"></a>upper_bound(ForwardIterator first, ForwardIterator last,const T&amp; val))</h2><p>ForwardIterator first是一个</p>
@@ -50,21 +65,6 @@
       </tags>
   </entry>
   <entry>
-    <title>C++判断类型的好用的函数</title>
-    <url>/2020/10/08/C++%E5%88%A4%E6%96%AD%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%A5%BD%E7%94%A8%E7%9A%84%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<h1 id="判断类型的好用的函数"><a href="#判断类型的好用的函数" class="headerlink" title="判断类型的好用的函数"></a>判断类型的好用的函数</h1><h2 id="isdigit-char-a"><a href="#isdigit-char-a" class="headerlink" title="isdigit(char a )"></a>isdigit(char a )</h2><p>判断是不是数字，其他的类推</p>
-<h2 id="isalnum-char-c"><a href="#isalnum-char-c" class="headerlink" title="isalnum(char c)"></a>isalnum(char c)</h2><p>判断是不是数字,大小写的字符</p>
-<h2 id="islower-char-c"><a href="#islower-char-c" class="headerlink" title="islower(char c)"></a>islower(char c)</h2><p>判断是不是小写字符</p>
-<h2 id="isupper-char-c"><a href="#isupper-char-c" class="headerlink" title="isupper(char c)"></a>isupper(char c)</h2><p>判断是不是大写字符</p>
-]]></content>
-      <categories>
-        <category>刷题小技巧</category>
-      </categories>
-      <tags>
-        <tag>类型判断</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C++判断素数的函数</title>
     <url>/2020/10/08/C++%E5%88%A4%E6%96%AD%E7%B4%A0%E6%95%B0%E7%9A%84%E5%87%BD%E6%95%B0/</url>
     <content><![CDATA[<h1 id="判断素数的函数"><a href="#判断素数的函数" class="headerlink" title="判断素数的函数"></a>判断素数的函数</h1><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isprime</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (n &lt;= <span class="number">1</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">int</span> sqr = <span class="keyword">int</span>(<span class="built_in">sqrt</span>(n * <span class="number">1.0</span>));</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= sqr; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (n % i == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -76,6 +76,19 @@
       <tags>
         <tag>素数</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>C++好用的逆置代码-逆置数组</title>
+    <url>/2020/10/08/C++%E5%A5%BD%E7%94%A8%E7%9A%84%E9%80%86%E7%BD%AE%E4%BB%A3%E7%A0%81-%E9%80%86%E7%BD%AE%E6%95%B0%E7%BB%84/</url>
+    <content><![CDATA[<h1 id="好用的逆置代码-逆置数组"><a href="#好用的逆置代码-逆置数组" class="headerlink" title="好用的逆置代码-逆置数组"></a>好用的逆置代码-逆置数组</h1><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; (sum - sum % k); i++)</span><br><span class="line">        <span class="comment">//i / k * k + k - 1 - i % k 这个代码,我是想不出来的.有点秀的.</span></span><br><span class="line">        result[i] = <span class="built_in">list</span>[i / k * k + k - <span class="number">1</span> - i % k];</span><br></pre></td></tr></table></figure>
+
+<p>sum是总长度 然后K是我们要逆置的段  打个比方</p>
+<p> 1 2 3 4 5 6 7   我们要每两个逆置</p>
+<p>2 1 4 3 6 5 7    这个2 就是 k</p>
+]]></content>
+      <categories>
+        <category>刷题小技巧</category>
+      </categories>
   </entry>
   <entry>
     <title>C++字符串里面的一些好用的函数</title>
@@ -91,19 +104,6 @@
       <tags>
         <tag>String</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>C++好用的逆置代码-逆置数组</title>
-    <url>/2020/10/08/C++%E5%A5%BD%E7%94%A8%E7%9A%84%E9%80%86%E7%BD%AE%E4%BB%A3%E7%A0%81-%E9%80%86%E7%BD%AE%E6%95%B0%E7%BB%84/</url>
-    <content><![CDATA[<h1 id="好用的逆置代码-逆置数组"><a href="#好用的逆置代码-逆置数组" class="headerlink" title="好用的逆置代码-逆置数组"></a>好用的逆置代码-逆置数组</h1><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; (sum - sum % k); i++)</span><br><span class="line">        <span class="comment">//i / k * k + k - 1 - i % k 这个代码,我是想不出来的.有点秀的.</span></span><br><span class="line">        result[i] = <span class="built_in">list</span>[i / k * k + k - <span class="number">1</span> - i % k];</span><br></pre></td></tr></table></figure>
-
-<p>sum是总长度 然后K是我们要逆置的段  打个比方</p>
-<p> 1 2 3 4 5 6 7   我们要每两个逆置</p>
-<p>2 1 4 3 6 5 7    这个2 就是 k</p>
-]]></content>
-      <categories>
-        <category>刷题小技巧</category>
-      </categories>
   </entry>
   <entry>
     <title>C++开平方函数和平方函数</title>
@@ -132,30 +132,23 @@
       </categories>
   </entry>
   <entry>
-    <title>C++里String里面的find</title>
-    <url>/2020/10/09/C++%E9%87%8CString%E9%87%8C%E9%9D%A2%E7%9A%84find/</url>
-    <content><![CDATA[<h2 id="String类型"><a href="#String类型" class="headerlink" title="String类型"></a>String类型</h2><p>tolower 就是转换为小写</p>
-<p>toupper就是转换为大写</p>
-<p>例子如下</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">string</span> s = <span class="string">&quot;ABCDEFGabcdefg&quot;</span>;</span><br><span class="line">    <span class="built_in">string</span> result;</span><br><span class="line">    transform(s.begin(), s.end(), s.begin(),::<span class="built_in">tolower</span>);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; s &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    transform(s.begin(), s.end(), s.begin(),::<span class="built_in">toupper</span>);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; s &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title>C++逆置String的函数</title>
+    <url>/2020/10/08/C++%E9%80%86%E7%BD%AEString%E7%9A%84%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<h1 id="逆置String的函数"><a href="#逆置String的函数" class="headerlink" title="逆置String的函数"></a>逆置String的函数</h1><p>头文件</p>
+<figure class="highlight autoit"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br></pre></td></tr></table></figure>
 
-<p>②    string里面find的用法</p>
-<p><strong>a.find()</strong></p>
-<p>查找第一次出现的目标字符串：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">string</span> s1 = <span class="string">&quot;abcdef&quot;</span>;</span><br><span class="line">    <span class="built_in">string</span> s2 = <span class="string">&quot;ef&quot;</span>;</span><br><span class="line">    <span class="keyword">int</span> ans = s1.find(s2);  <span class="comment">//在S1中查找子串S2 返回找到的位置</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, ans);</span><br><span class="line">    <span class="comment">//这里ans为4</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>如果没有找到返回值就是string::npos</p>
-<p>例子如下</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">string</span> s1 = <span class="string">&quot;abcdef&quot;</span>;</span><br><span class="line">    <span class="built_in">string</span> s2 = <span class="string">&quot;ez&quot;</span>;</span><br><span class="line">    <span class="keyword">int</span> ans = s1.find(s2);  <span class="comment">//在S1中查找子串S2 返回找到的位置</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;ans is  %d\n&quot;</span>, ans);</span><br><span class="line">    <span class="comment">//这里ans为4</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s2.length(); i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (s1.find(s2[i]) == <span class="built_in">string</span>::npos) &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%c is Wrong&quot;</span>,s2[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
+<p>文件名</p>
+<p>reverse(迭代器,迭代器)</p>
+<p>例子如下:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">string</span> a=<span class="string">&quot;hcir emoceb lliw I&quot;</span>;</span><br><span class="line">    reverse(a.begin(), a.end());</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
         <category>刷题小技巧</category>
       </categories>
+      <tags>
+        <tag>String</tag>
+      </tags>
   </entry>
   <entry>
     <title>C++进制转换里面的一些函数</title>
@@ -186,23 +179,30 @@
       </tags>
   </entry>
   <entry>
-    <title>C++逆置String的函数</title>
-    <url>/2020/10/08/C++%E9%80%86%E7%BD%AEString%E7%9A%84%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<h1 id="逆置String的函数"><a href="#逆置String的函数" class="headerlink" title="逆置String的函数"></a>逆置String的函数</h1><p>头文件</p>
-<figure class="highlight autoit"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br></pre></td></tr></table></figure>
+    <title>C++里String里面的find</title>
+    <url>/2020/10/09/C++%E9%87%8CString%E9%87%8C%E9%9D%A2%E7%9A%84find/</url>
+    <content><![CDATA[<h2 id="String类型"><a href="#String类型" class="headerlink" title="String类型"></a>String类型</h2><p>tolower 就是转换为小写</p>
+<p>toupper就是转换为大写</p>
+<p>例子如下</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">string</span> s = <span class="string">&quot;ABCDEFGabcdefg&quot;</span>;</span><br><span class="line">    <span class="built_in">string</span> result;</span><br><span class="line">    transform(s.begin(), s.end(), s.begin(),::<span class="built_in">tolower</span>);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; s &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    transform(s.begin(), s.end(), s.begin(),::<span class="built_in">toupper</span>);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; s &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>文件名</p>
-<p>reverse(迭代器,迭代器)</p>
-<p>例子如下:</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">string</span> a=<span class="string">&quot;hcir emoceb lliw I&quot;</span>;</span><br><span class="line">    reverse(a.begin(), a.end());</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>②    string里面find的用法</p>
+<p><strong>a.find()</strong></p>
+<p>查找第一次出现的目标字符串：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">string</span> s1 = <span class="string">&quot;abcdef&quot;</span>;</span><br><span class="line">    <span class="built_in">string</span> s2 = <span class="string">&quot;ef&quot;</span>;</span><br><span class="line">    <span class="keyword">int</span> ans = s1.find(s2);  <span class="comment">//在S1中查找子串S2 返回找到的位置</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, ans);</span><br><span class="line">    <span class="comment">//这里ans为4</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果没有找到返回值就是string::npos</p>
+<p>例子如下</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">string</span> s1 = <span class="string">&quot;abcdef&quot;</span>;</span><br><span class="line">    <span class="built_in">string</span> s2 = <span class="string">&quot;ez&quot;</span>;</span><br><span class="line">    <span class="keyword">int</span> ans = s1.find(s2);  <span class="comment">//在S1中查找子串S2 返回找到的位置</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;ans is  %d\n&quot;</span>, ans);</span><br><span class="line">    <span class="comment">//这里ans为4</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s2.length(); i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (s1.find(s2[i]) == <span class="built_in">string</span>::npos) &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%c is Wrong&quot;</span>,s2[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
 
 ]]></content>
       <categories>
         <category>刷题小技巧</category>
       </categories>
-      <tags>
-        <tag>String</tag>
-      </tags>
   </entry>
   <entry>
     <title>PTA 1001 A+B Format (20分)</title>
@@ -357,95 +357,6 @@
       </tags>
   </entry>
   <entry>
-    <title>PTA 1056 Mice and Rice (25分)</title>
-    <url>/2020/10/02/PTA%201032%20Sharing%20(25%E5%88%86)/</url>
-    <content><![CDATA[<p>强烈推荐,刷PTA的朋友都认识一下柳神–PTA解法大佬</p>
-<p>本文由参考于柳神博客写成</p>
-<p><a href="https://blog.csdn.net/liuchuo">柳神的CSDN博客,这个可以搜索文章</a></p>
-<p><a href="https://www.liuchuo.net/">柳神的个人博客,这个没有广告,但是不能搜索</a></p>
-<p>还有就是非常非常有用的 算法笔记 全名是</p>
-<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">算法笔记  上级训练实战指南		<span class="regexp">//</span>这本都是PTA的题解</span><br><span class="line">算法笔记</span><br></pre></td></tr></table></figure>
-
-<p>PS 今天也要加油鸭</p>
-<p><img src="https://img-blog.csdnimg.cn/20200924160038229.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<h2 id="题目原文"><a href="#题目原文" class="headerlink" title="题目原文"></a>题目原文</h2><p>To store English words, one method is to use linked lists and store a word letter by letter. To save some space, we may let the words share the same sublist if they share the same suffix. For example, <code>loading</code> and <code>being</code> are stored as showed in Figure 1.</p>
-<p><img src="https://images.ptausercontent.com/ef0a1fdf-3d9f-46dc-9a27-21f989270fd4.jpg" alt="fig.jpg"></p>
-<p>Figure 1</p>
-<p>You are supposed to find the starting position of the common suffix (e.g. the position of <code>i</code> in Figure 1).</p>
-<h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case. For each case, the first line contains two addresses of nodes and a positive <em>N</em> (≤105), where the two addresses are the addresses of the first nodes of the two words, and <em>N</em> is the total number of nodes. The address of a node is a 5-digit positive integer, and NULL is represented by −1.</p>
-<p>Then <em>N</em> lines follow, each describes a node in the format:</p>
-<figure class="highlight purebasic"><table><tr><td class="code"><pre><span class="line">Address <span class="keyword">Data</span> <span class="keyword">Next</span></span><br></pre></td></tr></table></figure>
-
-<p>where<code>Address</code> is the position of the node, <code>Data</code> is the letter contained by this node which is an English letter chosen from { a-z, A-Z }, and <code>Next</code> is the position of the next node.</p>
-<h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each case, simply output the 5-digit starting position of the common suffix. If the two words have no common suffix, output <code>-1</code> instead.</p>
-<h3 id="Sample-Input-1"><a href="#Sample-Input-1" class="headerlink" title="Sample Input 1:"></a>Sample Input 1:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">11111 22222 9</span><br><span class="line">67890 i 00002</span><br><span class="line">00010 a 12345</span><br><span class="line">00003 g -1</span><br><span class="line">12345 D 67890</span><br><span class="line">00002 n 00003</span><br><span class="line">22222 B 23456</span><br><span class="line">11111 L 00001</span><br><span class="line">23456 e 67890</span><br><span class="line">00001 o 00010</span><br></pre></td></tr></table></figure>
-
-<h3 id="Sample-Output-1"><a href="#Sample-Output-1" class="headerlink" title="Sample Output 1:"></a>Sample Output 1:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">67890</span><br></pre></td></tr></table></figure>
-
-<h3 id="Sample-Input-2"><a href="#Sample-Input-2" class="headerlink" title="Sample Input 2:"></a>Sample Input 2:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">00001 00002 4</span><br><span class="line">00001 a 10001</span><br><span class="line">10001 s -1</span><br><span class="line">00002 a 10002</span><br><span class="line">10002 t -1</span><br></pre></td></tr></table></figure>
-
-<h3 id="Sample-Output-2"><a href="#Sample-Output-2" class="headerlink" title="Sample Output 2:"></a>Sample Output 2:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-1</span><br></pre></td></tr></table></figure>
-
-<h2 id="生词如下"><a href="#生词如下" class="headerlink" title="生词如下:"></a>生词如下:</h2><p>suffix    后缀</p>
-<h2 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意:"></a>题目大意:</h2><p>就是给你两个链表,然后求他们的结尾有没有相同的结点,如果有就输出第一个相同的结点,输出他的地址.</p>
-<p>如果没有就输出-1</p>
-<h2 id="思路如下"><a href="#思路如下" class="headerlink" title="思路如下:"></a>思路如下:</h2><p>用多个数组来做 data保存数据.next保存下一个指数.然后用一个time来计算每个地址出现的次数.</p>
-<p>等下那个地址第一次出现了两次,那么他就是答案.</p>
-<h2 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下:"></a>代码如下:</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> Add_1, Add_2, N,flag = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> temp, next[<span class="number">100005</span>], time[<span class="number">100005</span>] = &#123; <span class="number">0</span> &#125;;</span><br><span class="line">	<span class="comment">//for (int i = 0; i &lt; 100005; ++i)	time[i] = 0;</span></span><br><span class="line">	<span class="keyword">char</span> date[<span class="number">100005</span>];</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d&quot;</span>, &amp;Add_1, &amp;Add_2, &amp;N);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; ++i) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d &quot;</span>, &amp;temp);</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%c%d&quot;</span>, &amp;date[temp],&amp;next[temp]);</span><br><span class="line">	&#125;</span><br><span class="line">	temp = Add_1;</span><br><span class="line">	<span class="keyword">while</span> (temp != <span class="number">-1</span>) &#123;</span><br><span class="line">		time[temp]++;</span><br><span class="line">		temp = next[temp];</span><br><span class="line">	&#125;</span><br><span class="line">	temp = Add_2;</span><br><span class="line">	<span class="keyword">while</span> (temp != <span class="number">-1</span>) &#123;</span><br><span class="line">		time[temp]++;</span><br><span class="line">		<span class="keyword">if</span> (time[temp] == <span class="number">2</span>) &#123; </span><br><span class="line">			flag = temp;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		temp = next[temp];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (flag == <span class="number">0</span>)<span class="built_in">printf</span>(<span class="string">&quot;-1&quot;</span>);</span><br><span class="line">	<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">&quot;%05d&quot;</span>, flag);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="柳神的思路如下"><a href="#柳神的思路如下" class="headerlink" title="柳神的思路如下:"></a>柳神的思路如下:</h2><p><strong>分析：用结构体数组存储，node[i]表示地址为i的结点，key表示值，next为下一个结点的地址，flag表示第一条链表有没有该结点</strong><br><strong>遍历第一条链表，将访问过的结点的flag都标记为true，当遍历第二条结点的时候，如果遇到了true的结点就输出并结束程序，没有遇到就输出-1</strong></p>
-<p>和俺的想法差不多</p>
-<p>确实还是bool类型的更加方便一点.</p>
-<h2 id="柳神的代码如下"><a href="#柳神的代码如下" class="headerlink" title="柳神的代码如下:"></a>柳神的代码如下:</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">NODE</span> &#123;</span></span><br><span class="line">    <span class="keyword">char</span> key;</span><br><span class="line">    <span class="keyword">int</span> next;</span><br><span class="line">    <span class="keyword">bool</span> flag;</span><br><span class="line">&#125;node[<span class="number">100000</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> s1, s2, n, a, b;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d&quot;</span>, &amp;s1, &amp;s2, &amp;n);</span><br><span class="line">    <span class="keyword">char</span> data;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d %c %d&quot;</span>, &amp;a, &amp;data, &amp;b);</span><br><span class="line">        node[a] = &#123;data, b, <span class="literal">false</span>&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = s1; i != <span class="number">-1</span>; i = node[i].next)</span><br><span class="line">        node[i].flag = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = s2; i != <span class="number">-1</span>; i = node[i].next) &#123;</span><br><span class="line">        <span class="keyword">if</span>(node[i].flag == <span class="literal">true</span>) &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%05d&quot;</span>, i);</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;-1&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>如果这篇文章对你有张帮助的话,可以用你高贵的小手给我点一个免费的赞吗</p>
-<p>相信我，你也能变成光.</p>
-<p><img src="https://img-blog.csdnimg.cn/20200607184932978.bmp" alt="在这里插入图片描述"></p>
-<p>如果你有任何建议,或者是发现了我的错误,欢迎评论留言指出.</p>
-]]></content>
-      <categories>
-        <category>刷题</category>
-        <category>PAT</category>
-      </categories>
-      <tags>
-        <tag>链表</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>PTA 1051 Pop Sequence (25分)</title>
-    <url>/2020/10/02/PTA%201051%20Pop%20Sequence%20(25%E5%88%86)/</url>
-    <content><![CDATA[<p>强烈推荐,刷PTA的朋友都认识一下柳神–PTA解法大佬</p>
-<p>本文由参考于柳神博客写成</p>
-<p><a href="https://blog.csdn.net/liuchuo">柳神的CSDN博客,这个可以搜索文章</a></p>
-<p><a href="https://www.liuchuo.net/">柳神的个人博客,这个没有广告,但是不能搜索</a></p>
-<p>PS 今天也要加油鸭</p>
-<p><img src="https://img-blog.csdnimg.cn/20200924160038229.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<h2 id="题目原文"><a href="#题目原文" class="headerlink" title="题目原文"></a>题目原文</h2><p>Given a stack which can keep <em>M</em> numbers at most. Push <em>N</em> numbers in the order of 1, 2, 3, …, <em>N</em> and pop randomly. You are supposed to tell if a given sequence of numbers is a possible pop sequence of the stack. For example, if <em>M</em> is 5 and <em>N</em> is 7, we can obtain 1, 2, 3, 4, 5, 6, 7 from the stack, but not 3, 2, 1, 7, 5, 6, 4.</p>
-<h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case. For each case, the first line contains 3 numbers (all no more than 1000): <em>M</em> (the maximum capacity of the stack), <em>N</em> (the length of push sequence), and <em>K</em> (the number of pop sequences to be checked). Then <em>K</em> lines follow, each contains a pop sequence of <em>N</em> numbers. All the numbers in a line are separated by a space.</p>
-<h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each pop sequence, print in one line “YES” if it is indeed a possible pop sequence of the stack, or “NO” if not.</p>
-<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">5 7 5</span><br><span class="line">1 2 3 4 5 6 7</span><br><span class="line">3 2 1 7 5 6 4</span><br><span class="line">7 6 5 4 3 2 1</span><br><span class="line">5 6 4 3 7 2 1</span><br><span class="line">1 7 6 5 4 3 2</span><br></pre></td></tr></table></figure>
-
-<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">YES</span><br><span class="line">NO</span><br><span class="line">NO</span><br><span class="line">YES</span><br><span class="line">NO</span><br></pre></td></tr></table></figure>
-
-<h2 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意:"></a>题目大意:</h2><p>就是给你一个长度为M的栈</p>
-<p>然后给你一个固定的1要N的入栈顺序,问你能不能得出特定的出栈顺序.</p>
-<h2 id="柳神的思路如下"><a href="#柳神的思路如下" class="headerlink" title="柳神的思路如下:"></a>柳神的思路如下:</h2><p><strong>分析：按照要求进行模拟。先把输入的序列接收进数组v。然后按顺序1~n把数字进栈，每进入一个数字，判断有没有超过最大范围，超过了就break。如果没超过，设current = 1，从数组的第一个数字开始，看看是否与栈顶元素相等，while相等就一直弹出栈，不相等就继续按顺序把数字压入栈～～最后根据变量flag的bool值输出yes或者no～</strong></p>
-<h2 id="柳神的代码如下"><a href="#柳神的代码如下" class="headerlink" title="柳神的代码如下:"></a>柳神的代码如下:</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> m, n, k;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d %d&quot;</span>, &amp;m, &amp;n, &amp;k);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">        <span class="keyword">bool</span> flag = <span class="literal">false</span>;</span><br><span class="line">        <span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; s;</span><br><span class="line">        <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">v</span><span class="params">(n + <span class="number">1</span>)</span></span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; j++)</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;v[j]);</span><br><span class="line">        <span class="keyword">int</span> current = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; j++) &#123;</span><br><span class="line">            s.push(j);</span><br><span class="line">            <span class="keyword">if</span>(s.size() &gt; m) <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">while</span>(!s.empty() &amp;&amp; s.top() == v[current]) &#123;</span><br><span class="line">                s.pop();</span><br><span class="line">                current++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(current == n + <span class="number">1</span>) flag = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">if</span>(flag) <span class="built_in">printf</span>(<span class="string">&quot;YES\n&quot;</span>);</span><br><span class="line">        <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">&quot;NO\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>如果这篇文章对你有张帮助的话,可以用你高贵的小手给我点一个免费的赞吗</p>
-<p>相信我，你也能变成光.</p>
-<p><img src="https://img-blog.csdnimg.cn/20200607184932978.bmp" alt="在这里插入图片描述"></p>
-<p>如果你有任何建议,或者是发现了我的错误,欢迎评论留言指出.</p>
-]]></content>
-      <categories>
-        <category>刷题</category>
-        <category>PAT</category>
-      </categories>
-      <tags>
-        <tag>栈</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>PTA 1022 Digital Library (30分)</title>
     <url>/2020/10/02/PTA%201022%20Digital%20Library%20(30%E5%88%86)/</url>
     <content><![CDATA[<p>强烈推荐,刷PTA的朋友都认识一下柳神–PTA解法大佬</p>
@@ -510,6 +421,61 @@
   </entry>
   <entry>
     <title>PTA 1056 Mice and Rice (25分)</title>
+    <url>/2020/10/02/PTA%201032%20Sharing%20(25%E5%88%86)/</url>
+    <content><![CDATA[<p>强烈推荐,刷PTA的朋友都认识一下柳神–PTA解法大佬</p>
+<p>本文由参考于柳神博客写成</p>
+<p><a href="https://blog.csdn.net/liuchuo">柳神的CSDN博客,这个可以搜索文章</a></p>
+<p><a href="https://www.liuchuo.net/">柳神的个人博客,这个没有广告,但是不能搜索</a></p>
+<p>还有就是非常非常有用的 算法笔记 全名是</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">算法笔记  上级训练实战指南		<span class="regexp">//</span>这本都是PTA的题解</span><br><span class="line">算法笔记</span><br></pre></td></tr></table></figure>
+
+<p>PS 今天也要加油鸭</p>
+<p><img src="https://img-blog.csdnimg.cn/20200924160038229.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<h2 id="题目原文"><a href="#题目原文" class="headerlink" title="题目原文"></a>题目原文</h2><p>To store English words, one method is to use linked lists and store a word letter by letter. To save some space, we may let the words share the same sublist if they share the same suffix. For example, <code>loading</code> and <code>being</code> are stored as showed in Figure 1.</p>
+<p><img src="https://images.ptausercontent.com/ef0a1fdf-3d9f-46dc-9a27-21f989270fd4.jpg" alt="fig.jpg"></p>
+<p>Figure 1</p>
+<p>You are supposed to find the starting position of the common suffix (e.g. the position of <code>i</code> in Figure 1).</p>
+<h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case. For each case, the first line contains two addresses of nodes and a positive <em>N</em> (≤105), where the two addresses are the addresses of the first nodes of the two words, and <em>N</em> is the total number of nodes. The address of a node is a 5-digit positive integer, and NULL is represented by −1.</p>
+<p>Then <em>N</em> lines follow, each describes a node in the format:</p>
+<figure class="highlight purebasic"><table><tr><td class="code"><pre><span class="line">Address <span class="keyword">Data</span> <span class="keyword">Next</span></span><br></pre></td></tr></table></figure>
+
+<p>where<code>Address</code> is the position of the node, <code>Data</code> is the letter contained by this node which is an English letter chosen from { a-z, A-Z }, and <code>Next</code> is the position of the next node.</p>
+<h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each case, simply output the 5-digit starting position of the common suffix. If the two words have no common suffix, output <code>-1</code> instead.</p>
+<h3 id="Sample-Input-1"><a href="#Sample-Input-1" class="headerlink" title="Sample Input 1:"></a>Sample Input 1:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">11111 22222 9</span><br><span class="line">67890 i 00002</span><br><span class="line">00010 a 12345</span><br><span class="line">00003 g -1</span><br><span class="line">12345 D 67890</span><br><span class="line">00002 n 00003</span><br><span class="line">22222 B 23456</span><br><span class="line">11111 L 00001</span><br><span class="line">23456 e 67890</span><br><span class="line">00001 o 00010</span><br></pre></td></tr></table></figure>
+
+<h3 id="Sample-Output-1"><a href="#Sample-Output-1" class="headerlink" title="Sample Output 1:"></a>Sample Output 1:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">67890</span><br></pre></td></tr></table></figure>
+
+<h3 id="Sample-Input-2"><a href="#Sample-Input-2" class="headerlink" title="Sample Input 2:"></a>Sample Input 2:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">00001 00002 4</span><br><span class="line">00001 a 10001</span><br><span class="line">10001 s -1</span><br><span class="line">00002 a 10002</span><br><span class="line">10002 t -1</span><br></pre></td></tr></table></figure>
+
+<h3 id="Sample-Output-2"><a href="#Sample-Output-2" class="headerlink" title="Sample Output 2:"></a>Sample Output 2:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-1</span><br></pre></td></tr></table></figure>
+
+<h2 id="生词如下"><a href="#生词如下" class="headerlink" title="生词如下:"></a>生词如下:</h2><p>suffix    后缀</p>
+<h2 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意:"></a>题目大意:</h2><p>就是给你两个链表,然后求他们的结尾有没有相同的结点,如果有就输出第一个相同的结点,输出他的地址.</p>
+<p>如果没有就输出-1</p>
+<h2 id="思路如下"><a href="#思路如下" class="headerlink" title="思路如下:"></a>思路如下:</h2><p>用多个数组来做 data保存数据.next保存下一个指数.然后用一个time来计算每个地址出现的次数.</p>
+<p>等下那个地址第一次出现了两次,那么他就是答案.</p>
+<h2 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下:"></a>代码如下:</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> Add_1, Add_2, N,flag = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> temp, next[<span class="number">100005</span>], time[<span class="number">100005</span>] = &#123; <span class="number">0</span> &#125;;</span><br><span class="line">	<span class="comment">//for (int i = 0; i &lt; 100005; ++i)	time[i] = 0;</span></span><br><span class="line">	<span class="keyword">char</span> date[<span class="number">100005</span>];</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d&quot;</span>, &amp;Add_1, &amp;Add_2, &amp;N);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; ++i) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d &quot;</span>, &amp;temp);</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%c%d&quot;</span>, &amp;date[temp],&amp;next[temp]);</span><br><span class="line">	&#125;</span><br><span class="line">	temp = Add_1;</span><br><span class="line">	<span class="keyword">while</span> (temp != <span class="number">-1</span>) &#123;</span><br><span class="line">		time[temp]++;</span><br><span class="line">		temp = next[temp];</span><br><span class="line">	&#125;</span><br><span class="line">	temp = Add_2;</span><br><span class="line">	<span class="keyword">while</span> (temp != <span class="number">-1</span>) &#123;</span><br><span class="line">		time[temp]++;</span><br><span class="line">		<span class="keyword">if</span> (time[temp] == <span class="number">2</span>) &#123; </span><br><span class="line">			flag = temp;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		temp = next[temp];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (flag == <span class="number">0</span>)<span class="built_in">printf</span>(<span class="string">&quot;-1&quot;</span>);</span><br><span class="line">	<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">&quot;%05d&quot;</span>, flag);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="柳神的思路如下"><a href="#柳神的思路如下" class="headerlink" title="柳神的思路如下:"></a>柳神的思路如下:</h2><p><strong>分析：用结构体数组存储，node[i]表示地址为i的结点，key表示值，next为下一个结点的地址，flag表示第一条链表有没有该结点</strong><br><strong>遍历第一条链表，将访问过的结点的flag都标记为true，当遍历第二条结点的时候，如果遇到了true的结点就输出并结束程序，没有遇到就输出-1</strong></p>
+<p>和俺的想法差不多</p>
+<p>确实还是bool类型的更加方便一点.</p>
+<h2 id="柳神的代码如下"><a href="#柳神的代码如下" class="headerlink" title="柳神的代码如下:"></a>柳神的代码如下:</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">NODE</span> &#123;</span></span><br><span class="line">    <span class="keyword">char</span> key;</span><br><span class="line">    <span class="keyword">int</span> next;</span><br><span class="line">    <span class="keyword">bool</span> flag;</span><br><span class="line">&#125;node[<span class="number">100000</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> s1, s2, n, a, b;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d&quot;</span>, &amp;s1, &amp;s2, &amp;n);</span><br><span class="line">    <span class="keyword">char</span> data;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d %c %d&quot;</span>, &amp;a, &amp;data, &amp;b);</span><br><span class="line">        node[a] = &#123;data, b, <span class="literal">false</span>&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = s1; i != <span class="number">-1</span>; i = node[i].next)</span><br><span class="line">        node[i].flag = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = s2; i != <span class="number">-1</span>; i = node[i].next) &#123;</span><br><span class="line">        <span class="keyword">if</span>(node[i].flag == <span class="literal">true</span>) &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%05d&quot;</span>, i);</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;-1&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果这篇文章对你有张帮助的话,可以用你高贵的小手给我点一个免费的赞吗</p>
+<p>相信我，你也能变成光.</p>
+<p><img src="https://img-blog.csdnimg.cn/20200607184932978.bmp" alt="在这里插入图片描述"></p>
+<p>如果你有任何建议,或者是发现了我的错误,欢迎评论留言指出.</p>
+]]></content>
+      <categories>
+        <category>刷题</category>
+        <category>PAT</category>
+      </categories>
+      <tags>
+        <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PTA 1056 Mice and Rice (25分)</title>
     <url>/2020/10/02/PTA%201052%20Linked%20List%20Sorting%20(25%E5%88%86)/</url>
     <content><![CDATA[<p>强烈推荐,刷PTA的朋友都认识一下柳神–PTA解法大佬</p>
 <p>本文由参考于柳神博客写成</p>
@@ -562,29 +528,25 @@
       </tags>
   </entry>
   <entry>
-    <title>PTA 1054 The Dominant Color (20分)</title>
-    <url>/2020/10/02/PTA%201054%20The-Dominant-Color-20%E5%88%86/</url>
+    <title>PTA 1051 Pop Sequence (25分)</title>
+    <url>/2020/10/02/PTA%201051%20Pop%20Sequence%20(25%E5%88%86)/</url>
     <content><![CDATA[<p>强烈推荐,刷PTA的朋友都认识一下柳神–PTA解法大佬</p>
 <p>本文由参考于柳神博客写成</p>
 <p><a href="https://blog.csdn.net/liuchuo">柳神的CSDN博客,这个可以搜索文章</a></p>
 <p><a href="https://www.liuchuo.net/">柳神的个人博客,这个没有广告,但是不能搜索</a></p>
 <p>PS 今天也要加油鸭</p>
 <p><img src="https://img-blog.csdnimg.cn/20200924160038229.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<h2 id="题目原文"><a href="#题目原文" class="headerlink" title="题目原文"></a>题目原文</h2><p>Behind the scenes in the computer’s memory, color is always talked about as a series of 24 bits of information for each pixel. In an image, the color with the largest proportional area is called the dominant color. A <strong>strictly</strong> dominant color takes more than half of the total area. Now given an image of resolution <em>M</em> by <em>N</em> (for example, 800×600), you are supposed to point out the strictly dominant color.</p>
-<h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case. For each case, the first line contains 2 positive numbers: <em>M</em> (≤800) and <em>N</em> (≤600) which are the resolutions of the image. Then <em>N</em> lines follow, each contains <em>M</em> digital colors in the range [0,224). It is guaranteed that the strictly dominant color exists for each input image. All the numbers in a line are separated by a space.</p>
-<h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each test case, simply print the dominant color in a line.</p>
-<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">5 3</span><br><span class="line">0 0 255 16777215 24</span><br><span class="line">24 24 0 0 24</span><br><span class="line">24 0 24 24 24</span><br></pre></td></tr></table></figure>
+<h2 id="题目原文"><a href="#题目原文" class="headerlink" title="题目原文"></a>题目原文</h2><p>Given a stack which can keep <em>M</em> numbers at most. Push <em>N</em> numbers in the order of 1, 2, 3, …, <em>N</em> and pop randomly. You are supposed to tell if a given sequence of numbers is a possible pop sequence of the stack. For example, if <em>M</em> is 5 and <em>N</em> is 7, we can obtain 1, 2, 3, 4, 5, 6, 7 from the stack, but not 3, 2, 1, 7, 5, 6, 4.</p>
+<h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case. For each case, the first line contains 3 numbers (all no more than 1000): <em>M</em> (the maximum capacity of the stack), <em>N</em> (the length of push sequence), and <em>K</em> (the number of pop sequences to be checked). Then <em>K</em> lines follow, each contains a pop sequence of <em>N</em> numbers. All the numbers in a line are separated by a space.</p>
+<h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each pop sequence, print in one line “YES” if it is indeed a possible pop sequence of the stack, or “NO” if not.</p>
+<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">5 7 5</span><br><span class="line">1 2 3 4 5 6 7</span><br><span class="line">3 2 1 7 5 6 4</span><br><span class="line">7 6 5 4 3 2 1</span><br><span class="line">5 6 4 3 7 2 1</span><br><span class="line">1 7 6 5 4 3 2</span><br></pre></td></tr></table></figure>
 
-<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">24</span><br></pre></td></tr></table></figure>
+<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">YES</span><br><span class="line">NO</span><br><span class="line">NO</span><br><span class="line">YES</span><br><span class="line">NO</span><br></pre></td></tr></table></figure>
 
-<h2 id="生词如下"><a href="#生词如下" class="headerlink" title="生词如下:"></a>生词如下:</h2><p><strong>strictly</strong>    严格的</p>
-<h2 id="题目大意："><a href="#题目大意：" class="headerlink" title="题目大意："></a>题目大意：</h2><p>PS 吐槽,这应该是我做过的最简单的一题PTA了</p>
-<p>就是给你N行 一行M个数字.</p>
-<p>然后让你算这些个数字里面那个出现的次数超过了一半,那么这个数字就是主要的颜色.</p>
-<h2 id="思路如下"><a href="#思路如下" class="headerlink" title="思路如下:"></a>思路如下:</h2><p>一个Map解决问题.</p>
-<h2 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下:"></a>代码如下:</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> M, N;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; M &gt;&gt; N;</span><br><span class="line">	<span class="built_in">string</span> a, result;</span><br><span class="line">	<span class="built_in">map</span>&lt;<span class="built_in">string</span>, <span class="keyword">int</span>&gt;Data;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; ++i) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; M; ++j) &#123;</span><br><span class="line">			<span class="built_in">cin</span> &gt;&gt; a;</span><br><span class="line">			Data[a]++;</span><br><span class="line">			<span class="keyword">if</span> (Data[a] &gt;= M * N / <span class="number">2</span>) &#123;</span><br><span class="line">				result = a;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; result;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
+<h2 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意:"></a>题目大意:</h2><p>就是给你一个长度为M的栈</p>
+<p>然后给你一个固定的1要N的入栈顺序,问你能不能得出特定的出栈顺序.</p>
+<h2 id="柳神的思路如下"><a href="#柳神的思路如下" class="headerlink" title="柳神的思路如下:"></a>柳神的思路如下:</h2><p><strong>分析：按照要求进行模拟。先把输入的序列接收进数组v。然后按顺序1~n把数字进栈，每进入一个数字，判断有没有超过最大范围，超过了就break。如果没超过，设current = 1，从数组的第一个数字开始，看看是否与栈顶元素相等，while相等就一直弹出栈，不相等就继续按顺序把数字压入栈～～最后根据变量flag的bool值输出yes或者no～</strong></p>
+<h2 id="柳神的代码如下"><a href="#柳神的代码如下" class="headerlink" title="柳神的代码如下:"></a>柳神的代码如下:</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> m, n, k;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d %d&quot;</span>, &amp;m, &amp;n, &amp;k);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">        <span class="keyword">bool</span> flag = <span class="literal">false</span>;</span><br><span class="line">        <span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; s;</span><br><span class="line">        <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">v</span><span class="params">(n + <span class="number">1</span>)</span></span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; j++)</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;v[j]);</span><br><span class="line">        <span class="keyword">int</span> current = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; j++) &#123;</span><br><span class="line">            s.push(j);</span><br><span class="line">            <span class="keyword">if</span>(s.size() &gt; m) <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">while</span>(!s.empty() &amp;&amp; s.top() == v[current]) &#123;</span><br><span class="line">                s.pop();</span><br><span class="line">                current++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(current == n + <span class="number">1</span>) flag = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">if</span>(flag) <span class="built_in">printf</span>(<span class="string">&quot;YES\n&quot;</span>);</span><br><span class="line">        <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">&quot;NO\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>如果这篇文章对你有张帮助的话,可以用你高贵的小手给我点一个免费的赞吗</p>
 <p>相信我，你也能变成光.</p>
@@ -596,7 +558,7 @@
         <category>PAT</category>
       </categories>
       <tags>
-        <tag>Map</tag>
+        <tag>栈</tag>
       </tags>
   </entry>
   <entry>
@@ -661,6 +623,44 @@
       </tags>
   </entry>
   <entry>
+    <title>PTA 1054 The Dominant Color (20分)</title>
+    <url>/2020/10/02/PTA%201054%20The-Dominant-Color-20%E5%88%86/</url>
+    <content><![CDATA[<p>强烈推荐,刷PTA的朋友都认识一下柳神–PTA解法大佬</p>
+<p>本文由参考于柳神博客写成</p>
+<p><a href="https://blog.csdn.net/liuchuo">柳神的CSDN博客,这个可以搜索文章</a></p>
+<p><a href="https://www.liuchuo.net/">柳神的个人博客,这个没有广告,但是不能搜索</a></p>
+<p>PS 今天也要加油鸭</p>
+<p><img src="https://img-blog.csdnimg.cn/20200924160038229.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<h2 id="题目原文"><a href="#题目原文" class="headerlink" title="题目原文"></a>题目原文</h2><p>Behind the scenes in the computer’s memory, color is always talked about as a series of 24 bits of information for each pixel. In an image, the color with the largest proportional area is called the dominant color. A <strong>strictly</strong> dominant color takes more than half of the total area. Now given an image of resolution <em>M</em> by <em>N</em> (for example, 800×600), you are supposed to point out the strictly dominant color.</p>
+<h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case. For each case, the first line contains 2 positive numbers: <em>M</em> (≤800) and <em>N</em> (≤600) which are the resolutions of the image. Then <em>N</em> lines follow, each contains <em>M</em> digital colors in the range [0,224). It is guaranteed that the strictly dominant color exists for each input image. All the numbers in a line are separated by a space.</p>
+<h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each test case, simply print the dominant color in a line.</p>
+<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">5 3</span><br><span class="line">0 0 255 16777215 24</span><br><span class="line">24 24 0 0 24</span><br><span class="line">24 0 24 24 24</span><br></pre></td></tr></table></figure>
+
+<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">24</span><br></pre></td></tr></table></figure>
+
+<h2 id="生词如下"><a href="#生词如下" class="headerlink" title="生词如下:"></a>生词如下:</h2><p><strong>strictly</strong>    严格的</p>
+<h2 id="题目大意："><a href="#题目大意：" class="headerlink" title="题目大意："></a>题目大意：</h2><p>PS 吐槽,这应该是我做过的最简单的一题PTA了</p>
+<p>就是给你N行 一行M个数字.</p>
+<p>然后让你算这些个数字里面那个出现的次数超过了一半,那么这个数字就是主要的颜色.</p>
+<h2 id="思路如下"><a href="#思路如下" class="headerlink" title="思路如下:"></a>思路如下:</h2><p>一个Map解决问题.</p>
+<h2 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下:"></a>代码如下:</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> M, N;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; M &gt;&gt; N;</span><br><span class="line">	<span class="built_in">string</span> a, result;</span><br><span class="line">	<span class="built_in">map</span>&lt;<span class="built_in">string</span>, <span class="keyword">int</span>&gt;Data;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; ++i) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; M; ++j) &#123;</span><br><span class="line">			<span class="built_in">cin</span> &gt;&gt; a;</span><br><span class="line">			Data[a]++;</span><br><span class="line">			<span class="keyword">if</span> (Data[a] &gt;= M * N / <span class="number">2</span>) &#123;</span><br><span class="line">				result = a;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; result;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>如果这篇文章对你有张帮助的话,可以用你高贵的小手给我点一个免费的赞吗</p>
+<p>相信我，你也能变成光.</p>
+<p><img src="https://img-blog.csdnimg.cn/20200607184932978.bmp" alt="在这里插入图片描述"></p>
+<p>如果你有任何建议,或者是发现了我的错误,欢迎评论留言指出.</p>
+]]></content>
+      <categories>
+        <category>刷题</category>
+        <category>PAT</category>
+      </categories>
+      <tags>
+        <tag>Map</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>PTA 1056 Mice and Rice (25分)</title>
     <url>/2020/10/02/PTA%201056%20Mice%20and%20Rice%20(25%E5%88%86)/</url>
     <content><![CDATA[<p>强烈推荐,刷PTA的朋友都认识一下柳神–PTA解法大佬</p>
@@ -718,6 +718,57 @@
       </tags>
   </entry>
   <entry>
+    <title>PTA 1063 Set Similarity (25分)</title>
+    <url>/2020/10/01/PTA%201063%20Set%20Similarity%20(25%E5%88%86)/</url>
+    <content><![CDATA[<p>强烈推荐,刷PTA的朋友都认识一下柳神–PTA解法大佬</p>
+<p>本文由参考于柳神博客写成</p>
+<p><a href="https://blog.csdn.net/liuchuo">柳神的CSDN博客,这个可以搜索文章</a></p>
+<p><a href="https://www.liuchuo.net/">柳神的个人博客,这个没有广告,但是不能搜索</a></p>
+<p>PS 今天也要加油鸭</p>
+<p><img src="https://img-blog.csdnimg.cn/20200924160038229.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<h2 id="题目原文"><a href="#题目原文" class="headerlink" title="题目原文"></a>题目原文</h2><p>Given two sets of integers, the similarity of the sets is defined to be <em>N**c</em>/<em>N**t</em>×100%, where <em>N**c</em> is the number of distinct common numbers shared by the two sets, and <em>N**t</em> is the total number of distinct numbers in the two sets. Your job is to calculate the similarity of any given pair of sets.</p>
+<h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case. Each case first gives a positive integer <em>N</em> (≤50) which is the total number of sets. Then <em>N</em> lines follow, each gives a set with a positive <em>M</em> (≤104) and followed by <em>M</em> integers in the range [0,109]. After the input of sets, a positive integer <em>K</em> (≤2000) is given, followed by <em>K</em> lines of queries. Each query gives a pair of set numbers (the sets are numbered from 1 to <em>N</em>). All the numbers in a line are separated by a space.</p>
+<h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each query, print in one line the similarity of the sets, in the percentage form accurate up to 1 decimal place.</p>
+<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">3</span><br><span class="line">3 99 87 101</span><br><span class="line">4 87 101 5 87</span><br><span class="line">7 99 101 18 5 135 18 99</span><br><span class="line">2</span><br><span class="line">1 2</span><br><span class="line">1 3</span><br></pre></td></tr></table></figure>
+
+<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">50.0%</span><br><span class="line">33.3%</span><br></pre></td></tr></table></figure>
+
+<h2 id="生词如下"><a href="#生词如下" class="headerlink" title="生词如下:"></a>生词如下:</h2><p>distinct    明显的,有区分的.</p>
+<p>similarity    相同的.</p>
+<p>a pair of set numbers    一对集合数</p>
+<p>query  疑问,询问.</p>
+<h2 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意:"></a>题目大意:</h2><p>就是给你N个集合</p>
+<p>然后再给你N个集合数–就是两个数字,代表的是集合的序列.</p>
+<p>问.这两个集合中有多少重复的数.算出重合率.</p>
+<p>并输出</p>
+<h2 id="思路如下"><a href="#思路如下" class="headerlink" title="思路如下:"></a>思路如下:</h2><p>用set来保存.因为set有自动的去重功能.</p>
+<p>把两个集合的长度加起来.算出第三个集合的长度在减去任意一个集合就是重合的.</p>
+<p>然后再除一下.就OK了.</p>
+<p>而且调用几个函数的事情.</p>
+<p>如果这样做的话.恭喜你.测试点五是过不去的.</p>
+<p>太浪费时间了</p>
+<p>我们改进一下.</p>
+<p>把短的集合里面的数在长集合里一个一个找出来.</p>
+<h2 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下:"></a>代码如下:</h2><p>这就是我能想到的最短的代码了.格式还改的不是很好看.阅读起来可能优点困难</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> N=<span class="number">0</span>,M=<span class="number">0</span>,cnt=<span class="number">0</span>,K = <span class="number">0</span>;;</span><br><span class="line">	<span class="built_in">string</span> t;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;N);</span><br><span class="line">	<span class="built_in">set</span>&lt;<span class="built_in">string</span>&gt; setarray[<span class="number">55</span>];</span><br><span class="line">	<span class="comment">//这个就是全部的录入函数,把所有的set都读取完毕.</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; ++i) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;M);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; M; ++j) &#123;</span><br><span class="line">			<span class="built_in">cin</span> &gt;&gt; t;</span><br><span class="line">			setarray[i].insert(t);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">set</span>&lt;<span class="built_in">string</span>&gt; sum;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;K);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; K; ++i) &#123;</span><br><span class="line">		<span class="keyword">int</span> begin=<span class="number">0</span>, end=<span class="number">0</span>;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;begin, &amp;end);</span><br><span class="line">		<span class="keyword">float</span> Add = setarray[begin<span class="number">-1</span>].size() + setarray[end<span class="number">-1</span>].size();</span><br><span class="line">		<span class="keyword">int</span> max = end - <span class="number">1</span>,min = begin - <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">if</span> (setarray[begin - <span class="number">1</span>].size() &gt; setarray[end - <span class="number">1</span>].size()) &#123;</span><br><span class="line">			min = end - <span class="number">1</span>;</span><br><span class="line">			max= begin - <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">auto</span> j : setarray[min]) &#123;</span><br><span class="line">			<span class="keyword">if</span> (setarray[max].find(j) != setarray[max].end()) &#123;</span><br><span class="line">				cnt++;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%.1f%%&quot;</span>, ((<span class="keyword">float</span>)cnt*<span class="number">100</span>) /((<span class="keyword">float</span>)(Add-cnt)));</span><br><span class="line">		<span class="keyword">if</span> (i != K - <span class="number">1</span>)	<span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">		sum.clear();	cnt = <span class="number">0</span>;			<span class="comment">//重新的清0代码</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="柳神的思路"><a href="#柳神的思路" class="headerlink" title="柳神的思路:"></a>柳神的思路:</h2><p><strong>分析：因为给出的集合里面含有重复的元素，而计算nc和nt不需要考虑两个集合里面是否分别有重复的元素，所以可以直接使用set存储每一个集合，然后把set放进一个数组里面存储。当需要计算集合a和集合b的相似度nc和nt的时候，遍历集合a中的每一个元素，寻找集合b中是否有该元素，如果有，说明是两个人公共的集合元素，则nc++，否则nt++（nt的初值为b集合里面本有的元素）</strong></p>
+<h2 id="柳神的代码"><a href="#柳神的代码" class="headerlink" title="柳神的代码:"></a>柳神的代码:</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n, m, k, temp, a, b;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;<span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt;&gt; <span class="title">v</span><span class="params">(n)</span></span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;m);</span><br><span class="line">        <span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt; s;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; m; j++) &#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;temp);</span><br><span class="line">            s.insert(temp);</span><br><span class="line">        &#125;</span><br><span class="line">        v[i] = s;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;k);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;a, &amp;b);</span><br><span class="line">        <span class="keyword">int</span> nc = <span class="number">0</span>, nt = v[b - <span class="number">1</span>].size();   <span class="comment">//一开始就是b的size对.</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span> it = v[a - <span class="number">1</span>].begin(); it != v[a - <span class="number">1</span>].end(); it++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (v[b - <span class="number">1</span>].find(*it) == v[b - <span class="number">1</span>].end())</span><br><span class="line">                nt++;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                nc++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">double</span> ans = (<span class="keyword">double</span>)nc / nt * <span class="number">100</span>;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%.1f%%\n&quot;</span>, ans);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果这篇文章对你有张帮助的话,可以用你高贵的小手给我点一个免费的赞吗</p>
+<p>相信我，你也能变成光.</p>
+<p><img src="https://img-blog.csdnimg.cn/20200607184932978.bmp" alt="在这里插入图片描述"></p>
+<p>如果你有任何建议,或者是发现了我的错误,欢迎评论留言指出.</p>
+]]></content>
+      <categories>
+        <category>刷题</category>
+        <category>PAT</category>
+      </categories>
+      <tags>
+        <tag>set</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>1060 Are They Equal (25分)</title>
     <url>/2020/10/01/PTA%201060%20Are%20They%20Equal%20(25%E5%88%86)/</url>
     <content><![CDATA[<p>强烈推荐,刷PTA的朋友都认识一下柳神–PTA解法大佬</p>
@@ -766,57 +817,6 @@
 </li>
 </ol>
 <h2 id="柳神的代码"><a href="#柳神的代码" class="headerlink" title="柳神的代码:"></a>柳神的代码:</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n, p = <span class="number">0</span>, q = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">char</span> a[<span class="number">10000</span>], b[<span class="number">10000</span>], A[<span class="number">10000</span>], B[<span class="number">10000</span>];</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%s%s&quot;</span>, &amp;n, a, b);</span><br><span class="line">    <span class="keyword">int</span> cnta = <span class="built_in">strlen</span>(a), cntb = <span class="built_in">strlen</span>(b);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="built_in">strlen</span>(a); i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(a[i] == <span class="string">&#x27;.&#x27;</span>) &#123;</span><br><span class="line">            cnta = i;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="built_in">strlen</span>(b); i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(b[i] == <span class="string">&#x27;.&#x27;</span>) &#123;</span><br><span class="line">            cntb = i;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> indexa = <span class="number">0</span>, indexb = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(a[p] == <span class="string">&#x27;0&#x27;</span> || a[p] == <span class="string">&#x27;.&#x27;</span>) p++;</span><br><span class="line">    <span class="keyword">while</span>(b[q] == <span class="string">&#x27;0&#x27;</span> || b[q] == <span class="string">&#x27;.&#x27;</span>) q++;</span><br><span class="line">    <span class="keyword">if</span>(cnta &gt;= p)</span><br><span class="line">        cnta = cnta - p;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        cnta = cnta - p + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(cntb &gt;= q)</span><br><span class="line">        cntb = cntb - q;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        cntb = cntb - q + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(p == <span class="built_in">strlen</span>(a))</span><br><span class="line">        cnta = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(q == <span class="built_in">strlen</span>(b))</span><br><span class="line">        cntb = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(indexa &lt; n) &#123;</span><br><span class="line">        <span class="keyword">if</span>(a[p] != <span class="string">&#x27;.&#x27;</span> &amp;&amp; p &lt; <span class="built_in">strlen</span>(a))</span><br><span class="line">            A[indexa++] = a[p];</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(p &gt;= <span class="built_in">strlen</span>(a))</span><br><span class="line">            A[indexa++] = <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">        p++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(indexb &lt; n) &#123;</span><br><span class="line">        <span class="keyword">if</span>(b[q] != <span class="string">&#x27;.&#x27;</span> &amp;&amp; q &lt; <span class="built_in">strlen</span>(b))</span><br><span class="line">            B[indexb++] = b[q];</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(q &gt;= <span class="built_in">strlen</span>(b))</span><br><span class="line">            B[indexb++] = <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">        q++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">strcmp</span>(A, B) == <span class="number">0</span> &amp;&amp; cnta == cntb)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;YES 0.%s*10^%d&quot;</span>, A, cnta);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;NO 0.%s*10^%d 0.%s*10^%d&quot;</span> , A, cnta, B, cntb);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>如果这篇文章对你有张帮助的话,可以用你高贵的小手给我点一个免费的赞吗</p>
-<p>相信我，你也能变成光.</p>
-<p><img src="https://img-blog.csdnimg.cn/20200607184932978.bmp" alt="在这里插入图片描述"></p>
-<p>如果你有任何建议,或者是发现了我的错误,欢迎评论留言指出.</p>
-]]></content>
-      <categories>
-        <category>刷题</category>
-        <category>PAT</category>
-      </categories>
-      <tags>
-        <tag>set</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>PTA 1063 Set Similarity (25分)</title>
-    <url>/2020/10/01/PTA%201063%20Set%20Similarity%20(25%E5%88%86)/</url>
-    <content><![CDATA[<p>强烈推荐,刷PTA的朋友都认识一下柳神–PTA解法大佬</p>
-<p>本文由参考于柳神博客写成</p>
-<p><a href="https://blog.csdn.net/liuchuo">柳神的CSDN博客,这个可以搜索文章</a></p>
-<p><a href="https://www.liuchuo.net/">柳神的个人博客,这个没有广告,但是不能搜索</a></p>
-<p>PS 今天也要加油鸭</p>
-<p><img src="https://img-blog.csdnimg.cn/20200924160038229.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<h2 id="题目原文"><a href="#题目原文" class="headerlink" title="题目原文"></a>题目原文</h2><p>Given two sets of integers, the similarity of the sets is defined to be <em>N**c</em>/<em>N**t</em>×100%, where <em>N**c</em> is the number of distinct common numbers shared by the two sets, and <em>N**t</em> is the total number of distinct numbers in the two sets. Your job is to calculate the similarity of any given pair of sets.</p>
-<h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case. Each case first gives a positive integer <em>N</em> (≤50) which is the total number of sets. Then <em>N</em> lines follow, each gives a set with a positive <em>M</em> (≤104) and followed by <em>M</em> integers in the range [0,109]. After the input of sets, a positive integer <em>K</em> (≤2000) is given, followed by <em>K</em> lines of queries. Each query gives a pair of set numbers (the sets are numbered from 1 to <em>N</em>). All the numbers in a line are separated by a space.</p>
-<h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each query, print in one line the similarity of the sets, in the percentage form accurate up to 1 decimal place.</p>
-<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">3</span><br><span class="line">3 99 87 101</span><br><span class="line">4 87 101 5 87</span><br><span class="line">7 99 101 18 5 135 18 99</span><br><span class="line">2</span><br><span class="line">1 2</span><br><span class="line">1 3</span><br></pre></td></tr></table></figure>
-
-<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">50.0%</span><br><span class="line">33.3%</span><br></pre></td></tr></table></figure>
-
-<h2 id="生词如下"><a href="#生词如下" class="headerlink" title="生词如下:"></a>生词如下:</h2><p>distinct    明显的,有区分的.</p>
-<p>similarity    相同的.</p>
-<p>a pair of set numbers    一对集合数</p>
-<p>query  疑问,询问.</p>
-<h2 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意:"></a>题目大意:</h2><p>就是给你N个集合</p>
-<p>然后再给你N个集合数–就是两个数字,代表的是集合的序列.</p>
-<p>问.这两个集合中有多少重复的数.算出重合率.</p>
-<p>并输出</p>
-<h2 id="思路如下"><a href="#思路如下" class="headerlink" title="思路如下:"></a>思路如下:</h2><p>用set来保存.因为set有自动的去重功能.</p>
-<p>把两个集合的长度加起来.算出第三个集合的长度在减去任意一个集合就是重合的.</p>
-<p>然后再除一下.就OK了.</p>
-<p>而且调用几个函数的事情.</p>
-<p>如果这样做的话.恭喜你.测试点五是过不去的.</p>
-<p>太浪费时间了</p>
-<p>我们改进一下.</p>
-<p>把短的集合里面的数在长集合里一个一个找出来.</p>
-<h2 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下:"></a>代码如下:</h2><p>这就是我能想到的最短的代码了.格式还改的不是很好看.阅读起来可能优点困难</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> N=<span class="number">0</span>,M=<span class="number">0</span>,cnt=<span class="number">0</span>,K = <span class="number">0</span>;;</span><br><span class="line">	<span class="built_in">string</span> t;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;N);</span><br><span class="line">	<span class="built_in">set</span>&lt;<span class="built_in">string</span>&gt; setarray[<span class="number">55</span>];</span><br><span class="line">	<span class="comment">//这个就是全部的录入函数,把所有的set都读取完毕.</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; ++i) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;M);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; M; ++j) &#123;</span><br><span class="line">			<span class="built_in">cin</span> &gt;&gt; t;</span><br><span class="line">			setarray[i].insert(t);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">set</span>&lt;<span class="built_in">string</span>&gt; sum;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;K);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; K; ++i) &#123;</span><br><span class="line">		<span class="keyword">int</span> begin=<span class="number">0</span>, end=<span class="number">0</span>;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;begin, &amp;end);</span><br><span class="line">		<span class="keyword">float</span> Add = setarray[begin<span class="number">-1</span>].size() + setarray[end<span class="number">-1</span>].size();</span><br><span class="line">		<span class="keyword">int</span> max = end - <span class="number">1</span>,min = begin - <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">if</span> (setarray[begin - <span class="number">1</span>].size() &gt; setarray[end - <span class="number">1</span>].size()) &#123;</span><br><span class="line">			min = end - <span class="number">1</span>;</span><br><span class="line">			max= begin - <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">auto</span> j : setarray[min]) &#123;</span><br><span class="line">			<span class="keyword">if</span> (setarray[max].find(j) != setarray[max].end()) &#123;</span><br><span class="line">				cnt++;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%.1f%%&quot;</span>, ((<span class="keyword">float</span>)cnt*<span class="number">100</span>) /((<span class="keyword">float</span>)(Add-cnt)));</span><br><span class="line">		<span class="keyword">if</span> (i != K - <span class="number">1</span>)	<span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">		sum.clear();	cnt = <span class="number">0</span>;			<span class="comment">//重新的清0代码</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="柳神的思路"><a href="#柳神的思路" class="headerlink" title="柳神的思路:"></a>柳神的思路:</h2><p><strong>分析：因为给出的集合里面含有重复的元素，而计算nc和nt不需要考虑两个集合里面是否分别有重复的元素，所以可以直接使用set存储每一个集合，然后把set放进一个数组里面存储。当需要计算集合a和集合b的相似度nc和nt的时候，遍历集合a中的每一个元素，寻找集合b中是否有该元素，如果有，说明是两个人公共的集合元素，则nc++，否则nt++（nt的初值为b集合里面本有的元素）</strong></p>
-<h2 id="柳神的代码"><a href="#柳神的代码" class="headerlink" title="柳神的代码:"></a>柳神的代码:</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n, m, k, temp, a, b;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;<span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt;&gt; <span class="title">v</span><span class="params">(n)</span></span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;m);</span><br><span class="line">        <span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt; s;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; m; j++) &#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;temp);</span><br><span class="line">            s.insert(temp);</span><br><span class="line">        &#125;</span><br><span class="line">        v[i] = s;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;k);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;a, &amp;b);</span><br><span class="line">        <span class="keyword">int</span> nc = <span class="number">0</span>, nt = v[b - <span class="number">1</span>].size();   <span class="comment">//一开始就是b的size对.</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span> it = v[a - <span class="number">1</span>].begin(); it != v[a - <span class="number">1</span>].end(); it++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (v[b - <span class="number">1</span>].find(*it) == v[b - <span class="number">1</span>].end())</span><br><span class="line">                nt++;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                nc++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">double</span> ans = (<span class="keyword">double</span>)nc / nt * <span class="number">100</span>;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%.1f%%\n&quot;</span>, ans);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>如果这篇文章对你有张帮助的话,可以用你高贵的小手给我点一个免费的赞吗</p>
 <p>相信我，你也能变成光.</p>
@@ -1081,59 +1081,6 @@
       </tags>
   </entry>
   <entry>
-    <title>PTA 1090 Highest Price in Supply Chain (25分)</title>
-    <url>/2020/10/14/PTA%201090-Highest-Price-in-Supply-Chain-25%E5%88%86/</url>
-    <content><![CDATA[<p>强烈推荐,刷PTA的朋友都认识一下柳神–PTA解法大佬</p>
-<p>本文由参考于柳神博客写成</p>
-<p><a href="https://blog.csdn.net/liuchuo">柳神的CSDN博客,这个可以搜索文章</a></p>
-<p><a href="https://www.liuchuo.net/">柳神的个人博客,这个没有广告,但是不能搜索</a></p>
-<p>还有就是非常非常有用的 算法笔记 全名是</p>
-<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">算法笔记  上级训练实战指南		<span class="regexp">//</span>这本都是PTA的题解</span><br><span class="line">算法笔记</span><br></pre></td></tr></table></figure>
-
-<p>PS 今天也要加油鸭</p>
-<p><img src="https://img-blog.csdnimg.cn/20200924160038229.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<h2 id="题目原文"><a href="#题目原文" class="headerlink" title="题目原文"></a>题目原文</h2><p>A supply chain is a network of retailers（零售商）, distributors（经销商）, and suppliers（供应商）– everyone involved in moving a product from supplier to customer.</p>
-<p>Starting from one root supplier, everyone on the chain buys products from one’s supplier in a price <em>P</em> and sell or distribute them in a price that is <em>r</em>% higher than <em>P</em>. It is assumed that each member in the supply chain has exactly one supplier except the root supplier, and there is no supply cycle.</p>
-<p>Now given a supply chain, you are supposed to tell the highest price we can expect from some retailers.</p>
-<h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case. For each case, The first line contains three positive numbers: <em>N</em> (≤105), the total number of the members in the supply chain (and hence they are numbered from 0 to <em>N</em>−1); <em>P</em>, the price given by the root supplier; and <em>r</em>, the percentage rate of price increment for each distributor or retailer. Then the next line contains <em>N</em> numbers, each number <em>S**i</em> is the index of the supplier for the <em>i</em>-th member. <em>S<strong>r</strong>o<strong>o</strong>t</em> for the root supplier is defined to be −1. All the numbers in a line are separated by a space.</p>
-<h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each test case, print in one line the highest price we can expect from some retailers, accurate up to 2 decimal places, and the number of retailers that sell at the highest price. There must be one space between the two numbers. It is guaranteed that the price will not exceed 1010.</p>
-<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">9 1.80 1.00</span><br><span class="line">1 5 4 4 -1 4 5 3 6</span><br></pre></td></tr></table></figure>
-
-<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.85 2</span><br></pre></td></tr></table></figure>
-
-<h2 id="生词如下"><a href="#生词如下" class="headerlink" title="生词如下:"></a>生词如下:</h2><p>不太有,都看懂了.因为这题和1079蛮像的.结果也都差不多,就改几句代码就OK了.用的还是柳神的板子</p>
-<h2 id="思路如下"><a href="#思路如下" class="headerlink" title="思路如下:"></a>思路如下:</h2><p>就是DFS深度一起过一遍.然后加几个if判断语句.找出最长的长度有没有相同的.</p>
-<p>还有算出深度.</p>
-<h2 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下:"></a>代码如下:</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> data;</span><br><span class="line">    <span class="keyword">int</span> level;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; child;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">vector</span>&lt;node&gt; v;</span><br><span class="line"><span class="keyword">int</span> result=<span class="number">0</span>,ans=<span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> index,<span class="keyword">int</span> depth)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (v[index].child.size() == <span class="number">0</span>)     <span class="keyword">return</span> depth;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; v[index].child.size(); i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (depth + <span class="number">1</span> &gt; result) &#123;</span><br><span class="line">            result = depth+<span class="number">1</span>;</span><br><span class="line">            ans = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (depth + <span class="number">1</span> == result) ans++;</span><br><span class="line">        dfs(v[index].child[i], depth + <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,root=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">double</span> p, r;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%lf%lf&quot;</span>, &amp;n, &amp;p, &amp;r);</span><br><span class="line">    v.resize(n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;v[i].data);</span><br><span class="line">        <span class="keyword">if</span> (v[i].data == <span class="number">-1</span>)    root = i;</span><br><span class="line">        <span class="keyword">else</span>    v[v[i].data].child.push_back(i);</span><br><span class="line">    &#125;</span><br><span class="line">    dfs(root,<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%.2lf %d&quot;</span>,p*<span class="built_in">pow</span>((<span class="number">1</span>+r/<span class="number">100.0</span>), result),ans+<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>柳神的思路和我的一模一样,就不贴了.</p>
-<p>但是有趣的是.</p>
-<p>柳神的代码中比我的好的地方贴一下.</p>
-<p>柳神的代码</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> index, <span class="keyword">int</span> depth)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(v[index].size() == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span>(maxdepth == depth)</span><br><span class="line">            maxnum++;</span><br><span class="line">        <span class="keyword">if</span>(maxdepth &lt; depth) &#123;</span><br><span class="line">            maxdepth = depth;</span><br><span class="line">            maxnum = <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; v[index].size(); i++)</span><br><span class="line">        dfs(v[index][i], depth + <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>他的比较是在==0 哪里写的,这样可以少比较很多次.</p>
-<p>比我的代码要好.</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>树的遍历.这个可以算是模板了.</p>
-<p>需要的东西在向上加.</p>
-<p>非常的好用的模板.</p>
-<p>要学会灵活的改</p>
-<p>自己的小错误还是太多了,导致我改了不少时间.</p>
-<p>如果这篇文章对你有张帮助的话,可以用你高贵的小手给我点一个免费的赞吗</p>
-<p>相信我，你也能变成光.</p>
-<p><img src="https://img-blog.csdnimg.cn/20200607184932978.bmp" alt="在这里插入图片描述"></p>
-<p>如果你有任何建议,或者是发现了我的错误,欢迎评论留言指出.</p>
-]]></content>
-      <categories>
-        <category>刷题</category>
-        <category>PAT</category>
-      </categories>
-      <tags>
-        <tag>树的遍历</tag>
-        <tag>DFS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>PTA 1091 Acute Stroke (30分)</title>
     <url>/2020/10/08/PTA%201091-Acute-Stroke-30%E5%88%86/</url>
     <content><![CDATA[<p>强烈推荐,刷PTA的朋友都认识一下柳神–PTA解法大佬</p>
@@ -1187,6 +1134,59 @@
       <tags>
         <tag>BFS</tag>
         <tag>广度优先搜索</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PTA 1090 Highest Price in Supply Chain (25分)</title>
+    <url>/2020/10/14/PTA%201090-Highest-Price-in-Supply-Chain-25%E5%88%86/</url>
+    <content><![CDATA[<p>强烈推荐,刷PTA的朋友都认识一下柳神–PTA解法大佬</p>
+<p>本文由参考于柳神博客写成</p>
+<p><a href="https://blog.csdn.net/liuchuo">柳神的CSDN博客,这个可以搜索文章</a></p>
+<p><a href="https://www.liuchuo.net/">柳神的个人博客,这个没有广告,但是不能搜索</a></p>
+<p>还有就是非常非常有用的 算法笔记 全名是</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">算法笔记  上级训练实战指南		<span class="regexp">//</span>这本都是PTA的题解</span><br><span class="line">算法笔记</span><br></pre></td></tr></table></figure>
+
+<p>PS 今天也要加油鸭</p>
+<p><img src="https://img-blog.csdnimg.cn/20200924160038229.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<h2 id="题目原文"><a href="#题目原文" class="headerlink" title="题目原文"></a>题目原文</h2><p>A supply chain is a network of retailers（零售商）, distributors（经销商）, and suppliers（供应商）– everyone involved in moving a product from supplier to customer.</p>
+<p>Starting from one root supplier, everyone on the chain buys products from one’s supplier in a price <em>P</em> and sell or distribute them in a price that is <em>r</em>% higher than <em>P</em>. It is assumed that each member in the supply chain has exactly one supplier except the root supplier, and there is no supply cycle.</p>
+<p>Now given a supply chain, you are supposed to tell the highest price we can expect from some retailers.</p>
+<h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case. For each case, The first line contains three positive numbers: <em>N</em> (≤105), the total number of the members in the supply chain (and hence they are numbered from 0 to <em>N</em>−1); <em>P</em>, the price given by the root supplier; and <em>r</em>, the percentage rate of price increment for each distributor or retailer. Then the next line contains <em>N</em> numbers, each number <em>S**i</em> is the index of the supplier for the <em>i</em>-th member. <em>S<strong>r</strong>o<strong>o</strong>t</em> for the root supplier is defined to be −1. All the numbers in a line are separated by a space.</p>
+<h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each test case, print in one line the highest price we can expect from some retailers, accurate up to 2 decimal places, and the number of retailers that sell at the highest price. There must be one space between the two numbers. It is guaranteed that the price will not exceed 1010.</p>
+<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">9 1.80 1.00</span><br><span class="line">1 5 4 4 -1 4 5 3 6</span><br></pre></td></tr></table></figure>
+
+<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.85 2</span><br></pre></td></tr></table></figure>
+
+<h2 id="生词如下"><a href="#生词如下" class="headerlink" title="生词如下:"></a>生词如下:</h2><p>不太有,都看懂了.因为这题和1079蛮像的.结果也都差不多,就改几句代码就OK了.用的还是柳神的板子</p>
+<h2 id="思路如下"><a href="#思路如下" class="headerlink" title="思路如下:"></a>思路如下:</h2><p>就是DFS深度一起过一遍.然后加几个if判断语句.找出最长的长度有没有相同的.</p>
+<p>还有算出深度.</p>
+<h2 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下:"></a>代码如下:</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> data;</span><br><span class="line">    <span class="keyword">int</span> level;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; child;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">vector</span>&lt;node&gt; v;</span><br><span class="line"><span class="keyword">int</span> result=<span class="number">0</span>,ans=<span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> index,<span class="keyword">int</span> depth)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (v[index].child.size() == <span class="number">0</span>)     <span class="keyword">return</span> depth;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; v[index].child.size(); i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (depth + <span class="number">1</span> &gt; result) &#123;</span><br><span class="line">            result = depth+<span class="number">1</span>;</span><br><span class="line">            ans = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (depth + <span class="number">1</span> == result) ans++;</span><br><span class="line">        dfs(v[index].child[i], depth + <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,root=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">double</span> p, r;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%lf%lf&quot;</span>, &amp;n, &amp;p, &amp;r);</span><br><span class="line">    v.resize(n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;v[i].data);</span><br><span class="line">        <span class="keyword">if</span> (v[i].data == <span class="number">-1</span>)    root = i;</span><br><span class="line">        <span class="keyword">else</span>    v[v[i].data].child.push_back(i);</span><br><span class="line">    &#125;</span><br><span class="line">    dfs(root,<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%.2lf %d&quot;</span>,p*<span class="built_in">pow</span>((<span class="number">1</span>+r/<span class="number">100.0</span>), result),ans+<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>柳神的思路和我的一模一样,就不贴了.</p>
+<p>但是有趣的是.</p>
+<p>柳神的代码中比我的好的地方贴一下.</p>
+<p>柳神的代码</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> index, <span class="keyword">int</span> depth)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(v[index].size() == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span>(maxdepth == depth)</span><br><span class="line">            maxnum++;</span><br><span class="line">        <span class="keyword">if</span>(maxdepth &lt; depth) &#123;</span><br><span class="line">            maxdepth = depth;</span><br><span class="line">            maxnum = <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; v[index].size(); i++)</span><br><span class="line">        dfs(v[index][i], depth + <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>他的比较是在==0 哪里写的,这样可以少比较很多次.</p>
+<p>比我的代码要好.</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>树的遍历.这个可以算是模板了.</p>
+<p>需要的东西在向上加.</p>
+<p>非常的好用的模板.</p>
+<p>要学会灵活的改</p>
+<p>自己的小错误还是太多了,导致我改了不少时间.</p>
+<p>如果这篇文章对你有张帮助的话,可以用你高贵的小手给我点一个免费的赞吗</p>
+<p>相信我，你也能变成光.</p>
+<p><img src="https://img-blog.csdnimg.cn/20200607184932978.bmp" alt="在这里插入图片描述"></p>
+<p>如果你有任何建议,或者是发现了我的错误,欢迎评论留言指出.</p>
+]]></content>
+      <categories>
+        <category>刷题</category>
+        <category>PAT</category>
+      </categories>
+      <tags>
+        <tag>树的遍历</tag>
+        <tag>DFS</tag>
       </tags>
   </entry>
   <entry>
