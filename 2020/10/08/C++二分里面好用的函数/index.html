@@ -220,7 +220,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">51</span>
+          <span class="site-state-item-count">52</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -233,7 +233,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">38</span>
+        <span class="site-state-item-count">39</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -334,7 +334,6 @@
 <p>返回一个迭代器,指向第一个不小于val的值的地址,也要减去数列的起始地址才是下标</p>
 <p>下面是官方的解释代码</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// lower_bound/upper_bound example</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;     // std::cout</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;    // std::lower_bound, std::upper_bound, std::sort</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;       // std::vector</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span> myints[] = &#123;<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">30</span>,<span class="number">20</span>,<span class="number">10</span>,<span class="number">10</span>,<span class="number">20</span>&#125;;</span><br><span class="line">  <span class="function"><span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">v</span><span class="params">(myints,myints+<span class="number">8</span>)</span></span>;           <span class="comment">// 10 20 30 30 20 10 10 20</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">std</span>::sort (v.begin(), v.end());                <span class="comment">// 10 10 10 20 20 20 30 30</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator low,up;</span><br><span class="line">  low=<span class="built_in">std</span>::lower_bound (v.begin(), v.end(), <span class="number">20</span>); <span class="comment">//          ^</span></span><br><span class="line">  up= <span class="built_in">std</span>::upper_bound (v.begin(), v.end(), <span class="number">20</span>); <span class="comment">//                   ^</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;lower_bound at position &quot;</span> &lt;&lt; (low- v.begin()) &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;upper_bound at position &quot;</span> &lt;&lt; (up - v.begin()) &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>官方解释文档如下</p>
 <p><a target="_blank" rel="noopener" href="http://www.cplusplus.com/reference/algorithm/lower_bound/">http://www.cplusplus.com/reference/algorithm/lower_bound/</a></p>
 <p><a target="_blank" rel="noopener" href="http://www.cplusplus.com/reference/algorithm/upper_bound/">http://www.cplusplus.com/reference/algorithm/upper_bound/</a></p>
@@ -454,6 +453,8 @@
 
 
 
+
+  
 
   
 

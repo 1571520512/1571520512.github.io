@@ -222,7 +222,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">51</span>
+          <span class="site-state-item-count">52</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -235,7 +235,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">38</span>
+        <span class="site-state-item-count">39</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -327,27 +327,23 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>强烈推荐,刷PTA的朋友都认识一下柳神–PTA解法大佬</p>
+        <p>强烈推荐,刷PTA的朋友都认识一下柳神—PTA解法大佬</p>
 <p>本文由参考于柳神博客写成</p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/liuchuo">柳神的CSDN博客,这个可以搜索文章</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.liuchuo.net/">柳神的个人博客,这个没有广告,但是不能搜索</a></p>
 <p>还有就是非常非常有用的 算法笔记 全名是</p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">算法笔记  上级训练实战指南		<span class="regexp">//</span>这本都是PTA的题解</span><br><span class="line">算法笔记</span><br></pre></td></tr></table></figure>
-
 <p>PS 今天也要加油鸭</p>
 <p><img src="https://img-blog.csdnimg.cn/20200924160038229.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
 <h2 id="题目原文"><a href="#题目原文" class="headerlink" title="题目原文"></a>题目原文</h2><p>A family hierarchy is usually presented by a pedigree tree. Your job is to count those family members who have no child.</p>
 <h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case. Each case starts with a line containing 0&lt;<em>N</em>&lt;100, the number of nodes in a tree, and <em>M</em> (&lt;<em>N</em>), the number of non-leaf nodes. Then <em>M</em> lines follow, each in the format:</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ID</span> <span class="selector-tag">K</span> <span class="selector-tag">ID</span><span class="selector-attr">[1]</span> <span class="selector-tag">ID</span><span class="selector-attr">[2]</span> ... <span class="selector-tag">ID</span><span class="selector-attr">[K]</span></span><br></pre></td></tr></table></figure>
-
 <p>where <code>ID</code> is a two-digit number representing a given non-leaf node, <code>K</code> is the number of its children, followed by a sequence of two-digit <code>ID</code>‘s of its children. For the sake of simplicity, let us fix the root ID to be <code>01</code>.</p>
 <p>The input ends with <em>N</em> being 0. That case must NOT be processed.</p>
 <h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each test case, you are supposed to count those family members who have no child <strong>for every seniority level</strong> starting from the root. The numbers must be printed in a line, separated by a space, and there must be no extra space at the end of each line.</p>
 <p>The sample case represents a tree with only 2 nodes, where <code>01</code> is the root and <code>02</code> is its only child. Hence on the root <code>01</code> level, there is <code>0</code> leaf node; and on the next level, there is <code>1</code> leaf node. Then we should output <code>0 1</code> in a line.</p>
 <h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2 1</span><br><span class="line">01 1 02</span><br></pre></td></tr></table></figure>
-
 <h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0 1</span><br></pre></td></tr></table></figure>
-
 <h2 id="生词如下"><a href="#生词如下" class="headerlink" title="生词如下:"></a>生词如下:</h2><p>这里确实有些词看不懂,就感觉做不出来了.</p>
 <p>我的问题,这里还有一个节点的问题,搞错了,没有理解.</p>
 <p>太菜了.</p>
@@ -357,7 +353,6 @@
 <h2 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意:"></a>题目大意:</h2><p>就是给你一个树,然后让你算出每一层的叶子节点.</p>
 <h2 id="思路如下"><a href="#思路如下" class="headerlink" title="思路如下:"></a>思路如下:</h2><p>就是套公式,然后带进去就OK了</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v[<span class="number">105</span>];</span><br><span class="line"><span class="keyword">int</span> level[<span class="number">105</span>] = &#123;<span class="number">0</span>&#125;, treedepth = <span class="number">-1</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> index, <span class="keyword">int</span> depth)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (v[index].size() == <span class="number">0</span>) &#123;</span><br><span class="line">		<span class="keyword">if</span> (depth &gt; treedepth)	treedepth = depth;</span><br><span class="line">		level[depth]++;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; v[index].size(); ++i) </span><br><span class="line">		dfs(v[index][i], depth + <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n = <span class="number">0</span>, m = <span class="number">0</span>,id=<span class="number">0</span>,child_num=<span class="number">0</span>,t=<span class="number">0</span>;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;n, &amp;m);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; ++i) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;id,&amp;child_num);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; child_num; ++j) &#123;</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;t);</span><br><span class="line">			v[id].push_back(t);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	dfs(<span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;treedepth; ++i) </span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, level[i]);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, level[treedepth]);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>这次,柳神的代码和我的是真的差不多.有兴趣的自己去看</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结:"></a>总结:</h2><p>有点会了这种题,也是刷了好几道了.</p>
 <p>要注意细小的差别.</p>
@@ -483,6 +478,8 @@
 
 
 
+
+  
 
   
 

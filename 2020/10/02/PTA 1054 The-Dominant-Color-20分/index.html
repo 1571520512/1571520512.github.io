@@ -22,12 +22,12 @@
     var CONFIG = {"hostname":"camilleferros.top","root":"/","scheme":"Muse","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="强烈推荐,刷PTA的朋友都认识一下柳神–PTA解法大佬 本文由参考于柳神博客写成 柳神的CSDN博客,这个可以搜索文章 柳神的个人博客,这个没有广告,但是不能搜索 PS 今天也要加油鸭  题目原文Behind the scenes in the computer’s memory, color is always talked about as a series of 24 bits of inf">
+  <meta name="description" content="强烈推荐,刷PTA的朋友都认识一下柳神—PTA解法大佬 本文由参考于柳神博客写成 柳神的CSDN博客,这个可以搜索文章 柳神的个人博客,这个没有广告,但是不能搜索 PS 今天也要加油鸭  题目原文Behind the scenes in the computer’s memory, color is always talked about as a series of 24 bits of inf">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PTA 1054 The Dominant Color (20分)">
 <meta property="og:url" content="https://camilleferros.top/2020/10/02/PTA%201054%20The-Dominant-Color-20%E5%88%86/index.html">
 <meta property="og:site_name" content="Camille">
-<meta property="og:description" content="强烈推荐,刷PTA的朋友都认识一下柳神–PTA解法大佬 本文由参考于柳神博客写成 柳神的CSDN博客,这个可以搜索文章 柳神的个人博客,这个没有广告,但是不能搜索 PS 今天也要加油鸭  题目原文Behind the scenes in the computer’s memory, color is always talked about as a series of 24 bits of inf">
+<meta property="og:description" content="强烈推荐,刷PTA的朋友都认识一下柳神—PTA解法大佬 本文由参考于柳神博客写成 柳神的CSDN博客,这个可以搜索文章 柳神的个人博客,这个没有广告,但是不能搜索 PS 今天也要加油鸭  题目原文Behind the scenes in the computer’s memory, color is always talked about as a series of 24 bits of inf">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200924160038229.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200607184932978.bmp">
@@ -223,7 +223,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">51</span>
+          <span class="site-state-item-count">52</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -236,7 +236,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">38</span>
+        <span class="site-state-item-count">39</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -333,7 +333,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>强烈推荐,刷PTA的朋友都认识一下柳神–PTA解法大佬</p>
+        <p>强烈推荐,刷PTA的朋友都认识一下柳神—PTA解法大佬</p>
 <p>本文由参考于柳神博客写成</p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/liuchuo">柳神的CSDN博客,这个可以搜索文章</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.liuchuo.net/">柳神的个人博客,这个没有广告,但是不能搜索</a></p>
@@ -343,18 +343,13 @@
 <h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case. For each case, the first line contains 2 positive numbers: <em>M</em> (≤800) and <em>N</em> (≤600) which are the resolutions of the image. Then <em>N</em> lines follow, each contains <em>M</em> digital colors in the range [0,224). It is guaranteed that the strictly dominant color exists for each input image. All the numbers in a line are separated by a space.</p>
 <h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each test case, simply print the dominant color in a line.</p>
 <h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">5 3</span><br><span class="line">0 0 255 16777215 24</span><br><span class="line">24 24 0 0 24</span><br><span class="line">24 0 24 24 24</span><br></pre></td></tr></table></figure>
-
 <h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">24</span><br></pre></td></tr></table></figure>
-
 <h2 id="生词如下"><a href="#生词如下" class="headerlink" title="生词如下:"></a>生词如下:</h2><p><strong>strictly</strong>    严格的</p>
 <h2 id="题目大意："><a href="#题目大意：" class="headerlink" title="题目大意："></a>题目大意：</h2><p>PS 吐槽,这应该是我做过的最简单的一题PTA了</p>
 <p>就是给你N行 一行M个数字.</p>
 <p>然后让你算这些个数字里面那个出现的次数超过了一半,那么这个数字就是主要的颜色.</p>
 <h2 id="思路如下"><a href="#思路如下" class="headerlink" title="思路如下:"></a>思路如下:</h2><p>一个Map解决问题.</p>
 <h2 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下:"></a>代码如下:</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> M, N;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; M &gt;&gt; N;</span><br><span class="line">	<span class="built_in">string</span> a, result;</span><br><span class="line">	<span class="built_in">map</span>&lt;<span class="built_in">string</span>, <span class="keyword">int</span>&gt;Data;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; ++i) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; M; ++j) &#123;</span><br><span class="line">			<span class="built_in">cin</span> &gt;&gt; a;</span><br><span class="line">			Data[a]++;</span><br><span class="line">			<span class="keyword">if</span> (Data[a] &gt;= M * N / <span class="number">2</span>) &#123;</span><br><span class="line">				result = a;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; result;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
 <p>如果这篇文章对你有张帮助的话,可以用你高贵的小手给我点一个免费的赞吗</p>
 <p>相信我，你也能变成光.</p>
 <p><img src="https://img-blog.csdnimg.cn/20200607184932978.bmp" alt="在这里插入图片描述"></p>
@@ -375,8 +370,8 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2020/10/02/PTA%201001%20A-B-Format-20%E5%88%86/" rel="prev" title="PTA 1001 A+B Format (20分)">
-                  <i class="fa fa-chevron-left"></i> PTA 1001 A+B Format (20分)
+                <a href="/2020/10/02/PTA%201002%20A+B%20for%20Polynomials%20(25%E5%88%86)/" rel="prev" title="PTA 1002 A+B for Polynomials (25分)">
+                  <i class="fa fa-chevron-left"></i> PTA 1002 A+B for Polynomials (25分)
                 </a>
             </div>
             <div class="post-nav-item">
@@ -475,6 +470,8 @@
 
 
 
+
+  
 
   
 

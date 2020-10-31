@@ -221,7 +221,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">51</span>
+          <span class="site-state-item-count">52</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -234,7 +234,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">38</span>
+        <span class="site-state-item-count">39</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -327,19 +327,15 @@
     <div class="post-body" itemprop="articleBody">
         <h1 id="进制转换里面的一些函数"><a href="#进制转换里面的一些函数" class="headerlink" title="进制转换里面的一些函数"></a>进制转换里面的一些函数</h1><p>C++里面自己写的函数（可以转换2-36的函数）</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">convert</span><span class="params">(<span class="built_in">string</span> n, <span class="keyword">long</span> <span class="keyword">long</span> radix)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> index = <span class="number">0</span>, temp = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> it = n.rbegin(); it != n.rend(); it++) &#123;</span><br><span class="line">        temp = <span class="built_in">isdigit</span>(*it) ? *it - <span class="string">&#x27;0&#x27;</span> : *it - <span class="string">&#x27;a&#x27;</span> + <span class="number">10</span>;</span><br><span class="line">        sum += temp * <span class="built_in">pow</span>(radix, index++);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <h2 id="String类型转换成int类型"><a href="#String类型转换成int类型" class="headerlink" title="String类型转换成int类型"></a>String类型转换成int类型</h2><p>注意,atoi直接放string类型是不对的,因为atoi里面的参数只能是char *的类型</p>
 <p>如果是string类型的话.一定要加一个  .c_str()</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* atoi example */</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;      /* printf, fgets */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;     /* atoi */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> i;</span><br><span class="line">  <span class="built_in">string</span> a=<span class="string">&quot;123&quot;</span>;</span><br><span class="line">  i = atoi(a.c_str());</span><br><span class="line">  <span class="built_in">printf</span> (<span class="string">&quot;%d&quot;</span>,i);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <h2 id="int-类型转换成string类型"><a href="#int-类型转换成string类型" class="headerlink" title="int 类型转换成string类型"></a>int 类型转换成string类型</h2><p>就是我们常用的</p>
 <p>to_string(a) a的类型是int</p>
 <p>需要的头文件为string</p>
 <p>例子如下:</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a=<span class="number">123</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;to_string(a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <h2 id="任意之间的进制转换"><a href="#任意之间的进制转换" class="headerlink" title="任意之间的进制转换"></a>任意之间的进制转换</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">int</span> len = <span class="number">0</span>, arr[<span class="number">100</span>];</span><br><span class="line"> <span class="keyword">do</span> &#123;</span><br><span class="line">     arr[len++] = n % d;</span><br><span class="line">	n = n / d;</span><br><span class="line"> &#125; <span class="keyword">while</span> (n != <span class="number">0</span>);</span><br><span class="line"><span class="comment">//柳神的老方法了.专门用来转换进制的.自己写的时候,忘记了.</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++)</span><br><span class="line">    n = n * d + arr[i];</span><br></pre></td></tr></table></figure>
-
 
     </div>
 
@@ -457,6 +453,8 @@
 
 
 
+
+  
 
   
 

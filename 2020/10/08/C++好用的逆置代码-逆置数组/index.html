@@ -22,12 +22,12 @@
     var CONFIG = {"hostname":"camilleferros.top","root":"/","scheme":"Muse","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="好用的逆置代码-逆置数组123for (int i &#x3D; 0; i &lt; (sum - sum % k); i++)        &#x2F;&#x2F;i &#x2F; k * k + k - 1 - i % k 这个代码,我是想不出来的.有点秀的.        result[i] &#x3D; list[i &#x2F; k * k + k - 1 - i % k];  sum是总长度 然后K是我们要逆置的段  打个比方  1 2 3">
+  <meta name="description" content="好用的逆置代码-逆置数组123for (int i &#x3D; 0; i &lt; (sum - sum % k); i++)        &#x2F;&#x2F;i &#x2F; k * k + k - 1 - i % k 这个代码,我是想不出来的.有点秀的.        result[i] &#x3D; list[i &#x2F; k * k + k - 1 - i % k]; sum是总长度 然后K是我们要逆置的段  打个比方  1 2 3 4">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++好用的逆置代码-逆置数组">
 <meta property="og:url" content="https://camilleferros.top/2020/10/08/C++%E5%A5%BD%E7%94%A8%E7%9A%84%E9%80%86%E7%BD%AE%E4%BB%A3%E7%A0%81-%E9%80%86%E7%BD%AE%E6%95%B0%E7%BB%84/index.html">
 <meta property="og:site_name" content="Camille">
-<meta property="og:description" content="好用的逆置代码-逆置数组123for (int i &#x3D; 0; i &lt; (sum - sum % k); i++)        &#x2F;&#x2F;i &#x2F; k * k + k - 1 - i % k 这个代码,我是想不出来的.有点秀的.        result[i] &#x3D; list[i &#x2F; k * k + k - 1 - i % k];  sum是总长度 然后K是我们要逆置的段  打个比方  1 2 3">
+<meta property="og:description" content="好用的逆置代码-逆置数组123for (int i &#x3D; 0; i &lt; (sum - sum % k); i++)        &#x2F;&#x2F;i &#x2F; k * k + k - 1 - i % k 这个代码,我是想不出来的.有点秀的.        result[i] &#x3D; list[i &#x2F; k * k + k - 1 - i % k]; sum是总长度 然后K是我们要逆置的段  打个比方  1 2 3 4">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-10-08T09:29:36.000Z">
 <meta property="article:modified_time" content="2020-10-08T09:30:15.276Z">
@@ -220,7 +220,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">51</span>
+          <span class="site-state-item-count">52</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -233,7 +233,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">38</span>
+        <span class="site-state-item-count">39</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -321,7 +321,6 @@
     
     <div class="post-body" itemprop="articleBody">
         <h1 id="好用的逆置代码-逆置数组"><a href="#好用的逆置代码-逆置数组" class="headerlink" title="好用的逆置代码-逆置数组"></a>好用的逆置代码-逆置数组</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; (sum - sum % k); i++)</span><br><span class="line">        <span class="comment">//i / k * k + k - 1 - i % k 这个代码,我是想不出来的.有点秀的.</span></span><br><span class="line">        result[i] = <span class="built_in">list</span>[i / k * k + k - <span class="number">1</span> - i % k];</span><br></pre></td></tr></table></figure>
-
 <p>sum是总长度 然后K是我们要逆置的段  打个比方</p>
 <p> 1 2 3 4 5 6 7   我们要每两个逆置</p>
 <p>2 1 4 3 6 5 7    这个2 就是 k</p>
@@ -438,6 +437,8 @@
 
 
 
+
+  
 
   
 

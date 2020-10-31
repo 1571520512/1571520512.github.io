@@ -222,7 +222,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">51</span>
+          <span class="site-state-item-count">52</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -235,7 +235,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">38</span>
+        <span class="site-state-item-count">39</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -327,13 +327,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>强烈推荐,刷PTA的朋友都认识一下柳神–PTA解法大佬</p>
+        <p>强烈推荐,刷PTA的朋友都认识一下柳神—PTA解法大佬</p>
 <p>本文由参考于柳神博客写成</p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/liuchuo">柳神的CSDN博客,这个可以搜索文章</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.liuchuo.net/">柳神的个人博客,这个没有广告,但是不能搜索</a></p>
 <p>还有就是非常非常有用的 算法笔记 全名是</p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">算法笔记  上级训练实战指南		<span class="regexp">//</span>这本都是PTA的题解</span><br><span class="line">算法笔记</span><br></pre></td></tr></table></figure>
-
 <p>PS 今天也要加油鸭</p>
 <p><img src="https://img-blog.csdnimg.cn/20200924160038229.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
 <h2 id="题目原文"><a href="#题目原文" class="headerlink" title="题目原文"></a>题目原文</h2><p>A Binary Search Tree (BST) is recursively defined as a binary tree which has the following properties:</p>
@@ -347,9 +346,7 @@
 <h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case. For each case, the first line contains a positive integer <em>N</em> (≤1000). Then <em>N</em> distinct non-negative integer keys are given in the next line. All the numbers in a line are separated by a space and are no greater than 2000.</p>
 <h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each test case, print in one line the level order traversal sequence of the corresponding complete binary search tree. All the numbers in a line must be separated by a space, and there must be no extra space at the end of the line.</p>
 <h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">10</span><br><span class="line">1 2 3 4 5 6 7 8 9 0</span><br></pre></td></tr></table></figure>
-
 <h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">6 3 8 1 5 7 9 0 2 4</span><br></pre></td></tr></table></figure>
-
 <h2 id="生词如下"><a href="#生词如下" class="headerlink" title="生词如下:"></a>生词如下:</h2><p>没有,都看懂了.</p>
 <p>PS:我自己把自己气的脑溢血了.</p>
 <p>二叉树的性质都没有用上.</p>
@@ -358,7 +355,6 @@
 <h2 id="思路如下"><a href="#思路如下" class="headerlink" title="思路如下:"></a>思路如下:</h2><p>二叉树的性质是.中序遍历的结果一定是有序的.</p>
 <p>我们只有把序列.排序一下.再中序遍历一遍.得到的二叉树就是完全二叉树了</p>
 <h2 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下:"></a>代码如下:</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> Data[<span class="number">1010</span>], CBT[<span class="number">1010</span>],index=<span class="number">0</span>,n=<span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">inOrder</span><span class="params">(<span class="keyword">int</span> root)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (root &gt; n)	<span class="keyword">return</span>;</span><br><span class="line">	inOrder(root * <span class="number">2</span>);</span><br><span class="line">	CBT[root] = Data[index++];</span><br><span class="line">	inOrder(root * <span class="number">2</span> + <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i)	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;Data[i]);</span><br><span class="line">	sort(Data, Data+n);				<span class="comment">//进行排序</span></span><br><span class="line">	inOrder(<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; ++i) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, CBT[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, CBT[n]);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>我真的太菜了</p>
 <p>如果这篇文章对你有张帮助的话,可以用你高贵的小手给我点一个免费的赞吗</p>
 <p>相信我，你也能变成光.</p>
@@ -481,6 +477,8 @@
 
 
 
+
+  
 
   
 

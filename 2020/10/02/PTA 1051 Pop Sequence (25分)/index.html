@@ -22,12 +22,12 @@
     var CONFIG = {"hostname":"camilleferros.top","root":"/","scheme":"Muse","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="强烈推荐,刷PTA的朋友都认识一下柳神–PTA解法大佬 本文由参考于柳神博客写成 柳神的CSDN博客,这个可以搜索文章 柳神的个人博客,这个没有广告,但是不能搜索 PS 今天也要加油鸭  题目原文Given a stack which can keep M numbers at most. Push N numbers in the order of 1, 2, 3, …, N and pop r">
+  <meta name="description" content="强烈推荐,刷PTA的朋友都认识一下柳神—PTA解法大佬 本文由参考于柳神博客写成 柳神的CSDN博客,这个可以搜索文章 柳神的个人博客,这个没有广告,但是不能搜索 PS 今天也要加油鸭  题目原文Given a stack which can keep M numbers at most. Push N numbers in the order of 1, 2, 3, …, N and pop r">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PTA 1051 Pop Sequence (25分)">
 <meta property="og:url" content="https://camilleferros.top/2020/10/02/PTA%201051%20Pop%20Sequence%20(25%E5%88%86)/index.html">
 <meta property="og:site_name" content="Camille">
-<meta property="og:description" content="强烈推荐,刷PTA的朋友都认识一下柳神–PTA解法大佬 本文由参考于柳神博客写成 柳神的CSDN博客,这个可以搜索文章 柳神的个人博客,这个没有广告,但是不能搜索 PS 今天也要加油鸭  题目原文Given a stack which can keep M numbers at most. Push N numbers in the order of 1, 2, 3, …, N and pop r">
+<meta property="og:description" content="强烈推荐,刷PTA的朋友都认识一下柳神—PTA解法大佬 本文由参考于柳神博客写成 柳神的CSDN博客,这个可以搜索文章 柳神的个人博客,这个没有广告,但是不能搜索 PS 今天也要加油鸭  题目原文Given a stack which can keep M numbers at most. Push N numbers in the order of 1, 2, 3, …, N and pop r">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200924160038229.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200607184932978.bmp">
@@ -223,7 +223,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">51</span>
+          <span class="site-state-item-count">52</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -236,7 +236,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">38</span>
+        <span class="site-state-item-count">39</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -333,7 +333,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>强烈推荐,刷PTA的朋友都认识一下柳神–PTA解法大佬</p>
+        <p>强烈推荐,刷PTA的朋友都认识一下柳神—PTA解法大佬</p>
 <p>本文由参考于柳神博客写成</p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/liuchuo">柳神的CSDN博客,这个可以搜索文章</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.liuchuo.net/">柳神的个人博客,这个没有广告,但是不能搜索</a></p>
@@ -343,14 +343,11 @@
 <h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case. For each case, the first line contains 3 numbers (all no more than 1000): <em>M</em> (the maximum capacity of the stack), <em>N</em> (the length of push sequence), and <em>K</em> (the number of pop sequences to be checked). Then <em>K</em> lines follow, each contains a pop sequence of <em>N</em> numbers. All the numbers in a line are separated by a space.</p>
 <h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each pop sequence, print in one line “YES” if it is indeed a possible pop sequence of the stack, or “NO” if not.</p>
 <h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">5 7 5</span><br><span class="line">1 2 3 4 5 6 7</span><br><span class="line">3 2 1 7 5 6 4</span><br><span class="line">7 6 5 4 3 2 1</span><br><span class="line">5 6 4 3 7 2 1</span><br><span class="line">1 7 6 5 4 3 2</span><br></pre></td></tr></table></figure>
-
 <h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">YES</span><br><span class="line">NO</span><br><span class="line">NO</span><br><span class="line">YES</span><br><span class="line">NO</span><br></pre></td></tr></table></figure>
-
 <h2 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意:"></a>题目大意:</h2><p>就是给你一个长度为M的栈</p>
 <p>然后给你一个固定的1要N的入栈顺序,问你能不能得出特定的出栈顺序.</p>
 <h2 id="柳神的思路如下"><a href="#柳神的思路如下" class="headerlink" title="柳神的思路如下:"></a>柳神的思路如下:</h2><p><strong>分析：按照要求进行模拟。先把输入的序列接收进数组v。然后按顺序1~n把数字进栈，每进入一个数字，判断有没有超过最大范围，超过了就break。如果没超过，设current = 1，从数组的第一个数字开始，看看是否与栈顶元素相等，while相等就一直弹出栈，不相等就继续按顺序把数字压入栈～～最后根据变量flag的bool值输出yes或者no～</strong></p>
 <h2 id="柳神的代码如下"><a href="#柳神的代码如下" class="headerlink" title="柳神的代码如下:"></a>柳神的代码如下:</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> m, n, k;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d %d&quot;</span>, &amp;m, &amp;n, &amp;k);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">        <span class="keyword">bool</span> flag = <span class="literal">false</span>;</span><br><span class="line">        <span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; s;</span><br><span class="line">        <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">v</span><span class="params">(n + <span class="number">1</span>)</span></span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; j++)</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;v[j]);</span><br><span class="line">        <span class="keyword">int</span> current = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; j++) &#123;</span><br><span class="line">            s.push(j);</span><br><span class="line">            <span class="keyword">if</span>(s.size() &gt; m) <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">while</span>(!s.empty() &amp;&amp; s.top() == v[current]) &#123;</span><br><span class="line">                s.pop();</span><br><span class="line">                current++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(current == n + <span class="number">1</span>) flag = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">if</span>(flag) <span class="built_in">printf</span>(<span class="string">&quot;YES\n&quot;</span>);</span><br><span class="line">        <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">&quot;NO\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>如果这篇文章对你有张帮助的话,可以用你高贵的小手给我点一个免费的赞吗</p>
 <p>相信我，你也能变成光.</p>
 <p><img src="https://img-blog.csdnimg.cn/20200607184932978.bmp" alt="在这里插入图片描述"></p>
@@ -371,13 +368,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2020/10/02/PTA%201074%20Reversing%20Linked%20List%20(25%E5%88%86)/" rel="prev" title="PTA 1056 Mice and Rice (25分)">
+                <a href="/2020/10/02/PTA%201052%20Linked%20List%20Sorting%20(25%E5%88%86)/" rel="prev" title="PTA 1056 Mice and Rice (25分)">
                   <i class="fa fa-chevron-left"></i> PTA 1056 Mice and Rice (25分)
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2020/10/02/PTA%201071%20Speech-Patterns-25%E5%88%86/" rel="next" title="PTA 1071 Speech Patterns (25分)">
-                  PTA 1071 Speech Patterns (25分) <i class="fa fa-chevron-right"></i>
+                <a href="/2020/10/02/PTA%201032%20Sharing%20(25%E5%88%86)/" rel="next" title="PTA 1056 Mice and Rice (25分)">
+                  PTA 1056 Mice and Rice (25分) <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -471,6 +468,8 @@
 
 
 
+
+  
 
   
 
