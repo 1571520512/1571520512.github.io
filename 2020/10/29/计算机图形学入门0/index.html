@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-fire-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-fire-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.0/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"camilleferros.top","root":"/","scheme":"Muse","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+  <meta property="og:type" content="article">
+<meta property="og:title" content="计算机图形学入门">
+<meta property="og:url" content="https://camilleferros.top/2020/10/29/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%85%A5%E9%97%A80/index.html">
+<meta property="og:site_name" content="Camille">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020101712555280.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201018130843709.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201019164115428.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201019164847607.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201019170423573.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="article:published_time" content="2020-10-29T14:25:02.000Z">
+<meta property="article:modified_time" content="2020-10-31T14:59:49.407Z">
+<meta property="article:author" content="Camille">
+<meta property="article:tag" content="图形学">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/2020101712555280.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center">
+
+
+<link rel="canonical" href="https://camilleferros.top/2020/10/29/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%85%A5%E9%97%A80/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>计算机图形学入门 | Camille</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Camille</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">你得先看重自己,否则别人就会当你一钱不值</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80"><span class="nav-number">1.</span> <span class="nav-text">基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%91%E9%87%8F"><span class="nav-number">1.1.</span> <span class="nav-text">向量:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%95%E4%BD%8D%E5%90%91%E9%87%8F%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">1.2.</span> <span class="nav-text">单位向量的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%B8%AA%E5%90%91%E9%87%8F-%E5%9C%A8%E5%9B%BE%E5%BD%A2%E5%AD%A6%E4%B8%AD-%E9%BB%98%E8%AE%A4%E7%9A%84%E5%B0%B1%E6%98%AF%E5%88%97%E5%90%91%E9%87%8F"><span class="nav-number">1.3.</span> <span class="nav-text">一个向量,在图形学中,默认的就是列向量.</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Dot-product"><span class="nav-number">1.3.1.</span> <span class="nav-text">Dot product</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%91%E9%87%8F%E7%82%B9%E4%B9%98%E7%9A%84%E5%B1%9E%E6%80%A7"><span class="nav-number">1.3.2.</span> <span class="nav-text">向量点乘的属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%95%E5%BD%B1%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">1.4.</span> <span class="nav-text">投影的概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Cross-product-%E5%8F%89%E4%B9%98"><span class="nav-number">1.4.1.</span> <span class="nav-text">Cross product 叉乘</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%98%E6%8D%A2"><span class="nav-number">2.</span> <span class="nav-text">变换</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Scale-%E6%94%B6%E7%BC%A9%E5%8F%98%E6%8D%A2"><span class="nav-number">2.1.</span> <span class="nav-text">Scale(收缩变换)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reflection-Matrix-%E5%8F%8D%E5%B0%84"><span class="nav-number">2.2.</span> <span class="nav-text">Reflection Matrix(反射)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Shear-Matrix-%E5%88%87%E5%8F%98"><span class="nav-number">2.3.</span> <span class="nav-text">Shear Matrix (切变)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Rotate-%E6%97%8B%E8%BD%AC"><span class="nav-number">2.4.</span> <span class="nav-text">Rotate(旋转)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Homogeneous-coordinates-%E5%85%B6%E6%AC%A1%E5%9D%90%E6%A0%87"><span class="nav-number">2.5.</span> <span class="nav-text">Homogeneous coordinates 其次坐标</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Homogenous-Coordinates"><span class="nav-number">2.5.1.</span> <span class="nav-text">Homogenous Coordinates</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B9%B3%E7%A7%BB%E7%9A%84%E5%8F%98%E6%8D%A2%E5%85%AC%E5%BC%8F"><span class="nav-number">2.5.2.</span> <span class="nav-text">平移的变换公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Homogenous-Coordinates-calculate-%E5%85%B6%E6%AC%A1%E5%9D%90%E6%A0%87-%E8%AE%A1%E7%AE%97"><span class="nav-number">2.5.3.</span> <span class="nav-text">Homogenous Coordinates   calculate 其次坐标  计算</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Affine-Transformations-%E4%BB%BF%E5%B0%84%E5%8F%98%E5%8C%96"><span class="nav-number">2.6.</span> <span class="nav-text">Affine Transformations 仿射变化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Scale-Coordinates"><span class="nav-number">2.6.1.</span> <span class="nav-text">Scale  Coordinates</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Rotation-Coordinates"><span class="nav-number">2.6.2.</span> <span class="nav-text">Rotation Coordinates</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Translation"><span class="nav-number">2.6.3.</span> <span class="nav-text">Translation</span></a></li></ol></li></ol></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Camille"
+      src="/images/Camille.jpg">
+  <p class="site-author-name" itemprop="name">Camille</p>
+  <div class="site-description" itemprop="description">效率，是成功的核心关键</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">232</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">65</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://camilleferros.top/2020/10/29/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%85%A5%E9%97%A80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Camille.jpg">
+      <meta itemprop="name" content="Camille">
+      <meta itemprop="description" content="效率，是成功的核心关键">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Camille">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          计算机图形学入门
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-10-29 22:25:02" itemprop="dateCreated datePublished" datetime="2020-10-29T22:25:02+08:00">2020-10-29</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2020-10-31 22:59:49" itemprop="dateModified" datetime="2020-10-31T22:59:49+08:00">2020-10-31</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%9B%BE%E5%BD%A2%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">图形学</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+            <div class="post-description"> </div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>本文是我再B站上GAMES101上的学习地址-地址如下:</p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1X7411F744">地址</a></p>
+<h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><h2 id="向量"><a href="#向量" class="headerlink" title="向量:"></a>向量:</h2><p>向量表示的是一个方向</p>
+<p>向量的两个属性:</p>
+<p>①:方向(核心属性)</p>
+<p>②:长度(非核心)</p>
+<h2 id="单位向量的定义"><a href="#单位向量的定义" class="headerlink" title="单位向量的定义"></a>单位向量的定义</h2><p>就是长度为1的向量</p>
+<p>向量的求和</p>
+<h2 id="一个向量-在图形学中-默认的就是列向量"><a href="#一个向量-在图形学中-默认的就是列向量" class="headerlink" title="一个向量,在图形学中,默认的就是列向量."></a>一个向量,在图形学中,默认的就是列向量.</h2><p>举个例子</p>
+<p>A(0,0)        B(2,3)</p>
+<script type="math/tex; mode=display">
+\vec{AB}</script><p>就可以表示为:</p>
+<script type="math/tex; mode=display">
+A=\begin{pmatrix}
+x \\y
+\end{pmatrix}</script><p>然后就是逆置,逆置</p>
+<script type="math/tex; mode=display">
+A^{T}=\begin{pmatrix}
+x ,& y
+\end{pmatrix}</script><p>向量的点乘(Dot product)和叉乘(Cross product)</p>
+<h3 id="Dot-product"><a href="#Dot-product" class="headerlink" title="Dot product"></a>Dot product</h3><p>给两个向量,然后他们之间的夹角</p>
+<script type="math/tex; mode=display">
+\vec{a}.\vec{b}=||\vec{a}||  ||\vec{b}|| Cos\Theta</script><h3 id="向量点乘的属性"><a href="#向量点乘的属性" class="headerlink" title="向量点乘的属性"></a>向量点乘的属性</h3><script type="math/tex; mode=display">
+\vec{a}.\vec{b}=\vec{b}.\vec{a}</script><script type="math/tex; mode=display">
+\vec{a}.(\vec{b}+\vec{c})=\vec{a}.\vec{b}+\vec{a}.\vec{c}</script><script type="math/tex; mode=display">
+(k\vec{a}).\vec{b}=\vec{a}.(k\vec{b})=k(\vec{a}.\vec{b})</script><p>然后我去好好的复习了一下,矩阵的乘法</p>
+<p>下面是一些古老的原则.</p>
+<p>矩阵一开始就是为了方便的表达 多项式之间的关系而出来的</p>
+<p>矩阵的乘法是很重要的.</p>
+<p>矩阵的乘法可以通过多项式之间的乘积来推导得出.</p>
+<p>Cartesian    笛卡尔积</p>
+<p>Coordiantates    坐标</p>
+<ul>
+<li>In2D</li>
+</ul>
+<script type="math/tex; mode=display">
+\vec{a}.\vec{b}=A=\begin{pmatrix}
+x_{a} \\ y_{a}
+\end{pmatrix}.\begin{pmatrix}
+x_{b} \\ y_{b}
+\end{pmatrix}=x_{a}*x_{b}+y_{a}*y_{b}</script><ul>
+<li>In3D</li>
+</ul>
+<script type="math/tex; mode=display">
+\vec{a}.\vec{b}.\vec{c}=A=\begin{pmatrix}
+x_{a} \\ y_{a}\\z_{a}
+\end{pmatrix}.\begin{pmatrix}
+x_{b} \\ y_{b}\\z_{b}
+\end{pmatrix}=x_{a}*x_{b}+y_{a}*y_{b}+z_{a}*z_{b}</script><p>点乘主要就是为了找出夹角</p>
+<h2 id="投影的概念"><a href="#投影的概念" class="headerlink" title="投影的概念"></a>投影的概念</h2><p><img src="https://img-blog.csdnimg.cn/2020101712555280.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<h3 id="Cross-product-叉乘"><a href="#Cross-product-叉乘" class="headerlink" title="Cross product 叉乘"></a>Cross product 叉乘</h3><p>向量的叉乘不满足交换律</p>
+<p>向量叉乘的公式</p>
+<script type="math/tex; mode=display">
+\vec{a}.\vec{b}=\begin{pmatrix}
+y_{a}z_{b} - y_{b}z_{a}\\ z_{a}x_{b} - x_{a}z_{b}\\x_{a}y_{b} - y_{a}x_{b}
+\end{pmatrix}</script><p>叉乘的主要目的是为了判定方向</p>
+<h1 id="变换"><a href="#变换" class="headerlink" title="变换"></a>变换</h1><h2 id="Scale-收缩变换"><a href="#Scale-收缩变换" class="headerlink" title="Scale(收缩变换)"></a>Scale(收缩变换)</h2><p>变换中有一点很重要的就是缩放</p>
+<p>举个例子:</p>
+<p><img src="https://img-blog.csdnimg.cn/20201018130843709.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<script type="math/tex; mode=display">
+_x{'}=sx</script><script type="math/tex; mode=display">
+_y{'}=sy</script><p>矩阵形式如下:</p>
+<script type="math/tex; mode=display">
+\begin{bmatrix}
+{x}'\\ {y}'
+
+\end{bmatrix}=\begin{bmatrix}
+s & 0\\ 
+0 & s
+\end{bmatrix} \begin{bmatrix}
+x\\ y
+
+\end{bmatrix}</script><p>S就是缩放的比例.</p>
+<p>这个式子还不是很完善的,X和Y的缩放比例不一定是一样的啊.</p>
+<script type="math/tex; mode=display">
+\begin{bmatrix}
+{x}'\\ {y}'
+
+\end{bmatrix}=\begin{bmatrix}
+s_{x} & 0\\ 
+0 & s_{y}
+\end{bmatrix} \begin{bmatrix}
+x\\ y
+
+\end{bmatrix}</script><h2 id="Reflection-Matrix-反射"><a href="#Reflection-Matrix-反射" class="headerlink" title="Reflection Matrix(反射)"></a>Reflection Matrix(反射)</h2><p><img src="https://img-blog.csdnimg.cn/20201019164115428.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<h2 id="Shear-Matrix-切变"><a href="#Shear-Matrix-切变" class="headerlink" title="Shear Matrix (切变)"></a>Shear Matrix (切变)</h2><p><img src="https://img-blog.csdnimg.cn/20201019164847607.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>这个图案,我们拉动的是x轴,y轴都是不变的</p>
+<script type="math/tex; mode=display">
+\begin{bmatrix}
+{x}'\\ {y}'
+
+\end{bmatrix}=\begin{bmatrix}
+1 & a\\ 
+0 & 1
+\end{bmatrix} \begin{bmatrix}
+x\\ y
+
+\end{bmatrix}</script><h2 id="Rotate-旋转"><a href="#Rotate-旋转" class="headerlink" title="Rotate(旋转)"></a>Rotate(旋转)</h2><p>默认情况下,我们默认旋转中心为(0,0)</p>
+<p>默认的选装方向是逆时针</p>
+<p>下面的公式也就是默认情况下的旋转公式</p>
+<p><img src="https://img-blog.csdnimg.cn/20201019170423573.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>Linear Transforms 线性变换</p>
+<p>Matrices     矩阵</p>
+<p>Linear Transforms = Matrices 是可以相互转换的  注意维度的问题</p>
+<p>Homogeneous coordinates    专有名词,齐次坐标</p>
+<h2 id="Homogeneous-coordinates-其次坐标"><a href="#Homogeneous-coordinates-其次坐标" class="headerlink" title="Homogeneous coordinates 其次坐标"></a>Homogeneous coordinates 其次坐标</h2><p> 首先我们要需要知道.平移变换的公式是什么</p>
+<p>公式如下:        非常的好理解,不理解的,可以问我.</p>
+<script type="math/tex; mode=display">
+\begin{bmatrix}
+{x}'\\ {y}'
+
+\end{bmatrix}=\begin{bmatrix}
+a & b\\ 
+c & d
+\end{bmatrix} \begin{bmatrix}
+x\\ y
+\end{bmatrix}+
+\begin{bmatrix}
+t_{x}\\ t_{y}
+
+\end{bmatrix}</script><p>平移变换并不是一个线性变换.</p>
+<p>那怎么解决这个问题呢.</p>
+<p>这时候,其次坐标就出现了.</p>
+<h3 id="Homogenous-Coordinates"><a href="#Homogenous-Coordinates" class="headerlink" title="Homogenous Coordinates"></a>Homogenous Coordinates</h3><p>我们增加一个维度在x,y上</p>
+<script type="math/tex; mode=display">
+2D point=\begin{pmatrix}
+ x \\y\\1
+\end{pmatrix}</script><script type="math/tex; mode=display">
+2D vector=\begin{pmatrix}
+ x \\y\\0
+\end{pmatrix}</script><h3 id="平移的变换公式"><a href="#平移的变换公式" class="headerlink" title="平移的变换公式"></a>平移的变换公式</h3><script type="math/tex; mode=display">
+\begin{pmatrix}
+ {x}'\\{y}'\\{w}'
+\end{pmatrix} 
+=
+\begin{pmatrix}
+  1& 0 & t_{x}\\
+  0& 1 & t_{y}\\
+  0& 0 & 1 
+\end{pmatrix}
+\cdot 
+\begin{pmatrix}
+x\\y \\ 1
+\end{pmatrix}
+=
+\begin{pmatrix}
+x+t_{x}\\ y+t_{y}\\1
+\end{pmatrix}</script><h3 id="Homogenous-Coordinates-calculate-其次坐标-计算"><a href="#Homogenous-Coordinates-calculate-其次坐标-计算" class="headerlink" title="Homogenous Coordinates   calculate 其次坐标  计算"></a>Homogenous Coordinates   calculate 其次坐标  计算</h3><p>vector + vector =vector</p>
+<p>point - point =vector</p>
+<p>point +vector=point</p>
+<p>point+point=??</p>
+<p>In homogeneous coordinates.</p>
+<script type="math/tex; mode=display">
+\begin{pmatrix}
+x\\y 
+\\w 
+\end{pmatrix}=\begin{pmatrix}
+x/w\\y/w 
+\\1 
+\end{pmatrix}   w\neq 0</script><h2 id="Affine-Transformations-仿射变化"><a href="#Affine-Transformations-仿射变化" class="headerlink" title="Affine Transformations 仿射变化"></a>Affine Transformations 仿射变化</h2><script type="math/tex; mode=display">
+\begin{pmatrix}
+{x}'\\ {y}'
+
+\end{pmatrix}=\begin{pmatrix}
+a & b\\ c& d
+\end{pmatrix} \cdot  \begin{pmatrix}
+x\\ y
+\end{pmatrix}+\begin{pmatrix}
+t_{x}\\t_{y} 
+
+\end{pmatrix}</script><p>我们把原来的变换变成其次变换.</p>
+<h3 id="Scale-Coordinates"><a href="#Scale-Coordinates" class="headerlink" title="Scale  Coordinates"></a>Scale  Coordinates</h3><script type="math/tex; mode=display">
+S(S_{x},S_{y})=\begin{pmatrix}
+ S_{x}& 0 &0 \\ 
+ 0& S_{y} & 0\\ 
+ 0& 0 &1 
+\end{pmatrix}</script><h3 id="Rotation-Coordinates"><a href="#Rotation-Coordinates" class="headerlink" title="Rotation Coordinates"></a>Rotation Coordinates</h3><script type="math/tex; mode=display">
+R( \alpha )=\begin{pmatrix}
+\cos \alpha  & -\sin\alpha &0 \\ 
+ \sin\alpha& \cos \alpha & 0\\ 
+ 0& 0 &1 
+\end{pmatrix}</script><h3 id="Translation"><a href="#Translation" class="headerlink" title="Translation"></a>Translation</h3><script type="math/tex; mode=display">
+T(t_{x}.t_{y})=\begin{pmatrix}
+1 & 0  & t_{x}\\ 
+0 & 1 & t_{y}\\ 
+ 0 & 0  & 1
+\end{pmatrix}</script>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%9B%BE%E5%BD%A2%E5%AD%A6/" rel="tag"># 图形学</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/10/29/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E4%BD%9C%E4%B8%9A0/" rel="prev" title="计算机图形学作业0">
+                  <i class="fa fa-chevron-left"></i> 计算机图形学作业0
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/10/31/C++%E9%87%8C%E9%9D%A2%E5%A1%AB%E5%85%85C%E7%B1%BB%E5%9E%8B%E6%95%B0%E7%BB%84%E7%9A%84%E5%87%BD%E6%95%B0memset/" rel="next" title="C++里面填充C类型数组的函数memset">
+                  C++里面填充C类型数组的函数memset <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Camille</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+  
+      <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    const script = document.createElement('script');
+    script.src = '//cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-fire-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-fire-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.0/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"camilleferros.top","root":"/","scheme":"Muse","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+  <meta property="og:type" content="article">
+<meta property="og:title" content="PTA甲1095 Cars on Campus (30point(s))">
+<meta property="og:url" content="https://camilleferros.top/2021/04/13/PTA%E7%94%B21095%20Cars%20on%20Campus%20(30point(s))/index.html">
+<meta property="og:site_name" content="Camille">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-04-13T06:36:50.000Z">
+<meta property="article:modified_time" content="2021-04-13T09:40:01.721Z">
+<meta property="article:author" content="Camille">
+<meta property="article:tag" content="C++,UE4,PTA,PAT">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://camilleferros.top/2021/04/13/PTA%E7%94%B21095%20Cars%20on%20Campus%20(30point(s))/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>PTA甲1095 Cars on Campus (30point(s)) | Camille</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Camille</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">你得先看重自己,否则别人就会当你一钱不值</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%8E%9F%E6%96%87"><span class="nav-number">1.</span> <span class="nav-text">题目原文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Input-Specification"><span class="nav-number">2.</span> <span class="nav-text">Input Specification:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Output-Specification"><span class="nav-number">3.</span> <span class="nav-text">Output Specification:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sample-Input"><span class="nav-number">4.</span> <span class="nav-text">Sample Input:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sample-Output"><span class="nav-number">5.</span> <span class="nav-text">Sample Output:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%9F%E8%AF%8D%E5%A6%82%E4%B8%8B"><span class="nav-number">6.</span> <span class="nav-text">生词如下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%A4%A7%E6%84%8F"><span class="nav-number">7.</span> <span class="nav-text">题目大意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E7%82%B9"><span class="nav-number">8.</span> <span class="nav-text">注意点:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%A6%82%E4%B8%8B"><span class="nav-number">9.</span> <span class="nav-text">代码如下</span></a></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Camille"
+      src="/images/Camille.jpg">
+  <p class="site-author-name" itemprop="name">Camille</p>
+  <div class="site-description" itemprop="description">效率，是成功的核心关键</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">232</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">65</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://camilleferros.top/2021/04/13/PTA%E7%94%B21095%20Cars%20on%20Campus%20(30point(s))/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Camille.jpg">
+      <meta itemprop="name" content="Camille">
+      <meta itemprop="description" content="效率，是成功的核心关键">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Camille">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          PTA甲1095 Cars on Campus (30point(s))
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-04-13 14:36:50 / Modified: 17:40:01" itemprop="dateCreated datePublished" datetime="2021-04-13T14:36:50+08:00">2021-04-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">刷题笔记</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/PTA/" itemprop="url" rel="index"><span itemprop="name">PTA</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+            <div class="post-description"> </div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>首先,先贴柳神的博客</p>
+<p><a target="_blank" rel="noopener" href="https://www.liuchuo.net/">https://www.liuchuo.net/</a> 这是地址</p>
+<p>想要刷好PTA,强烈推荐柳神的博客,和算法笔记</p>
+<p>这一篇博客大部分都是借鉴（抄袭）的算法笔记</p>
+<h3 id="题目原文"><a href="#题目原文" class="headerlink" title="题目原文"></a>题目原文</h3><p>Zhejiang University has 8 campuses and a lot of gates. From each gate we can collect the in/out times and the plate numbers of the cars crossing the gate. Now with all the information available, you are supposed to tell, at any specific time point, the number of cars parking on campus, and at the end of the day find the cars that have parked for the longest time period.</p>
+<h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case. Each case starts with two positive integers <em>N</em> (≤104), the number of records, and <em>K</em> (≤8×104) the number of queries. Then <em>N</em> lines follow, each gives a record in the format:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">plate_number</span> <span class="selector-tag">hh</span><span class="selector-pseudo">:mm</span><span class="selector-pseudo">:ss</span> <span class="selector-tag">status</span>  </span><br></pre></td></tr></table></figure>
+<p>where <code>plate_number</code> is a string of 7 English capital letters or 1-digit numbers; <code>hh:mm:ss</code> represents the time point in a day by hour:minute:second, with the earliest time being <code>00:00:00</code> and the latest <code>23:59:59</code>; and <code>status</code> is either <code>in</code> or <code>out</code>.</p>
+<p>Note that all times will be within a single day. Each <code>in</code> record is paired with the chronologically next record for the same car provided it is an <code>out</code> record. Any <code>in</code> records that are not paired with an <code>out</code> record are ignored, as are <code>out</code> records not paired with an <code>in</code> record. It is guaranteed that at least one car is well paired in the input, and no car is both <code>in</code> and <code>out</code> at the same moment. Times are recorded using a 24-hour clock.</p>
+<p>Then <em>K</em> lines of queries follow, each gives a time point in the format <code>hh:mm:ss</code>. Note: the queries are given in <strong>ascending</strong> order of the times.</p>
+<h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each query, output in a line the total number of cars parking on campus. The last line of output is supposed to give the plate number of the car that has parked for the longest time period, and the corresponding time length. If such a car is not unique, then output all of their plate numbers in a line in alphabetical order, separated by a space.</p>
+<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">16 7</span><br><span class="line">JH007BD 18:00:01 in</span><br><span class="line">ZD00001 11:30:08 out</span><br><span class="line">DB8888A 13:00:00 out</span><br><span class="line">ZA3Q625 23:59:50 out</span><br><span class="line">ZA133CH 10:23:00 in</span><br><span class="line">ZD00001 04:09:59 in</span><br><span class="line">JH007BD 05:09:59 in</span><br><span class="line">ZA3Q625 11:42:01 out</span><br><span class="line">JH007BD 05:10:33 in</span><br><span class="line">ZA3Q625 06:30:50 in</span><br><span class="line">JH007BD 12:23:42 out</span><br><span class="line">ZA3Q625 23:55:00 in</span><br><span class="line">JH007BD 12:24:23 out</span><br><span class="line">ZA133CH 17:11:22 out</span><br><span class="line">JH007BD 18:07:01 out</span><br><span class="line">DB8888A 06:30:50 in</span><br><span class="line">05:10:00</span><br><span class="line">06:30:50</span><br><span class="line">11:00:00</span><br><span class="line">12:23:42</span><br><span class="line">14:00:00</span><br><span class="line">18:00:00</span><br><span class="line">23:59:00 </span><br></pre></td></tr></table></figure>
+<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">2</span><br><span class="line">1</span><br><span class="line">0</span><br><span class="line">1</span><br><span class="line">JH007BD ZD00001 07:20:09</span><br></pre></td></tr></table></figure>
+<h3 id="生词如下"><a href="#生词如下" class="headerlink" title="生词如下"></a>生词如下</h3><p>gates    大门</p>
+<p>ascending    上升的</p>
+<p>queries    查询</p>
+<p>unique    独一无二的</p>
+<p>any <code>in</code> records that are not paired with an <code>out</code> record are ignored</p>
+<p>任何没有与out记录配对的in记录都会被忽略</p>
+<p>翻译为,in的下一个必须是out,不然就错误</p>
+<h3 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h3><p>给出N条记录，每条记录给出一辆车的的车牌号，当前时刻以及出入校情况（入校（in))还是出校（out），然后给出K个查询，每个查询给出一个时刻，输出在这个时刻校园内的车辆数，查询完毕后输出在学校内停留时间最长的车辆的车牌号（如果有多个，就一并输出）和对应的停留时间。注意：对同一辆车来讲，配对的on和off必须满足把这辆车的记录按时间顺序排列后，在他们之间，不允许出现其他的on或则off 的记录，否则，将被视为无效记录</p>
+<h3 id="注意点"><a href="#注意点" class="headerlink" title="注意点:"></a>注意点:</h3><p>①    在线处理那个进入的车辆,用一个num来代表校园里面有的车辆</p>
+<p>②    用map可以简化许多许多操作</p>
+<p>③    英文不行,思路也差,我这题没有写出来,都是借鉴的.</p>
+<h3 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下"></a>代码如下</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">10010</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Car</span> &#123;</span></span><br><span class="line">	<span class="keyword">char</span> id[<span class="number">10</span>];		<span class="comment">//车牌号</span></span><br><span class="line">	<span class="keyword">int</span> time;			<span class="comment">//记录的时刻(以S作为单位）</span></span><br><span class="line">	<span class="keyword">char</span> status[<span class="number">4</span>];		<span class="comment">//in或者out</span></span><br><span class="line">&#125;all[maxn],valid[maxn];</span><br><span class="line"><span class="keyword">int</span> num = <span class="number">0</span>;</span><br><span class="line"><span class="built_in">map</span>&lt;<span class="built_in">string</span>, <span class="keyword">int</span>&gt;parktime;	<span class="comment">//车牌号--&gt;总记录时间</span></span><br><span class="line"><span class="comment">//timeToInt将时间转换位以s为单位</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">timeToInt</span><span class="params">(<span class="keyword">int</span> hh, <span class="keyword">int</span> mm, <span class="keyword">int</span> ss)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> hh * <span class="number">3600</span> + mm * <span class="number">60</span> + ss;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//先按车牌号字典序从小到大排序,若车牌号相同,则按时间从小到大排序</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmpByIdAndTime</span><span class="params">(Car a, Car b)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (<span class="built_in">strcmp</span>(a.id, b.id))<span class="keyword">return</span> <span class="built_in">strcmp</span>(a.id, b.id) &lt; <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">return</span> a.time &lt; b.time;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmpByTime</span><span class="params">(Car a, Car b)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> a.time &lt; b.time;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n, k, hh, mm, ss;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;n, &amp;k);		<span class="comment">//记录数</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%s %d:%d:%d %s&quot;</span>, all[i].id, &amp;hh, &amp;mm, &amp;ss, all[i].status);</span><br><span class="line">		all[i].time = timeToInt(hh, mm, ss);</span><br><span class="line">	&#125;</span><br><span class="line">	sort(all, all + n, cmpByIdAndTime);</span><br><span class="line">	<span class="keyword">int</span> maxTime = <span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n - <span class="number">1</span>; i++) &#123;	<span class="comment">//遍历所有的记录</span></span><br><span class="line">		<span class="keyword">if</span> (!<span class="built_in">strcmp</span>(all[i].id, all[i + <span class="number">1</span>].id) &amp;&amp; !<span class="built_in">strcmp</span>(all[i].status, <span class="string">&quot;in&quot;</span>) &amp;&amp; !<span class="built_in">strcmp</span>(all[i + <span class="number">1</span>].status, <span class="string">&quot;out&quot;</span>)) &#123;</span><br><span class="line">			valid[num++] = all[i];		<span class="comment">//i和i+1是配对的,存入valid数组</span></span><br><span class="line">			valid[num++] = all[i + <span class="number">1</span>];</span><br><span class="line">			<span class="keyword">int</span> inTime = all[i + <span class="number">1</span>].time - all[i].time;	<span class="comment">//此次停留时间</span></span><br><span class="line">			<span class="keyword">if</span> (parktime.count(all[i + <span class="number">1</span>].id) == <span class="number">0</span>) &#123;</span><br><span class="line">				parktime[all[i].id] = <span class="number">0</span>;			<span class="comment">//map中还没有这个车牌号,置零</span></span><br><span class="line">			&#125;</span><br><span class="line">			parktime[all[i].id] += inTime;			<span class="comment">//增加该车牌号的总停留时间</span></span><br><span class="line">			maxTime = max(maxTime, parktime[all[i].id]);	<span class="comment">//更新最大停留时间</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	sort(valid, valid + num, cmpByTime);			<span class="comment">//把有效记录按时间大小排序</span></span><br><span class="line">	<span class="comment">//now指向不超过当前查询时间的记录,numCar为当前校园内车辆数</span></span><br><span class="line">	<span class="keyword">int</span> now = <span class="number">0</span>, numCar = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d:%d:%d&quot;</span>, &amp;hh, &amp;mm, &amp;ss);</span><br><span class="line">		<span class="keyword">int</span> time = timeToInt(hh, mm, ss);</span><br><span class="line">		<span class="comment">//让now处理当前查询时间</span></span><br><span class="line">		<span class="keyword">while</span> (now &lt; num &amp;&amp; valid[now].time &lt;= time) &#123;</span><br><span class="line">			<span class="keyword">if</span> (!<span class="built_in">strcmp</span>(valid[now].status, <span class="string">&quot;in&quot;</span>))</span><br><span class="line">				numCar++;	<span class="comment">//车牌进入</span></span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				numCar--;	<span class="comment">//车辆离开</span></span><br><span class="line">			now++;		<span class="comment">//指向下一条记录</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, numCar);		<span class="comment">//输出该时刻校园内车辆数</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">map</span>&lt;<span class="built_in">string</span>, <span class="keyword">int</span>&gt;::iterator it;	<span class="comment">//遍历所有车牌号</span></span><br><span class="line">	<span class="keyword">for</span> (it = parktime.begin(); it != parktime.end(); it++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (it-&gt;second == maxTime) &#123;		<span class="comment">//输出所有最长总停留时间的车牌号</span></span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;%s &quot;</span>, it-&gt;first.c_str());</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//输出最长总停留时间</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%02d:%02d:%02d\n&quot;</span>, maxTime / <span class="number">3600</span>, maxTime % <span class="number">3600</span> / <span class="number">60</span>, maxTime % <span class="number">60</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>1095 Cars on Campus (30point(s))</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/04/13/PTA%E7%94%B21096%20Consecutive%20Factors%20(20%E5%88%86)/" rel="prev" title="PTA甲1096 Consecutive Factors (20分)">
+                  <i class="fa fa-chevron-left"></i> PTA甲1096 Consecutive Factors (20分)
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/04/13/PTA%E7%94%B21092%20To%20Buy%20or%20Not%20to%20Buy%20(20point(s))/" rel="next" title="PTA甲1092 To Buy or Not to Buy (20point(s))">
+                  PTA甲1092 To Buy or Not to Buy (20point(s)) <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Camille</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+  
+      <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    const script = document.createElement('script');
+    script.src = '//cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

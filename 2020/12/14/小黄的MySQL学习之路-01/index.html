@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-fire-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-fire-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.0/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"camilleferros.top","root":"/","scheme":"Muse","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+  <meta property="og:type" content="article">
+<meta property="og:title" content="小黄的MySQL学习之路-01">
+<meta property="og:url" content="https://camilleferros.top/2020/12/14/%E5%B0%8F%E9%BB%84%E7%9A%84MySQL%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF-01/index.html">
+<meta property="og:site_name" content="Camille">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020071816345866.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200718164105533.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200718165309201.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200718170315683.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200718170315683.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200719115100774.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200719205748229.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200719210221493.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200719211831699.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200719214245577.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020072122045465.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200721220808759.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200721221127660.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200721221534694.png">
+<meta property="article:published_time" content="2020-12-14T01:53:43.000Z">
+<meta property="article:modified_time" content="2020-12-14T01:54:23.824Z">
+<meta property="article:author" content="Camille">
+<meta property="article:tag" content="MySQL">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/2020071816345866.png">
+
+
+<link rel="canonical" href="https://camilleferros.top/2020/12/14/%E5%B0%8F%E9%BB%84%E7%9A%84MySQL%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF-01/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>小黄的MySQL学习之路-01 | Camille</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Camille</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">你得先看重自己,否则别人就会当你一钱不值</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#MySQL%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">MySQL实用教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%9F%A5%E7%9C%8B%E6%89%80%E6%9C%89%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">1.1.</span> <span class="nav-text">1 查看所有的数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E9%80%89%E6%8B%A9%E4%B8%80%E4%B8%AA%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">1.2.</span> <span class="nav-text">2 选择一个数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%B1%95%E7%A4%BA%E6%89%80%E6%9C%89%E7%9A%84%E8%A1%A8-%E5%9C%A8%E4%B8%80%E4%B8%AA%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD"><span class="nav-number">1.3.</span> <span class="nav-text">3 展示所有的表(在一个数据库中)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E6%98%BE%E7%A4%BA%E4%B8%80%E4%B8%AA%E5%85%B7%E4%BD%93%E7%9A%84%E8%A1%A8%E7%9A%84%E5%86%85%E5%AE%B9"><span class="nav-number">1.4.</span> <span class="nav-text">4 显示一个具体的表的内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%A1%A8"><span class="nav-number">1.5.</span> <span class="nav-text">5 如何创建一个表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%91%A0-%E4%B8%80%E4%B8%AA%E6%9C%80%E5%9F%BA%E6%9C%AC%E7%9A%84%E4%BE%8B%E5%AD%90"><span class="nav-number">1.5.1.</span> <span class="nav-text">① 一个最基本的例子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%91%A1-NULL%E5%80%BC"><span class="nav-number">1.5.2.</span> <span class="nav-text">② NULL值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%91%A3-%E4%B8%BB%E9%94%AE"><span class="nav-number">1.5.3.</span> <span class="nav-text">④ 主键</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%91%A4-AUTO-INCREMENT"><span class="nav-number">1.5.4.</span> <span class="nav-text">⑤ AUTO_INCREMENT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F"><span class="nav-number">1.5.5.</span> <span class="nav-text">注意:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%91%A5-%E4%BD%BF%E7%94%A8%E9%BB%98%E8%AE%A4%E5%80%BC"><span class="nav-number">1.5.6.</span> <span class="nav-text">⑥ 使用默认值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%91%A6-%E6%9B%B4%E6%96%B0%E8%A1%A8"><span class="nav-number">1.5.7.</span> <span class="nav-text">⑦ 更新表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%91%A7-%E5%88%A0%E9%99%A4%E5%92%8C%E9%87%8D%E5%91%BD%E5%90%8D%E8%A1%A8"><span class="nav-number">1.5.8.</span> <span class="nav-text">⑧ 删除和重命名表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%A0%E9%99%A4"><span class="nav-number">1.5.8.1.</span> <span class="nav-text">删除</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%87%8D%E5%91%BD%E5%90%8D"><span class="nav-number">1.5.8.2.</span> <span class="nav-text">重命名</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE"><span class="nav-number">1.6.</span> <span class="nav-text">6 插入数据</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%91%A0-%E6%95%B0%E6%8D%AE%E6%8F%92%E5%85%A5"><span class="nav-number">1.6.1.</span> <span class="nav-text">① 数据插入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%91%A1-%E6%8F%92%E5%85%A5%E5%AE%8C%E6%95%B4%E7%9A%84%E8%A1%8C"><span class="nav-number">1.6.2.</span> <span class="nav-text">② 插入完整的行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%91%A2-%E6%8F%92%E5%85%A5%E8%A1%8C%E7%9A%84%E4%B8%80%E9%83%A8%E5%88%86"><span class="nav-number">1.6.3.</span> <span class="nav-text">③ 插入行的一部分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%91%A3-%E6%8F%92%E5%85%A5%E5%A4%9A%E4%B8%AA%E8%A1%8C"><span class="nav-number">1.6.4.</span> <span class="nav-text">④ 插入多个行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%91%A4-%E6%8F%92%E5%85%A5%E6%A3%80%E7%B4%A2%E5%87%BA%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="nav-number">1.6.5.</span> <span class="nav-text">⑤ 插入检索出的数据</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%E6%9B%B4%E6%96%B0%E5%92%8C%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE"><span class="nav-number">1.7.</span> <span class="nav-text">7 更新和删除数据</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%91%A0-%E6%9B%B4%E6%96%B0%E8%A1%A8%E4%B8%AD%E7%89%B9%E5%AE%9A%E7%9A%84%E8%A1%8C"><span class="nav-number">1.7.1.</span> <span class="nav-text">① 更新表中特定的行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%91%A1-%E6%9B%B4%E6%96%B0%E8%A1%A8%E4%B8%AD%E6%89%80%E6%9C%89%E7%9A%84%E8%A1%8C"><span class="nav-number">1.7.2.</span> <span class="nav-text">② 更新表中所有的行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%91%A2-%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE"><span class="nav-number">1.7.3.</span> <span class="nav-text">③ 删除数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%91%A3-PS%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E5%9C%B0%E6%96%B9"><span class="nav-number">1.7.4.</span> <span class="nav-text">④ PS要注意的地方</span></a></li></ol></li></ol></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Camille"
+      src="/images/Camille.jpg">
+  <p class="site-author-name" itemprop="name">Camille</p>
+  <div class="site-description" itemprop="description">效率，是成功的核心关键</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">232</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">65</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://camilleferros.top/2020/12/14/%E5%B0%8F%E9%BB%84%E7%9A%84MySQL%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF-01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Camille.jpg">
+      <meta itemprop="name" content="Camille">
+      <meta itemprop="description" content="效率，是成功的核心关键">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Camille">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          小黄的MySQL学习之路-01
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2020-12-14 09:53:43 / Modified: 09:54:23" itemprop="dateCreated datePublished" datetime="2020-12-14T09:53:43+08:00">2020-12-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/MySQL/" itemprop="url" rel="index"><span itemprop="name">MySQL</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+            <div class="post-description"> </div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>这是我学习的</p>
+<p>MySQL必知必会的笔记</p>
+<h1 id="MySQL实用教程"><a href="#MySQL实用教程" class="headerlink" title="MySQL实用教程"></a>MySQL实用教程</h1><p>@[toc]</p>
+<h2 id="1-查看所有的数据库"><a href="#1-查看所有的数据库" class="headerlink" title="1 查看所有的数据库"></a>1 查看所有的数据库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show databases;</span><br></pre></td></tr></table></figure>
+<p>我电脑里面的结果</p>
+<p><img src="https://img-blog.csdnimg.cn/2020071816345866.png" alt="在这里插入图片描述"></p>
+<h2 id="2-选择一个数据库"><a href="#2-选择一个数据库" class="headerlink" title="2 选择一个数据库"></a>2 选择一个数据库</h2><p>use  数据库名</p>
+<p>例如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use mysql;</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20200718164105533.png" alt="在这里插入图片描述"></p>
+<h2 id="3-展示所有的表-在一个数据库中"><a href="#3-展示所有的表-在一个数据库中" class="headerlink" title="3 展示所有的表(在一个数据库中)"></a>3 展示所有的表(在一个数据库中)</h2><p>在上一步中,我们已经选择了数据库 mysql</p>
+<p>这一步是在第二部的基础上进行的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show tables;</span><br></pre></td></tr></table></figure>
+<p>结果</p>
+<p><img src="https://img-blog.csdnimg.cn/20200718165309201.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="4-显示一个具体的表的内容"><a href="#4-显示一个具体的表的内容" class="headerlink" title="4 显示一个具体的表的内容"></a>4 显示一个具体的表的内容</h2><p>这题还是在第二题的基础上</p>
+<p>我们已经选择了mysql数据库</p>
+<p>show COLUMNS from  表名</p>
+<p>例如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show COLUMNS from help_topic;</span><br></pre></td></tr></table></figure>
+<p>结果如下</p>
+<p><img src="https://img-blog.csdnimg.cn/20200718170315683.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>show COLUMNS from  表名  ==  DESCRIBE help_topic</p>
+<p>结果还是相同</p>
+<p><img src="https://img-blog.csdnimg.cn/20200718170315683.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>想要知道更多的show命令</p>
+<p>请使用</p>
+<p>help show</p>
+<h2 id="5-如何创建一个表"><a href="#5-如何创建一个表" class="headerlink" title="5 如何创建一个表"></a>5 如何创建一个表</h2><h3 id="①-一个最基本的例子"><a href="#①-一个最基本的例子" class="headerlink" title="① 一个最基本的例子"></a>① 一个最基本的例子</h3><p>先选择数据库 class</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use class;</span><br></pre></td></tr></table></figure>
+<p>然后再创建一个表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">create table customers(</span><br><span class="line">	cust_id int ,</span><br><span class="line">	cust_name char(50)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>create table 表名  ()</p>
+<p>( )里面就是一个列名+ 它的类型</p>
+<p>前面的所有列都要加  “  ，”</p>
+<p>只有最后一个列可以不用加  </p>
+<h3 id="②-NULL值"><a href="#②-NULL值" class="headerlink" title="② NULL值"></a>② NULL值</h3><p>如果一个列使用了NULL值 ,那么这个列在插入和更新的时候,就可以不给出值</p>
+<p>如果使用了NOT NULL 那么在插入和更新的时候,就必须要给出值.</p>
+<p>举个例子</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">create table <span class="title">orders</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">	order_num <span class="keyword">int</span> NOT <span class="literal">NULL</span> ,</span></span></span><br><span class="line"><span class="function"><span class="params">	order_data datetime NOT <span class="literal">NULL</span>,</span></span></span><br><span class="line"><span class="function"><span class="params">	cust_id <span class="keyword">int</span> NOT <span class="literal">NULL</span></span></span></span><br><span class="line"><span class="function"><span class="params">)</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">create table <span class="title">vendors</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">	vend_id <span class="keyword">int</span> NOT	<span class="literal">NULL</span>,</span></span></span><br><span class="line"><span class="function"><span class="params">	vend_name <span class="keyword">char</span>(<span class="number">50</span>) NOT <span class="literal">NULL</span>,</span></span></span><br><span class="line"><span class="function"><span class="params">	vend_address <span class="keyword">char</span>(<span class="number">50</span>) <span class="literal">NULL</span>,</span></span></span><br><span class="line"><span class="function"><span class="params">	vend_city <span class="keyword">char</span>(<span class="number">50</span>) <span class="literal">NULL</span>,</span></span></span><br><span class="line"><span class="function"><span class="params">	vend_state <span class="keyword">char</span>(<span class="number">5</span>) <span class="literal">NULL</span>,</span></span></span><br><span class="line"><span class="function"><span class="params">	vend_zip <span class="keyword">char</span>(<span class="number">10</span>) <span class="literal">NULL</span>,</span></span></span><br><span class="line"><span class="function"><span class="params">	vend_country <span class="keyword">char</span>(<span class="number">50</span>) <span class="literal">NULL</span></span></span></span><br><span class="line"><span class="function"><span class="params">)</span></span></span><br></pre></td></tr></table></figure>
+<p>如果不指明的话,默认为NULL </p>
+<h3 id="④-主键"><a href="#④-主键" class="headerlink" title="④ 主键"></a>④ 主键</h3><p>主键的定义:一列(一组列)，其值能够唯一区分表中的每个行.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">create table vendors(</span><br><span class="line">	vend_id int NOT	NULL,</span><br><span class="line">	vend_name char(50) NOT NULL,</span><br><span class="line">	vend_address char(50) NULL,</span><br><span class="line">	vend_city char(50) NULL,</span><br><span class="line">	vend_state char(5) NULL,</span><br><span class="line">	vend_zip char(10) NULL,</span><br><span class="line">	vend_country char(50) NULL,</span><br><span class="line">	PRIMARY KEY (vend_id)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>设置vend_id为主键.</p>
+<p>主键还可以使用多个列,联合起来当主键.</p>
+<p>例如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">create table orders(</span><br><span class="line">	order_num int NOT NULL ,</span><br><span class="line">	order_item int NOT NULL,</span><br><span class="line">	prod_id char(10) NOT NULL,</span><br><span class="line">	quantity int NOT NULL,</span><br><span class="line">	item_price decimal(8,2) NOT NULL,</span><br><span class="line">	PRIMARY KEY (order_num,order_item)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>这种情况下,order_num和item都不能为空.</p>
+<h3 id="⑤-AUTO-INCREMENT"><a href="#⑤-AUTO-INCREMENT" class="headerlink" title="⑤ AUTO_INCREMENT"></a>⑤ AUTO_INCREMENT</h3><p>AUTO_INCREMENT 就是自动增加的</p>
+<p>比如原来的有一个 id  为5 你插入一个,那个值就成了6</p>
+<p>举个例子</p>
+<p>原来的值.</p>
+<p><img src="https://img-blog.csdnimg.cn/20200719115100774.png" alt="在这里插入图片描述"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO orders (order_item,prod_id,quantity,item_price)</span><br><span class="line">VALUES(2,17851234,75,10.5)</span><br></pre></td></tr></table></figure>
+<p>后来的值</p>
+<p><img src="https://img-blog.csdnimg.cn/20200719205748229.png" alt="在这里插入图片描述"></p>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意:"></a>注意:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO orders (order_num,order_item,prod_id,quantity,item_price)</span><br><span class="line">VALUES(10,2,17851234,75,10.5)</span><br></pre></td></tr></table></figure>
+<p>在插入的时候,在插入到一个10</p>
+<p>然后</p>
+<p>我们在不带上,默认的order_num应该是 最近的一个后面的值.</p>
+<p>再设置一下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO orders (order_item,prod_id,quantity,item_price)</span><br><span class="line">VALUES(2,17851234,75,10.5)</span><br></pre></td></tr></table></figure>
+<p>结果如下:</p>
+<p><img src="https://img-blog.csdnimg.cn/20200719210221493.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="⑥-使用默认值"><a href="#⑥-使用默认值" class="headerlink" title="⑥ 使用默认值"></a>⑥ 使用默认值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">create table customers(</span><br><span class="line">	cust_id int ,</span><br><span class="line">	cust_name char(50) DEFAULT &quot;张三&quot;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>然后再插入一个值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO customers(cust_id)</span><br><span class="line">VALUES (1);</span><br></pre></td></tr></table></figure>
+<p>结果</p>
+<p><img src="https://img-blog.csdnimg.cn/20200719211831699.png" alt="在这里插入图片描述"></p>
+<h3 id="⑦-更新表"><a href="#⑦-更新表" class="headerlink" title="⑦ 更新表"></a>⑦ 更新表</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE customers</span><br><span class="line">ADD cust_sex char(5);</span><br></pre></td></tr></table></figure>
+<p>就是为表 customers加一个列</p>
+<p><img src="https://img-blog.csdnimg.cn/20200719214245577.png" alt="在这里插入图片描述"></p>
+<h3 id="⑧-删除和重命名表"><a href="#⑧-删除和重命名表" class="headerlink" title="⑧ 删除和重命名表"></a>⑧ 删除和重命名表</h3><h4 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h4><p>DROP TABLE 表名</p>
+<p>DROP TABLE customers</p>
+<h4 id="重命名"><a href="#重命名" class="headerlink" title="重命名"></a>重命名</h4><p>RENAME TABLE 原表名 TO 新表名</p>
+<p>RENAME TABLE orders TO NewName;</p>
+<h2 id="6-插入数据"><a href="#6-插入数据" class="headerlink" title="6 插入数据"></a>6 插入数据</h2><h3 id="①-数据插入"><a href="#①-数据插入" class="headerlink" title="① 数据插入"></a>① 数据插入</h3><p>我们要用一张表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE customer(</span><br><span class="line">	cust_id INT PRIMARY KEY,</span><br><span class="line">	cust_name CHAR(50),</span><br><span class="line">	cust_address CHAR(50),</span><br><span class="line">	cust_city CHAR(50),</span><br><span class="line">	cust_state CHAR(50),</span><br><span class="line">	cust_zip CHAR(50),</span><br><span class="line">	cust_country CHAR(50),</span><br><span class="line">	cust_contact CHAR(50),</span><br><span class="line">	cust_email CHAR(50)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>然后我们插入一些数据</p>
+<h3 id="②-插入完整的行"><a href="#②-插入完整的行" class="headerlink" title="② 插入完整的行"></a>② 插入完整的行</h3><p>例子如下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO customer</span><br><span class="line">VALUES </span><br><span class="line">(17851075,&#39;李相赫&#39;,&#39;召唤师峡谷&#39;,&#39;韩国&#39;,&#39;首尔&#39;,&#39;99999&#39;,&#39;韩国&#39;,&#39;不死的魔王&#39;,&#39;666@gmail.com&#39;);</span><br></pre></td></tr></table></figure>
+<h3 id="③-插入行的一部分"><a href="#③-插入行的一部分" class="headerlink" title="③ 插入行的一部分"></a>③ 插入行的一部分</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO customer(cust_id,cust_name,cust_address,cust_city,</span><br><span class="line">										cust_state ,cust_zip ,cust_country ,cust_contact) </span><br><span class="line">VALUES </span><br><span class="line">(17851234,&#39;Faker&#39;,&#39;召唤师峡谷&#39;,&#39;韩国&#39;,&#39;首尔&#39;,&#39;99999&#39;,&#39;韩国&#39;,&#39;不死的魔王&#39;);</span><br></pre></td></tr></table></figure>
+<h3 id="④-插入多个行"><a href="#④-插入多个行" class="headerlink" title="④ 插入多个行"></a>④ 插入多个行</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO customer(cust_id,cust_name,cust_address,cust_city,</span><br><span class="line">										cust_state ,cust_zip ,cust_country ,cust_contact) </span><br><span class="line">VALUES </span><br><span class="line">(17850001,&#39;Faker&#39;,&#39;召唤师峡谷&#39;,&#39;韩国&#39;,&#39;首尔&#39;,&#39;99999&#39;,&#39;韩国&#39;,&#39;不死的魔王&#39;),</span><br><span class="line">(17850002,&#39;李相赫&#39;,&#39;召唤师峡谷&#39;,&#39;韩国&#39;,&#39;首尔&#39;,&#39;99999&#39;,&#39;韩国&#39;,&#39;不死的魔王&#39;);</span><br></pre></td></tr></table></figure>
+<h3 id="⑤-插入检索出的数据"><a href="#⑤-插入检索出的数据" class="headerlink" title="⑤ 插入检索出的数据"></a>⑤ 插入检索出的数据</h3><p>顾名思意,就是把我们找出来的东西,插入进去.</p>
+<p>我们先建立一个和原来的custmer一摸一样的表(表名不一样)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE custnew(</span><br><span class="line">	cust_id INT PRIMARY KEY,</span><br><span class="line">	cust_name CHAR(50),</span><br><span class="line">	cust_address CHAR(50),</span><br><span class="line">	cust_city CHAR(50),</span><br><span class="line">	cust_state CHAR(50),</span><br><span class="line">	cust_zip CHAR(50),</span><br><span class="line">	cust_country CHAR(50),</span><br><span class="line">	cust_contact CHAR(50),</span><br><span class="line">	cust_email CHAR(50)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>然后再custNew里面插入点数据.</p>
+<p>然后清空custmer里面的数据</p>
+<p>然后</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO customer(cust_id,cust_name,cust_address,cust_city,</span><br><span class="line">										cust_state ,cust_zip ,cust_country ,cust_contact) </span><br><span class="line">SELECT cust_id,cust_name,cust_address,cust_city,</span><br><span class="line">										cust_state ,cust_zip ,cust_country ,cust_contact</span><br><span class="line">FROM custnew;</span><br></pre></td></tr></table></figure>
+<p>就OK拉</p>
+<h2 id="7-更新和删除数据"><a href="#7-更新和删除数据" class="headerlink" title="7 更新和删除数据"></a>7 更新和删除数据</h2><h3 id="①-更新表中特定的行"><a href="#①-更新表中特定的行" class="headerlink" title="① 更新表中特定的行"></a>① 更新表中特定的行</h3><p>举两个例子</p>
+<p><img src="https://img-blog.csdnimg.cn/2020072122045465.png" alt="在这里插入图片描述"></p>
+<p>现在customer表中的数据是这样的.</p>
+<p>然后我们想为Faker添加一个电子邮件</p>
+<p>我们需要</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">UPDATE customer </span><br><span class="line">SET cust_email &#x3D;&#39;the_god@qq.com&#39;</span><br><span class="line">WHERE cust_name &#x3D;&#39;Faker&#39;;</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20200721220808759.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>更新多个行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">UPDATE customer </span><br><span class="line">SET cust_email &#x3D;&#39;the_god@163.com&#39;,</span><br><span class="line">		cust_contact&#x3D;&#39;唯一真神&#39;</span><br><span class="line">WHERE cust_name &#x3D;&#39;Faker&#39;;</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20200721221127660.png" alt="在这里插入图片描述"></p>
+<h3 id="②-更新表中所有的行"><a href="#②-更新表中所有的行" class="headerlink" title="② 更新表中所有的行"></a>② 更新表中所有的行</h3><p>就是不使用WHERE</p>
+<p>这里就不做演示了</p>
+<h3 id="③-删除数据"><a href="#③-删除数据" class="headerlink" title="③ 删除数据"></a>③ 删除数据</h3><p>举个例子</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">DELETE FROM customer </span><br><span class="line">WHERE cust_name &#x3D;&#39;Faker&#39;;</span><br></pre></td></tr></table></figure>
+<p>在表里的结果</p>
+<p><img src="https://img-blog.csdnimg.cn/20200721221534694.png" alt="在这里插入图片描述"></p>
+<h3 id="④-PS要注意的地方"><a href="#④-PS要注意的地方" class="headerlink" title="④ PS要注意的地方"></a>④ PS要注意的地方</h3><p>一定要加WHERE 语句</p>
+<p>不然就是全局的更新和删除</p>
+<p>而且MySQL里面是没有撤销按钮的.</p>
+<p>如果是清空数据.</p>
+<p>MySQL有一个命令.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TRUNCATE TABLE customer;</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/MySQL/" rel="tag"># MySQL</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/12/14/LeedCode-Easy-Maximum-Subarray/" rel="prev" title="LeedCode-Easy-Maximum Subarray">
+                  <i class="fa fa-chevron-left"></i> LeedCode-Easy-Maximum Subarray
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/12/14/%E5%B0%8F%E9%BB%84%E7%9A%84MySQL%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF-02/" rel="next" title="小黄的MySQL学习之路-02">
+                  小黄的MySQL学习之路-02 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Camille</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+  
+      <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    const script = document.createElement('script');
+    script.src = '//cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

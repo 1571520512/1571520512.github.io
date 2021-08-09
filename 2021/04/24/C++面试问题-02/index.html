@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-fire-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-fire-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.0/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"camilleferros.top","root":"/","scheme":"Muse","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+  <meta property="og:type" content="article">
+<meta property="og:title" content="C++面试问题-02">
+<meta property="og:url" content="https://camilleferros.top/2021/04/24/C++%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98-02/index.html">
+<meta property="og:site_name" content="Camille">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-04-24T06:43:28.000Z">
+<meta property="article:modified_time" content="2021-04-24T06:45:00.521Z">
+<meta property="article:author" content="Camille">
+<meta property="article:tag" content="C++">
+<meta property="article:tag" content="面试问题">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://camilleferros.top/2021/04/24/C++%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98-02/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>C++面试问题-02 | Camille</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Camille</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">你得先看重自己,否则别人就会当你一钱不值</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%B7%E4%BD%A0%E5%9B%9E%E7%AD%94%E4%B8%80%E4%B8%8B%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0%E5%BF%85%E9%A1%BB%E6%98%AF%E8%99%9A%E5%87%BD%E6%95%B0%EF%BC%9F%E4%B8%BA%E4%BB%80%E4%B9%88C-%E9%BB%98%E8%AE%A4%E7%9A%84%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0%E4%B8%8D%E6%98%AF%E8%99%9A%E5%87%BD%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">请你回答一下为什么析构函数必须是虚函数？为什么C++默认的析构函数不是虚函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%B7%E4%BD%A0%E6%9D%A5%E8%AF%B4%E4%B8%80%E4%B8%8B%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88"><span class="nav-number">2.</span> <span class="nav-text">请你来说一下函数指针</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">2.1.</span> <span class="nav-text">定义:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%A8%E9%80%94"><span class="nav-number">2.2.</span> <span class="nav-text">用途</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B"><span class="nav-number">2.3.</span> <span class="nav-text">示例:</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%B7%E4%BD%A0%E6%9D%A5%E8%AF%B4%E4%B8%80%E4%B8%8BC-%E4%B8%AD%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">3.</span> <span class="nav-text">请你来说一下C++中析构函数的作用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%B7%E4%BD%A0%E6%9D%A5%E8%AF%B4%E4%B8%80%E4%B8%8B%E9%9D%99%E6%80%81%E5%87%BD%E6%95%B0%E5%92%8C%E8%99%9A%E5%87%BD%E6%95%B0%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">4.</span> <span class="nav-text">请你来说一下静态函数和虚函数的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%B7%E4%BD%A0%E8%AF%B4%E4%B8%80%E8%AF%B4strcpy%E5%92%8Cstrlen"><span class="nav-number">5.</span> <span class="nav-text">请你说一说strcpy和strlen</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%B7%E4%BD%A0%E8%AF%B4%E4%B8%80%E8%AF%B4%E4%BD%A0%E7%90%86%E8%A7%A3%E7%9A%84%E8%99%9A%E5%87%BD%E6%95%B0%E5%92%8C%E5%A4%9A%E6%80%81"><span class="nav-number">6.</span> <span class="nav-text">请你说一说你理解的虚函数和多态</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%B7%E4%BD%A0%E6%9D%A5%E7%AE%80%E5%8D%95%E5%9B%9E%E7%AD%94%E4%B8%80%E4%B8%8Bi-%E5%92%8C-i%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">7.</span> <span class="nav-text">请你来简单回答一下i++和++i的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E4%B8%8D%E5%90%8C"><span class="nav-number">7.1.</span> <span class="nav-text">实现不同</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%B7%E4%BD%A0%E6%9D%A5%E5%86%99%E4%B8%AA%E5%87%BD%E6%95%B0%E5%9C%A8main%E5%87%BD%E6%95%B0%E6%89%A7%E8%A1%8C%E5%89%8D%E5%85%88%E8%BF%90%E8%A1%8C"><span class="nav-number">8.</span> <span class="nav-text">请你来写个函数在main函数执行前先运行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A5%E4%B8%8B%E5%9B%9B%E8%A1%8C%E4%BB%A3%E7%A0%81%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">9.</span> <span class="nav-text">以下四行代码的区别是什么?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%B7%E4%BD%A0%E6%9D%A5%E8%AF%B4%E4%BB%A5%E4%B8%8BC-%E9%87%8C%E9%9D%A2%E6%98%AF%E6%80%8E%E4%B9%88%E5%AE%9A%E4%B9%89%E5%B8%B8%E9%87%8F%E7%9A%84%EF%BC%9F%E5%B8%B8%E9%87%8F%E5%AD%98%E6%94%BE%E5%9C%A8%E5%86%85%E5%AD%98%E7%9A%84%E9%82%A3%E4%B8%AA%E4%BD%8D%E7%BD%AE"><span class="nav-number">10.</span> <span class="nav-text">请你来说以下C++里面是怎么定义常量的？常量存放在内存的那个位置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%B7%E4%BD%A0%E6%9D%A5%E5%9B%9E%E7%AD%94%E4%BB%A5%E4%B8%8Bconst%E4%BF%AE%E9%A5%B0%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0%E7%9A%84%E7%9B%AE%E7%9A%84%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">11.</span> <span class="nav-text">请你来回答以下const修饰成员函数的目的是什么?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A6%82%E6%9E%9C%E5%90%8C%E6%97%B6%E5%AE%9A%E4%B9%89%E4%BA%86%E4%B8%A4%E4%B8%AA%E5%87%BD%E6%95%B0-%E4%B8%80%E4%B8%AA%E5%B8%A6const-%E4%B8%80%E4%B8%AA%E4%B8%8D%E5%B8%A6-%E4%BC%9A%E6%9C%89%E9%97%AE%E9%A2%98"><span class="nav-number">12.</span> <span class="nav-text">如果同时定义了两个函数,一个带const,一个不带,会有问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%B7%E4%BD%A0%E6%9D%A5%E8%AF%B4%E4%B8%80%E8%AF%B4%E9%9A%90%E7%A7%81%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="nav-number">13.</span> <span class="nav-text">请你来说一说隐私类型转换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%B7%E4%BD%A0%E6%9D%A5%E8%AF%B4%E4%B8%80%E8%AF%B4C-%E5%87%BD%E6%95%B0%E6%A0%88%E7%A9%BA%E9%97%B4%E7%9A%84%E6%9C%80%E5%A4%A7%E5%80%BC"><span class="nav-number">14.</span> <span class="nav-text">请你来说一说C++函数栈空间的最大值</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%B7%E4%BD%A0%E6%9D%A5%E8%AF%B4%E4%B8%80%E8%AF%B4extern%E2%80%9DC%E2%80%9D"><span class="nav-number">15.</span> <span class="nav-text">请你来说一说extern”C”</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%B7%E4%BD%A0%E5%9B%9E%E7%AD%94%E4%B8%80%E4%B8%8Bnew-delete%E4%B8%8Emalloc-free%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">16.</span> <span class="nav-text">请你回答一下new&#x2F;delete与malloc&#x2F;free的区别是什么</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%B7%E4%BD%A0%E8%AF%B4%E8%AF%B4%E4%BD%A0%E4%BA%86%E8%A7%A3%E7%9A%84RTTI"><span class="nav-number">17.</span> <span class="nav-text">请你说说你了解的RTTI</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%B7%E4%BD%A0%E8%AF%B4%E8%AF%B4%E8%99%9A%E5%87%BD%E6%95%B0%E8%A1%A8%E5%85%B7%E4%BD%93%E6%98%AF%E6%80%8E%E6%9D%A8%E5%AE%9E%E7%8E%B0%E8%BF%90%E8%A1%8C%E6%97%B6%E5%A4%9A%E6%80%81%E7%9A%84"><span class="nav-number">18.</span> <span class="nav-text">请你说说虚函数表具体是怎杨实现运行时多态的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%B7%E4%BD%A0%E8%AF%B4%E8%AF%B4C%E8%AF%AD%E8%A8%80%E6%98%AF%E6%80%8E%E4%B9%88%E8%BF%9B%E8%A1%8C%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E7%9A%84"><span class="nav-number">19.</span> <span class="nav-text">请你说说C语言是怎么进行函数调用的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%B7%E4%BD%A0%E8%AF%B4%E8%AF%B4C%E8%AF%AD%E8%A8%80%E5%8F%82%E6%95%B0%E5%8E%8B%E6%A0%88%E9%A1%BA%E5%BA%8F"><span class="nav-number">20.</span> <span class="nav-text">请你说说C语言参数压栈顺序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%B7%E4%BD%A0%E8%AF%B4%E8%AF%B4C-%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="nav-number">21.</span> <span class="nav-text">请你说说C++如何处理返回值</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%B7%E4%BD%A0%E5%9B%9E%E7%AD%94%E4%B8%80%E4%B8%8BC-%E4%B8%AD%E6%8B%B7%E8%B4%9D%E8%B5%8B%E5%80%BC%E5%87%BD%E6%95%B0%E7%9A%84%E5%BD%A2%E5%8F%82%E8%83%BD%E5%90%A6%E8%BF%9B%E8%A1%8C%E5%80%BC%E4%BC%A0%E9%80%92"><span class="nav-number">22.</span> <span class="nav-text">请你回答一下C++中拷贝赋值函数的形参能否进行值传递</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%B7%E4%BD%A0%E5%9B%9E%E7%AD%94%E4%BB%A5%E4%B8%8Bmalloc%E4%B8%8Enew%E5%8C%BA%E5%88%AB"><span class="nav-number">23.</span> <span class="nav-text">请你回答以下malloc与new区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%B7%E4%BD%A0%E8%AF%B4%E4%B8%80%E8%AF%B4select"><span class="nav-number">24.</span> <span class="nav-text">请你说一说select</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%B7%E4%BD%A0%E8%AF%B4%E8%AF%B4fork-wait-exec%E5%87%BD%E6%95%B0"><span class="nav-number">25.</span> <span class="nav-text">请你说说fork,wait,exec函数</span></a></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Camille"
+      src="/images/Camille.jpg">
+  <p class="site-author-name" itemprop="name">Camille</p>
+  <div class="site-description" itemprop="description">效率，是成功的核心关键</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">232</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">65</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://camilleferros.top/2021/04/24/C++%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98-02/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Camille.jpg">
+      <meta itemprop="name" content="Camille">
+      <meta itemprop="description" content="效率，是成功的核心关键">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Camille">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          C++面试问题-02
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-04-24 14:43:28 / Modified: 14:45:00" itemprop="dateCreated datePublished" datetime="2021-04-24T14:43:28+08:00">2021-04-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/C/" itemprop="url" rel="index"><span itemprop="name">C++</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/C/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98/" itemprop="url" rel="index"><span itemprop="name">面试问题</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+            <div class="post-description"> </div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="请你回答一下为什么析构函数必须是虚函数？为什么C-默认的析构函数不是虚函数"><a href="#请你回答一下为什么析构函数必须是虚函数？为什么C-默认的析构函数不是虚函数" class="headerlink" title="请你回答一下为什么析构函数必须是虚函数？为什么C++默认的析构函数不是虚函数"></a>请你回答一下为什么析构函数必须是虚函数？为什么C++默认的析构函数不是虚函数</h1><p>将可能会被继承的父类的析构函数设置为虚函数,可以保证当我们new一个子类,然后使用基类指针指向该子类对象,释放基类指针时可以释放子类的空间,防止内存泄漏</p>
+<p>C++默认的析构函数不是虚函数是因为虚函数需要额外的虚函数表和虚表指针,占用额外的内存,因此C++默认的析构函数不是虚函数,而是只有当需要当作父类时,设置为虚函数.</p>
+<h1 id="请你来说一下函数指针"><a href="#请你来说一下函数指针" class="headerlink" title="请你来说一下函数指针"></a>请你来说一下函数指针</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义:"></a>定义:</h2><p>函数指针是指向函数的指针变量</p>
+<p>函数指针本身首先是一个指针变量.该指针变量指向一个具体的函数,这正如用指针变量可指向整型变量,字符型,数组一样.这里指向函数.</p>
+<p>C在编译时,每一个函数都有一个入口地址.该入口地址就是函数指针所指向的地址,有了指向函数的指针变量后,可用该指针变量调用函数,就如同指针变量可引用其他类型变量一样,在这些概念上是大体一致的.</p>
+<h2 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h2><p>调用函数和做函数的参数时,比如回调函数</p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例:"></a>示例:</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">char</span>* <span class="title">fun</span><span class="params">(<span class="keyword">char</span>* p)</span> </span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;Word hard To find a job&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">char</span>* (*pf)(<span class="keyword">char</span>* p);	<span class="comment">//函数指针pf</span></span><br><span class="line">	pf = fun;				<span class="comment">//函数指针pf指向函数fun</span></span><br><span class="line">	<span class="keyword">char</span> p[<span class="number">20</span>] = <span class="string">&quot;?&quot;</span>;</span><br><span class="line">	pf(p);					<span class="comment">//通过函数指针pf调用函数fun</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="请你来说一下C-中析构函数的作用"><a href="#请你来说一下C-中析构函数的作用" class="headerlink" title="请你来说一下C++中析构函数的作用"></a>请你来说一下C++中析构函数的作用</h1><p>析构函数与构造函数对应,当对象结束其生命周期,如对象所在的函数调用完毕时,系统会自动执行析构函数.</p>
+<p>析构函数名也应与类名相同.只是在函数名前面加一个位取反符~.例如  ~stud().以区别于构造函数,它不能带任何参数.也没有返回值(包括void类型).只能有一个析构函数,不能重载</p>
+<p>如果用户没有编写析构函数,编译系统会自动生成一个缺省的析构函数(即使自定义了析构函数,编译器也总是会为我们合成一个析构函数,并且如果自定义了析构函数,编译器在执行时会想调用自定义的析构函数在调用合成的析构函数)它也不进行任何操作.所以许多简单的类中没有用显示的析构函数</p>
+<p>如果一个类中有指针,且在使用的过程中动态的申请了内存.那么最好显示构造析构函数在销毁类之前.释放掉申请的内存空间.避免内存泄漏</p>
+<p>类析构顺序.</p>
+<p>① 派生类本身的析构函数</p>
+<p>② 对象成员的析构函数</p>
+<p>③ 基类析构函数</p>
+<h1 id="请你来说一下静态函数和虚函数的区别"><a href="#请你来说一下静态函数和虚函数的区别" class="headerlink" title="请你来说一下静态函数和虚函数的区别"></a>请你来说一下静态函数和虚函数的区别</h1><p>静态函数在编译的时候就已经确定运行时机.虚函数在运行的时候动态绑定.虚函数因为用了虚函数表机制.调用的时候会增加一次内存开销.</p>
+<h1 id="请你说一说strcpy和strlen"><a href="#请你说一说strcpy和strlen" class="headerlink" title="请你说一说strcpy和strlen"></a>请你说一说strcpy和strlen</h1><p>strcpy是字符拷贝函数:<br>原型</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">char</span> *<span class="title">strcpy</span><span class="params">(<span class="keyword">char</span> *dest,<span class="keyword">const</span> <span class="keyword">char</span> *src)</span></span>;</span><br></pre></td></tr></table></figure>
+<p>从src逐字节拷贝到dest,直到遇到 ‘\0’结束,因为没有指定长度.可能会导致拷贝越界.造成缓冲区溢出漏洞.安全版本是strncpy函数.</p>
+<p>strlen函数是计算字符串长度的函数,返回从开始到’\0’之间的字符个数</p>
+<h1 id="请你说一说你理解的虚函数和多态"><a href="#请你说一说你理解的虚函数和多态" class="headerlink" title="请你说一说你理解的虚函数和多态"></a>请你说一说你理解的虚函数和多态</h1><p>多态的实现主要分为静态多态和动态多态.静态多态主要是重载.在编译的时候就已经确定;动态多态是用虚函数机制实现的.在运行期间动态绑定</p>
+<p>一个父类类型的指针指向一个子类对象时候,使用父类的指针去调用子类中重写了的父类中的虚函数的时候,会调用子类重写过后的函数,在父类中声明为加了virtual关键字的函数,在子类中重写时候不需要加virtual也是虚函数</p>
+<p>虚函数的实现:在有虚函数的类中.类的最开始部分是一个虚函数表的指针.这个指针指向一个虚函数表.表中放了虚函数的地址.实际的虚函数在代码段(.text)中.当子类继承了父类的时候也会继承其虚函数表,当子类重写父类中虚函数时候,会将其继承到的虚函数表中的地址替换为重新写的函数地址.使用了虚函数,会增加访问内存开销,降低效率.</p>
+<h1 id="请你来简单回答一下i-和-i的区别"><a href="#请你来简单回答一下i-和-i的区别" class="headerlink" title="请你来简单回答一下i++和++i的区别"></a>请你来简单回答一下i++和++i的区别</h1><p>i++返回原来的值.不能作为左值</p>
+<p>++i返回加1后的值,可以作为左值</p>
+<h2 id="实现不同"><a href="#实现不同" class="headerlink" title="实现不同"></a>实现不同</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 前缀形式：</span></span><br><span class="line"><span class="keyword">int</span>&amp; <span class="keyword">int</span>::<span class="keyword">operator</span>++() <span class="comment">//这里返回的是一个引用形式，就是说函数返回值也可以作为一个左值使用</span></span><br><span class="line">&#123;<span class="comment">//函数本身无参，意味着是在自身空间内增加1的</span></span><br><span class="line">  *<span class="keyword">this</span> += <span class="number">1</span>;  <span class="comment">// 增加</span></span><br><span class="line">  <span class="keyword">return</span> *<span class="keyword">this</span>;  <span class="comment">// 取回值</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//后缀形式:</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> <span class="keyword">int</span>::<span class="keyword">operator</span>++(<span class="keyword">int</span>) <span class="comment">//函数返回值是一个非左值型的，与前缀形式的差别所在。</span></span><br><span class="line">&#123;<span class="comment">//函数带参，说明有另外的空间开辟</span></span><br><span class="line">  <span class="keyword">int</span> oldValue = *<span class="keyword">this</span>;  <span class="comment">// 取回值</span></span><br><span class="line">  ++(*<span class="keyword">this</span>);  <span class="comment">// 增加</span></span><br><span class="line">  <span class="keyword">return</span> oldValue;  <span class="comment">// 返回被取回的值</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="请你来写个函数在main函数执行前先运行"><a href="#请你来写个函数在main函数执行前先运行" class="headerlink" title="请你来写个函数在main函数执行前先运行"></a>请你来写个函数在main函数执行前先运行</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">__attribute((constructor))<span class="function"><span class="keyword">void</span> <span class="title">before</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;before main\n&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个函数还只能在G++之前运行.</p>
+<p>有段代码写成了下边这样.在只修改一个字符的前提下.让代码输出20个hello</p>
+<p>原代码:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">20</span>; i--) </span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;hello&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
+<p>新代码:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i + <span class="number">20</span>; i--) </span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;hello&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
+<h1 id="以下四行代码的区别是什么"><a href="#以下四行代码的区别是什么" class="headerlink" title="以下四行代码的区别是什么?"></a>以下四行代码的区别是什么?</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">char</span> * arr=<span class="string">&quot;123&quot;</span>;</span><br><span class="line"><span class="keyword">char</span> *brr=<span class="string">&quot;123&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">char</span> crr[]=<span class="string">&quot;123&quot;</span>;</span><br><span class="line"><span class="keyword">char</span> drr[]=<span class="string">&quot;123&quot;</span>;</span><br></pre></td></tr></table></figure>
+<p>const char *arr=”123”</p>
+<p>//arr指向的字符串”123”本来就是在常量区的,你加不加const都是一样不能修改的</p>
+<p>char *brr=”123”</p>
+<p>//字符串123保存在常量区,所以即使brr没有加const,也是不能修改的.</p>
+<p>const char crr[]=”123”</p>
+<p>//这里的123.本来是在Stack(栈)上的.但是编译器可能会做某些优化,将其放到常量区</p>
+<p>char drr[]=”123”</p>
+<p>//字符串123保存在栈区.可以通过drr去修改</p>
+<h1 id="请你来说以下C-里面是怎么定义常量的？常量存放在内存的那个位置"><a href="#请你来说以下C-里面是怎么定义常量的？常量存放在内存的那个位置" class="headerlink" title="请你来说以下C++里面是怎么定义常量的？常量存放在内存的那个位置"></a>请你来说以下C++里面是怎么定义常量的？常量存放在内存的那个位置</h1><p>常量在C++里的定义就是一个top-level  const加上对象类型.常量定义必须初始化,对于局部对象.常量存放在栈区.对于全局对象.常量存放在全局,静态存储区.对于字面值常量.</p>
+<p>存放在常量存储区.</p>
+<h1 id="请你来回答以下const修饰成员函数的目的是什么"><a href="#请你来回答以下const修饰成员函数的目的是什么" class="headerlink" title="请你来回答以下const修饰成员函数的目的是什么?"></a>请你来回答以下const修饰成员函数的目的是什么?</h1><p>const 修饰的成员函数表明函数调用不会对对象做出任何更改.事实上.如果确定不会对对象做更改.就应该为函数加上const限定.这样无论const对象还是普通对象都可以调用函数.</p>
+<h1 id="如果同时定义了两个函数-一个带const-一个不带-会有问题"><a href="#如果同时定义了两个函数-一个带const-一个不带-会有问题" class="headerlink" title="如果同时定义了两个函数,一个带const,一个不带,会有问题"></a>如果同时定义了两个函数,一个带const,一个不带,会有问题</h1><p>不会,这相当于函数的重载</p>
+<h1 id="请你来说一说隐私类型转换"><a href="#请你来说一说隐私类型转换" class="headerlink" title="请你来说一说隐私类型转换"></a>请你来说一说隐私类型转换</h1><p>​    首先.对于内置类型,低精度的变量给高精度变量赋值会发生隐式类型转换.其次,对于只存在单个参数的构造函数的对象构造来说,函数调用可以直接使用该参数传入.编译器会自动调用其构造函数生成临时对象.</p>
+<h1 id="请你来说一说C-函数栈空间的最大值"><a href="#请你来说一说C-函数栈空间的最大值" class="headerlink" title="请你来说一说C++函数栈空间的最大值"></a>请你来说一说C++函数栈空间的最大值</h1><p>默认是1M,不过可以调整</p>
+<h1 id="请你来说一说extern”C”"><a href="#请你来说一说extern”C”" class="headerlink" title="请你来说一说extern”C”"></a>请你来说一说extern”C”</h1><p>C++调用C函数需要extern C,因为C语言没有函数重载</p>
+<h1 id="请你回答一下new-delete与malloc-free的区别是什么"><a href="#请你回答一下new-delete与malloc-free的区别是什么" class="headerlink" title="请你回答一下new/delete与malloc/free的区别是什么"></a>请你回答一下new/delete与malloc/free的区别是什么</h1><p> new/delete是C++的关键字,而malloc/free是C语言的库函数,后者使用必须指明申请内存空间的大小.对于类类型的对象,后者不会调用构造函数和析构函数</p>
+<h1 id="请你说说你了解的RTTI"><a href="#请你说说你了解的RTTI" class="headerlink" title="请你说说你了解的RTTI"></a>请你说说你了解的RTTI</h1><p>运行时类型检查,在C++层面主要体现在dynamic_case和typeid,VS中虚函数表的-1位置存放了指向type_info的指针.对于存在虚函数的类型,typeid和dynameic_cast都会去查询type_info</p>
+<h1 id="请你说说虚函数表具体是怎杨实现运行时多态的"><a href="#请你说说虚函数表具体是怎杨实现运行时多态的" class="headerlink" title="请你说说虚函数表具体是怎杨实现运行时多态的"></a>请你说说虚函数表具体是怎杨实现运行时多态的</h1><p>子类若重写父类虚函数,虚函数表中,该函数的地址会被替换,对于存在虚函数的类的对象,在VS中,对象的对象模型的头部存放指向虚函数表的指针,通过该机制实现多态</p>
+<h1 id="请你说说C语言是怎么进行函数调用的"><a href="#请你说说C语言是怎么进行函数调用的" class="headerlink" title="请你说说C语言是怎么进行函数调用的"></a>请你说说C语言是怎么进行函数调用的</h1><p>每一个函数调用部分都会分配函数栈,在栈内部进行函数执行过程.调用前,先把返回地址压入栈.然后把当前函数的esp指针压栈</p>
+<h1 id="请你说说C语言参数压栈顺序"><a href="#请你说说C语言参数压栈顺序" class="headerlink" title="请你说说C语言参数压栈顺序"></a>请你说说C语言参数压栈顺序</h1><p>从右到左</p>
+<h1 id="请你说说C-如何处理返回值"><a href="#请你说说C-如何处理返回值" class="headerlink" title="请你说说C++如何处理返回值"></a>请你说说C++如何处理返回值</h1><p>生成一个临时变量.把它的引用作为函数参数传入函数内</p>
+<h1 id="请你回答一下C-中拷贝赋值函数的形参能否进行值传递"><a href="#请你回答一下C-中拷贝赋值函数的形参能否进行值传递" class="headerlink" title="请你回答一下C++中拷贝赋值函数的形参能否进行值传递"></a>请你回答一下C++中拷贝赋值函数的形参能否进行值传递</h1><p>不能,如果是这种情况下,调用拷贝构造函数的时候,首先要将实参传递给形参,这个传递的时候又要拷贝构造函数,如此循环,无法完成拷贝,栈也会满</p>
+<h1 id="请你回答以下malloc与new区别"><a href="#请你回答以下malloc与new区别" class="headerlink" title="请你回答以下malloc与new区别"></a>请你回答以下malloc与new区别</h1><p>malloc需要给定申请内存的大小.返回的指针需要强转</p>
+<p>new会调用构造函数,不用指定内存大小,返回的指针不用强转</p>
+<h1 id="请你说一说select"><a href="#请你说一说select" class="headerlink" title="请你说一说select"></a>请你说一说select</h1><p>select在使用前,先将需要监控的的描述符对应的bit位置1,然后将其传给select,当右任何一个事件发生时,select将会返回所有的描述符,需要应用程序自己遍历去检查哪个描述符上右事件发生,效率很低.并且不断在内核太和用户态进行描述符的拷贝,花销很大</p>
+<h1 id="请你说说fork-wait-exec函数"><a href="#请你说说fork-wait-exec函数" class="headerlink" title="请你说说fork,wait,exec函数"></a>请你说说fork,wait,exec函数</h1><p>父进程产生子进程使用fork拷贝出来一个父进程的副本,此时只拷贝了父进程的页表,两个进程都读同一块内存,当有进程写的时候使用拷贝机制分配内存,exec函数可以加载一个elf文件去替换父进程,从此父进程和子进程就可以运行不同的程序.</p>
+<p>fork</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/C/" rel="tag"># C++</a>
+              <a href="/tags/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98/" rel="tag"># 面试问题</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/04/24/C++%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98-01/" rel="prev" title="C++面试问题-01">
+                  <i class="fa fa-chevron-left"></i> C++面试问题-01
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/07/04/PTA%E7%94%B21119-Pre-and-Post-order-Traversals-30-%E5%88%86/" rel="next" title="PTA甲1119 Pre- and Post-order Traversals (30 分)">
+                  PTA甲1119 Pre- and Post-order Traversals (30 分) <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Camille</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+  
+      <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    const script = document.createElement('script');
+    script.src = '//cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>
