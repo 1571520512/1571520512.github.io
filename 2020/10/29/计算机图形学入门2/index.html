@@ -22,12 +22,10 @@
     var CONFIG = {"hostname":"camilleferros.top","root":"/","scheme":"Muse","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="本文是我再B站上GAMES101上的学习地址-地址如下: 地址 总结的课程是 4~ 重点词汇View  (观测变化) transformation View&#x2F;Camera(相机) transformation Projection(投影)  transformation Orthographic(正交) projection Perspective(透视) projection Ortho 正交">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Camille">
-<meta property="og:url" content="https://camilleferros.top/2021/08/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%85%A5%E9%97%A82/index.html">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="计算机图形学入门2">
+<meta property="og:url" content="https://camilleferros.top/2020/10/29/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%85%A5%E9%97%A82/index.html">
 <meta property="og:site_name" content="Camille">
-<meta property="og:description" content="本文是我再B站上GAMES101上的学习地址-地址如下: 地址 总结的课程是 4~ 重点词汇View  (观测变化) transformation View&#x2F;Camera(相机) transformation Projection(投影)  transformation Orthographic(正交) projection Perspective(透视) projection Ortho 正交">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20201104160516662.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20201104162620681.jpg#pic_center">
@@ -42,15 +40,15 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20201113165215318.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20201114165757629.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20201114185433417.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center">
-<meta property="article:published_time" content="2021-08-11T07:17:53.130Z">
-<meta property="article:modified_time" content="2021-07-18T14:42:45.928Z">
+<meta property="article:published_time" content="2020-10-29T14:25:02.000Z">
+<meta property="article:modified_time" content="2021-08-11T13:54:32.689Z">
 <meta property="article:author" content="Camille">
-<meta property="article:tag" content="C++,UE4,PTA,PAT">
+<meta property="article:tag" content="图形学">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/20201104160516662.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center">
 
 
-<link rel="canonical" href="https://camilleferros.top/2021/08/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%85%A5%E9%97%A82/">
+<link rel="canonical" href="https://camilleferros.top/2020/10/29/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%85%A5%E9%97%A82/">
 
 
 <script class="page-configurations">
@@ -63,7 +61,7 @@
   };
 </script>
 
-  <title> | Camille</title>
+  <title>计算机图形学入门2 | Camille</title>
   
 
 
@@ -287,7 +285,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://camilleferros.top/2021/08/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%85%A5%E9%97%A82/">
+    <link itemprop="mainEntityOfPage" href="https://camilleferros.top/2020/10/29/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%85%A5%E9%97%A82/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/Camille.jpg">
@@ -300,7 +298,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          
+          计算机图形学入门2
         </h1>
 
         <div class="post-meta-container">
@@ -311,19 +309,29 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2021-08-11 15:17:53" itemprop="dateCreated datePublished" datetime="2021-08-11T15:17:53+08:00">2021-08-11</time>
+      <time title="Created: 2020-10-29 22:25:02" itemprop="dateCreated datePublished" datetime="2020-10-29T22:25:02+08:00">2020-10-29</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-18 22:42:45" itemprop="dateModified" datetime="2021-07-18T22:42:45+08:00">2021-07-18</time>
+        <time title="Modified: 2021-08-11 21:54:32" itemprop="dateModified" datetime="2021-08-11T21:54:32+08:00">2021-08-11</time>
       </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%9B%BE%E5%BD%A2%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">图形学</span></a>
+        </span>
+    </span>
 
   
 </div>
 
+            <div class="post-description"> </div>
         </div>
       </header>
 
@@ -515,18 +523,21 @@ M_{viewport}=
     
 
     <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%9B%BE%E5%BD%A2%E5%AD%A6/" rel="tag"># 图形学</a>
+          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/07/25/PTA%E7%94%B21126-Eulerian-Path-25-point-s/" rel="prev" title="PTA甲1126 Eulerian Path (25 point(s))">
-                  <i class="fa fa-chevron-left"></i> PTA甲1126 Eulerian Path (25 point(s))
+                <a href="/2020/10/29/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E4%BD%9C%E4%B8%9A0/" rel="prev" title="计算机图形学作业0">
+                  <i class="fa fa-chevron-left"></i> 计算机图形学作业0
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/08/11/%E4%BE%AF%E6%8D%B7_C++%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-03/" rel="next" title="">
-                   <i class="fa fa-chevron-right"></i>
+                <a href="/2020/10/29/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%85%A5%E9%97%A80/" rel="next" title="计算机图形学入门1">
+                  计算机图形学入门1 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -624,6 +635,50 @@ M_{viewport}=
   
 
   
+      <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    const script = document.createElement('script');
+    script.src = '//cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
