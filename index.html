@@ -269,7 +269,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://camilleferros.top/2021/08/09/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%85%A5%E9%97%A82/">
+    <link itemprop="mainEntityOfPage" href="https://camilleferros.top/2021/08/11/%E4%BE%AF%E6%8D%B7_C++%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-03/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/Camille.jpg">
@@ -283,7 +283,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/08/09/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%85%A5%E9%97%A82/" class="post-title-link" itemprop="url">Untitled</a>
+            <a href="/2021/08/11/%E4%BE%AF%E6%8D%B7_C++%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-03/" class="post-title-link" itemprop="url">Untitled</a>
         </h2>
 
         <div class="post-meta-container">
@@ -294,7 +294,118 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2021-08-09 22:17:00" itemprop="dateCreated datePublished" datetime="2021-08-09T22:17:00+08:00">2021-08-09</time>
+      <time title="Created: 2021-08-11 15:17:53" itemprop="dateCreated datePublished" datetime="2021-08-11T15:17:53+08:00">2021-08-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-07-18 22:42:46" itemprop="dateModified" datetime="2021-07-18T22:42:46+08:00">2021-07-18</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="c三大函数-拷贝构造-拷贝复制-析构"><a href="#c三大函数-拷贝构造-拷贝复制-析构" class="headerlink" title="c三大函数: 拷贝构造,拷贝复制,析构"></a>c三大函数: 拷贝构造,拷贝复制,析构</h1><p>外国也叫 Big Three  三个特殊函数 </p>
+<p>对象里面有指针的话.我们必须要重写操作符拷贝构造和拷贝复制.析构函数</p>
+<h2 id="拷贝构造函数"><a href="#拷贝构造函数" class="headerlink" title="拷贝构造函数"></a>拷贝构造函数</h2><p>拷贝构造函数接受的第一个参数是自身类型的引用.且任何额外参数都有默认值.那么这个构造函数就是拷贝构造函数</p>
+<p>PS:此定义来自于C++Primer</p>
+<h2 id="拷贝复制-拷贝复制运算符"><a href="#拷贝复制-拷贝复制运算符" class="headerlink" title="拷贝复制(拷贝复制运算符)"></a>拷贝复制(拷贝复制运算符)</h2><p>定义:</p>
+<p>接受一个本类型对象的赋值运算,通常,拷贝赋值运算符的参数是一个const的引用.并返回指向本对象的引用.</p>
+<p>如果你不写,编译器会自动的为它合成一个.</p>
+<h2 id="析构函数的定义"><a href="#析构函数的定义" class="headerlink" title="析构函数的定义"></a>析构函数的定义</h2><p>特殊的成员函数,当对象离开作用域或被释放时清理工作.编译器会自动销毁每个数据成员.类类型的成员通过调用其析构函数来销毁;而内置类型或复合类型的成员的销毁则不需要做任何工作,特别是,析构函数不会释放指针成员指向的对象</p>
+<h2 id="注意-不使用默认构造函数和默认的拷贝复制运算符的原因"><a href="#注意-不使用默认构造函数和默认的拷贝复制运算符的原因" class="headerlink" title="注意: 不使用默认构造函数和默认的拷贝复制运算符的原因"></a>注意: 不使用默认构造函数和默认的拷贝复制运算符的原因</h2><p><img src="C:\Users\HPY\AppData\Roaming\Typora\typora-user-images\image-20201102155928805.png" alt="image-20201102155928805"></p>
+<h2 id="使用自我复制的原因"><a href="#使用自我复制的原因" class="headerlink" title="使用自我复制的原因"></a>使用自我复制的原因</h2><p><img src="https://img-blog.csdnimg.cn/20201103165000944.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>下面是例子的代码</p>
+<p>string.h</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> __MYSTRING__</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> __MYSTRING__</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;memory&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">String</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	String(<span class="keyword">const</span> <span class="keyword">char</span>* cstr = <span class="number">0</span>);<span class="comment">//普通的构造函数</span></span><br><span class="line">	String(<span class="keyword">const</span> String&amp; str);<span class="comment">//拷贝构造函数</span></span><br><span class="line">	String&amp; <span class="keyword">operator</span>=(<span class="keyword">const</span> String&amp; str);	<span class="comment">//拷贝赋值运算符</span></span><br><span class="line">	~String();	<span class="comment">//析构函数</span></span><br><span class="line">	<span class="function"><span class="keyword">char</span>* <span class="title">get_c_str</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> m_data; &#125;;	</span><br><span class="line">	<span class="comment">//get_c_str()不改变数据,所以要加const,加上const,让代码变得大气</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">char</span>* m_data;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="title">String::String</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span>* cstr = <span class="number">0</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (cstr) &#123;</span><br><span class="line">		m_data = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="built_in">strlen</span>(cstr) + <span class="number">1</span>];</span><br><span class="line">		<span class="built_in">strcpy</span>(m_data, cstr);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> &#123;		<span class="comment">//未指定初值</span></span><br><span class="line">		m_data = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="number">1</span>];</span><br><span class="line">		*m_data = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">inline</span> String::~String() &#123;	<span class="comment">//析构函数</span></span><br><span class="line">	<span class="keyword">delete</span>[] m_data;		<span class="comment">//在类的生命周期结束的时,自动调用析构函数</span></span><br><span class="line">				<span class="comment">//释放掉  动态开辟的空间</span></span><br><span class="line">&#125; </span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="title">String::String</span><span class="params">(<span class="keyword">const</span> String&amp; str)</span> </span>&#123;	<span class="comment">//深拷贝</span></span><br><span class="line">	m_data = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="built_in">strlen</span>(str.m_data) + <span class="number">1</span>];</span><br><span class="line">	<span class="built_in">strcpy</span>(m_data, str.m_data);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">inline</span> String&amp; String::<span class="keyword">operator</span>=(<span class="keyword">const</span> String&amp; str) &#123;</span><br><span class="line">	<span class="comment">//自我赋值是大家的程序员必须要写的东西</span></span><br><span class="line">	<span class="keyword">if</span> (<span class="keyword">this</span> == &amp;str)	<span class="keyword">return</span> *<span class="keyword">this</span>;<span class="comment">//自我赋值</span></span><br><span class="line">	<span class="keyword">delete</span>[] m_data;</span><br><span class="line">	m_data = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="built_in">strlen</span>(str.m_data) + <span class="number">1</span>];</span><br><span class="line">	<span class="built_in">strcpy</span>(m_data, str.m_data);</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//ouput函数</span></span><br><span class="line"><span class="built_in">std</span>::ostream&amp; <span class="keyword">operator</span>&lt;&lt;(<span class="built_in">std</span>::ostream&amp; os, <span class="keyword">const</span> String&amp; str) &#123;</span><br><span class="line">	os &lt;&lt; str.get_c_str();</span><br><span class="line">	<span class="keyword">return</span> os;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
+<p>Stack,是存在于某个作用域(Scope的一块内存空间,memory space).当你调用函数,函数本身即会形成一个stack用来放置它所接受的参数,以及返回地址.</p>
+<p>在函数本体内声明的任何变量.其所使用的内存块都取自上述stack</p>
+<p>Heap .就是Sysyem heap,是指由操作系统提供的一块global内存空间.程序可动态分配(dynamic allocated) 从里面获得若干哥blocks</p>
+<h3 id="例子如下"><a href="#例子如下" class="headerlink" title="例子如下:"></a>例子如下:</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Complex</span>&#123;</span>&#125;;</span><br><span class="line">&#123;</span><br><span class="line">	Complex c1;	<span class="comment">//c1在作用域结束的时候,会自动被清理</span></span><br><span class="line">	<span class="function"><span class="keyword">static</span> Complex <span class="title">c2</span><span class="params">(<span class="number">1</span>,<span class="number">2</span>)</span></span>; <span class="comment">//c2是static object,它的生命在作用域(scope)结束之后才结束</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Complex <span class="title">c3</span><span class="params">(<span class="number">1</span>,<span class="number">2</span>)</span></span>;	<span class="comment">//c3是全局变量,全局变量的生命也是在整个程序结束之后才结束,也可以看作是一种static object</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>例子二</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Complex</span>&#123;</span>&#125;;</span><br><span class="line">&#123;</span><br><span class="line">Complex *p=<span class="keyword">new</span> Complex;</span><br><span class="line"></span><br><span class="line"><span class="keyword">delete</span> p;	<span class="comment">//正确  因为p是我们手动开辟出来的内存空间,如果不手动清理的话,它就会一直存在,就算程序结束掉.这种情况就叫做内存泄漏.</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="new-讲解"><a href="#new-讲解" class="headerlink" title="new 讲解"></a>new 讲解</h2><p>先分配memory在调用dtor</p>
+<p>例子如下:</p>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Complex</span> *pc=<span class="keyword">new</span> <span class="built_in">Complex</span>(<span class="number">1</span>,<span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+<p>编译器转换为:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Complex *pc;</span><br><span class="line">① <span class="keyword">void</span> *men=<span class="keyword">operator</span> <span class="keyword">new</span> (<span class="keyword">sizeof</span>(Complex));<span class="comment">//分配内存 opertor new是C++里面一个特殊的函数</span></span><br><span class="line">② pc=<span class="keyword">static_cast</span>&lt;Complex*&gt;(men);		<span class="comment">//转型</span></span><br><span class="line">③ pc-&gt;Complex::Complex(<span class="number">1</span>,<span class="number">2</span>);			<span class="comment">//构造函数</span></span><br><span class="line">③=Complex::Complex(pc,<span class="number">1</span>,<span class="number">2</span>);		<span class="comment">//构造函数都是成员函数inline function</span></span><br></pre></td></tr></table></figure>
+<h2 id="delete讲解"><a href="#delete讲解" class="headerlink" title="delete讲解"></a>delete讲解</h2><p>delete:先调用dtor,在释放memory</p>
+<p>例子如下:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String *ps=<span class="keyword">new</span> String(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line"><span class="keyword">delete</span> ps;</span><br></pre></td></tr></table></figure>
+<p>编译器转换为:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String::~String(ps);			<span class="comment">//析构函数</span></span><br><span class="line"><span class="function"><span class="keyword">operator</span> <span class="title">delete</span><span class="params">(ps)</span></span>;			<span class="comment">//释放内存,operator delete是C++的一个特殊函数</span></span><br></pre></td></tr></table></figure>
+<p>放一下我们原来自己写的String类</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">String</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    ~String()&#123;<span class="keyword">delete</span>[] m_data;&#125;;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">char</span>* m_data;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>这里,析构函数的作用就是释放掉我们动态分配的那块内存.那个释放的PS,就只是一个指针.</p>
+<p>截图如下:</p>
+<p><img src="https://img-blog.csdnimg.cn/20201106164152149.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>老师讲的那个动态分配的不是很懂.不能乱讲.过.</p>
+<p>PS:array new 一定要搭配array delete </p>
+<p>原因如下:</p>
+<p><img src="https://img-blog.csdnimg.cn/20201106165023792.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>array new 要搭配array delete</p>
+<p>array delete内存泄露的除了数组头指针后面的部分.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://camilleferros.top/2021/08/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%85%A5%E9%97%A82/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Camille.jpg">
+      <meta itemprop="name" content="Camille">
+      <meta itemprop="description" content="效率，是成功的核心关键">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Camille">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/08/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%85%A5%E9%97%A82/" class="post-title-link" itemprop="url">Untitled</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-08-11 15:17:53" itemprop="dateCreated datePublished" datetime="2021-08-11T15:17:53+08:00">2021-08-11</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
@@ -490,117 +601,6 @@ M_{viewport}=
 <p>例如:</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> x=<span class="number">0</span>;x&lt;xmax;++x)</span><br><span class="line">	output[x]=f(x);</span><br></pre></td></tr></table></figure>
 <p><img src="https://img-blog.csdnimg.cn/20201114185433417.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://camilleferros.top/2021/08/09/%E4%BE%AF%E6%8D%B7_C++%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-03/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/Camille.jpg">
-      <meta itemprop="name" content="Camille">
-      <meta itemprop="description" content="效率，是成功的核心关键">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Camille">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/08/09/%E4%BE%AF%E6%8D%B7_C++%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-03/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-08-09 22:17:00" itemprop="dateCreated datePublished" datetime="2021-08-09T22:17:00+08:00">2021-08-09</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-18 22:42:46" itemprop="dateModified" datetime="2021-07-18T22:42:46+08:00">2021-07-18</time>
-      </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="c三大函数-拷贝构造-拷贝复制-析构"><a href="#c三大函数-拷贝构造-拷贝复制-析构" class="headerlink" title="c三大函数: 拷贝构造,拷贝复制,析构"></a>c三大函数: 拷贝构造,拷贝复制,析构</h1><p>外国也叫 Big Three  三个特殊函数 </p>
-<p>对象里面有指针的话.我们必须要重写操作符拷贝构造和拷贝复制.析构函数</p>
-<h2 id="拷贝构造函数"><a href="#拷贝构造函数" class="headerlink" title="拷贝构造函数"></a>拷贝构造函数</h2><p>拷贝构造函数接受的第一个参数是自身类型的引用.且任何额外参数都有默认值.那么这个构造函数就是拷贝构造函数</p>
-<p>PS:此定义来自于C++Primer</p>
-<h2 id="拷贝复制-拷贝复制运算符"><a href="#拷贝复制-拷贝复制运算符" class="headerlink" title="拷贝复制(拷贝复制运算符)"></a>拷贝复制(拷贝复制运算符)</h2><p>定义:</p>
-<p>接受一个本类型对象的赋值运算,通常,拷贝赋值运算符的参数是一个const的引用.并返回指向本对象的引用.</p>
-<p>如果你不写,编译器会自动的为它合成一个.</p>
-<h2 id="析构函数的定义"><a href="#析构函数的定义" class="headerlink" title="析构函数的定义"></a>析构函数的定义</h2><p>特殊的成员函数,当对象离开作用域或被释放时清理工作.编译器会自动销毁每个数据成员.类类型的成员通过调用其析构函数来销毁;而内置类型或复合类型的成员的销毁则不需要做任何工作,特别是,析构函数不会释放指针成员指向的对象</p>
-<h2 id="注意-不使用默认构造函数和默认的拷贝复制运算符的原因"><a href="#注意-不使用默认构造函数和默认的拷贝复制运算符的原因" class="headerlink" title="注意: 不使用默认构造函数和默认的拷贝复制运算符的原因"></a>注意: 不使用默认构造函数和默认的拷贝复制运算符的原因</h2><p><img src="C:\Users\HPY\AppData\Roaming\Typora\typora-user-images\image-20201102155928805.png" alt="image-20201102155928805"></p>
-<h2 id="使用自我复制的原因"><a href="#使用自我复制的原因" class="headerlink" title="使用自我复制的原因"></a>使用自我复制的原因</h2><p><img src="https://img-blog.csdnimg.cn/20201103165000944.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<p>下面是例子的代码</p>
-<p>string.h</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> __MYSTRING__</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> __MYSTRING__</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;memory&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">String</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	String(<span class="keyword">const</span> <span class="keyword">char</span>* cstr = <span class="number">0</span>);<span class="comment">//普通的构造函数</span></span><br><span class="line">	String(<span class="keyword">const</span> String&amp; str);<span class="comment">//拷贝构造函数</span></span><br><span class="line">	String&amp; <span class="keyword">operator</span>=(<span class="keyword">const</span> String&amp; str);	<span class="comment">//拷贝赋值运算符</span></span><br><span class="line">	~String();	<span class="comment">//析构函数</span></span><br><span class="line">	<span class="function"><span class="keyword">char</span>* <span class="title">get_c_str</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> m_data; &#125;;	</span><br><span class="line">	<span class="comment">//get_c_str()不改变数据,所以要加const,加上const,让代码变得大气</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">char</span>* m_data;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="title">String::String</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span>* cstr = <span class="number">0</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (cstr) &#123;</span><br><span class="line">		m_data = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="built_in">strlen</span>(cstr) + <span class="number">1</span>];</span><br><span class="line">		<span class="built_in">strcpy</span>(m_data, cstr);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> &#123;		<span class="comment">//未指定初值</span></span><br><span class="line">		m_data = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="number">1</span>];</span><br><span class="line">		*m_data = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">inline</span> String::~String() &#123;	<span class="comment">//析构函数</span></span><br><span class="line">	<span class="keyword">delete</span>[] m_data;		<span class="comment">//在类的生命周期结束的时,自动调用析构函数</span></span><br><span class="line">				<span class="comment">//释放掉  动态开辟的空间</span></span><br><span class="line">&#125; </span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="title">String::String</span><span class="params">(<span class="keyword">const</span> String&amp; str)</span> </span>&#123;	<span class="comment">//深拷贝</span></span><br><span class="line">	m_data = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="built_in">strlen</span>(str.m_data) + <span class="number">1</span>];</span><br><span class="line">	<span class="built_in">strcpy</span>(m_data, str.m_data);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">inline</span> String&amp; String::<span class="keyword">operator</span>=(<span class="keyword">const</span> String&amp; str) &#123;</span><br><span class="line">	<span class="comment">//自我赋值是大家的程序员必须要写的东西</span></span><br><span class="line">	<span class="keyword">if</span> (<span class="keyword">this</span> == &amp;str)	<span class="keyword">return</span> *<span class="keyword">this</span>;<span class="comment">//自我赋值</span></span><br><span class="line">	<span class="keyword">delete</span>[] m_data;</span><br><span class="line">	m_data = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="built_in">strlen</span>(str.m_data) + <span class="number">1</span>];</span><br><span class="line">	<span class="built_in">strcpy</span>(m_data, str.m_data);</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//ouput函数</span></span><br><span class="line"><span class="built_in">std</span>::ostream&amp; <span class="keyword">operator</span>&lt;&lt;(<span class="built_in">std</span>::ostream&amp; os, <span class="keyword">const</span> String&amp; str) &#123;</span><br><span class="line">	os &lt;&lt; str.get_c_str();</span><br><span class="line">	<span class="keyword">return</span> os;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
-<p>Stack,是存在于某个作用域(Scope的一块内存空间,memory space).当你调用函数,函数本身即会形成一个stack用来放置它所接受的参数,以及返回地址.</p>
-<p>在函数本体内声明的任何变量.其所使用的内存块都取自上述stack</p>
-<p>Heap .就是Sysyem heap,是指由操作系统提供的一块global内存空间.程序可动态分配(dynamic allocated) 从里面获得若干哥blocks</p>
-<h3 id="例子如下"><a href="#例子如下" class="headerlink" title="例子如下:"></a>例子如下:</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Complex</span>&#123;</span>&#125;;</span><br><span class="line">&#123;</span><br><span class="line">	Complex c1;	<span class="comment">//c1在作用域结束的时候,会自动被清理</span></span><br><span class="line">	<span class="function"><span class="keyword">static</span> Complex <span class="title">c2</span><span class="params">(<span class="number">1</span>,<span class="number">2</span>)</span></span>; <span class="comment">//c2是static object,它的生命在作用域(scope)结束之后才结束</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Complex <span class="title">c3</span><span class="params">(<span class="number">1</span>,<span class="number">2</span>)</span></span>;	<span class="comment">//c3是全局变量,全局变量的生命也是在整个程序结束之后才结束,也可以看作是一种static object</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>例子二</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Complex</span>&#123;</span>&#125;;</span><br><span class="line">&#123;</span><br><span class="line">Complex *p=<span class="keyword">new</span> Complex;</span><br><span class="line"></span><br><span class="line"><span class="keyword">delete</span> p;	<span class="comment">//正确  因为p是我们手动开辟出来的内存空间,如果不手动清理的话,它就会一直存在,就算程序结束掉.这种情况就叫做内存泄漏.</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="new-讲解"><a href="#new-讲解" class="headerlink" title="new 讲解"></a>new 讲解</h2><p>先分配memory在调用dtor</p>
-<p>例子如下:</p>
-<figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Complex</span> *pc=<span class="keyword">new</span> <span class="built_in">Complex</span>(<span class="number">1</span>,<span class="number">2</span>);</span><br></pre></td></tr></table></figure>
-<p>编译器转换为:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Complex *pc;</span><br><span class="line">① <span class="keyword">void</span> *men=<span class="keyword">operator</span> <span class="keyword">new</span> (<span class="keyword">sizeof</span>(Complex));<span class="comment">//分配内存 opertor new是C++里面一个特殊的函数</span></span><br><span class="line">② pc=<span class="keyword">static_cast</span>&lt;Complex*&gt;(men);		<span class="comment">//转型</span></span><br><span class="line">③ pc-&gt;Complex::Complex(<span class="number">1</span>,<span class="number">2</span>);			<span class="comment">//构造函数</span></span><br><span class="line">③=Complex::Complex(pc,<span class="number">1</span>,<span class="number">2</span>);		<span class="comment">//构造函数都是成员函数inline function</span></span><br></pre></td></tr></table></figure>
-<h2 id="delete讲解"><a href="#delete讲解" class="headerlink" title="delete讲解"></a>delete讲解</h2><p>delete:先调用dtor,在释放memory</p>
-<p>例子如下:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String *ps=<span class="keyword">new</span> String(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line"><span class="keyword">delete</span> ps;</span><br></pre></td></tr></table></figure>
-<p>编译器转换为:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String::~String(ps);			<span class="comment">//析构函数</span></span><br><span class="line"><span class="function"><span class="keyword">operator</span> <span class="title">delete</span><span class="params">(ps)</span></span>;			<span class="comment">//释放内存,operator delete是C++的一个特殊函数</span></span><br></pre></td></tr></table></figure>
-<p>放一下我们原来自己写的String类</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">String</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    ~String()&#123;<span class="keyword">delete</span>[] m_data;&#125;;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">char</span>* m_data;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>这里,析构函数的作用就是释放掉我们动态分配的那块内存.那个释放的PS,就只是一个指针.</p>
-<p>截图如下:</p>
-<p><img src="https://img-blog.csdnimg.cn/20201106164152149.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<p>老师讲的那个动态分配的不是很懂.不能乱讲.过.</p>
-<p>PS:array new 一定要搭配array delete </p>
-<p>原因如下:</p>
-<p><img src="https://img-blog.csdnimg.cn/20201106165023792.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<p>array new 要搭配array delete</p>
-<p>array delete内存泄露的除了数组头指针后面的部分.</p>
 
       
     </div>
