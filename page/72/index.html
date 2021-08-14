@@ -217,7 +217,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">232</span>
+          <span class="site-state-item-count">234</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -230,7 +230,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">65</span>
+        <span class="site-state-item-count">66</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -261,6 +261,188 @@
       
 
       
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://camilleferros.top/2020/10/08/C++%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E9%87%8C%E9%9D%A2%E7%9A%84%E4%B8%80%E4%BA%9B%E5%87%BD%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Camille.jpg">
+      <meta itemprop="name" content="Camille">
+      <meta itemprop="description" content="效率，是成功的核心关键">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Camille">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/10/08/C++%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E9%87%8C%E9%9D%A2%E7%9A%84%E4%B8%80%E4%BA%9B%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">C++进制转换里面的一些函数</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-10-08 16:47:06" itemprop="dateCreated datePublished" datetime="2020-10-08T16:47:06+08:00">2020-10-08</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-04-13 09:37:46" itemprop="dateModified" datetime="2021-04-13T09:37:46+08:00">2021-04-13</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%88%B7%E9%A2%98%E5%B0%8F%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">刷题小技巧</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="进制转换里面的一些函数"><a href="#进制转换里面的一些函数" class="headerlink" title="进制转换里面的一些函数"></a>进制转换里面的一些函数</h1><p>C++里面自己写的函数（可以转换2-36的函数）</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">convert</span><span class="params">(<span class="built_in">string</span> n, <span class="keyword">long</span> <span class="keyword">long</span> radix)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> index = <span class="number">0</span>, temp = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> it = n.rbegin(); it != n.rend(); it++) &#123;</span><br><span class="line">        temp = <span class="built_in">isdigit</span>(*it) ? *it - <span class="string">&#x27;0&#x27;</span> : *it - <span class="string">&#x27;a&#x27;</span> + <span class="number">10</span>;</span><br><span class="line">        sum += temp * <span class="built_in">pow</span>(radix, index++);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="String类型转换成int类型"><a href="#String类型转换成int类型" class="headerlink" title="String类型转换成int类型"></a>String类型转换成int类型</h2><p>注意,atoi直接放string类型是不对的,因为atoi里面的参数只能是char *的类型</p>
+<p>如果是string类型的话.一定要加一个  .c_str()</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* atoi example */</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;      /* printf, fgets */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;     /* atoi */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> i;</span><br><span class="line">  <span class="built_in">string</span> a=<span class="string">&quot;123&quot;</span>;</span><br><span class="line">  i = atoi(a.c_str());</span><br><span class="line">  <span class="built_in">printf</span> (<span class="string">&quot;%d&quot;</span>,i);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="int-类型转换成string类型"><a href="#int-类型转换成string类型" class="headerlink" title="int 类型转换成string类型"></a>int 类型转换成string类型</h2><p>就是我们常用的</p>
+<p>to_string(a) a的类型是int</p>
+<p>需要的头文件为string</p>
+<p>例子如下:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a=<span class="number">123</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;to_string(a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="任意之间的进制转换"><a href="#任意之间的进制转换" class="headerlink" title="任意之间的进制转换"></a>任意之间的进制转换</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">int</span> len = <span class="number">0</span>, arr[<span class="number">100</span>];</span><br><span class="line"> <span class="keyword">do</span> &#123;</span><br><span class="line">     arr[len++] = n % d;</span><br><span class="line">	n = n / d;</span><br><span class="line"> &#125; <span class="keyword">while</span> (n != <span class="number">0</span>);</span><br><span class="line"><span class="comment">//柳神的老方法了.专门用来转换进制的.自己写的时候,忘记了.</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++)</span><br><span class="line">    n = n * d + arr[i];</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://camilleferros.top/2020/10/08/C++%E4%BA%8C%E5%88%86%E9%87%8C%E9%9D%A2%E5%A5%BD%E7%94%A8%E7%9A%84%E5%87%BD%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Camille.jpg">
+      <meta itemprop="name" content="Camille">
+      <meta itemprop="description" content="效率，是成功的核心关键">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Camille">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/10/08/C++%E4%BA%8C%E5%88%86%E9%87%8C%E9%9D%A2%E5%A5%BD%E7%94%A8%E7%9A%84%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">C++二分里面好用的函数</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2020-10-08 16:41:27 / Modified: 16:42:11" itemprop="dateCreated datePublished" datetime="2020-10-08T16:41:27+08:00">2020-10-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%88%B7%E9%A2%98%E5%B0%8F%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">刷题小技巧</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="二分里面好用的函数"><a href="#二分里面好用的函数" class="headerlink" title="二分里面好用的函数"></a>二分里面好用的函数</h1><h2 id="upper-bound-ForwardIterator-first-ForwardIterator-last-const-T-amp-val"><a href="#upper-bound-ForwardIterator-first-ForwardIterator-last-const-T-amp-val" class="headerlink" title="upper_bound(ForwardIterator first, ForwardIterator last,const T&amp; val))"></a>upper_bound(ForwardIterator first, ForwardIterator last,const T&amp; val))</h2><p>ForwardIterator first是一个</p>
+<p>ForwardIterator first    是指要查询的数列的起点</p>
+<p>ForwardIterator last    是值要查询的数列的终点</p>
+<p>const T&amp;val    表明输入进去的值</p>
+<p>官方的原文</p>
+<p>Returns an iterator pointing to the first element in the range <code>[first,last)</code> which compares greater than val.</p>
+<p>返回一个迭代器,指向第一个元素超过val的地址</p>
+<p>因为返回的是地址,所以我们求下标的时候就要把这个地址减去数列的起始地址</p>
+<h2 id="lower-bound-ForwardIterator-first-ForwardIterator-last-const-T-amp-val"><a href="#lower-bound-ForwardIterator-first-ForwardIterator-last-const-T-amp-val" class="headerlink" title="lower_bound(ForwardIterator first, ForwardIterator last,const T&amp; val))"></a>lower_bound(ForwardIterator first, ForwardIterator last,const T&amp; val))</h2><p>他们的参数都是一样的，不一样的在功能上</p>
+<p>官方的原文</p>
+<p>Returns an iterator pointing to the first element in the range <code>[first,last)</code> which does not compare less than val</p>
+<p>返回一个迭代器,指向第一个不小于val的值的地址,也要减去数列的起始地址才是下标</p>
+<p>下面是官方的解释代码</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// lower_bound/upper_bound example</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;     // std::cout</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;    // std::lower_bound, std::upper_bound, std::sort</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;       // std::vector</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span> myints[] = &#123;<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">30</span>,<span class="number">20</span>,<span class="number">10</span>,<span class="number">10</span>,<span class="number">20</span>&#125;;</span><br><span class="line">  <span class="function"><span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">v</span><span class="params">(myints,myints+<span class="number">8</span>)</span></span>;           <span class="comment">// 10 20 30 30 20 10 10 20</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">std</span>::sort (v.begin(), v.end());                <span class="comment">// 10 10 10 20 20 20 30 30</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator low,up;</span><br><span class="line">  low=<span class="built_in">std</span>::lower_bound (v.begin(), v.end(), <span class="number">20</span>); <span class="comment">//          ^</span></span><br><span class="line">  up= <span class="built_in">std</span>::upper_bound (v.begin(), v.end(), <span class="number">20</span>); <span class="comment">//                   ^</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;lower_bound at position &quot;</span> &lt;&lt; (low- v.begin()) &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;upper_bound at position &quot;</span> &lt;&lt; (up - v.begin()) &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>官方解释文档如下</p>
+<p><a target="_blank" rel="noopener" href="http://www.cplusplus.com/reference/algorithm/lower_bound/">http://www.cplusplus.com/reference/algorithm/lower_bound/</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.cplusplus.com/reference/algorithm/upper_bound/">http://www.cplusplus.com/reference/algorithm/upper_bound/</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
     
 
 
@@ -330,241 +512,6 @@
 <p>toupper就是转换为大写</p>
 <p>例子如下</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">string</span> s = <span class="string">&quot;ABCDEFGabcdefg&quot;</span>;</span><br><span class="line">    <span class="built_in">string</span> result;</span><br><span class="line">    transform(s.begin(), s.end(), s.begin(),::<span class="built_in">tolower</span>);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; s &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    transform(s.begin(), s.end(), s.begin(),::<span class="built_in">toupper</span>);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; s &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://camilleferros.top/2020/10/08/PTA%E7%94%B21091%20Acute-Stroke-30%E5%88%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/Camille.jpg">
-      <meta itemprop="name" content="Camille">
-      <meta itemprop="description" content="效率，是成功的核心关键">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Camille">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/10/08/PTA%E7%94%B21091%20Acute-Stroke-30%E5%88%86/" class="post-title-link" itemprop="url">PTA 1091 Acute Stroke (30分)</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2020-10-08 13:55:13" itemprop="dateCreated datePublished" datetime="2020-10-08T13:55:13+08:00">2020-10-08</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-04-13 14:23:57" itemprop="dateModified" datetime="2021-04-13T14:23:57+08:00">2021-04-13</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">刷题笔记</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/PTA/" itemprop="url" rel="index"><span itemprop="name">PTA</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>强烈推荐,刷PTA的朋友都认识一下柳神—PTA解法大佬</p>
-<p>本文由参考于柳神博客写成</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/liuchuo">柳神的CSDN博客,这个可以搜索文章</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.liuchuo.net/">柳神的个人博客,这个没有广告,但是不能搜索</a></p>
-<p>还有就是非常非常有用的 算法笔记 全名是</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">算法笔记  上级训练实战指南		<span class="regexp">//</span>这本都是PTA的题解</span><br><span class="line">算法笔记</span><br></pre></td></tr></table></figure>
-<p>PS 今天也要加油鸭</p>
-<p><img src="https://img-blog.csdnimg.cn/20200924160038229.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<h2 id="题目原文"><a href="#题目原文" class="headerlink" title="题目原文"></a>题目原文</h2><p>One important factor to identify acute stroke (急性脑卒中) is the volume of the stroke core. Given the results of image analysis in which the core regions are identified in each MRI slice, your job is to calculate the volume of the stroke core.</p>
-<h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case. For each case, the first line contains 4 positive integers: <em>M</em>, <em>N</em>, <em>L</em> and <em>T</em>, where <em>M</em> and <em>N</em> are the sizes of each slice (i.e. pixels of a slice are in an <em>M</em>×<em>N</em> matrix, and the maximum resolution is 1286 by 128); <em>L</em> (≤60) is the number of slices of a brain; and <em>T</em> is the integer threshold (i.e. if the volume of a connected core is less than <em>T</em>, then that core must not be counted).</p>
-<p>Then <em>L</em> slices are given. Each slice is represented by an <em>M</em>×<em>N</em> matrix of 0’s and 1’s, where 1 represents a pixel of stroke, and 0 means normal. Since the thickness of a slice is a constant, we only have to count the number of 1’s to obtain the volume. However, there might be several separated core regions in a brain, and only those with their volumes no less than <em>T</em> are counted. Two pixels are <strong>connected</strong> and hence belong to the same region if they share a common side, as shown by Figure 1 where all the 6 red pixels are connected to the blue one.</p>
-<p><img src="https://images.ptausercontent.com/f85c00cc-62ce-41ff-8dd0-d1c288d87409.jpg" alt="figstroke.jpg"></p>
-<p>Figure 1</p>
-<h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each case, output in a line the total volume of the stroke core.</p>
-<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">3 4 5 2</span><br><span class="line">1 1 1 1</span><br><span class="line">1 1 1 1</span><br><span class="line">1 1 1 1</span><br><span class="line">0 0 1 1</span><br><span class="line">0 0 1 1</span><br><span class="line">0 0 1 1</span><br><span class="line">1 0 1 1</span><br><span class="line">0 1 0 0</span><br><span class="line">0 0 0 0</span><br><span class="line">1 0 1 1</span><br><span class="line">0 0 0 0</span><br><span class="line">0 0 0 0</span><br><span class="line">1 0 0 0</span><br></pre></td></tr></table></figure>
-<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">26</span><br></pre></td></tr></table></figure>
-<h2 id="生词如下"><a href="#生词如下" class="headerlink" title="生词如下:"></a>生词如下:</h2><p>这题的英文是一点都不懂系列,讲的啥都不知道</p>
-<p>volume    量,卷,大</p>
-<p>matrix    矩阵</p>
-<p>slices    切片,图片,片段,割图区域</p>
-<p>Then L slices are given. Each slice is represented by an M×N matrix of 0’s and 1’s, where 1 represents a pixel of stroke </p>
-<p>这L个切片和m*n连接在一起.切片的个数只能是0 和1 </p>
-<h3 id="核心句子"><a href="#核心句子" class="headerlink" title="核心句子"></a>核心句子</h3><p>Then L slices are given    然后给了L个切片</p>
-<h2 id="题目大意："><a href="#题目大意：" class="headerlink" title="题目大意："></a>题目大意：</h2><p>就是给你一个三维的矩阵,要你求出一个块 .块的定义就是:</p>
-<p>如果矩阵中有若干个一是相邻的, (不必两两相邻) 那么称这些1构成了一个 “块” 求给定的矩阵中 “块” 的个数</p>
-<p>就是一个点和一个点是相邻的.</p>
-<p>然后要你输出符合要求的块数.</p>
-<h2 id="思路如下"><a href="#思路如下" class="headerlink" title="思路如下:"></a>思路如下:</h2><p>套算法笔记的模板   </p>
-<p>不过这个是三维的了.所以我们的和增量有关的数据都需要改变.</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> X[<span class="number">6</span>] = &#123; <span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">-1</span>,<span class="number">1</span> &#125;;</span><br><span class="line"><span class="keyword">int</span> Y[<span class="number">6</span>] = &#123; <span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">-1</span>,<span class="number">0</span>,<span class="number">0</span> &#125;;</span><br><span class="line"><span class="keyword">int</span> Z[<span class="number">6</span>] = &#123; <span class="number">1</span>,<span class="number">-1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span> &#125;;</span><br></pre></td></tr></table></figure>
-<p>其他的都差不多,就是改个增量,然后就是他输入时候的顺序我没有看懂.</p>
-<p>我copy的笔记.如果输入的那个看懂了</p>
-<p>这题柳神的代码也基本都是模板,就不放上来了.</p>
-<h2 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下:"></a>代码如下:</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line">	<span class="keyword">int</span> x, y, z;		<span class="comment">//位置 x,y,z</span></span><br><span class="line">	</span><br><span class="line">&#125;Node;</span><br><span class="line"><span class="keyword">int</span> N,M,L,T;							<span class="comment">//矩阵的大小</span></span><br><span class="line"><span class="keyword">int</span> matrix[<span class="number">1290</span>][<span class="number">130</span>][<span class="number">61</span>];				<span class="comment">//默认的最大矩阵</span></span><br><span class="line"><span class="keyword">bool</span> inq[<span class="number">1290</span>][<span class="number">130</span>][<span class="number">61</span>] = &#123; <span class="literal">false</span> &#125;;</span><br><span class="line"><span class="keyword">int</span> X[<span class="number">6</span>] = &#123; <span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">-1</span> &#125;;</span><br><span class="line"><span class="keyword">int</span> Y[<span class="number">6</span>] = &#123; <span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">-1</span>,<span class="number">0</span>,<span class="number">0</span> &#125;;</span><br><span class="line"><span class="keyword">int</span> Z[<span class="number">6</span>] = &#123; <span class="number">1</span>,<span class="number">-1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">judge</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> z)</span> </span>&#123;		<span class="comment">//判断坐标(x,y,z)合理不合理</span></span><br><span class="line">	<span class="comment">//越界返回false</span></span><br><span class="line">	<span class="keyword">if</span> (x &gt;= N || x &lt; <span class="number">0</span> || y &gt;= M || y &lt; <span class="number">0</span>||z&gt;=L||z&lt;<span class="number">0</span>)	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	<span class="comment">//当前位置为0,或(x,y)已入过对,返回false</span></span><br><span class="line">	<span class="keyword">if</span> (matrix[x][y][z] == <span class="number">0</span> || inq[x][y][z] == <span class="literal">true</span>)	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	<span class="comment">//以上条件都不满足,返回true</span></span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">BFS</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> z)</span> </span>&#123;</span><br><span class="line">	<span class="built_in">queue</span>&lt;node&gt; Q;							<span class="comment">//定义队列</span></span><br><span class="line">	Node.x = x, Node.y = y, Node.z = z;	<span class="comment">//当前队列的坐标为(x,y,z)</span></span><br><span class="line">	Q.push(Node);							<span class="comment">//将结点Node入列</span></span><br><span class="line">	inq[x][y][z] = <span class="literal">true</span>;					<span class="comment">//设置(x,y,z)已入队列</span></span><br><span class="line">	<span class="keyword">int</span> tot = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (!Q.empty()) &#123;</span><br><span class="line">		node top = Q.front();				<span class="comment">//取队首元素</span></span><br><span class="line">		Q.pop();	</span><br><span class="line">		tot++;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">6</span>; ++i) &#123;</span><br><span class="line">			<span class="keyword">int</span> newX = top.x + X[i];</span><br><span class="line">			<span class="keyword">int</span> newY = top.y + Y[i];</span><br><span class="line">			<span class="keyword">int</span> newZ = top.z + Z[i];</span><br><span class="line">			<span class="keyword">if</span> (judge(newX, newY, newZ)) &#123;</span><br><span class="line">				<span class="comment">//设置Node的坐标为(newX,newY,newZ)</span></span><br><span class="line">				Node.x = newX, Node.y = newY, Node.z = newZ;</span><br><span class="line">				Q.push(Node);</span><br><span class="line">				inq[newX][newY][newZ]=<span class="literal">true</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (tot &gt;= T)	<span class="keyword">return</span> tot;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d%d&quot;</span>, &amp;N, &amp;M, &amp;L, &amp;T);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> z = <span class="number">0</span>; z &lt; L; ++z) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> x = <span class="number">0</span>; x &lt; N; ++x) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> y = <span class="number">0</span>; y &lt; M; ++y)</span><br><span class="line">				<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;matrix[x][y][z]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> z = <span class="number">0</span>; z &lt; L; ++z) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> x = <span class="number">0</span>; x &lt; N; ++x) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> y = <span class="number">0</span>; y &lt; M; ++y)</span><br><span class="line">				<span class="keyword">if</span> (matrix[x][y][z] == <span class="number">1</span> &amp;&amp; inq[x][y][z]==<span class="literal">false</span>) &#123;</span><br><span class="line">					ans += BFS(x, y, z);</span><br><span class="line">				&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, ans);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>如果这篇文章对你有张帮助的话,可以用你高贵的小手给我点一个免费的赞吗</p>
-<p>相信我，你也能变成光.</p>
-<p><img src="https://img-blog.csdnimg.cn/20200607184932978.bmp" alt="在这里插入图片描述"></p>
-<p>如果你有任何建议,或者是发现了我的错误,欢迎评论留言指出.</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://camilleferros.top/2020/10/06/PTA%E7%94%B21103%20Integer-Factorization-30%E5%88%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/Camille.jpg">
-      <meta itemprop="name" content="Camille">
-      <meta itemprop="description" content="效率，是成功的核心关键">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Camille">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/10/06/PTA%E7%94%B21103%20Integer-Factorization-30%E5%88%86/" class="post-title-link" itemprop="url">PTA甲1103 Integer Factorization (30分)</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2020-10-06 16:10:50" itemprop="dateCreated datePublished" datetime="2020-10-06T16:10:50+08:00">2020-10-06</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-04-13 14:18:40" itemprop="dateModified" datetime="2021-04-13T14:18:40+08:00">2021-04-13</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">刷题笔记</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/PTA/" itemprop="url" rel="index"><span itemprop="name">PTA</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>强烈推荐,刷PTA的朋友都认识一下柳神—PTA解法大佬</p>
-<p>本文由参考于柳神博客写成</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/liuchuo">柳神的CSDN博客,这个可以搜索文章</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.liuchuo.net/">柳神的个人博客,这个没有广告,但是不能搜索</a></p>
-<p>还有就是非常非常有用的 算法笔记 全名是</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">算法笔记  上级训练实战指南		<span class="regexp">//</span>这本都是PTA的题解</span><br><span class="line">算法笔记</span><br></pre></td></tr></table></figure>
-<p>PS 今天也要加油鸭</p>
-<p><img src="https://img-blog.csdnimg.cn/20200924160038229.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<h2 id="题目原文"><a href="#题目原文" class="headerlink" title="题目原文"></a>题目原文</h2><p>The <em>K</em>−<em>P</em> factorization of a positive integer <em>N</em> is to write <em>N</em> as the sum of the <em>P</em>-th power of <em>K</em> positive integers. You are supposed to write a program to find the <em>K</em>−<em>P</em> factorization of <em>N</em> for any positive integers <em>N</em>, <em>K</em> and <em>P</em>.</p>
-<h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case which gives in a line the three positive integers <em>N</em> (≤400), <em>K</em> (≤<em>N</em>) and <em>P</em> (1&lt;<em>P</em>≤7). The numbers in a line are separated by a space.</p>
-<h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each case, if the solution exists, output in the format:</p>
-<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">N</span> = <span class="built_in">n</span>[<span class="number">1</span>]^P + ... <span class="built_in">n</span>[K]^P</span><br></pre></td></tr></table></figure>
-<p>where <code>n[i]</code> (<code>i</code> = 1, …, <code>K</code>) is the <code>i</code>-th factor. All the factors must be printed in non-increasing order.</p>
-<p>Note: the solution may not be unique. For example, the 5-2 factorization of 169 has 9 solutions, such as 122+42+22+22+12, or 112+62+22+22+22, or more. You must output the one with the maximum sum of the factors. If there is a tie, the largest factor sequence must be chosen — sequence { <em>a</em>1,<em>a</em>2,⋯,<em>a**K</em> } is said to be <strong>larger</strong> than { <em>b</em>1,<em>b</em>2,⋯,<em>b**K</em> } if there exists 1≤<em>L</em>≤<em>K</em> such that <em>a**i</em>=<em>b**i</em> for <em>i</em>&lt;<em>L</em> and <em>a**L</em>&gt;<em>b**L</em>.</p>
-<p>If there is no solution, simple output <code>Impossible</code>.</p>
-<h3 id="Sample-Input-1"><a href="#Sample-Input-1" class="headerlink" title="Sample Input 1:"></a>Sample Input 1:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">169 5 2</span><br></pre></td></tr></table></figure>
-<h3 id="Sample-Output-1"><a href="#Sample-Output-1" class="headerlink" title="Sample Output 1:"></a>Sample Output 1:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">169 &#x3D; 6^2 + 6^2 + 6^2 + 6^2 + 5^2</span><br></pre></td></tr></table></figure>
-<h3 id="Sample-Input-2"><a href="#Sample-Input-2" class="headerlink" title="Sample Input 2:"></a>Sample Input 2:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">169 167 3</span><br></pre></td></tr></table></figure>
-<h3 id="Sample-Output-2"><a href="#Sample-Output-2" class="headerlink" title="Sample Output 2:"></a>Sample Output 2:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Impossible</span><br></pre></td></tr></table></figure>
-<h2 id="生词如下"><a href="#生词如下" class="headerlink" title="生词如下:"></a>生词如下:</h2><p>PS:有事朦胧题,但是这题如果我不翻译的话,肯定是做不出来的.我只知道这题可以套模板,但是并不知道,这题的变量都是啥.</p>
-<p>Factorization    因子分解</p>
-<h2 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意:"></a>题目大意:</h2><p>给你一个数N  然后一个数K,一个数P</p>
-<p>要你吧N因数分解成K个数的p次方的和</p>
-<p>而且要求这K个数的和是最大的</p>
-<p>这是一道非常经典的DFS算法.</p>
-<p>我们采用的方法就是套用模板</p>
-<h2 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下:"></a>代码如下:</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="comment">//n ,k,p如题所示,maxFacsum就是最大底数之和</span></span><br><span class="line"><span class="keyword">int</span> n, k, p, maxFacSum = <span class="number">-1</span>;</span><br><span class="line"><span class="comment">//fac记录0^p 1^p ..... i^p是的i^p为不超过n的最大数</span></span><br><span class="line"><span class="comment">//ans存放最优底数序列,temp存放递归中的临时底数序列</span></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; fac, ans, temp;</span><br><span class="line"><span class="comment">//power函数计算x^p</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">power</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> ans = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; p; ++i) &#123;</span><br><span class="line">		ans *= x;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//init函数预处理fac数组,注意吧0也存进去.</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">0</span>,temp = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (temp &lt;= n) &#123;					<span class="comment">//当i^p没有超过n时,不断吧i^p加入fac</span></span><br><span class="line">		fac.push_back(temp);</span><br><span class="line">		temp = power(++i);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//DFS函数,当前访问fac[index],nowK为当前选中个数</span></span><br><span class="line"><span class="comment">//sum为当前选中的数之和,facSum为当前选中的底数之和</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS</span><span class="params">(<span class="keyword">int</span> index, <span class="keyword">int</span> nowK, <span class="keyword">int</span> sum, <span class="keyword">int</span> facSum)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (sum == n &amp;&amp; nowK == k) &#123;		<span class="comment">//找到一个满足的序列		</span></span><br><span class="line">		<span class="keyword">if</span> (facSum &gt; maxFacSum) &#123;		<span class="comment">//底数之和更优</span></span><br><span class="line">			ans = temp;					<span class="comment">//更新最优底数序列</span></span><br><span class="line">			maxFacSum = facSum;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (sum &gt; n || nowK &gt; k)	<span class="keyword">return</span>;	<span class="comment">//这种情况下不会产生答案,直接返回</span></span><br><span class="line">	<span class="keyword">if</span> (index - <span class="number">1</span> &gt;= <span class="number">0</span>) &#123;		<span class="comment">//fac[0]不需要选择</span></span><br><span class="line">		temp.push_back(index);	<span class="comment">//把底数index加入临时序列temp</span></span><br><span class="line">		DFS(index, nowK + <span class="number">1</span>, sum + fac[index], facSum + index);</span><br><span class="line">		temp.pop_back();</span><br><span class="line">		DFS(index<span class="number">-1</span>, nowK, sum, facSum);<span class="comment">//不选的分支</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d&quot;</span>, &amp;n, &amp;k, &amp;p);</span><br><span class="line">	init();							<span class="comment">//初始化init数组</span></span><br><span class="line">	DFS(fac.size() - <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);	<span class="comment">//从fac的最后以为开始往前搜索</span></span><br><span class="line">	<span class="keyword">if</span> (maxFacSum == <span class="number">-1</span>)	<span class="built_in">printf</span>(<span class="string">&quot;Impossible\n&quot;</span>);</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d = %d^%d&quot;</span>, n, ans[<span class="number">0</span>],p);	<span class="comment">//输出ans的结果</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; ans.size(); ++i)</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot; + %d^%d&quot;</span>, ans[i], p);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-<h2 id="核心代码-模板"><a href="#核心代码-模板" class="headerlink" title="核心代码(模板)"></a>核心代码(模板)</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS</span><span class="params">(<span class="keyword">int</span> index, <span class="keyword">int</span> nowK, <span class="keyword">int</span> sum, <span class="keyword">int</span> facSum)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (sum == n &amp;&amp; nowK == k) &#123;		<span class="comment">//找到一个满足的序列		</span></span><br><span class="line">		<span class="keyword">if</span> (facSum &gt; maxFacSum) &#123;		<span class="comment">//底数之和更优</span></span><br><span class="line">			ans = temp;					<span class="comment">//更新最优底数序列</span></span><br><span class="line">			maxFacSum = facSum;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (sum &gt; n || nowK &gt; k)	<span class="keyword">return</span>;	<span class="comment">//这种情况下不会产生答案,直接返回</span></span><br><span class="line">	<span class="keyword">if</span> (index - <span class="number">1</span> &gt;= <span class="number">0</span>) &#123;		<span class="comment">//fac[0]不需要选择</span></span><br><span class="line">		temp.push_back(index);	<span class="comment">//把底数index加入临时序列temp</span></span><br><span class="line">		DFS(index, nowK + <span class="number">1</span>, sum + fac[index], facSum + index);</span><br><span class="line">		temp.pop_back();</span><br><span class="line">		DFS(index<span class="number">-1</span>, nowK, sum, facSum);<span class="comment">//不选的分支</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="柳神的代码"><a href="#柳神的代码" class="headerlink" title="柳神的代码:"></a>柳神的代码:</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n, k, p, maxFacSum = <span class="number">-1</span>;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v, ans, tempAns;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp = <span class="number">0</span>, index = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (temp &lt;= n) &#123;</span><br><span class="line">        v.push_back(temp);</span><br><span class="line">        temp = <span class="built_in">pow</span>(index, p);</span><br><span class="line">        index++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> index, <span class="keyword">int</span> tempSum, <span class="keyword">int</span> tempK, <span class="keyword">int</span> facSum)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (tempK == k) &#123;</span><br><span class="line">        <span class="keyword">if</span> (tempSum == n &amp;&amp; facSum &gt; maxFacSum) &#123;</span><br><span class="line">                ans = tempAns;</span><br><span class="line">                maxFacSum = facSum;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(index &gt;= <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (tempSum + v[index] &lt;= n) &#123;</span><br><span class="line">            tempAns[tempK] = index;</span><br><span class="line">            dfs(index, tempSum + v[index], tempK + <span class="number">1</span>, facSum + index);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (index == <span class="number">1</span>) <span class="keyword">return</span>;</span><br><span class="line">        index--;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d&quot;</span>, &amp;n, &amp;k, &amp;p);</span><br><span class="line">    init(); </span><br><span class="line">    tempAns.resize(k);</span><br><span class="line">    dfs(v.size() - <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">    <span class="keyword">if</span> (maxFacSum == <span class="number">-1</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Impossible&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d = &quot;</span>, n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; ans.size(); i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (i != <span class="number">0</span>) <span class="built_in">printf</span>(<span class="string">&quot; + &quot;</span>);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d^%d&quot;</span>, ans[i], p);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
       
     </div>
 
