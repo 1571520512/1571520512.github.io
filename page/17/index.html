@@ -217,20 +217,20 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">236</span>
+          <span class="site-state-item-count">237</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-count">30</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">67</span>
+        <span class="site-state-item-count">69</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -261,6 +261,92 @@
       
 
       
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://camilleferros.top/2021/04/13/PTA%E4%B9%991028%20%E4%BA%BA%E5%8F%A3%E6%99%AE%E6%9F%A5%20(20%E5%88%86))--%E6%B0%B4%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Camille.jpg">
+      <meta itemprop="name" content="Camille">
+      <meta itemprop="description" content="效率，是成功的核心关键">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Camille">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/04/13/PTA%E4%B9%991028%20%E4%BA%BA%E5%8F%A3%E6%99%AE%E6%9F%A5%20(20%E5%88%86))--%E6%B0%B4%E9%A2%98/" class="post-title-link" itemprop="url">PTA乙1028 人口普查 (20分))--水题</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-04-13 14:36:50 / Modified: 20:14:18" itemprop="dateCreated datePublished" datetime="2021-04-13T14:36:50+08:00">2021-04-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">刷题笔记</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/PTA/" itemprop="url" rel="index"><span itemprop="name">PTA</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="题目原文"><a href="#题目原文" class="headerlink" title="题目原文"></a>题目原文</h1><p>某城镇进行人口普查，得到了全体居民的生日。现请你写个程序，找出镇上最年长和最年轻的人。</p>
+<p>这里确保每个输入的日期都是合法的，但不一定是合理的——假设已知镇上没有超过 200 岁的老人，而今天是 2014 年 9 月 6 日，所以超过 200 岁的生日和未出生的生日都是不合理的，应该被过滤掉。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在第一行给出正整数 <em>N</em>，取值在(0,105]；随后 <em>N</em> 行，每行给出 1 个人的姓名（由不超过 5 个英文字母组成的字符串）、以及按 <code>yyyy/mm/dd</code>（即年/月/日）格式给出的生日。题目保证最年长和最年轻的人没有并列。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中顺序输出有效生日的个数、最年长人和最年轻人的姓名，其间以空格分隔。</p>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">John 2001&#x2F;05&#x2F;12</span><br><span class="line">Tom 1814&#x2F;09&#x2F;06</span><br><span class="line">Ann 2121&#x2F;01&#x2F;30</span><br><span class="line">James 1814&#x2F;09&#x2F;05</span><br><span class="line">Steve 1967&#x2F;11&#x2F;20</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 Tom John</span><br></pre></td></tr></table></figure>
+<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">People</span> &#123;</span></span><br><span class="line">	<span class="keyword">char</span> Name[<span class="number">6</span>];</span><br><span class="line">	<span class="keyword">int</span> Year;</span><br><span class="line">	<span class="keyword">int</span> Month;</span><br><span class="line">	<span class="keyword">int</span> Day;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">People</span> <span class="title">town</span>[100020];</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> Year, Month, Day;</span><br><span class="line">	<span class="keyword">int</span> Max=<span class="number">0</span>, Min=<span class="number">9999999999</span>;	<span class="comment">//初始化</span></span><br><span class="line">	<span class="keyword">int</span> MaxID=<span class="number">0</span>, MinID=<span class="number">0</span>;		<span class="comment">//用来存储下标</span></span><br><span class="line">	<span class="keyword">char</span> Name[<span class="number">6</span>];</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">int</span> K;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;K);</span><br><span class="line">	<span class="keyword">int</span> j = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; K; i++) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%s %d/%d/%d&quot;</span>, Name, &amp;Year, &amp;Month, &amp;Day);</span><br><span class="line">		<span class="keyword">if</span> (Year &lt; <span class="number">1814</span>)</span><br><span class="line">			;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (Year &gt;<span class="number">2014</span>)</span><br><span class="line">			;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (Year == <span class="number">2014</span> &amp;&amp; Month &gt; <span class="number">9</span>)</span><br><span class="line">			;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (Year == <span class="number">2014</span> &amp;&amp; Month == <span class="number">9</span> &amp;&amp; Day &gt; <span class="number">6</span>)</span><br><span class="line">			;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (Year == <span class="number">1814</span> &amp;&amp; Month &lt; <span class="number">9</span>)</span><br><span class="line">			;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (Year == <span class="number">1814</span> &amp;&amp; Month == <span class="number">9</span> &amp;&amp; Day &lt; <span class="number">6</span>)</span><br><span class="line">			;</span><br><span class="line">		<span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="built_in">strcpy</span>(town[j].Name, Name);</span><br><span class="line">			town[j].Year = Year;</span><br><span class="line">			town[j].Month = Month;</span><br><span class="line">			town[j].Day = Day;</span><br><span class="line">			<span class="keyword">if</span> (Year * <span class="number">365</span> + Month * <span class="number">30</span> + Day &gt; Max) &#123;</span><br><span class="line">				Max = Year * <span class="number">365</span> + Month * <span class="number">30</span> + Day;</span><br><span class="line">				MaxID = j;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (Year * <span class="number">365</span> + Month * <span class="number">30</span> + Day &lt; Min) &#123;</span><br><span class="line">				Min = Year * <span class="number">365</span> + Month * <span class="number">30</span> + Day;</span><br><span class="line">				MinID = j;</span><br><span class="line">			&#125;</span><br><span class="line">			j++;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (j != <span class="number">0</span>)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d %s %s&quot;</span>, j, town[MinID].Name, town[MaxID].Name);</span><br><span class="line">	<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">&quot;0&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>123</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
     
 
 
@@ -413,96 +499,6 @@
 <h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">10 8</span><br><span class="line">2 3 20 4 5 1 6 7 8 9</span><br></pre></td></tr></table></figure>
 <h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">8</span><br></pre></td></tr></table></figure>
 <h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">100010</span>;</span><br><span class="line"><span class="keyword">int</span> n, p, a[maxn];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">binarySearch</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">long</span> <span class="keyword">long</span> x)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (a[n - <span class="number">1</span>] &lt;= x)	<span class="keyword">return</span> n;</span><br><span class="line">	<span class="keyword">int</span> l = i + <span class="number">1</span>, r = n - <span class="number">1</span>, mid;</span><br><span class="line">	<span class="keyword">while</span> (l &lt; r) &#123;</span><br><span class="line">		mid = (l + r) / <span class="number">2</span>;</span><br><span class="line">		<span class="keyword">if</span> (a[mid] &lt;= x)	l = mid + <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">else</span>	r = mid;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span>	l;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;n, &amp;p);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;a[i]);</span><br><span class="line">	sort(a, a + n);				<span class="comment">//递增排序</span></span><br><span class="line">	<span class="keyword">int</span> ans = <span class="number">1</span>;				<span class="comment">//最大长度,初值为1(表示有至少有一个数)</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">		<span class="keyword">int</span> j = binarySearch(i, (<span class="keyword">long</span> <span class="keyword">long</span>)a[i] * p);</span><br><span class="line">		ans = max(ans, j - i);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, ans);	<span class="comment">//输出结果</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>123</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://camilleferros.top/2021/04/13/PTA%E4%B9%991031%20%E6%9F%A5%E9%AA%8C%E8%BA%AB%E4%BB%BD%E8%AF%81%20(15%E5%88%86)--%E6%B0%B4%E9%A2%98/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/Camille.jpg">
-      <meta itemprop="name" content="Camille">
-      <meta itemprop="description" content="效率，是成功的核心关键">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Camille">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/04/13/PTA%E4%B9%991031%20%E6%9F%A5%E9%AA%8C%E8%BA%AB%E4%BB%BD%E8%AF%81%20(15%E5%88%86)--%E6%B0%B4%E9%A2%98/" class="post-title-link" itemprop="url">PTA乙1031 查验身份证 (15分)--水题</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-04-13 14:36:50 / Modified: 20:17:53" itemprop="dateCreated datePublished" datetime="2021-04-13T14:36:50+08:00">2021-04-13</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">刷题笔记</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/PTA/" itemprop="url" rel="index"><span itemprop="name">PTA</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="题目原文"><a href="#题目原文" class="headerlink" title="题目原文"></a>题目原文</h1><p>一个合法的身份证号码由17位地区、日期编号和顺序编号加1位校验码组成。校验码的计算规则如下：</p>
-<p>首先对前17位数字加权求和，权重分配为：{7，9，10，5，8，4，2，1，6，3，7，9，10，5，8，4，2}；然后将计算的和对11取模得到值<code>Z</code>；最后按照以下关系对应<code>Z</code>值与校验码<code>M</code>的值：</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Z：<span class="number">0</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span> <span class="number">7</span> <span class="number">8</span> <span class="number">9</span> <span class="number">10</span></span><br><span class="line">M：<span class="number">1</span> <span class="number">0</span> X <span class="number">9</span> <span class="number">8</span> <span class="number">7</span> <span class="number">6</span> <span class="number">5</span> <span class="number">4</span> <span class="number">3</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
-<p>现在给定一些身份证号码，请你验证校验码的有效性，并输出有问题的号码。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入第一行给出正整数<em>N</em>（≤100）是输入的身份证号码的个数。随后<em>N</em>行，每行给出1个18位身份证号码。</p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>按照输入的顺序每行输出1个有问题的身份证号码。这里并不检验前17位是否合理，只检查前17位是否全为数字且最后1位校验码计算准确。如果所有号码都正常，则输出<code>All passed</code>。</p>
-<h3 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">320124198808240056</span><br><span class="line">12010X198901011234</span><br><span class="line">110108196711301866</span><br><span class="line">37070419881216001X</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">12010X198901011234</span><br><span class="line">110108196711301866</span><br><span class="line">37070419881216001X</span><br></pre></td></tr></table></figure>
-<h3 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h3><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">320124198808240056</span></span><br><span class="line"><span class="number">110108196711301862</span></span><br></pre></td></tr></table></figure>
-<h3 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h3><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">All</span> passed</span><br></pre></td></tr></table></figure>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> N, Weight[<span class="number">18</span>] = &#123; <span class="number">7</span>,<span class="number">9</span>,<span class="number">10</span>,<span class="number">5</span>,<span class="number">8</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">6</span>,<span class="number">3</span>,<span class="number">7</span>,<span class="number">9</span>,<span class="number">10</span>,<span class="number">5</span>,<span class="number">8</span>,<span class="number">4</span>,<span class="number">2</span> &#125;, Sum = <span class="number">0</span>, flag=<span class="number">0</span>,MaxFlag=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">char</span> M[<span class="number">12</span>] = &#123; <span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;0&#x27;</span>,<span class="string">&#x27;X&#x27;</span>, <span class="string">&#x27;9&#x27;</span> ,<span class="string">&#x27;8&#x27;</span>, <span class="string">&#x27;7&#x27;</span> ,<span class="string">&#x27;6&#x27;</span> ,<span class="string">&#x27;5&#x27;</span>, <span class="string">&#x27;4&#x27;</span>, <span class="string">&#x27;3&#x27;</span>, <span class="string">&#x27;2&#x27;</span> &#125;;</span><br><span class="line">	<span class="built_in">string</span> ID;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; N;</span><br><span class="line">	<span class="keyword">while</span> (N--) &#123;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; ID;</span><br><span class="line">		flag = <span class="number">0</span>;</span><br><span class="line">		Sum = <span class="number">0</span>;	<span class="comment">//重新初始化</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">17</span>; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (ID[i] &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; ID[i] &lt;= <span class="string">&#x27;9&#x27;</span>) &#123; Sum += Weight[i]* (ID[i] - <span class="string">&#x27;0&#x27;</span>); &#125;</span><br><span class="line">			<span class="keyword">else</span> &#123;</span><br><span class="line">				flag = <span class="number">1</span>;</span><br><span class="line">				MaxFlag = <span class="number">1</span>;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (M[Sum % <span class="number">11</span>] == ID[<span class="number">17</span>] &amp;&amp; flag == <span class="number">0</span>) &#123;</span><br><span class="line">			flag = <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> &#123;</span><br><span class="line">			flag = <span class="number">1</span>;</span><br><span class="line">			MaxFlag = <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (flag == <span class="number">1</span>) &#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; ID&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (MaxFlag == <span class="number">0</span>)	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;All passed&quot;</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>123</p>
 
       
