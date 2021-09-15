@@ -217,7 +217,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">240</span>
+          <span class="site-state-item-count">241</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -261,6 +261,92 @@
       
 
       
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://camilleferros.top/2020/10/02/PTA%E7%94%B21001%20A+B-Format-20%E5%88%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Camille.jpg">
+      <meta itemprop="name" content="Camille">
+      <meta itemprop="description" content="效率，是成功的核心关键">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Camille">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/10/02/PTA%E7%94%B21001%20A+B-Format-20%E5%88%86/" class="post-title-link" itemprop="url">PTA甲1001 A+B Format (20分)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-10-02 11:00:58" itemprop="dateCreated datePublished" datetime="2020-10-02T11:00:58+08:00">2020-10-02</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-04-13 15:11:56" itemprop="dateModified" datetime="2021-04-13T15:11:56+08:00">2021-04-13</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">刷题笔记</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/PTA/" itemprop="url" rel="index"><span itemprop="name">PTA</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p> 这题我不会,是抄的刘婼大神的.地址如下</p>
+<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a><a target="_blank" rel="noopener" href="https://blog.csdn.net/liuchuo/article/details/81436096">地址</a></h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a, b;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; a &gt;&gt; b;</span><br><span class="line">    <span class="built_in">string</span> s = to_string(a + b);    <span class="comment">//把a+b转换为字符串</span></span><br><span class="line">    <span class="keyword">int</span> len = s.length();           <span class="comment">//算出s的长度</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; s[i];               <span class="comment">//输出第一个字符</span></span><br><span class="line">        <span class="keyword">if</span> (s[i] == <span class="string">&#x27;-&#x27;</span>) </span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">if</span> ((i + <span class="number">1</span>) % <span class="number">3</span> == len % <span class="number">3</span> &amp;&amp; i != len - <span class="number">1</span>) <span class="comment">//如果i满足第三位的情况下</span></span><br><span class="line">            <span class="comment">//而且不是最后一个</span></span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;,&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
     
 
 
@@ -501,166 +587,10 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://camilleferros.top/2020/10/01/UE4Pawn%E7%B1%BB%E7%AC%94%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/Camille.jpg">
-      <meta itemprop="name" content="Camille">
-      <meta itemprop="description" content="效率，是成功的核心关键">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Camille">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/10/01/UE4Pawn%E7%B1%BB%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">UE4Pawn类笔记</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2020-10-01 22:47:58" itemprop="dateCreated datePublished" datetime="2020-10-01T22:47:58+08:00">2020-10-01</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-10-06 13:15:29" itemprop="dateModified" datetime="2020-10-06T13:15:29+08:00">2020-10-06</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/UE4/" itemprop="url" rel="index"><span itemprop="name">UE4</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>本篇文章是我学习UE4的笔记</p>
-<p>UE4 里面的碰撞分为简单碰撞和复杂碰撞两种.</p>
-<p>Pawn类是Actor的子类.</p>
-<p>有些东西是可以继承的.</p>
-<p>其他的还是那一套.</p>
-<p>标识符.</p>
-<p>然后指针指向.</p>
-<p>但是不同的是.</p>
-<p>学到了游戏的Mod .就是控制方式.</p>
-<p>这个游戏的控制方式.</p>
-<p>然后就是一些基本的设置.</p>
-<p>贴一些核心代码:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">MyCamera = CreateDefaultSubobject&lt;UCameraComponent&gt;(TEXT(<span class="string">&quot;MyCamera&quot;</span>));</span><br><span class="line">MyCamera-&gt;SetupAttachment(GetRootComponent());	<span class="comment">//把这个相机设置在根组件上.</span></span><br><span class="line"><span class="comment">//设置一个相对位置</span></span><br><span class="line">MyCamera-&gt;SetRelativeLocation(FVector(<span class="number">-300.0f</span>,<span class="number">0.0f</span>,<span class="number">300.0f</span>));</span><br><span class="line">MyCamera-&gt;SetRelativeRotation(FRotator(<span class="number">-45.0f</span>, <span class="number">0.0f</span>, <span class="number">0.0f</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">//设置默认的控制角色</span></span><br><span class="line">AutoPossessPlayer = EAutoReceiveInput::Player0;</span><br></pre></td></tr></table></figure>
-<p>需要的头文件:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;Camera/CameraComponent.h&quot;</span></span></span><br></pre></td></tr></table></figure>
-<p>还有就是控制权的更改.这点在<strong>谌嘉诚</strong> 的视频里,也有讲到过.</p>
-<p>我们可以创建许多的游戏控制方式.</p>
-<p>但是在一个地图—世界里.</p>
-<p>我们只能选择一种控制方式.</p>
-<p>在Map地图哪里选择world setting </p>
-<p>Game Mode哪里选择</p>
-<p><img src="https://img-blog.csdnimg.cn/20201002231519304.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<p>在Default Pawn Class 设置</p>
-<h2 id="映射"><a href="#映射" class="headerlink" title="映射:"></a>映射:</h2><p>映射分为两种:</p>
-<p>一种就是动作映射</p>
-<p>一种就是轴映射</p>
-<p><img src="https://img-blog.csdnimg.cn/20201002232714501.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<p>动作映射一般是 即刻性的映射.就是按下就有.送了就没有.</p>
-<p>轴映射一般是值.可以多个值.但是持续的时间长.</p>
-<h2 id="DeltaTime"><a href="#DeltaTime" class="headerlink" title="DeltaTime"></a>DeltaTime</h2><p>DeltaTime是两帧之间的间隔.</p>
-<p>帧 每秒显示的图片数量.</p>
-<p>不同的机器的帧率通常是不同的.</p>
-<p>Tick就是一个每帧都调用的一个函数</p>
-<p>那么如果我们按照帧率来计算偏移量的话,那么性能好的机器,就会移动的更加快.</p>
-<p>但是当我们乘上了一个DeltaTime的话</p>
-<p>但是乘上了DeltaTime的话,整体的速度都还是会减少的.减少的倍数就是各自的帧率.</p>
-<p>例子如下:</p>
-<p><img src="https://img-blog.csdnimg.cn/2020100320234175.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<h2 id="UE4里面的SpringArm-组件"><a href="#UE4里面的SpringArm-组件" class="headerlink" title="UE4里面的SpringArm 组件"></a>UE4里面的SpringArm 组件</h2><p><img src="https://img-blog.csdnimg.cn/20201003210811383.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<p>核心代码:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don&#x27;t need it.</span></span><br><span class="line">	PrimaryActorTick.bCanEverTick = <span class="literal">true</span>;</span><br><span class="line">	<span class="comment">//创建一个默认的根组件.然后讲我们创建的组件挂到默认的根组件</span></span><br><span class="line">	RootComponent = CreateDefaultSubobject&lt;USceneComponent&gt;(TEXT(<span class="string">&quot;RootComponent&quot;</span>));</span><br><span class="line">	MyStaticMesh = CreateDefaultSubobject&lt;UStaticMeshComponent&gt;(TEXT(<span class="string">&quot;MyStaticMesh&quot;</span>));</span><br><span class="line">	MyStaticMesh-&gt;SetupAttachment(GetRootComponent());	<span class="comment">//附加组件的过程</span></span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">	MySpringArm = CreateDefaultSubobject&lt;USpringArmComponent&gt;(TEXT(<span class="string">&quot;MySpringArm&quot;</span>));</span><br><span class="line">	MySpringArm-&gt;SetupAttachment(MyStaticMesh);	<span class="comment">//附着在摄像机上.</span></span><br><span class="line">	MySpringArm-&gt;SetRelativeRotation(FRotator(<span class="number">-45.0f</span>, <span class="number">0.0f</span>, <span class="number">0.0f</span>));</span><br><span class="line">	MySpringArm-&gt;TargetArmLength = <span class="number">400.0f</span>;</span><br><span class="line">	MySpringArm-&gt;bEnableCameraLag = <span class="literal">true</span>;</span><br><span class="line">	MySpringArm-&gt;CameraLagSpeed = <span class="number">3.0f</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	MyCamera = CreateDefaultSubobject&lt;UCameraComponent&gt;(TEXT(<span class="string">&quot;MyCamera&quot;</span>));</span><br><span class="line">	MyCamera-&gt;SetupAttachment(MySpringArm);	<span class="comment">//把这个相机设置在根组件上.</span></span><br><span class="line">	<span class="comment">//设置一个相对位置</span></span><br><span class="line">	MyCamera-&gt;SetRelativeLocation(FVector(<span class="number">-300.0f</span>,<span class="number">0.0f</span>,<span class="number">300.0f</span>));</span><br><span class="line">	<span class="comment">//设置一个旋转的位置</span></span><br><span class="line">	MyCamera-&gt;SetRelativeRotation(FRotator(<span class="number">-45.0f</span>, <span class="number">0.0f</span>, <span class="number">0.0f</span>));</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="comment">//设置默认的控制角色</span></span><br><span class="line">	AutoPossessPlayer = EAutoReceiveInput::Player0;</span><br><span class="line"></span><br><span class="line">	MaxSpeed = <span class="number">100.0f</span>;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	Velocity = FVector::ZeroVector;</span><br></pre></td></tr></table></figure>
-<p>Spring Arm 是一个非常有用的的组件.让我们来看看官方的定义吧</p>
-<p><strong>Remarks</strong>（附注）</p>
-<h3 id="SpringArm的解释"><a href="#SpringArm的解释" class="headerlink" title="SpringArm的解释"></a>SpringArm的解释</h3><p>英文原版</p>
-<p>This component tries to maintain its children at a fixed distance from the parent, but will retract the children if there is a collision, and spring back when there is no collision.</p>
-<p>Example: Use as a ‘camera boom’ to keep the follow camera for a player from colliding into the world.</p>
-<p>中文翻译</p>
-<p>这个组件尝试将它的子组件与父组件保持固定的距离，但是如果发生碰撞，它将收回子组件，如果没有碰撞，它将弹回。</p>
-<p>例如:作为一个“相机吊杆”，以保持跟随相机为玩家碰撞到世界。</p>
-<h3 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h3><p>当你再C++中改变了类的层级的时候,通常,我们再UE4中需要删除掉相应的蓝图类,然后再重新生成</p>
-<p>我们再蓝图类中指定的材质信息,就都会消失掉.</p>
-<h2 id="在C-中指定对应的材质"><a href="#在C-中指定对应的材质" class="headerlink" title="在C++中指定对应的材质"></a>在C++中指定对应的材质</h2><p>这里贴部分代码</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span>                                      ConstructorHelpers::FObjectFinder&lt;UStaticMesh&gt;StaticMeshAsset(TEXT(<span class="string">&quot;StaticMesh&#x27;/Engine/BasicShapes/Sphere.Sphere&#x27;&quot;</span>));</span><br><span class="line"><span class="keyword">static</span>    ConstructorHelpers::FObjectFinder&lt;UMaterialInterface&gt;MaterialAsset(TEXT(<span class="string">&quot;Material&#x27;/Game/StarterContent/Materials/M_Tech_Hex_Tile.M_Tech_Hex_Tile&#x27;&quot;</span>));</span><br><span class="line"><span class="keyword">if</span> (StaticMeshAsset.Succeeded() &amp;&amp; MaterialAsset.Succeeded()) &#123;</span><br><span class="line">	MyStaticMesh-&gt;SetStaticMesh(StaticMeshAsset.Object);</span><br><span class="line">	MyStaticMesh-&gt;SetMaterial(<span class="number">0</span>, MaterialAsset.Object);</span><br><span class="line">	MyStaticMesh-&gt;SetWorldScale3D(FVector(<span class="number">0.5f</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>太长了,主要讲一下主要的函数的作用 ：                PS:移动进虚幻官方文档也太慢了吧.</p>
-<p> ConstructorHelpers::FObjectFinder 是一个类,这个类继承与  </p>
-<p> FGCObject ConstructorHelpers::FObjectFinder 其他的文档里面也只讲了方法</p>
-<p>网卡,查阅文档也太痛苦了.</p>
-<h2 id="FGCObject的作用是"><a href="#FGCObject的作用是" class="headerlink" title="FGCObject的作用是:"></a>FGCObject的作用是:</h2><p>This class provides common registration for garbage collection for non-UObject classes. It is an abstract base class requiring you to implement the <a target="_blank" rel="noopener" href="https://docs.unrealengine.com/en-US/API/Runtime/CoreUObject/UObject/FGCObject/AddReferencedObjects/index.html">AddReferencedObjects()</a> method. </p>
-<p>这是英文文档的原话</p>
-<p>翻译一下:</p>
-<h2 id="我的翻译"><a href="#我的翻译" class="headerlink" title="我的翻译:"></a>我的翻译:</h2><p>这个类提供一个普通的注册方法为 垃圾收集的没有UObject的对象.</p>
-<p>这是一个抽象的基础实现在 <a target="_blank" rel="noopener" href="https://docs.unrealengine.com/en-US/API/Runtime/CoreUObject/UObject/FGCObject/AddReferencedObjects/index.html">AddReferencedObjects()</a>方法里面</p>
-<h2 id="谷歌翻译"><a href="#谷歌翻译" class="headerlink" title="谷歌翻译:"></a>谷歌翻译:</h2><p>此类为非UObject类的垃圾回收提供通用注册。 它是一个抽象基类，要求您实现AddReferencedObjects方法。</p>
-<h2 id="然后就是Sweep仅仅对根组件有效"><a href="#然后就是Sweep仅仅对根组件有效" class="headerlink" title="然后就是Sweep仅仅对根组件有效"></a>然后就是Sweep仅仅对根组件有效</h2><p>我们可以把默认的Root组件和staticMesh组件换一个位置.</p>
-<p>注意默认的Root组件时一个不可编辑的组件.是没有任何细节的.</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MyStaticMesh = CreateDefaultSubobject&lt;UStaticMeshComponent&gt;(TEXT(<span class="string">&quot;MyStaticMesh&quot;</span>));</span><br><span class="line">RootComponent = MyStaticMesh;</span><br><span class="line">MyStaticMesh-&gt;SetCollisionProfileName(TEXT(<span class="string">&quot;Pawn&quot;</span>));</span><br></pre></td></tr></table></figure>
-<p>改变一下顺序,让RootComponent附在MyStaticMesh上就行.</p>
-<p>设置碰撞预制文件名为Pawn</p>
-<h2 id="设置摄像头的旋转"><a href="#设置摄像头的旋转" class="headerlink" title="设置摄像头的旋转"></a>设置摄像头的旋转</h2><p><img src="https://img-blog.csdnimg.cn/20201005190430724.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<p>我们需要先设置按键.</p>
-<p>然后再绑定</p>
-<p>.cpp</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">LookUp</span><span class="params">(<span class="keyword">float</span> Value)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">LookRight</span><span class="params">(<span class="keyword">float</span> Value)</span></span>;</span><br><span class="line">FVector2D MouseInput;</span><br></pre></td></tr></table></figure>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Fill out your copyright notice in the Description page of Project Settings.</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;MyPawn.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;Components/StaticMeshComponent.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;Camera/CameraComponent.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;Components/InputComponent.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;GameFramework/SpringArmComponent.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;UObject/ConstructorHelpers.h&quot;</span></span></span><br><span class="line"><span class="comment">// Sets default values</span></span><br><span class="line">AMyPawn::AMyPawn()</span><br><span class="line">&#123;</span><br><span class="line"> 	<span class="comment">// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don&#x27;t need it.</span></span><br><span class="line">	PrimaryActorTick.bCanEverTick = <span class="literal">true</span>;</span><br><span class="line">	<span class="comment">//创建一个默认的根组件.然后讲我们创建的组件挂到默认的根组件</span></span><br><span class="line">	</span><br><span class="line">	MyStaticMesh = CreateDefaultSubobject&lt;UStaticMeshComponent&gt;(TEXT(<span class="string">&quot;MyStaticMesh&quot;</span>));</span><br><span class="line">	RootComponent = MyStaticMesh;</span><br><span class="line">	MyStaticMesh-&gt;SetCollisionProfileName(TEXT(<span class="string">&quot;Pawn&quot;</span>));</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">static</span> ConstructorHelpers::FObjectFinder&lt;UStaticMesh&gt;StaticMeshAsset(TEXT(<span class="string">&quot;StaticMesh&#x27;/Engine/BasicShapes/Sphere.Sphere&#x27;&quot;</span>));</span><br><span class="line">	<span class="keyword">static</span> ConstructorHelpers::FObjectFinder&lt;UMaterialInterface&gt;MaterialAsset(TEXT(<span class="string">&quot;Material&#x27;/Game/StarterContent/Materials/M_Tech_Hex_Tile.M_Tech_Hex_Tile&#x27;&quot;</span>));</span><br><span class="line">	<span class="keyword">if</span> (StaticMeshAsset.Succeeded() &amp;&amp; MaterialAsset.Succeeded()) &#123;</span><br><span class="line">		MyStaticMesh-&gt;SetStaticMesh(StaticMeshAsset.Object);</span><br><span class="line">		MyStaticMesh-&gt;SetMaterial(<span class="number">0</span>, MaterialAsset.Object);</span><br><span class="line">		MyStaticMesh-&gt;SetWorldScale3D(FVector(<span class="number">0.5f</span>));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	MySpringArm = CreateDefaultSubobject&lt;USpringArmComponent&gt;(TEXT(<span class="string">&quot;MySpringArm&quot;</span>));</span><br><span class="line">	MySpringArm-&gt;SetupAttachment(GetStaticMeshComponent());	<span class="comment">//附着在摄像机上.</span></span><br><span class="line">	MySpringArm-&gt;SetRelativeRotation(FRotator(<span class="number">-45.0f</span>, <span class="number">0.0f</span>, <span class="number">0.0f</span>));</span><br><span class="line">	MySpringArm-&gt;TargetArmLength = <span class="number">400.0f</span>;</span><br><span class="line">	MySpringArm-&gt;bEnableCameraLag = <span class="literal">true</span>;</span><br><span class="line">	MySpringArm-&gt;CameraLagSpeed = <span class="number">3.0f</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	MyCamera = CreateDefaultSubobject&lt;UCameraComponent&gt;(TEXT(<span class="string">&quot;MyCamera&quot;</span>));</span><br><span class="line">	MyCamera-&gt;SetupAttachment(GetSpringArmComponent());	<span class="comment">//把这个相机设置在根组件上.</span></span><br><span class="line">	<span class="comment">//设置一个相对位置</span></span><br><span class="line">	MyCamera-&gt;SetRelativeLocation(FVector(<span class="number">-300.0f</span>,<span class="number">0.0f</span>,<span class="number">300.0f</span>));</span><br><span class="line">	<span class="comment">//设置一个旋转的位置</span></span><br><span class="line">	MyCamera-&gt;SetRelativeRotation(FRotator(<span class="number">-45.0f</span>, <span class="number">0.0f</span>, <span class="number">0.0f</span>));</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="comment">//设置默认的控制角色</span></span><br><span class="line">	AutoPossessPlayer = EAutoReceiveInput::Player0;</span><br><span class="line">	bUseControllerRotationYaw = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">	MaxSpeed = <span class="number">100.0f</span>;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	Velocity = FVector::ZeroVector;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Called when the game starts or when spawned</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">AMyPawn::BeginPlay</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Super::BeginPlay();</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Called every frame</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">AMyPawn::Tick</span><span class="params">(<span class="keyword">float</span> DeltaTime)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Super::Tick(DeltaTime);</span><br><span class="line">	AddActorLocalOffset(Velocity * DeltaTime, <span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">	AddControllerYawInput(MouseInput.X);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//我们是不需要旋转小球360度的</span></span><br><span class="line">	<span class="comment">//保存当前小球的旋转</span></span><br><span class="line">	FRotator NewSpringArmRotation = MySpringArm-&gt;GetComponentRotation();</span><br><span class="line">	<span class="comment">//X Y Z</span></span><br><span class="line">	<span class="comment">//Row Pitch Yaw</span></span><br><span class="line">	<span class="comment">//我们旋转的是我们的Y轴</span></span><br><span class="line">	NewSpringArmRotation.Pitch = FMath::Clamp(NewSpringArmRotation.Pitch += MouseInput.Y, <span class="number">-80.0f</span>, <span class="number">0.0f</span>);</span><br><span class="line">	MySpringArm-&gt;SetWorldRotation(NewSpringArmRotation);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Called to bind functionality to input</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">AMyPawn::SetupPlayerInputComponent</span><span class="params">(UInputComponent* PlayerInputComponent)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Super::SetupPlayerInputComponent(PlayerInputComponent);</span><br><span class="line">	</span><br><span class="line">	PlayerInputComponent-&gt;BindAxis(TEXT(<span class="string">&quot;MoveForward&quot;</span>), <span class="keyword">this</span>, &amp;AMyPawn::MoveForward);</span><br><span class="line">	PlayerInputComponent-&gt;BindAxis(TEXT(<span class="string">&quot;MoveRight&quot;</span>), <span class="keyword">this</span>, &amp;AMyPawn::MoveRight);</span><br><span class="line"></span><br><span class="line">	PlayerInputComponent-&gt;BindAxis(TEXT(<span class="string">&quot;LookUp&quot;</span>), <span class="keyword">this</span>, &amp;AMyPawn::LookUp);</span><br><span class="line">	PlayerInputComponent-&gt;BindAxis(TEXT(<span class="string">&quot;LookRight&quot;</span>), <span class="keyword">this</span>, &amp;AMyPawn::LookRight);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">AMyPawn::MoveForward</span><span class="params">(<span class="keyword">float</span> Value)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//FMath::Clamp(Value,-1.0f,1.0f) 将Value夹在-1和1之间</span></span><br><span class="line">	Velocity.X =FMath::Clamp(Value,<span class="number">-1.0f</span>,<span class="number">1.0f</span>)* MaxSpeed;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">AMyPawn::MoveRight</span><span class="params">(<span class="keyword">float</span> Value)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Velocity.Y = FMath::Clamp(Value, <span class="number">-1.0f</span>, <span class="number">1.0f</span>) * MaxSpeed;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">AMyPawn::LookUp</span><span class="params">(<span class="keyword">float</span> Value)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	MouseInput.Y = FMath::Clamp(Value, <span class="number">-1.0f</span>, <span class="number">1.0f</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">AMyPawn::LookRight</span><span class="params">(<span class="keyword">float</span> Value)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	MouseInput.X = FMath::Clamp(Value, <span class="number">-1.0f</span>, <span class="number">1.0f</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>.h</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Fill out your copyright notice in the Description page of Project Settings.</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> once</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;CoreMinimal.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;GameFramework/Pawn.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;MyPawn.generated.h&quot;</span></span></span><br><span class="line"></span><br><span class="line">UCLASS()</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SIKI_PROJECT_API</span> <span class="title">AMyPawn</span> :</span> <span class="keyword">public</span> APawn</span><br><span class="line">&#123;</span><br><span class="line">	GENERATED_BODY()</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="comment">// Sets default values for this pawn&#x27;s properties</span></span><br><span class="line">	AMyPawn();</span><br><span class="line"></span><br><span class="line">	UPROPERTY(VisibleAnywhere, Category = <span class="string">&quot;My Pawn Components&quot;</span>)</span><br><span class="line">	<span class="class"><span class="keyword">class</span> <span class="title">UStaticMeshComponent</span>* <span class="title">MyStaticMesh</span>;</span>		<span class="comment">//这个指针一般就是指向我们创建的实例的</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//创建一个摄像机的指针</span></span><br><span class="line">	UPROPERTY(VisibleAnywhere, Category = <span class="string">&quot;My Pawn Components&quot;</span>)</span><br><span class="line">	<span class="class"><span class="keyword">class</span> <span class="title">UCameraComponent</span>* <span class="title">MyCamera</span>;</span></span><br><span class="line"></span><br><span class="line">	UPROPERTY(VisibleAnywhere, Category = <span class="string">&quot;My Pawn Movement&quot;</span>)</span><br><span class="line">	<span class="class"><span class="keyword">class</span> <span class="title">USpringArmComponent</span>* <span class="title">MySpringArm</span>;</span></span><br><span class="line"></span><br><span class="line">	UPROPERTY(EditAnywhere, Category = <span class="string">&quot;My Pawn Components&quot;</span>)</span><br><span class="line">	<span class="keyword">float</span> MaxSpeed;</span><br><span class="line">	</span><br><span class="line">	<span class="function">FORCEINLINE UStaticMeshComponent* <span class="title">GetStaticMeshComponent</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> MyStaticMesh;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function">FORCEINLINE USpringArmComponent* <span class="title">GetSpringArmComponent</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> MySpringArm;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">protected</span>:</span><br><span class="line">	<span class="comment">// Called when the game starts or when spawned</span></span><br><span class="line">	<span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">BeginPlay</span><span class="params">()</span> <span class="keyword">override</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:	</span><br><span class="line">	<span class="comment">// Called every frame</span></span><br><span class="line">	<span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">Tick</span><span class="params">(<span class="keyword">float</span> DeltaTime)</span> <span class="keyword">override</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// Called to bind functionality to input</span></span><br><span class="line">	<span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">SetupPlayerInputComponent</span><span class="params">(class UInputComponent* PlayerInputComponent)</span> <span class="keyword">override</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">MoveForward</span><span class="params">(<span class="keyword">float</span> Value)</span></span>;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">MoveRight</span><span class="params">(<span class="keyword">float</span> Value)</span></span>;</span><br><span class="line">	FVector Velocity;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">LookUp</span><span class="params">(<span class="keyword">float</span> Value)</span></span>;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">LookRight</span><span class="params">(<span class="keyword">float</span> Value)</span></span>;</span><br><span class="line">	FVector2D MouseInput;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/78/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/78/">78</a><span class="page-number current">79</span><a class="page-number" href="/page/80/">80</a><a class="extend next" rel="next" href="/page/80/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/78/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/78/">78</a><span class="page-number current">79</span><a class="page-number" href="/page/80/">80</a><a class="page-number" href="/page/81/">81</a><a class="extend next" rel="next" href="/page/80/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
