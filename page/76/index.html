@@ -217,7 +217,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">242</span>
+          <span class="site-state-item-count">243</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -261,6 +261,128 @@
       
 
       
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://camilleferros.top/2020/10/08/PTA%E7%94%B21091%20Acute-Stroke-30%E5%88%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Camille.jpg">
+      <meta itemprop="name" content="Camille">
+      <meta itemprop="description" content="效率，是成功的核心关键">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Camille">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/10/08/PTA%E7%94%B21091%20Acute-Stroke-30%E5%88%86/" class="post-title-link" itemprop="url">PTA 1091 Acute Stroke (30分)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-10-08 13:55:13" itemprop="dateCreated datePublished" datetime="2020-10-08T13:55:13+08:00">2020-10-08</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-04-13 14:23:57" itemprop="dateModified" datetime="2021-04-13T14:23:57+08:00">2021-04-13</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">刷题笔记</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/PTA/" itemprop="url" rel="index"><span itemprop="name">PTA</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>强烈推荐,刷PTA的朋友都认识一下柳神—PTA解法大佬</p>
+<p>本文由参考于柳神博客写成</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/liuchuo">柳神的CSDN博客,这个可以搜索文章</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.liuchuo.net/">柳神的个人博客,这个没有广告,但是不能搜索</a></p>
+<p>还有就是非常非常有用的 算法笔记 全名是</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">算法笔记  上级训练实战指南		<span class="regexp">//</span>这本都是PTA的题解</span><br><span class="line">算法笔记</span><br></pre></td></tr></table></figure>
+<p>PS 今天也要加油鸭</p>
+<p><img src="https://img-blog.csdnimg.cn/20200924160038229.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<h2 id="题目原文"><a href="#题目原文" class="headerlink" title="题目原文"></a>题目原文</h2><p>One important factor to identify acute stroke (急性脑卒中) is the volume of the stroke core. Given the results of image analysis in which the core regions are identified in each MRI slice, your job is to calculate the volume of the stroke core.</p>
+<h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case. For each case, the first line contains 4 positive integers: <em>M</em>, <em>N</em>, <em>L</em> and <em>T</em>, where <em>M</em> and <em>N</em> are the sizes of each slice (i.e. pixels of a slice are in an <em>M</em>×<em>N</em> matrix, and the maximum resolution is 1286 by 128); <em>L</em> (≤60) is the number of slices of a brain; and <em>T</em> is the integer threshold (i.e. if the volume of a connected core is less than <em>T</em>, then that core must not be counted).</p>
+<p>Then <em>L</em> slices are given. Each slice is represented by an <em>M</em>×<em>N</em> matrix of 0’s and 1’s, where 1 represents a pixel of stroke, and 0 means normal. Since the thickness of a slice is a constant, we only have to count the number of 1’s to obtain the volume. However, there might be several separated core regions in a brain, and only those with their volumes no less than <em>T</em> are counted. Two pixels are <strong>connected</strong> and hence belong to the same region if they share a common side, as shown by Figure 1 where all the 6 red pixels are connected to the blue one.</p>
+<p><img src="https://images.ptausercontent.com/f85c00cc-62ce-41ff-8dd0-d1c288d87409.jpg" alt="figstroke.jpg"></p>
+<p>Figure 1</p>
+<h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each case, output in a line the total volume of the stroke core.</p>
+<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">3 4 5 2</span><br><span class="line">1 1 1 1</span><br><span class="line">1 1 1 1</span><br><span class="line">1 1 1 1</span><br><span class="line">0 0 1 1</span><br><span class="line">0 0 1 1</span><br><span class="line">0 0 1 1</span><br><span class="line">1 0 1 1</span><br><span class="line">0 1 0 0</span><br><span class="line">0 0 0 0</span><br><span class="line">1 0 1 1</span><br><span class="line">0 0 0 0</span><br><span class="line">0 0 0 0</span><br><span class="line">1 0 0 0</span><br></pre></td></tr></table></figure>
+<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">26</span><br></pre></td></tr></table></figure>
+<h2 id="生词如下"><a href="#生词如下" class="headerlink" title="生词如下:"></a>生词如下:</h2><p>这题的英文是一点都不懂系列,讲的啥都不知道</p>
+<p>volume    量,卷,大</p>
+<p>matrix    矩阵</p>
+<p>slices    切片,图片,片段,割图区域</p>
+<p>Then L slices are given. Each slice is represented by an M×N matrix of 0’s and 1’s, where 1 represents a pixel of stroke </p>
+<p>这L个切片和m*n连接在一起.切片的个数只能是0 和1 </p>
+<h3 id="核心句子"><a href="#核心句子" class="headerlink" title="核心句子"></a>核心句子</h3><p>Then L slices are given    然后给了L个切片</p>
+<h2 id="题目大意："><a href="#题目大意：" class="headerlink" title="题目大意："></a>题目大意：</h2><p>就是给你一个三维的矩阵,要你求出一个块 .块的定义就是:</p>
+<p>如果矩阵中有若干个一是相邻的, (不必两两相邻) 那么称这些1构成了一个 “块” 求给定的矩阵中 “块” 的个数</p>
+<p>就是一个点和一个点是相邻的.</p>
+<p>然后要你输出符合要求的块数.</p>
+<h2 id="思路如下"><a href="#思路如下" class="headerlink" title="思路如下:"></a>思路如下:</h2><p>套算法笔记的模板   </p>
+<p>不过这个是三维的了.所以我们的和增量有关的数据都需要改变.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> X[<span class="number">6</span>] = &#123; <span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">-1</span>,<span class="number">1</span> &#125;;</span><br><span class="line"><span class="keyword">int</span> Y[<span class="number">6</span>] = &#123; <span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">-1</span>,<span class="number">0</span>,<span class="number">0</span> &#125;;</span><br><span class="line"><span class="keyword">int</span> Z[<span class="number">6</span>] = &#123; <span class="number">1</span>,<span class="number">-1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span> &#125;;</span><br></pre></td></tr></table></figure>
+<p>其他的都差不多,就是改个增量,然后就是他输入时候的顺序我没有看懂.</p>
+<p>我copy的笔记.如果输入的那个看懂了</p>
+<p>这题柳神的代码也基本都是模板,就不放上来了.</p>
+<h2 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下:"></a>代码如下:</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line">	<span class="keyword">int</span> x, y, z;		<span class="comment">//位置 x,y,z</span></span><br><span class="line">	</span><br><span class="line">&#125;Node;</span><br><span class="line"><span class="keyword">int</span> N,M,L,T;							<span class="comment">//矩阵的大小</span></span><br><span class="line"><span class="keyword">int</span> matrix[<span class="number">1290</span>][<span class="number">130</span>][<span class="number">61</span>];				<span class="comment">//默认的最大矩阵</span></span><br><span class="line"><span class="keyword">bool</span> inq[<span class="number">1290</span>][<span class="number">130</span>][<span class="number">61</span>] = &#123; <span class="literal">false</span> &#125;;</span><br><span class="line"><span class="keyword">int</span> X[<span class="number">6</span>] = &#123; <span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">-1</span> &#125;;</span><br><span class="line"><span class="keyword">int</span> Y[<span class="number">6</span>] = &#123; <span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">-1</span>,<span class="number">0</span>,<span class="number">0</span> &#125;;</span><br><span class="line"><span class="keyword">int</span> Z[<span class="number">6</span>] = &#123; <span class="number">1</span>,<span class="number">-1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">judge</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> z)</span> </span>&#123;		<span class="comment">//判断坐标(x,y,z)合理不合理</span></span><br><span class="line">	<span class="comment">//越界返回false</span></span><br><span class="line">	<span class="keyword">if</span> (x &gt;= N || x &lt; <span class="number">0</span> || y &gt;= M || y &lt; <span class="number">0</span>||z&gt;=L||z&lt;<span class="number">0</span>)	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	<span class="comment">//当前位置为0,或(x,y)已入过对,返回false</span></span><br><span class="line">	<span class="keyword">if</span> (matrix[x][y][z] == <span class="number">0</span> || inq[x][y][z] == <span class="literal">true</span>)	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	<span class="comment">//以上条件都不满足,返回true</span></span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">BFS</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> z)</span> </span>&#123;</span><br><span class="line">	<span class="built_in">queue</span>&lt;node&gt; Q;							<span class="comment">//定义队列</span></span><br><span class="line">	Node.x = x, Node.y = y, Node.z = z;	<span class="comment">//当前队列的坐标为(x,y,z)</span></span><br><span class="line">	Q.push(Node);							<span class="comment">//将结点Node入列</span></span><br><span class="line">	inq[x][y][z] = <span class="literal">true</span>;					<span class="comment">//设置(x,y,z)已入队列</span></span><br><span class="line">	<span class="keyword">int</span> tot = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (!Q.empty()) &#123;</span><br><span class="line">		node top = Q.front();				<span class="comment">//取队首元素</span></span><br><span class="line">		Q.pop();	</span><br><span class="line">		tot++;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">6</span>; ++i) &#123;</span><br><span class="line">			<span class="keyword">int</span> newX = top.x + X[i];</span><br><span class="line">			<span class="keyword">int</span> newY = top.y + Y[i];</span><br><span class="line">			<span class="keyword">int</span> newZ = top.z + Z[i];</span><br><span class="line">			<span class="keyword">if</span> (judge(newX, newY, newZ)) &#123;</span><br><span class="line">				<span class="comment">//设置Node的坐标为(newX,newY,newZ)</span></span><br><span class="line">				Node.x = newX, Node.y = newY, Node.z = newZ;</span><br><span class="line">				Q.push(Node);</span><br><span class="line">				inq[newX][newY][newZ]=<span class="literal">true</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (tot &gt;= T)	<span class="keyword">return</span> tot;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d%d&quot;</span>, &amp;N, &amp;M, &amp;L, &amp;T);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> z = <span class="number">0</span>; z &lt; L; ++z) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> x = <span class="number">0</span>; x &lt; N; ++x) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> y = <span class="number">0</span>; y &lt; M; ++y)</span><br><span class="line">				<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;matrix[x][y][z]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> z = <span class="number">0</span>; z &lt; L; ++z) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> x = <span class="number">0</span>; x &lt; N; ++x) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> y = <span class="number">0</span>; y &lt; M; ++y)</span><br><span class="line">				<span class="keyword">if</span> (matrix[x][y][z] == <span class="number">1</span> &amp;&amp; inq[x][y][z]==<span class="literal">false</span>) &#123;</span><br><span class="line">					ans += BFS(x, y, z);</span><br><span class="line">				&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, ans);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果这篇文章对你有张帮助的话,可以用你高贵的小手给我点一个免费的赞吗</p>
+<p>相信我，你也能变成光.</p>
+<p><img src="https://img-blog.csdnimg.cn/20200607184932978.bmp" alt="在这里插入图片描述"></p>
+<p>如果你有任何建议,或者是发现了我的错误,欢迎评论留言指出.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
     
 
 
@@ -478,136 +600,6 @@
 <p>老规矩了,下面是柳神的代码时间</p>
 <h2 id="柳神的分析"><a href="#柳神的分析" class="headerlink" title="柳神的分析"></a>柳神的分析</h2><p><strong>分析：用结构体数组存储这个链表，大小为maxn = 100000，node[i]表示地址为i的结点。在结构体中定义一个num变量，将num变量先初始化为2 * maxn。通过改变num变量的值最后sort排序来改变链表的顺序。</strong><br><strong>将没有删除的结点的num标记为cnt1，cnt1为当前没有删除的结点的个数；将需要删除的结点的num标记为maxn + cnt2，cnt2表示当前删除了的结点的个数，因为一开始初始化为了2 * maxn，所以我们可以通过对num排序达到：num = 0~maxn为不删除结点，num = maxn~2maxn为删除结点，num = 2maxn为无效结点</strong><br><strong>这样sort后就会按照需要输出的顺序将结点排序，我们只需要输出前cnt1+cnt2个结点即可～～</strong></p>
 <h2 id="柳神的代码："><a href="#柳神的代码：" class="headerlink" title="柳神的代码："></a>柳神的代码：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">100000</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">NODE</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> address, key, next, num = <span class="number">2</span> * maxn;</span><br><span class="line">&#125;node[maxn];</span><br><span class="line"><span class="keyword">bool</span> exist[maxn];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cmp1</span><span class="params">(NODE a, NODE b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.num &lt; b.num;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> begin, n, cnt1 = <span class="number">0</span>, cnt2 = <span class="number">0</span>, a;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;begin, &amp;n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;a);</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;node[a].key, &amp;node[a].next);</span><br><span class="line">        node[a].address = a;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = begin; i != <span class="number">-1</span>; i = node[i].next) &#123;</span><br><span class="line">        <span class="keyword">if</span>(exist[<span class="built_in">abs</span>(node[i].key)] == <span class="literal">false</span>) &#123;</span><br><span class="line">            exist[<span class="built_in">abs</span>(node[i].key)] = <span class="literal">true</span>;</span><br><span class="line">            node[i].num = cnt1;</span><br><span class="line">            cnt1++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            node[i].num = maxn + cnt2;</span><br><span class="line">            cnt2++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    sort(node, node + maxn, cmp1);</span><br><span class="line">    <span class="keyword">int</span> cnt = cnt1 + cnt2;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; cnt; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(i != cnt1 - <span class="number">1</span> &amp;&amp; i != cnt - <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%05d %d %05d\n&quot;</span>, node[i].address, node[i].key, node[i+<span class="number">1</span>].address);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%05d %d -1\n&quot;</span>, node[i].address, node[i].key);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>如果这篇文章对你有张帮助的话,可以用你高贵的小手给我点一个免费的赞吗</p>
-<p>相信我，你也能变成光.</p>
-<p><img src="https://img-blog.csdnimg.cn/20200607184932978.bmp" alt="在这里插入图片描述"></p>
-<p>如果你有任何建议,或者是发现了我的错误,欢迎评论留言指出.</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://camilleferros.top/2020/10/02/PTA%E7%94%B21022%20Digital%20Library%20(30%E5%88%86)/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/Camille.jpg">
-      <meta itemprop="name" content="Camille">
-      <meta itemprop="description" content="效率，是成功的核心关键">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Camille">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/10/02/PTA%E7%94%B21022%20Digital%20Library%20(30%E5%88%86)/" class="post-title-link" itemprop="url">PTA 1022 Digital Library (30分)</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2020-10-02 15:43:59" itemprop="dateCreated datePublished" datetime="2020-10-02T15:43:59+08:00">2020-10-02</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-04-14 07:24:11" itemprop="dateModified" datetime="2021-04-14T07:24:11+08:00">2021-04-14</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%88%B7%E9%A2%98/" itemprop="url" rel="index"><span itemprop="name">刷题</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%88%B7%E9%A2%98/PTA/" itemprop="url" rel="index"><span itemprop="name">PTA</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>强烈推荐,刷PTA的朋友都认识一下柳神—PTA解法大佬</p>
-<p>本文由参考于柳神博客写成</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/liuchuo">柳神的CSDN博客,这个可以搜索文章</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.liuchuo.net/">柳神的个人博客,这个没有广告,但是不能搜索</a></p>
-<p>PS 今天也要加油鸭</p>
-<p><img src="https://img-blog.csdnimg.cn/20200924160038229.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<h2 id="题目原文"><a href="#题目原文" class="headerlink" title="题目原文"></a>题目原文</h2><p>A Digital Library contains millions of books, stored according to their titles, authors, key words of their abstracts, publishers, and published years. Each book is assigned an unique 7-digit number as its ID. Given any query from a reader, you are supposed to output the resulting books, sorted in increasing order of their ID’s.</p>
-<h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case. For each case, the first line contains a positive integer <em>N</em> (≤104) which is the total number of books. Then <em>N</em> blocks follow, each contains the information of a book in 6 lines:</p>
-<ul>
-<li>Line #1: the 7-digit ID number;</li>
-<li>Line #2: the book title — a string of no more than 80 characters;</li>
-<li>Line #3: the author — a string of no more than 80 characters;</li>
-<li>Line #4: the key words — each word is a string of no more than 10 characters without any white space, and the keywords are separated by exactly one space;</li>
-<li>Line #5: the publisher — a string of no more than 80 characters;</li>
-<li>Line #6: the published year — a 4-digit number which is in the range [1000, 3000].</li>
-</ul>
-<p>It is assumed that each book belongs to one author only, and contains no more than 5 key words; there are no more than 1000 distinct key words in total; and there are no more than 1000 distinct publishers.</p>
-<p>After the book information, there is a line containing a positive integer <em>M</em> (≤1000) which is the number of user’s search queries. Then <em>M</em> lines follow, each in one of the formats shown below:</p>
-<ul>
-<li>1: a book title</li>
-<li>2: name of an author</li>
-<li>3: a key word</li>
-<li>4: name of a publisher</li>
-<li>5: a 4-digit number representing the year</li>
-</ul>
-<h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each query, first print the original query in a line, then output the resulting book ID’s in increasing order, each occupying a line. If no book is found, print <code>Not Found</code> instead.</p>
-<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">1111111</span><br><span class="line">The Testing Book</span><br><span class="line">Yue Chen</span><br><span class="line">test code debug sort keywords</span><br><span class="line">ZUCS Print</span><br><span class="line">2011</span><br><span class="line">3333333</span><br><span class="line">Another Testing Book</span><br><span class="line">Yue Chen</span><br><span class="line">test code sort keywords</span><br><span class="line">ZUCS Print2</span><br><span class="line">2012</span><br><span class="line">2222222</span><br><span class="line">The Testing Book</span><br><span class="line">CYLL</span><br><span class="line">keywords debug book</span><br><span class="line">ZUCS Print2</span><br><span class="line">2011</span><br><span class="line">6</span><br><span class="line">1: The Testing Book</span><br><span class="line">2: Yue Chen</span><br><span class="line">3: keywords</span><br><span class="line">4: ZUCS Print</span><br><span class="line">5: 2011</span><br><span class="line">3: blablabla</span><br></pre></td></tr></table></figure>
-<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">1: The Testing Book</span><br><span class="line">1111111</span><br><span class="line">2222222</span><br><span class="line">2: Yue Chen</span><br><span class="line">1111111</span><br><span class="line">3333333</span><br><span class="line">3: keywords</span><br><span class="line">1111111</span><br><span class="line">2222222</span><br><span class="line">3333333</span><br><span class="line">4: ZUCS Print</span><br><span class="line">1111111</span><br><span class="line">5: 2011</span><br><span class="line">1111111</span><br><span class="line">2222222</span><br><span class="line">3: blablabla</span><br><span class="line">Not Found</span><br></pre></td></tr></table></figure>
-<h2 id="生词如下"><a href="#生词如下" class="headerlink" title="生词如下:"></a>生词如下:</h2><p>Digital    数字的</p>
-<p>abstracts    摘要,抽象</p>
-<h2 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意:"></a>题目大意:</h2><p>给你N本书</p>
-<p>然后给你这书的一些信息,分别是</p>
-<p>id ,书名,作者,关键字—有多个.出版社.出版年份</p>
-<p>然后再给N个查询,1 是查书名 2 是查作者,3 是查关键字,4是查出版社,5是查出版月份</p>
-<p>要你给出查询到的id</p>
-<h2 id="思路如下"><a href="#思路如下" class="headerlink" title="思路如下:"></a>思路如下:</h2><p>我们用</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">map</span>&lt;<span class="built_in">string</span> <span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt;&gt;</span><br></pre></td></tr></table></figure>
-<p>来做,不过要注意关键字的keywords的录入.</p>
-<p>还有就是getline 之前要读取多余的\n</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> c =getchar();</span><br></pre></td></tr></table></figure>
-<h2 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下:"></a>代码如下:</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">query</span><span class="params">(<span class="built_in">map</span> &lt; <span class="built_in">string</span>, <span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; mp, <span class="built_in">string</span>&amp; str)</span></span>;		<span class="comment">//输出函数</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="built_in">map</span>&lt;<span class="built_in">string</span>, <span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt;&gt; title_id,author_id,key_id, pub_id,pubyear_id;	</span><br><span class="line">	<span class="keyword">int</span> N=<span class="number">0</span>,id=<span class="number">0</span>;</span><br><span class="line">	<span class="built_in">string</span> t, key;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; N;</span><br><span class="line">	<span class="keyword">bool</span>  flag = <span class="literal">false</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; ++i) &#123;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; id;</span><br><span class="line">		<span class="keyword">char</span> c = getchar();			<span class="comment">//接受掉换行</span></span><br><span class="line">		getline(<span class="built_in">cin</span>, t);		title_id[t].insert(id);</span><br><span class="line">		getline(<span class="built_in">cin</span>, t);		author_id[t].insert(id);		</span><br><span class="line">		<span class="keyword">while</span> (<span class="built_in">cin</span> &gt;&gt; key) &#123;</span><br><span class="line">			key_id[key].insert(id);</span><br><span class="line">			<span class="keyword">char</span>  c = getchar();</span><br><span class="line">			<span class="keyword">if</span> (c == <span class="string">&#x27;\n&#x27;</span>) <span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		getline(<span class="built_in">cin</span>, t);		pub_id[t].insert(id);</span><br><span class="line">		getline(<span class="built_in">cin</span>, t);		pubyear_id[t].insert(id);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; N;</span><br><span class="line">	<span class="keyword">char</span> c = getchar();			<span class="comment">//接受掉换行</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; ++i) &#123;</span><br><span class="line">		getline(<span class="built_in">cin</span>, t);</span><br><span class="line">		<span class="keyword">if</span> (t[<span class="number">0</span>] == <span class="string">&#x27;1&#x27;</span>) &#123;					<span class="comment">//Book title就是书本的标签</span></span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; t &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">			t.erase(t.begin(), t.begin() + <span class="number">3</span>);</span><br><span class="line">			query(title_id, t);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (t[<span class="number">0</span>] == <span class="string">&#x27;2&#x27;</span>) &#123;		<span class="comment">//author_id</span></span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; t &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">			t.erase(t.begin(), t.begin() + <span class="number">3</span>);</span><br><span class="line">			query(author_id, t);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (t[<span class="number">0</span>] == <span class="string">&#x27;3&#x27;</span>) &#123;						<span class="comment">//key_id</span></span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; t &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">			t.erase(t.begin(), t.begin() + <span class="number">3</span>);</span><br><span class="line">			query(key_id, t);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (t[<span class="number">0</span>] == <span class="string">&#x27;4&#x27;</span>) &#123;				<span class="comment">//pub_id</span></span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; t &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">			t.erase(t.begin(), t.begin() + <span class="number">3</span>);</span><br><span class="line">			query(pub_id, t);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (t[<span class="number">0</span>] == <span class="string">&#x27;5&#x27;</span>) &#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; t &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">			t.erase(t.begin(), t.begin() + <span class="number">3</span>);</span><br><span class="line">			query(pubyear_id, t);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">query</span><span class="params">(<span class="built_in">map</span> &lt; <span class="built_in">string</span>, <span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; mp, <span class="built_in">string</span>&amp; str)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (mp.find(str) == mp.end())	<span class="built_in">printf</span>(<span class="string">&quot;Not Found\n&quot;</span>);</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt;::iterator it = mp[str].begin(); it != mp[str].end(); it++) &#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;%07d\n&quot;</span>, *it);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这题柳神的思路和我的差不多,就不贴了.有兴趣的,自己去柳神的Blog上去翻一番.</p>
 <p>如果这篇文章对你有张帮助的话,可以用你高贵的小手给我点一个免费的赞吗</p>
 <p>相信我，你也能变成光.</p>
 <p><img src="https://img-blog.csdnimg.cn/20200607184932978.bmp" alt="在这里插入图片描述"></p>
