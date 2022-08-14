@@ -217,7 +217,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">236</span>
+          <span class="site-state-item-count">237</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -261,6 +261,97 @@
       
 
       
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://camilleferros.top/2021/04/13/PTA%E4%B9%991043%20%E8%BE%93%E5%87%BAPATest%20(20%20point(s))/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Camille.jpg">
+      <meta itemprop="name" content="Camille">
+      <meta itemprop="description" content="效率，是成功的核心关键">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Camille">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/04/13/PTA%E4%B9%991043%20%E8%BE%93%E5%87%BAPATest%20(20%20point(s))/" class="post-title-link" itemprop="url">PTA乙1043 输出PATest (20 point(s))</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-04-13 14:36:50" itemprop="dateCreated datePublished" datetime="2021-04-13T14:36:50+08:00">2021-04-13</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-04-14 07:12:25" itemprop="dateModified" datetime="2021-04-14T07:12:25+08:00">2021-04-14</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">刷题笔记</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/PTA/" itemprop="url" rel="index"><span itemprop="name">PTA</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="题目原文"><a href="#题目原文" class="headerlink" title="题目原文"></a>题目原文</h1><p>给定一个长度不超过 104 的、仅由英文字母构成的字符串。请将字符重新调整顺序，按 <code>PATestPATest....</code> 这样的顺序输出，并忽略其它字符。当然，六种字符的个数不一定是一样多的，若某种字符已经输出完，则余下的字符仍按 PATest 的顺序打印，直到所有字符都被输出。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出一个长度不超过 104 的、仅由英文字母构成的非空字符串。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中按题目要求输出排序后的字符串。题目保证输出非空。</p>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redlesPayBestPATTopTeePHPereatitAPPT</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PATestPATestPTetPTePePee</span><br></pre></td></tr></table></figure>
+<h2 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下"></a>代码如下</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> <span class="built_in">map</span>[<span class="number">128</span>] = &#123; <span class="number">0</span> &#125;, c;</span><br><span class="line">	<span class="keyword">while</span> ((c = <span class="built_in">cin</span>.get()) != EOF) <span class="built_in">map</span>[c]++;</span><br><span class="line">	<span class="keyword">while</span> (<span class="built_in">map</span>[<span class="string">&#x27;P&#x27;</span>] &gt; <span class="number">0</span> || <span class="built_in">map</span>[<span class="string">&#x27;A&#x27;</span>] &gt; <span class="number">0</span> || <span class="built_in">map</span>[<span class="string">&#x27;T&#x27;</span>] &gt; <span class="number">0</span> || <span class="built_in">map</span>[<span class="string">&#x27;e&#x27;</span>] &gt; <span class="number">0</span> || <span class="built_in">map</span>[<span class="string">&#x27;s&#x27;</span>] &gt; <span class="number">0</span> || <span class="built_in">map</span>[<span class="string">&#x27;t&#x27;</span>] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">map</span>[<span class="string">&#x27;P&#x27;</span>]-- &gt; <span class="number">0</span>) <span class="built_in">cout</span> &lt;&lt; <span class="string">&#x27;P&#x27;</span>;</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">map</span>[<span class="string">&#x27;A&#x27;</span>]-- &gt; <span class="number">0</span>) <span class="built_in">cout</span> &lt;&lt; <span class="string">&#x27;A&#x27;</span>;</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">map</span>[<span class="string">&#x27;T&#x27;</span>]-- &gt; <span class="number">0</span>) <span class="built_in">cout</span> &lt;&lt; <span class="string">&#x27;T&#x27;</span>;</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">map</span>[<span class="string">&#x27;e&#x27;</span>]-- &gt; <span class="number">0</span>) <span class="built_in">cout</span> &lt;&lt; <span class="string">&#x27;e&#x27;</span>;</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">map</span>[<span class="string">&#x27;s&#x27;</span>]-- &gt; <span class="number">0</span>) <span class="built_in">cout</span> &lt;&lt; <span class="string">&#x27;s&#x27;</span>;</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">map</span>[<span class="string">&#x27;t&#x27;</span>]-- &gt; <span class="number">0</span>) <span class="built_in">cout</span> &lt;&lt; <span class="string">&#x27;t&#x27;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>123</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
     
 
 
@@ -339,105 +430,6 @@
 <h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">29</span><br><span class="line">5</span><br><span class="line">elo nov</span><br><span class="line">tam</span><br></pre></td></tr></table></figure>
 <h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hel mar</span><br><span class="line">may</span><br><span class="line">115</span><br><span class="line">13</span><br></pre></td></tr></table></figure>
 <h2 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下"></a>代码如下</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> N;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; N;</span><br><span class="line">	<span class="built_in">map</span>&lt;<span class="keyword">int</span>, <span class="built_in">string</span>&gt; Data;</span><br><span class="line">	<span class="built_in">map</span>&lt;<span class="built_in">string</span>, <span class="keyword">int</span>&gt; CopyData;</span><br><span class="line">	<span class="built_in">string</span> Mars[<span class="number">13</span>] = &#123;<span class="string">&quot;tret&quot;</span>,<span class="string">&quot;tam&quot;</span>,<span class="string">&quot;hel&quot;</span>,<span class="string">&quot;maa&quot;</span>,<span class="string">&quot;huh&quot;</span>,<span class="string">&quot;tou&quot;</span>,<span class="string">&quot;kes&quot;</span>,<span class="string">&quot;hei&quot;</span>,<span class="string">&quot;elo&quot;</span>,<span class="string">&quot;syy&quot;</span>,<span class="string">&quot;lok&quot;</span>,<span class="string">&quot;mer&quot;</span>,<span class="string">&quot;jou&quot;</span> &#125;;</span><br><span class="line">	<span class="built_in">string</span> Earth[<span class="number">13</span>] = &#123;<span class="string">&quot;tret&quot;</span>,<span class="string">&quot;jan&quot;</span>,<span class="string">&quot;feb&quot;</span>,<span class="string">&quot;mar&quot;</span>,<span class="string">&quot;apr&quot;</span>,<span class="string">&quot;may&quot;</span>,<span class="string">&quot;jun&quot;</span>,<span class="string">&quot;jly&quot;</span>,<span class="string">&quot;aug&quot;</span>,<span class="string">&quot;sep&quot;</span>,<span class="string">&quot;oct&quot;</span>,<span class="string">&quot;nov&quot;</span>,<span class="string">&quot;dec&quot;</span> &#125;;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">169</span>; i++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (i / <span class="number">13</span> &lt; <span class="number">1</span>) </span><br><span class="line">			Data[i] = Earth[i % <span class="number">13</span>];</span><br><span class="line">		<span class="keyword">else</span> &#123;</span><br><span class="line">			Data[i] = Mars[i / <span class="number">13</span>];</span><br><span class="line">			<span class="keyword">if</span>(i%<span class="number">13</span>!=<span class="number">0</span>)		Data[i] = Data[i] + <span class="string">&quot; &quot;</span> + Earth[i % <span class="number">13</span>];</span><br><span class="line">		&#125;</span><br><span class="line">		CopyData[Data[i]] = i;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">string</span> a;</span><br><span class="line">	<span class="built_in">cin</span>.clear();	<span class="built_in">cin</span>.ignore();		<span class="comment">//清楚缓存</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; ++i) &#123;</span><br><span class="line">		getline(<span class="built_in">cin</span>, a);</span><br><span class="line">		<span class="keyword">if</span> (a[<span class="number">0</span>] &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; a[<span class="number">0</span>] &lt;= <span class="string">&#x27;9&#x27;</span>) 	<span class="built_in">cout</span> &lt;&lt; Data[atoi(a.c_str())];</span><br><span class="line">		<span class="keyword">else</span>		<span class="built_in">cout</span> &lt;&lt; CopyData[a];</span><br><span class="line">		<span class="keyword">if</span> (i != N - <span class="number">1</span>)	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>123</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://camilleferros.top/2021/04/13/PTA%E4%B9%991045%20%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%20(25%20point(s))/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/Camille.jpg">
-      <meta itemprop="name" content="Camille">
-      <meta itemprop="description" content="效率，是成功的核心关键">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Camille">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/04/13/PTA%E4%B9%991045%20%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%20(25%20point(s))/" class="post-title-link" itemprop="url">PTA乙1045 快速排序 (25 point(s))</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-04-13 14:36:50" itemprop="dateCreated datePublished" datetime="2021-04-13T14:36:50+08:00">2021-04-13</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-04-14 07:15:24" itemprop="dateModified" datetime="2021-04-14T07:15:24+08:00">2021-04-14</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">刷题笔记</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/PTA/" itemprop="url" rel="index"><span itemprop="name">PTA</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="题目原文"><a href="#题目原文" class="headerlink" title="题目原文"></a>题目原文</h1><p>著名的快速排序算法里有一个经典的划分过程：我们通常采用某种方法取一个元素作为主元，通过交换，把比主元小的元素放到它的左边，比主元大的元素放到它的右边。 给定划分后的 <em>N</em> 个互不相同的正整数的排列，请问有多少个元素可能是划分前选取的主元？</p>
-<p>例如给定 <em>N</em>=5, 排列是1、3、2、4、5。则：</p>
-<ul>
-<li>1 的左边没有元素，右边的元素都比它大，所以它可能是主元；</li>
-<li>尽管 3 的左边元素都比它小，但其右边的 2 比它小，所以它不能是主元；</li>
-<li>尽管 2 的右边元素都比它大，但其左边的 3 比它大，所以它不能是主元；</li>
-<li>类似原因，4 和 5 都可能是主元。</li>
-</ul>
-<p>因此，有 3 个元素可能是主元。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在第 1 行中给出一个正整数 <em>N</em>（≤105）； 第 2 行是空格分隔的 <em>N</em> 个不同的正整数，每个数不超过 109。</p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在第 1 行中输出有可能是主元的元素个数；在第 2 行中按递增顺序输出这些元素，其间以 1 个空格分隔，行首尾不得有多余空格。</p>
-<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">1 3 2 4 5</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">1 4 5</span><br></pre></td></tr></table></figure>
-<h2 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下"></a>代码如下</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> N;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;N);</span><br><span class="line">	<span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span>&gt; <span class="title">data</span><span class="params">(N)</span></span>;</span><br><span class="line">	<span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span>&gt; <span class="title">leftMax</span><span class="params">(N)</span></span>;</span><br><span class="line">	leftMax.push_back(<span class="number">-1</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;data[<span class="number">0</span>]);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;N;++i)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;data[i]);</span><br><span class="line">		leftMax[i] = max(leftMax[i<span class="number">-1</span>],data[i<span class="number">-1</span>]);	</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span>&gt; <span class="title">rightMin</span><span class="params">(N)</span></span>;</span><br><span class="line">	rightMin[N<span class="number">-1</span>] = <span class="number">999999999</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=N<span class="number">-2</span>;i&gt;=<span class="number">0</span>;--i)&#123;</span><br><span class="line">		rightMin[i] = min(rightMin[i+<span class="number">1</span>],data[i+<span class="number">1</span>]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span>&gt; ans;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(leftMax[i]&lt;data[i]&amp;&amp;rightMin[i]&gt;data[i])</span><br><span class="line">			ans.push_back(data[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,ans.size());</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;ans.size();i++)&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;ans[i];</span><br><span class="line">		<span class="keyword">if</span>(i&lt;ans.size()<span class="number">-1</span>)</span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>123</p>
 
       
