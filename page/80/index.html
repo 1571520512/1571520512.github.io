@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-fire-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-fire-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.0/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"camilleferros.top","root":"/","scheme":"Muse","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+  <meta name="description" content="效率，是成功的核心关键">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Camille">
+<meta property="og:url" content="https://camilleferros.top/page/80/index.html">
+<meta property="og:site_name" content="Camille">
+<meta property="og:description" content="效率，是成功的核心关键">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Camille">
+<meta property="article:tag" content="C++,UE4,PTA,PAT">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://camilleferros.top/page/80/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Camille</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Camille</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">你得先看重自己,否则别人就会当你一钱不值</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Camille"
+      src="/images/Camille.jpg">
+  <p class="site-author-name" itemprop="name">Camille</p>
+  <div class="site-description" itemprop="description">效率，是成功的核心关键</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">238</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">67</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner index posts-expand">
+      
+
+      
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://camilleferros.top/2020/10/01/PTA%E7%94%B21060%20Are%20They%20Equal%20(25%E5%88%86)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Camille.jpg">
+      <meta itemprop="name" content="Camille">
+      <meta itemprop="description" content="效率，是成功的核心关键">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Camille">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/10/01/PTA%E7%94%B21060%20Are%20They%20Equal%20(25%E5%88%86)/" class="post-title-link" itemprop="url">1060 Are They Equal (25分)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-10-01 16:11:23" itemprop="dateCreated datePublished" datetime="2020-10-01T16:11:23+08:00">2020-10-01</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-04-13 14:30:31" itemprop="dateModified" datetime="2021-04-13T14:30:31+08:00">2021-04-13</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>强烈推荐,刷PTA的朋友都认识一下柳神—PTA解法大佬</p>
+<p>本文由参考于柳神博客写成</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/liuchuo">柳神的CSDN博客,这个可以搜索文章</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.liuchuo.net/">柳神的个人博客,这个没有广告,但是不能搜索</a></p>
+<p>PS 今天也要加油鸭</p>
+<p><img src="https://img-blog.csdnimg.cn/20200924160038229.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<h2 id="题目原文"><a href="#题目原文" class="headerlink" title="题目原文"></a>题目原文</h2><p>If a machine can save only 3 significant digits, the float numbers 12300 and 12358.9 are considered equal since they are both saved as 0.123×105 with simple chopping. Now given the number of significant digits on a machine and two float numbers, you are supposed to tell if they are treated equal in that machine.</p>
+<h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case which gives three numbers <em>N</em>, <em>A</em> and <em>B</em>, where <em>N</em> (&lt;100) is the number of significant digits, and <em>A</em> and <em>B</em> are the two float numbers to be compared. Each float number is non-negative, no greater than 10100, and that its total digit number is less than 100.</p>
+<h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each test case, print in a line <code>YES</code> if the two numbers are treated equal, and then the number in the standard form <code>0.d[1]...d[N]*10^k</code> (<code>d[1]</code>&gt;0 unless the number is 0); or <code>NO</code> if they are not treated equal, and then the two numbers in their standard form. All the terms must be separated by a space, with no extra space at the end of a line.</p>
+<p>Note: Simple chopping is assumed without rounding.</p>
+<h3 id="Sample-Input-1"><a href="#Sample-Input-1" class="headerlink" title="Sample Input 1:"></a>Sample Input 1:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 12300 12358.9</span><br></pre></td></tr></table></figure>
+<h3 id="Sample-Output-1"><a href="#Sample-Output-1" class="headerlink" title="Sample Output 1:"></a>Sample Output 1:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">YES 0.123*10^5</span><br></pre></td></tr></table></figure>
+<h3 id="Sample-Input-2"><a href="#Sample-Input-2" class="headerlink" title="Sample Input 2:"></a>Sample Input 2:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 120 128</span><br></pre></td></tr></table></figure>
+<h3 id="Sample-Output-2"><a href="#Sample-Output-2" class="headerlink" title="Sample Output 2:"></a>Sample Output 2:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NO 0.120*10^3 0.128*10^3</span><br></pre></td></tr></table></figure>
+<h2 id="生词如下"><a href="#生词如下" class="headerlink" title="生词如下:"></a>生词如下:</h2><p>chopping 就是切,消减，牛排的意思,是一个四级单词.</p>
+<h2 id="大意如下"><a href="#大意如下" class="headerlink" title="大意如下:"></a>大意如下:</h2><p>就是给你两个有意义的非负数.</p>
+<p>然后让你比较他们的大小</p>
+<p>数字的大小不超过10100.长度不超过100</p>
+<p>用float long long int 啥的肯定是存储不了的呢.</p>
+<p>所以,我们要使用.string</p>
+<h2 id="思路如下"><a href="#思路如下" class="headerlink" title="思路如下:"></a>思路如下:</h2><p>① 就是按照各种各样的方法比较.</p>
+<p>② 这题的难点就在于小数有许多种类型的.就看你考虑问题是不是全面.</p>
+<p>000.00 和 0.000 是一个数字.但是写法确不一样.</p>
+<p>我的代码修修补补之后也AC了</p>
+<h2 id="我的代码如下"><a href="#我的代码如下" class="headerlink" title="我的代码如下:"></a>我的代码如下:</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">Equal</span><span class="params">(<span class="built_in">string</span> a, <span class="keyword">int</span> N, <span class="keyword">int</span>* index)</span> </span>&#123;</span><br><span class="line">	<span class="comment">//如果是小数的话</span></span><br><span class="line">	<span class="built_in">string</span> result;</span><br><span class="line">	result += <span class="string">&quot;0.&quot;</span>;</span><br><span class="line">	<span class="comment">//小数点 </span></span><br><span class="line">	<span class="keyword">bool</span> flag_radixs = <span class="literal">false</span>, eff_num = <span class="literal">false</span>;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> (i &lt; a.length()&amp;&amp;N&gt;<span class="number">0</span>) &#123;</span><br><span class="line">		<span class="keyword">if</span> (!eff_num &amp;&amp; !flag_radixs &amp;&amp; a[i] != <span class="string">&#x27;0&#x27;</span>&amp;&amp;a[i]!=<span class="string">&#x27;.&#x27;</span>) &#123;</span><br><span class="line">			eff_num = <span class="literal">true</span>;</span><br><span class="line">			N--;</span><br><span class="line">			result += a[i];</span><br><span class="line">			(*index)++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (a[i]==<span class="string">&#x27;.&#x27;</span>) &#123;</span><br><span class="line">			flag_radixs = <span class="literal">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//已经在小数点后了,但是还是0</span></span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (flag_radixs &amp;&amp;!eff_num&amp;&amp; a[i] == <span class="string">&#x27;0&#x27;</span>) &#123;</span><br><span class="line">			(*index)--;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (flag_radixs &amp;&amp; a[i] != <span class="string">&#x27;0&#x27;</span>) &#123;</span><br><span class="line">			result += a[i];</span><br><span class="line">			N--;</span><br><span class="line">			eff_num = <span class="literal">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (flag_radixs &amp;&amp; a[i] == <span class="string">&#x27;0&#x27;</span>&amp;&amp;eff_num) &#123;</span><br><span class="line">			result += a[i];</span><br><span class="line">			N--;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (eff_num) &#123;</span><br><span class="line">			N--;</span><br><span class="line">			result += a[i];</span><br><span class="line">			(*index)++;</span><br><span class="line">		&#125;</span><br><span class="line">		++i;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> (i &lt; a.length()) &#123;</span><br><span class="line">		<span class="keyword">if</span> (!flag_radixs &amp;&amp; a[i] != <span class="string">&#x27;.&#x27;</span>)	(*index)++;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (a[i] == <span class="string">&#x27;.&#x27;</span>)	<span class="keyword">break</span>;</span><br><span class="line">		++i;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span> (N &gt; <span class="number">0</span>) &#123;</span><br><span class="line">		result += <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">		N--;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (!eff_num)	(*index) = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> N = <span class="number">0</span>, isPositive = <span class="number">0</span>, index_a = <span class="number">0</span>, i, index_b = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">string</span> a, b, result;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; N &gt;&gt; a &gt;&gt; b;</span><br><span class="line">	a = Equal(a, N, &amp;index_a);</span><br><span class="line">	b = Equal(b, N, &amp;index_b);</span><br><span class="line">	<span class="keyword">if</span> (a == b &amp;&amp; index_a == index_b) &#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;YES &quot;</span> &lt;&lt; a &lt;&lt; <span class="string">&quot;*10^&quot;</span> &lt;&lt; index_a;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;NO &quot;</span> &lt;&lt; a &lt;&lt; <span class="string">&quot;*10^&quot;</span> &lt;&lt; index_a &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; b &lt;&lt; <span class="string">&quot;*10^&quot;</span> &lt;&lt; index_b;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="柳神的思路"><a href="#柳神的思路" class="headerlink" title="柳神的思路:"></a>柳神的思路:</h2><p>分析：</p>
+<ol>
+<li><p>cnta 和 cntb 通过扫描字符串得到小数点所在的下标（初始化cnta cntb为字符串长度，即下标为strlen(str））</p>
+</li>
+<li><p>考虑到可能前面有多余的零，用 p 和 q 通过扫描字符串使 p q 开始于第一个非0（且非小数点）处的下标</p>
+</li>
+<li><p>如果cnta &gt;= p ，说明小数点在第一个开始的非0数的下标的右边，那么科学计数法的指数为cnta – p ; 否则应该为cnta – p + 1; 字符串b同理。</p>
+</li>
+<li><p>如果 p 和 q 等于字符串长度， 说明字符串是 0， 此时直接把 cnta（或者cntb）置为0，因为对于0来说乘以几次方都是相等的，如果不置为0可能会出现两个0比较导致判断为它们不相等</p>
+</li>
+<li><p>indexa = 0开始给新的A数组赋值，共赋值n位除去小数点外的正常数字，从p的下标开始。如果p大于等于strlen，说明字符串遍历完毕后依旧没能满足需要的位数，此时需要在A数组后面补上0直到满足n位数字。indexb同理，产生新的B数组</p>
+</li>
+<li><p>判断A和B是否相等，且cnta和cntb是否相等。如果相等，说明他们用科学计数法表示后是相同的，输出YES，否则输出NO，同时输出正确的科学计数法</p>
+</li>
+</ol>
+<h2 id="柳神的代码"><a href="#柳神的代码" class="headerlink" title="柳神的代码:"></a>柳神的代码:</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n, p = <span class="number">0</span>, q = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">char</span> a[<span class="number">10000</span>], b[<span class="number">10000</span>], A[<span class="number">10000</span>], B[<span class="number">10000</span>];</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%s%s&quot;</span>, &amp;n, a, b);</span><br><span class="line">    <span class="keyword">int</span> cnta = <span class="built_in">strlen</span>(a), cntb = <span class="built_in">strlen</span>(b);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="built_in">strlen</span>(a); i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(a[i] == <span class="string">&#x27;.&#x27;</span>) &#123;</span><br><span class="line">            cnta = i;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="built_in">strlen</span>(b); i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(b[i] == <span class="string">&#x27;.&#x27;</span>) &#123;</span><br><span class="line">            cntb = i;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> indexa = <span class="number">0</span>, indexb = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(a[p] == <span class="string">&#x27;0&#x27;</span> || a[p] == <span class="string">&#x27;.&#x27;</span>) p++;</span><br><span class="line">    <span class="keyword">while</span>(b[q] == <span class="string">&#x27;0&#x27;</span> || b[q] == <span class="string">&#x27;.&#x27;</span>) q++;</span><br><span class="line">    <span class="keyword">if</span>(cnta &gt;= p)</span><br><span class="line">        cnta = cnta - p;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        cnta = cnta - p + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(cntb &gt;= q)</span><br><span class="line">        cntb = cntb - q;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        cntb = cntb - q + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(p == <span class="built_in">strlen</span>(a))</span><br><span class="line">        cnta = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(q == <span class="built_in">strlen</span>(b))</span><br><span class="line">        cntb = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(indexa &lt; n) &#123;</span><br><span class="line">        <span class="keyword">if</span>(a[p] != <span class="string">&#x27;.&#x27;</span> &amp;&amp; p &lt; <span class="built_in">strlen</span>(a))</span><br><span class="line">            A[indexa++] = a[p];</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(p &gt;= <span class="built_in">strlen</span>(a))</span><br><span class="line">            A[indexa++] = <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">        p++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(indexb &lt; n) &#123;</span><br><span class="line">        <span class="keyword">if</span>(b[q] != <span class="string">&#x27;.&#x27;</span> &amp;&amp; q &lt; <span class="built_in">strlen</span>(b))</span><br><span class="line">            B[indexb++] = b[q];</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(q &gt;= <span class="built_in">strlen</span>(b))</span><br><span class="line">            B[indexb++] = <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">        q++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">strcmp</span>(A, B) == <span class="number">0</span> &amp;&amp; cnta == cntb)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;YES 0.%s*10^%d&quot;</span>, A, cnta);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;NO 0.%s*10^%d 0.%s*10^%d&quot;</span> , A, cnta, B, cntb);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果这篇文章对你有张帮助的话,可以用你高贵的小手给我点一个免费的赞吗</p>
+<p>相信我，你也能变成光.</p>
+<p><img src="https://img-blog.csdnimg.cn/20200607184932978.bmp" alt="在这里插入图片描述"></p>
+<p>如果你有任何建议,或者是发现了我的错误,欢迎评论留言指出.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/79/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/79/">79</a><span class="page-number current">80</span>
+  </nav>
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Camille</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
