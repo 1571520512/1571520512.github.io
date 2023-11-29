@@ -2,27 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.2.0">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
+
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-fire-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-fire-16x16-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
 
 
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.0/css/all.min.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"camilleferros.top","root":"/","scheme":"Muse","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
-  </script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"camilleferros.top","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-  <meta property="og:type" content="article">
+    <meta property="og:type" content="article">
 <meta property="og:title" content="PTA甲1009 Product of Polynomials">
 <meta property="og:url" content="https://camilleferros.top/2021/04/13/PTA%E7%94%B21009%20Product%20of%20Polynomials/index.html">
 <meta property="og:site_name" content="Camille">
@@ -37,18 +34,14 @@
 <link rel="canonical" href="https://camilleferros.top/2021/04/13/PTA%E7%94%B21009%20Product%20of%20Polynomials/">
 
 
-<script class="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'en'
-  };
-</script>
 
-  <title>PTA甲1009 Product of Polynomials | Camille</title>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://camilleferros.top/2021/04/13/PTA%E7%94%B21009%20Product%20of%20Polynomials/","path":"2021/04/13/PTA甲1009 Product of Polynomials/","title":"PTA甲1009 Product of Polynomials"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>PTA甲1009 Product of Polynomials | Camille</title>
   
+
+
 
 
 
@@ -56,53 +49,18 @@
 
 
   <noscript>
-  <style>
-  body { margin-top: 2rem; }
-
-  .use-motion .menu-item,
-  .use-motion .sidebar,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header {
-    visibility: visible;
-  }
-
-  .use-motion .header,
-  .use-motion .site-brand-container .toggle,
-  .use-motion .footer { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle,
-  .use-motion .custom-logo-image {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line {
-    transform: scaleX(1);
-  }
-
-  .search-pop-overlay, .sidebar-nav { display: none; }
-  .sidebar-panel { display: block; }
-  </style>
-</noscript>
-
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
 
   <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
     </div>
   </div>
 
@@ -110,85 +68,27 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Camille</h1>
+      <p class="site-title">Camille</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">你得先看重自己,否则别人就会当你一钱不值</p>
   </div>
 
   <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-        <i class="fa fa-search fa-fw fa-lg"></i>
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
     </div>
   </div>
 </div>
 
 
 
-<nav class="site-nav">
-  <ul class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
-
-  </li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
-        </a>
-      </li>
-  </ul>
-</nav>
 
 
 
-  <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off" maxlength="80"
-           placeholder="Searching..." spellcheck="false"
-           type="search" class="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div class="search-result-container no-result">
-  <div class="search-result-icon">
-    <i class="fa fa-spinner fa-pulse fa-5x"></i>
-  </div>
-</div>
 
-    </div>
-  </div>
-
-</div>
+</header>
         
   
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-
   <aside class="sidebar">
 
     <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
@@ -201,67 +101,51 @@
         </li>
       </ul>
 
-      <!--noindex-->
-      <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1009-Product-of-Polynomials"><span class="nav-number">1.</span> <span class="nav-text">1009 Product of Polynomials</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%8E%9F%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">题目原题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Input-Specification"><span class="nav-number">2.1.</span> <span class="nav-text">Input Specification:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Output-Specification"><span class="nav-number">2.2.</span> <span class="nav-text">Output Specification:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sample-Input"><span class="nav-number">2.3.</span> <span class="nav-text">Sample Input:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sample-Output"><span class="nav-number">2.4.</span> <span class="nav-text">Sample Output:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E7%82%B9"><span class="nav-number">2.5.</span> <span class="nav-text">注意点:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E5%BC%80%E5%A7%8B%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="nav-number">2.6.</span> <span class="nav-text">一开始的代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%94%B9%E8%BF%9B%E5%90%8E%E5%A6%82%E4%B8%8B"><span class="nav-number">2.7.</span> <span class="nav-text">改进后如下</span></a></li></ol></li></ol></div>
-      </section>
-      <!--/noindex-->
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1009-Product-of-Polynomials"><span class="nav-number">1.</span> <span class="nav-text">1009 Product of Polynomials</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%8E%9F%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">题目原题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Input-Specification"><span class="nav-number">2.1.</span> <span class="nav-text">Input Specification:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Output-Specification"><span class="nav-number">2.2.</span> <span class="nav-text">Output Specification:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sample-Input"><span class="nav-number">2.3.</span> <span class="nav-text">Sample Input:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sample-Output"><span class="nav-number">2.4.</span> <span class="nav-text">Sample Output:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E7%82%B9"><span class="nav-number">2.5.</span> <span class="nav-text">注意点:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E5%BC%80%E5%A7%8B%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="nav-number">2.6.</span> <span class="nav-text">一开始的代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%94%B9%E8%BF%9B%E5%90%8E%E5%A6%82%E4%B8%8B"><span class="nav-number">2.7.</span> <span class="nav-text">改进后如下</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
 
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Camille"
-      src="/images/Camille.jpg">
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">Camille</p>
   <div class="site-description" itemprop="description">效率，是成功的核心关键</div>
 </div>
-<div class="site-state-wrap site-overview-item animated">
+<div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives">
+        <a href="/archives/">
           <span class="site-state-item-count">237</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
+          <a href="/categories/">
         <span class="site-state-item-count">29</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
+          <a href="/tags/">
         <span class="site-state-item-count">67</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
 
-
-
-      </section>
+        </div>
+      </div>
     </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
-
-
-    </header>
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+  </aside>
 
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
 
+    </div>
 
     <div class="main-inner post posts-expand">
-      
 
-      
 
   
 
@@ -274,13 +158,18 @@
     <link itemprop="mainEntityOfPage" href="https://camilleferros.top/2021/04/13/PTA%E7%94%B21009%20Product%20of%20Polynomials/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/Camille.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Camille">
-      <meta itemprop="description" content="效率，是成功的核心关键">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Camille">
+      <meta itemprop="description" content="效率，是成功的核心关键">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="PTA甲1009 Product of Polynomials | Camille">
+      <meta itemprop="description" content=" ">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -322,14 +211,13 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-        <h2 id="1009-Product-of-Polynomials"><a href="#1009-Product-of-Polynomials" class="headerlink" title="1009 Product of Polynomials"></a>1009 Product of Polynomials</h2><h2 id="题目原题"><a href="#题目原题" class="headerlink" title="题目原题"></a>题目原题</h2><p>@[toc]<br>This time, you are supposed to find <em>A</em>×<em>B</em> where <em>A</em> and <em>B</em> are two polynomials.</p>
+    <div class="post-body" itemprop="articleBody"><h2 id="1009-Product-of-Polynomials"><a href="#1009-Product-of-Polynomials" class="headerlink" title="1009 Product of Polynomials"></a>1009 Product of Polynomials</h2><h2 id="题目原题"><a href="#题目原题" class="headerlink" title="题目原题"></a>题目原题</h2><p>@[toc]<br>This time, you are supposed to find <em>A</em>×<em>B</em> where <em>A</em> and <em>B</em> are two polynomials.</p>
 <h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case. Each case occupies 2 lines, and each line contains the information of a polynomial:</p>
 <p><em>K</em> <em>N</em>1 <em>a**N</em>1 <em>N</em>2 <em>a**N</em>2 … <em>N**K</em> <em>a<strong>N</strong>K</em></p>
 <p>where <em>K</em> is the number of nonzero terms in the polynomial, <em>N**i</em> and <em>a<strong>N</strong>i</em> (<em>i</em>=1,2,⋯,<em>K</em>) are the exponents and coefficients, respectively. It is given that 1≤<em>K</em>≤10, 0≤<em>N**K</em>&lt;⋯&lt;<em>N</em>2&lt;<em>N</em>1≤1000.</p>
 <h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each test case you should output the product of <em>A</em> and <em>B</em> in one line, with the same format as the input. Notice that there must be <strong>NO</strong> extra space at the end of each line. Please be accurate up to 1 decimal place.</p>
-<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2 1 2.4 0 3.2</span><br><span class="line">2 2 1.5 1 0.5</span><br></pre></td></tr></table></figure>
-<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 3 3.6 2 6.0 1 1.6</span><br></pre></td></tr></table></figure>
+<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2 1 2.4 0 3.2</span><br><span class="line">2 2 1.5 1 0.5</span><br></pre></td></tr></table></figure>
+<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 3 3.6 2 6.0 1 1.6</span><br></pre></td></tr></table></figure>
 <p>生词一览:</p>
 <p>polynomials  多项式</p>
 <p><strong>exponents  指数</strong></p>
@@ -340,8 +228,8 @@
 <p>这个非常的重要,Sumc一定要在C[e]都算好了在统计个数<br>因为C[e]在计算中,可能会出现一正一负的,可以消去的同类项.<br>会多计算两次C[e]  一般这就是测试点0通不过的原因</p>
 <p>③    最好在输出的时候,是不可以输出非零项的.</p>
 <h3 id="一开始的代码"><a href="#一开始的代码" class="headerlink" title="一开始的代码"></a>一开始的代码</h3><p>代码如下</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> K1, K2, Maxa = <span class="number">0</span>, Maxb = <span class="number">0</span>, e, Sumc = <span class="number">0</span>;	<span class="comment">//Sumc就是计算乘起来之后一共有几个非零的多项式</span></span><br><span class="line">	<span class="keyword">double</span>  c;</span><br><span class="line">	<span class="keyword">double</span> A[<span class="number">1005</span>] = &#123; <span class="number">0</span> &#125;, B[<span class="number">1005</span>] = &#123; <span class="number">0</span> &#125;, C[<span class="number">2005</span>] = &#123; <span class="number">0</span> &#125;;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;K1);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; K1; i++) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d%lf&quot;</span>, &amp;e, &amp;c);</span><br><span class="line">		<span class="keyword">if</span> (e &gt; Maxa) Maxa = e;			<span class="comment">//这是计算乘积的时候的循环最大值</span></span><br><span class="line">		A[e] = c;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;K2);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; K2; i++) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d%lf&quot;</span>, &amp;e, &amp;c);</span><br><span class="line">		<span class="keyword">if</span> (e &gt; Maxb) Maxb = e;			<span class="comment">//这是计算乘积的时候的循环最大值</span></span><br><span class="line">		B[e] = c;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= Maxa; i++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (A[i] != <span class="number">0.0</span>) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= Maxb; j++) &#123;</span><br><span class="line">				<span class="keyword">if</span> (B[j] != <span class="number">0.0</span>) &#123;</span><br><span class="line">					e = i + j;</span><br><span class="line">					c = A[i] * B[j];</span><br><span class="line">					<span class="keyword">if</span> (C[e] == <span class="number">0.0</span>) &#123;</span><br><span class="line">						C[e] = c;</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">else</span></span><br><span class="line">						C[e] = C[e] + c;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//这个非常的重要,Sumc一定要在C[e]都算好了在统计个数</span></span><br><span class="line">	<span class="comment">//因为C[e]在计算中,可能会出现一正一负的,可以消去的同类项.</span></span><br><span class="line">	<span class="comment">//会多计算两次C[e]</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= Maxa + Maxb; i++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (C[i] != <span class="number">0</span>) &#123;</span><br><span class="line">			Sumc++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//第一个测试点有0 项,要删除,不能输出.</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, Sumc);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = Maxa + Maxb; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">		<span class="keyword">if</span> (C[i] != <span class="number">0.0</span>) &#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot; %d %.1lf&quot;</span>, i, C[i]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="改进后如下"><a href="#改进后如下" class="headerlink" title="改进后如下"></a>改进后如下</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> K1, K2,e, Sumc = <span class="number">0</span>;	<span class="comment">//Sumc就是计算乘起来之后一共有几个非零的多项式</span></span><br><span class="line">	<span class="keyword">double</span>  c;</span><br><span class="line">	<span class="keyword">double</span> A[<span class="number">1005</span>] = &#123; <span class="number">0</span> &#125;, B[<span class="number">1005</span>] = &#123; <span class="number">0</span> &#125;, C[<span class="number">2005</span>] = &#123; <span class="number">0</span> &#125;;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;K1);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; K1; i++) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d%lf&quot;</span>, &amp;e, &amp;c);</span><br><span class="line">		A[e] = c;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;K2);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; K2; i++) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d%lf&quot;</span>, &amp;e, &amp;c);</span><br><span class="line">		<span class="keyword">int</span> Te = e;</span><br><span class="line">		<span class="keyword">double</span> Tc = c;					<span class="comment">//每一次写好了,要重新赋值</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= <span class="number">1002</span>; j++) &#123;</span><br><span class="line"></span><br><span class="line">			e = j + e;</span><br><span class="line">			c = A[j] * c;</span><br><span class="line">			<span class="keyword">if</span> (c != <span class="number">0</span>) &#123;			<span class="comment">//不计算非零项</span></span><br><span class="line">				<span class="keyword">if</span> (C[e] == <span class="number">0.0</span>) &#123;</span><br><span class="line">					C[e] = c;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span></span><br><span class="line">					C[e] = C[e] + c;</span><br><span class="line">			&#125;</span><br><span class="line">			e = Te; c = Tc;					<span class="comment">//重新赋值</span></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//这个非常的重要,Sumc一定要在C[e]都算好了在统计个数</span></span><br><span class="line">	<span class="comment">//因为C[e]在计算中,可能会出现一正一负的,可以消去的同类项.</span></span><br><span class="line">	<span class="comment">//会多计算两次C[e]</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= <span class="number">2002</span>; i++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (C[i] != <span class="number">0</span>) &#123;</span><br><span class="line">			Sumc++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//第一个测试点有0 项,要删除,不能输出.</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, Sumc);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2002</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">		<span class="keyword">if</span> (C[i] != <span class="number">0.0</span>) &#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot; %d %.1lf&quot;</span>, i, C[i]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> K1, K2, Maxa = <span class="number">0</span>, Maxb = <span class="number">0</span>, e, Sumc = <span class="number">0</span>;	<span class="comment">//Sumc就是计算乘起来之后一共有几个非零的多项式</span></span><br><span class="line">	<span class="type">double</span>  c;</span><br><span class="line">	<span class="type">double</span> A[<span class="number">1005</span>] = &#123; <span class="number">0</span> &#125;, B[<span class="number">1005</span>] = &#123; <span class="number">0</span> &#125;, C[<span class="number">2005</span>] = &#123; <span class="number">0</span> &#125;;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;K1);</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; K1; i++) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d%lf&quot;</span>, &amp;e, &amp;c);</span><br><span class="line">		<span class="keyword">if</span> (e &gt; Maxa) Maxa = e;			<span class="comment">//这是计算乘积的时候的循环最大值</span></span><br><span class="line">		A[e] = c;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;K2);</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; K2; i++) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d%lf&quot;</span>, &amp;e, &amp;c);</span><br><span class="line">		<span class="keyword">if</span> (e &gt; Maxb) Maxb = e;			<span class="comment">//这是计算乘积的时候的循环最大值</span></span><br><span class="line">		B[e] = c;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt;= Maxa; i++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (A[i] != <span class="number">0.0</span>) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt;= Maxb; j++) &#123;</span><br><span class="line">				<span class="keyword">if</span> (B[j] != <span class="number">0.0</span>) &#123;</span><br><span class="line">					e = i + j;</span><br><span class="line">					c = A[i] * B[j];</span><br><span class="line">					<span class="keyword">if</span> (C[e] == <span class="number">0.0</span>) &#123;</span><br><span class="line">						C[e] = c;</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">else</span></span><br><span class="line">						C[e] = C[e] + c;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//这个非常的重要,Sumc一定要在C[e]都算好了在统计个数</span></span><br><span class="line">	<span class="comment">//因为C[e]在计算中,可能会出现一正一负的,可以消去的同类项.</span></span><br><span class="line">	<span class="comment">//会多计算两次C[e]</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt;= Maxa + Maxb; i++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (C[i] != <span class="number">0</span>) &#123;</span><br><span class="line">			Sumc++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//第一个测试点有0 项,要删除,不能输出.</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, Sumc);</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = Maxa + Maxb; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">		<span class="keyword">if</span> (C[i] != <span class="number">0.0</span>) &#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot; %d %.1lf&quot;</span>, i, C[i]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="改进后如下"><a href="#改进后如下" class="headerlink" title="改进后如下"></a>改进后如下</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> K1, K2,e, Sumc = <span class="number">0</span>;	<span class="comment">//Sumc就是计算乘起来之后一共有几个非零的多项式</span></span><br><span class="line">	<span class="type">double</span>  c;</span><br><span class="line">	<span class="type">double</span> A[<span class="number">1005</span>] = &#123; <span class="number">0</span> &#125;, B[<span class="number">1005</span>] = &#123; <span class="number">0</span> &#125;, C[<span class="number">2005</span>] = &#123; <span class="number">0</span> &#125;;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;K1);</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; K1; i++) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d%lf&quot;</span>, &amp;e, &amp;c);</span><br><span class="line">		A[e] = c;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;K2);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; K2; i++) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d%lf&quot;</span>, &amp;e, &amp;c);</span><br><span class="line">		<span class="type">int</span> Te = e;</span><br><span class="line">		<span class="type">double</span> Tc = c;					<span class="comment">//每一次写好了,要重新赋值</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt;= <span class="number">1002</span>; j++) &#123;</span><br><span class="line"></span><br><span class="line">			e = j + e;</span><br><span class="line">			c = A[j] * c;</span><br><span class="line">			<span class="keyword">if</span> (c != <span class="number">0</span>) &#123;			<span class="comment">//不计算非零项</span></span><br><span class="line">				<span class="keyword">if</span> (C[e] == <span class="number">0.0</span>) &#123;</span><br><span class="line">					C[e] = c;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span></span><br><span class="line">					C[e] = C[e] + c;</span><br><span class="line">			&#125;</span><br><span class="line">			e = Te; c = Tc;					<span class="comment">//重新赋值</span></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//这个非常的重要,Sumc一定要在C[e]都算好了在统计个数</span></span><br><span class="line">	<span class="comment">//因为C[e]在计算中,可能会出现一正一负的,可以消去的同类项.</span></span><br><span class="line">	<span class="comment">//会多计算两次C[e]</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt;= <span class="number">2002</span>; i++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (C[i] != <span class="number">0</span>) &#123;</span><br><span class="line">			Sumc++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//第一个测试点有0 项,要删除,不能输出.</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, Sumc);</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2002</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">		<span class="keyword">if</span> (C[i] != <span class="number">0.0</span>) &#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot; %d %.1lf&quot;</span>, i, C[i]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -354,13 +242,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/04/13/PTA%E7%94%B21011%20World%20Cup%20Betting%20(20%E5%88%86)/" rel="prev" title="PTA甲1011 World Cup Betting (20分)">
-                  <i class="fa fa-chevron-left"></i> PTA甲1011 World Cup Betting (20分)
+                <a href="/2021/04/13/PTA%E7%94%B21010%20Radix%20%20(25%E5%88%86)/" rel="prev" title="PTA甲1010 Radix  (25分)">
+                  <i class="fa fa-angle-left"></i> PTA甲1010 Radix  (25分)
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/04/13/PTA%E7%94%B21010%20Radix%20%20(25%E5%88%86)/" rel="next" title="PTA甲1010 Radix  (25分)">
-                  PTA甲1010 Radix  (25分) <i class="fa fa-chevron-right"></i>
+                <a href="/2021/04/13/PTA%E7%94%B21008%20Elevator%20(20%E5%88%86)/" rel="next" title="PTA甲1008 Elevator (20分)">
+                  PTA甲1008 Elevator (20分) <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
@@ -373,82 +261,48 @@
 
 
 
-      
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      const commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-    </div>
+</div>
   </main>
 
   <footer class="footer">
     <div class="footer-inner">
-      
 
-      
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2023</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Camille</span>
-</div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Camille</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
 
     </div>
   </footer>
 
   
-  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
 
-  
-
-
-
-
-  <script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
 
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
-
+  
 
 
 
@@ -457,53 +311,9 @@
 
   
 
-  
-      <script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              const target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    const script = document.createElement('script');
-    script.src = '//cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
-    script.defer = true;
-    document.head.appendChild(script);
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.typesetClear();
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
 
-    
 
-  
+
 
 </body>
 </html>

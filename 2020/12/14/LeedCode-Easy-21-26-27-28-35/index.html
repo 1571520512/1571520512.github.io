@@ -2,27 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.2.0">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
+
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-fire-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-fire-16x16-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
 
 
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.0/css/all.min.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"camilleferros.top","root":"/","scheme":"Muse","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
-  </script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"camilleferros.top","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-  <meta property="og:type" content="article">
+    <meta property="og:type" content="article">
 <meta property="og:title" content="LeedCode-Easy 21,26,27,28,35">
 <meta property="og:url" content="https://camilleferros.top/2020/12/14/LeedCode-Easy-21-26-27-28-35/index.html">
 <meta property="og:site_name" content="Camille">
@@ -37,18 +34,14 @@
 <link rel="canonical" href="https://camilleferros.top/2020/12/14/LeedCode-Easy-21-26-27-28-35/">
 
 
-<script class="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'en'
-  };
-</script>
 
-  <title>LeedCode-Easy 21,26,27,28,35 | Camille</title>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://camilleferros.top/2020/12/14/LeedCode-Easy-21-26-27-28-35/","path":"2020/12/14/LeedCode-Easy-21-26-27-28-35/","title":"LeedCode-Easy 21,26,27,28,35"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>LeedCode-Easy 21,26,27,28,35 | Camille</title>
   
+
+
 
 
 
@@ -56,53 +49,18 @@
 
 
   <noscript>
-  <style>
-  body { margin-top: 2rem; }
-
-  .use-motion .menu-item,
-  .use-motion .sidebar,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header {
-    visibility: visible;
-  }
-
-  .use-motion .header,
-  .use-motion .site-brand-container .toggle,
-  .use-motion .footer { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle,
-  .use-motion .custom-logo-image {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line {
-    transform: scaleX(1);
-  }
-
-  .search-pop-overlay, .sidebar-nav { display: none; }
-  .sidebar-panel { display: block; }
-  </style>
-</noscript>
-
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
 
   <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
     </div>
   </div>
 
@@ -110,85 +68,27 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Camille</h1>
+      <p class="site-title">Camille</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">你得先看重自己,否则别人就会当你一钱不值</p>
   </div>
 
   <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-        <i class="fa fa-search fa-fw fa-lg"></i>
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
     </div>
   </div>
 </div>
 
 
 
-<nav class="site-nav">
-  <ul class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
-
-  </li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
-        </a>
-      </li>
-  </ul>
-</nav>
 
 
 
-  <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off" maxlength="80"
-           placeholder="Searching..." spellcheck="false"
-           type="search" class="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div class="search-result-container no-result">
-  <div class="search-result-icon">
-    <i class="fa fa-spinner fa-pulse fa-5x"></i>
-  </div>
-</div>
 
-    </div>
-  </div>
-
-</div>
+</header>
         
   
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-
   <aside class="sidebar">
 
     <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
@@ -201,67 +101,51 @@
         </li>
       </ul>
 
-      <!--noindex-->
-      <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Merge-Two-Sorted-Lists"><span class="nav-number">1.</span> <span class="nav-text">Merge Two Sorted Lists</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%8E%9F%E6%96%87"><span class="nav-number">1.1.</span> <span class="nav-text">题目原文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%A4%A7%E6%84%8F"><span class="nav-number">1.2.</span> <span class="nav-text">题目大意</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Remove-Duplicates-from-Sorted-Array"><span class="nav-number">2.</span> <span class="nav-text">Remove Duplicates from Sorted Array</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%8E%9F%E6%96%87-1"><span class="nav-number">2.1.</span> <span class="nav-text">题目原文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%A4%A7%E6%84%8F-1"><span class="nav-number">2.2.</span> <span class="nav-text">题目大意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%A6%82%E4%B8%8B"><span class="nav-number">2.3.</span> <span class="nav-text">代码如下:</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Remove-Element"><span class="nav-number">3.</span> <span class="nav-text">Remove Element</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%8E%9F%E6%96%87-2"><span class="nav-number">3.1.</span> <span class="nav-text">题目原文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%9F%E8%AF%8D%E5%A6%82%E4%B8%8B"><span class="nav-number">3.2.</span> <span class="nav-text">生词如下:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%A4%A7%E6%84%8F-2"><span class="nav-number">3.3.</span> <span class="nav-text">题目大意:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%91%E7%9A%84%E4%BB%A3%E7%A0%81%E5%A6%82%E4%B8%8B"><span class="nav-number">3.4.</span> <span class="nav-text">我的代码如下:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E4%B8%8A%E7%9A%84%E4%BC%98%E7%A7%80%E4%BB%A3%E7%A0%81"><span class="nav-number">3.5.</span> <span class="nav-text">网上的优秀代码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%91%A0-%E7%AE%80%E5%8C%96%E7%89%88"><span class="nav-number">3.5.1.</span> <span class="nav-text">①    简化版</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%91%A1-STL%E7%89%88"><span class="nav-number">3.5.2.</span> <span class="nav-text">②    STL版</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Implement-strStr"><span class="nav-number">4.</span> <span class="nav-text">Implement strStr()</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%8E%9F%E6%96%87-3"><span class="nav-number">4.1.</span> <span class="nav-text">题目原文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%9F%E8%AF%8D%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="nav-number">4.2.</span> <span class="nav-text">生词如下：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%A4%A7%E6%84%8F-3"><span class="nav-number">4.3.</span> <span class="nav-text">题目大意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%91%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="nav-number">4.4.</span> <span class="nav-text">我的代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E4%B8%8A%E7%9A%84%E4%BC%98%E7%A7%80%E4%BB%A3%E7%A0%81-1"><span class="nav-number">4.5.</span> <span class="nav-text">网上的优秀代码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%91%A0-%E4%B8%80%E8%A1%8C%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="nav-number">4.5.1.</span> <span class="nav-text">①    一行的代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%91%A1-KMP%E4%BB%A3%E7%A0%81-%E5%BF%AB-%E5%A5%BD"><span class="nav-number">4.5.2.</span> <span class="nav-text">②    KMP代码-快,好</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Search-Insert-Position"><span class="nav-number">5.</span> <span class="nav-text">Search Insert Position</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%A4%A7%E6%84%8F-4"><span class="nav-number">5.1.</span> <span class="nav-text">题目大意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%AB%E4%BA%BA%E7%9A%84%E4%BC%98%E7%A7%80%E4%BB%A3%E7%A0%81"><span class="nav-number">5.2.</span> <span class="nav-text">别人的优秀代码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E8%A1%8C%E5%9C%B0%E5%9D%80%E5%86%B3%E9%97%AE%E9%A2%98"><span class="nav-number">5.2.1.</span> <span class="nav-text">一行地址决问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E7%9A%84%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0"><span class="nav-number">5.3.</span> <span class="nav-text">二分查找的具体实现</span></a></li></ol></li></ol></div>
-      </section>
-      <!--/noindex-->
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Merge-Two-Sorted-Lists"><span class="nav-number">1.</span> <span class="nav-text">Merge Two Sorted Lists</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%8E%9F%E6%96%87"><span class="nav-number">1.1.</span> <span class="nav-text">题目原文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%A4%A7%E6%84%8F"><span class="nav-number">1.2.</span> <span class="nav-text">题目大意</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Remove-Duplicates-from-Sorted-Array"><span class="nav-number">2.</span> <span class="nav-text">Remove Duplicates from Sorted Array</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%8E%9F%E6%96%87-1"><span class="nav-number">2.1.</span> <span class="nav-text">题目原文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%A4%A7%E6%84%8F-1"><span class="nav-number">2.2.</span> <span class="nav-text">题目大意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%A6%82%E4%B8%8B"><span class="nav-number">2.3.</span> <span class="nav-text">代码如下:</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Remove-Element"><span class="nav-number">3.</span> <span class="nav-text">Remove Element</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%8E%9F%E6%96%87-2"><span class="nav-number">3.1.</span> <span class="nav-text">题目原文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%9F%E8%AF%8D%E5%A6%82%E4%B8%8B"><span class="nav-number">3.2.</span> <span class="nav-text">生词如下:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%A4%A7%E6%84%8F-2"><span class="nav-number">3.3.</span> <span class="nav-text">题目大意:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%91%E7%9A%84%E4%BB%A3%E7%A0%81%E5%A6%82%E4%B8%8B"><span class="nav-number">3.4.</span> <span class="nav-text">我的代码如下:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E4%B8%8A%E7%9A%84%E4%BC%98%E7%A7%80%E4%BB%A3%E7%A0%81"><span class="nav-number">3.5.</span> <span class="nav-text">网上的优秀代码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%91%A0-%E7%AE%80%E5%8C%96%E7%89%88"><span class="nav-number">3.5.1.</span> <span class="nav-text">①    简化版</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%91%A1-STL%E7%89%88"><span class="nav-number">3.5.2.</span> <span class="nav-text">②    STL版</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Implement-strStr"><span class="nav-number">4.</span> <span class="nav-text">Implement strStr()</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%8E%9F%E6%96%87-3"><span class="nav-number">4.1.</span> <span class="nav-text">题目原文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%9F%E8%AF%8D%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="nav-number">4.2.</span> <span class="nav-text">生词如下：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%A4%A7%E6%84%8F-3"><span class="nav-number">4.3.</span> <span class="nav-text">题目大意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%91%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="nav-number">4.4.</span> <span class="nav-text">我的代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E4%B8%8A%E7%9A%84%E4%BC%98%E7%A7%80%E4%BB%A3%E7%A0%81-1"><span class="nav-number">4.5.</span> <span class="nav-text">网上的优秀代码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%91%A0-%E4%B8%80%E8%A1%8C%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="nav-number">4.5.1.</span> <span class="nav-text">①    一行的代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%91%A1-KMP%E4%BB%A3%E7%A0%81-%E5%BF%AB-%E5%A5%BD"><span class="nav-number">4.5.2.</span> <span class="nav-text">②    KMP代码-快,好</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Search-Insert-Position"><span class="nav-number">5.</span> <span class="nav-text">Search Insert Position</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%A4%A7%E6%84%8F-4"><span class="nav-number">5.1.</span> <span class="nav-text">题目大意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%AB%E4%BA%BA%E7%9A%84%E4%BC%98%E7%A7%80%E4%BB%A3%E7%A0%81"><span class="nav-number">5.2.</span> <span class="nav-text">别人的优秀代码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E8%A1%8C%E5%9C%B0%E5%9D%80%E5%86%B3%E9%97%AE%E9%A2%98"><span class="nav-number">5.2.1.</span> <span class="nav-text">一行地址决问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E7%9A%84%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0"><span class="nav-number">5.3.</span> <span class="nav-text">二分查找的具体实现</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
 
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Camille"
-      src="/images/Camille.jpg">
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">Camille</p>
   <div class="site-description" itemprop="description">效率，是成功的核心关键</div>
 </div>
-<div class="site-state-wrap site-overview-item animated">
+<div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives">
+        <a href="/archives/">
           <span class="site-state-item-count">237</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
+          <a href="/categories/">
         <span class="site-state-item-count">29</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
+          <a href="/tags/">
         <span class="site-state-item-count">67</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
 
-
-
-      </section>
+        </div>
+      </div>
     </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
-
-
-    </header>
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+  </aside>
 
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
 
+    </div>
 
     <div class="main-inner post posts-expand">
-      
 
-      
 
   
 
@@ -274,13 +158,18 @@
     <link itemprop="mainEntityOfPage" href="https://camilleferros.top/2020/12/14/LeedCode-Easy-21-26-27-28-35/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/Camille.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Camille">
-      <meta itemprop="description" content="效率，是成功的核心关键">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Camille">
+      <meta itemprop="description" content="效率，是成功的核心关键">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="LeedCode-Easy 21,26,27,28,35 | Camille">
+      <meta itemprop="description" content=" ">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -322,47 +211,46 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-        <h1 id="Merge-Two-Sorted-Lists"><a href="#Merge-Two-Sorted-Lists" class="headerlink" title="Merge Two Sorted Lists"></a>Merge Two Sorted Lists</h1><h2 id="题目原文"><a href="#题目原文" class="headerlink" title="题目原文"></a>题目原文</h2><p>Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.</p>
+    <div class="post-body" itemprop="articleBody"><h1 id="Merge-Two-Sorted-Lists"><a href="#Merge-Two-Sorted-Lists" class="headerlink" title="Merge Two Sorted Lists"></a>Merge Two Sorted Lists</h1><h2 id="题目原文"><a href="#题目原文" class="headerlink" title="题目原文"></a>题目原文</h2><p>Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.</p>
 <p><strong>Example:</strong></p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: <span class="number">1</span>-&gt;<span class="number">2</span>-&gt;<span class="number">4</span>, <span class="number">1</span>-&gt;<span class="number">3</span>-&gt;<span class="number">4</span></span><br><span class="line">Output: <span class="number">1</span>-&gt;<span class="number">1</span>-&gt;<span class="number">2</span>-&gt;<span class="number">3</span>-&gt;<span class="number">4</span>-&gt;<span class="number">4</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Input</span>: <span class="number">1</span>-&gt;<span class="number">2</span>-&gt;<span class="number">4</span>, <span class="number">1</span>-&gt;<span class="number">3</span>-&gt;<span class="number">4</span></span><br><span class="line"><span class="attribute">Output</span>: <span class="number">1</span>-&gt;<span class="number">1</span>-&gt;<span class="number">2</span>-&gt;<span class="number">3</span>-&gt;<span class="number">4</span>-&gt;<span class="number">4</span></span><br></pre></td></tr></table></figure>
 <h2 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h2><p>合并两个排列序列并且返回一个作为新的序列.这个新的序列应该成为新的有序序列</p>
 <p>我对链表忘记掉了,用的是大佬的代码</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">   <span class="function">ListNode* <span class="title">mergeTwoLists</span><span class="params">(ListNode* l1, ListNode* l2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!l1)         <span class="comment">// If no l1, return l2</span></span><br><span class="line">        <span class="keyword">return</span> l2;</span><br><span class="line">    <span class="keyword">if</span> (!l2)         <span class="comment">// If no l2, return l1</span></span><br><span class="line">        <span class="keyword">return</span> l1;</span><br><span class="line">    <span class="keyword">if</span> (!l2 &amp;&amp; !l1)  <span class="comment">// If neither, return NULL;</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line">    ListNode* head; <span class="comment">// The pointer we will use to construct a merged list</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (l1-&gt;val &lt; l2-&gt;val)   <span class="comment">// If l1 less than l2</span></span><br><span class="line">    &#123;</span><br><span class="line">        head = l1;          <span class="comment">// We start at l1</span></span><br><span class="line">        l1 = l1-&gt;next;      <span class="comment">// and iterate l1</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>                    <span class="comment">// If l2 less than l1</span></span><br><span class="line">    &#123;</span><br><span class="line">        head = l2;          <span class="comment">// We start at l2</span></span><br><span class="line">        l2 = l2-&gt;next;      <span class="comment">// and iterate l2</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    ListNode* ret = head;   <span class="comment">// We need to save the addres of the head of the list</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (l1 &amp;&amp; l2)         <span class="comment">// While both input lists have values</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (l1-&gt;val &lt; l2-&gt;val)   <span class="comment">// Compare the current values, if l1 is less</span></span><br><span class="line">        &#123;</span><br><span class="line">            head-&gt;next = l1;    <span class="comment">// Append the merged list with l1&#x27;s current address</span></span><br><span class="line">            l1 = l1-&gt;next;      <span class="comment">// Advance l1</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>                    <span class="comment">// Else, l2 had the low value</span></span><br><span class="line">        &#123;</span><br><span class="line">            head-&gt;next = l2;    <span class="comment">// Append l2 to the list</span></span><br><span class="line">            l2 = l2-&gt;next;      <span class="comment">// Advance l2</span></span><br><span class="line">        &#125;</span><br><span class="line">        head-&gt;next-&gt;next = <span class="literal">NULL</span>;    <span class="comment">// Append a NULL teminator to the list</span></span><br><span class="line">        head = head-&gt;next;          <span class="comment">// Advance the merged list</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Lastly, if list were different lengths, we need to append the longer list tail to the merged list</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (l1)</span><br><span class="line">        head-&gt;next = l1;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (l2)</span><br><span class="line">        head-&gt;next = l2;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> ret; <span class="comment">// Return the starting address of head that we saved.</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">   <span class="function">ListNode* <span class="title">mergeTwoLists</span><span class="params">(ListNode* l1, ListNode* l2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!l1)         <span class="comment">// If no l1, return l2</span></span><br><span class="line">        <span class="keyword">return</span> l2;</span><br><span class="line">    <span class="keyword">if</span> (!l2)         <span class="comment">// If no l2, return l1</span></span><br><span class="line">        <span class="keyword">return</span> l1;</span><br><span class="line">    <span class="keyword">if</span> (!l2 &amp;&amp; !l1)  <span class="comment">// If neither, return NULL;</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line">    ListNode* head; <span class="comment">// The pointer we will use to construct a merged list</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (l1-&gt;val &lt; l2-&gt;val)   <span class="comment">// If l1 less than l2</span></span><br><span class="line">    &#123;</span><br><span class="line">        head = l1;          <span class="comment">// We start at l1</span></span><br><span class="line">        l1 = l1-&gt;next;      <span class="comment">// and iterate l1</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>                    <span class="comment">// If l2 less than l1</span></span><br><span class="line">    &#123;</span><br><span class="line">        head = l2;          <span class="comment">// We start at l2</span></span><br><span class="line">        l2 = l2-&gt;next;      <span class="comment">// and iterate l2</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    ListNode* ret = head;   <span class="comment">// We need to save the addres of the head of the list</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (l1 &amp;&amp; l2)         <span class="comment">// While both input lists have values</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (l1-&gt;val &lt; l2-&gt;val)   <span class="comment">// Compare the current values, if l1 is less</span></span><br><span class="line">        &#123;</span><br><span class="line">            head-&gt;next = l1;    <span class="comment">// Append the merged list with l1&#x27;s current address</span></span><br><span class="line">            l1 = l1-&gt;next;      <span class="comment">// Advance l1</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>                    <span class="comment">// Else, l2 had the low value</span></span><br><span class="line">        &#123;</span><br><span class="line">            head-&gt;next = l2;    <span class="comment">// Append l2 to the list</span></span><br><span class="line">            l2 = l2-&gt;next;      <span class="comment">// Advance l2</span></span><br><span class="line">        &#125;</span><br><span class="line">        head-&gt;next-&gt;next = <span class="literal">NULL</span>;    <span class="comment">// Append a NULL teminator to the list</span></span><br><span class="line">        head = head-&gt;next;          <span class="comment">// Advance the merged list</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Lastly, if list were different lengths, we need to append the longer list tail to the merged list</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (l1)</span><br><span class="line">        head-&gt;next = l1;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (l2)</span><br><span class="line">        head-&gt;next = l2;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> ret; <span class="comment">// Return the starting address of head that we saved.</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <h1 id="Remove-Duplicates-from-Sorted-Array"><a href="#Remove-Duplicates-from-Sorted-Array" class="headerlink" title="Remove Duplicates from Sorted Array"></a>Remove Duplicates from Sorted Array</h1><h2 id="题目原文-1"><a href="#题目原文-1" class="headerlink" title="题目原文"></a>题目原文</h2><p>Given a sorted array <em>nums</em>, remove the duplicates <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/In-place_algorithm"><strong>in-place</strong></a> such that each element appear only <em>once</em> and return the new length.</p>
 <p>Do not allocate extra space for another array, you must do this by <strong>modifying the input array <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/In-place_algorithm">in-place</a></strong> with O(1) extra memory.</p>
 <p><strong>Example 1:</strong></p>
 <figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Given nums = [<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>],</span><br><span class="line"></span><br><span class="line">Your <span class="keyword">function</span> <span class="title">should</span> <span class="keyword">return</span> <span class="type">length</span> = <span class="number">2</span>, <span class="keyword">with</span> the first two elements <span class="keyword">of</span> nums being <span class="number">1</span> <span class="keyword">and</span> <span class="number">2</span> respectively.</span><br><span class="line"></span><br><span class="line">It doesn<span class="symbol">&#x27;t</span> matter what you leave beyond the returned length.</span><br></pre></td></tr></table></figure>
 <p><strong>Example 2:</strong></p>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Given nums = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">3</span>,<span class="number">4</span>],</span><br><span class="line"></span><br><span class="line">Your function should return length = <span class="number">5</span>, with the first five elements of nums being modified to <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, and <span class="number">4</span> respectively.</span><br><span class="line"></span><br><span class="line">It doesn&#x27;t matter what values are set beyond the returned length.</span><br></pre></td></tr></table></figure>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Given nums = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">3</span>,<span class="number">4</span>],</span><br><span class="line"></span><br><span class="line">Your <span class="keyword">function</span> <span class="title">should</span> <span class="keyword">return</span> <span class="type">length</span> = <span class="number">5</span>, <span class="keyword">with</span> the first five elements <span class="keyword">of</span> nums being modified to <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="keyword">and</span> <span class="number">4</span> respectively.</span><br><span class="line"></span><br><span class="line">It doesn<span class="symbol">&#x27;t</span> matter what values are set beyond the returned length.</span><br></pre></td></tr></table></figure>
 <p><strong>Clarification:</strong></p>
 <p>Confused why the returned value is an integer but your answer is an array?</p>
 <p>Note that the input array is passed in by <strong>reference</strong>, which means modification to the input array will be known to the caller as well.</p>
 <p>Internally you can think of this:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// nums is passed in by reference. (i.e., without making a copy)</span></span><br><span class="line"><span class="keyword">int</span> len = removeDuplicates(nums);</span><br><span class="line"></span><br><span class="line"><span class="comment">// any modification to nums in your function would be known by the caller.</span></span><br><span class="line"><span class="comment">// using the length returned by your function, it prints the first len elements.</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">    print(nums[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// nums is passed in by reference. (i.e., without making a copy)</span></span><br><span class="line"><span class="type">int</span> len = <span class="built_in">removeDuplicates</span>(nums);</span><br><span class="line"></span><br><span class="line"><span class="comment">// any modification to nums in your function would be known by the caller.</span></span><br><span class="line"><span class="comment">// using the length returned by your function, it prints the first len elements.</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">    <span class="built_in">print</span>(nums[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="题目大意-1"><a href="#题目大意-1" class="headerlink" title="题目大意"></a>题目大意</h2><p>就是给你一个数组,要你算出里面不重复数一共有多少,而且要去掉那些重复的</p>
 <h2 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下:"></a>代码如下:</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/remove-duplicates-from-sorted-array/discuss/12112/My-C%2B%2B-O(n)-solution">https://leetcode.com/problems/remove-duplicates-from-sorted-array/discuss/12112/My-C%2B%2B-O(n)-solution</a></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">removeDuplicates</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (nums.size() == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>, j = <span class="number">1</span>;</span><br><span class="line">        <span class="comment">//i是从头开始遍历的坐标</span></span><br><span class="line">        <span class="comment">//j是后来终止的符号</span></span><br><span class="line">        <span class="keyword">while</span> (j &lt; nums.size())</span><br><span class="line">        &#123; </span><br><span class="line">            <span class="comment">//如果j不等于i的话</span></span><br><span class="line">            <span class="keyword">if</span> (nums[j] != nums[i])</span><br><span class="line">                <span class="comment">//++i用的是i+1后的值</span></span><br><span class="line">                nums[++i] = nums[j];</span><br><span class="line">            j++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> i + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">removeDuplicates</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (nums.<span class="built_in">size</span>() == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> i = <span class="number">0</span>, j = <span class="number">1</span>;</span><br><span class="line">        <span class="comment">//i是从头开始遍历的坐标</span></span><br><span class="line">        <span class="comment">//j是后来终止的符号</span></span><br><span class="line">        <span class="keyword">while</span> (j &lt; nums.<span class="built_in">size</span>())</span><br><span class="line">        &#123; </span><br><span class="line">            <span class="comment">//如果j不等于i的话</span></span><br><span class="line">            <span class="keyword">if</span> (nums[j] != nums[i])</span><br><span class="line">                <span class="comment">//++i用的是i+1后的值</span></span><br><span class="line">                nums[++i] = nums[j];</span><br><span class="line">            j++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> i + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <h1 id="Remove-Element"><a href="#Remove-Element" class="headerlink" title="Remove Element"></a>Remove Element</h1><h2 id="题目原文-2"><a href="#题目原文-2" class="headerlink" title="题目原文"></a>题目原文</h2><p>Given an array <em>nums</em> and a value <em>val</em>, remove all instances of that value <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/In-place_algorithm"><strong>in-place</strong></a> and return the new length.</p>
 <p>Do not allocate extra space for another array, you must do this by <strong>modifying the input array <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/In-place_algorithm">in-place</a></strong> with O(1) extra memory.</p>
 <p>The order of elements can be changed. It doesn’t matter what you leave beyond the new length.</p>
 <p><strong>Example 1:</strong></p>
 <figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Given nums = [<span class="number">3</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>], val = <span class="number">3</span>,</span><br><span class="line"></span><br><span class="line">Your <span class="keyword">function</span> <span class="title">should</span> <span class="keyword">return</span> <span class="type">length</span> = <span class="number">2</span>, <span class="keyword">with</span> the first two elements <span class="keyword">of</span> nums being <span class="number">2</span>.</span><br><span class="line"></span><br><span class="line">It doesn<span class="symbol">&#x27;t</span> matter what you leave beyond the returned length.</span><br></pre></td></tr></table></figure>
 <p><strong>Example 2:</strong></p>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Given nums = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">0</span>,<span class="number">4</span>,<span class="number">2</span>], val = <span class="number">2</span>,</span><br><span class="line"></span><br><span class="line">Your function should return length = <span class="number">5</span>, with the first five elements of nums containing <span class="number">0</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">0</span>, and <span class="number">4.</span></span><br><span class="line"></span><br><span class="line">Note that the order of those five elements can be arbitrary.</span><br><span class="line"></span><br><span class="line">It doesn&#x27;t matter what values are set beyond the returned length.</span><br></pre></td></tr></table></figure>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Given nums = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">0</span>,<span class="number">4</span>,<span class="number">2</span>], val = <span class="number">2</span>,</span><br><span class="line"></span><br><span class="line">Your <span class="keyword">function</span> <span class="title">should</span> <span class="keyword">return</span> <span class="type">length</span> = <span class="number">5</span>, <span class="keyword">with</span> the first five elements <span class="keyword">of</span> nums containing <span class="number">0</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">0</span>, <span class="keyword">and</span> <span class="number">4</span>.</span><br><span class="line"></span><br><span class="line">Note that the order <span class="keyword">of</span> those five elements can be arbitrary.</span><br><span class="line"></span><br><span class="line">It doesn<span class="symbol">&#x27;t</span> matter what values are set beyond the returned length.</span><br></pre></td></tr></table></figure>
 <p><strong>Clarification:</strong></p>
 <p>Confused why the returned value is an integer but your answer is an array?</p>
 <p>Note that the input array is passed in by <strong>reference</strong>, which means modification to the input array will be known to the caller as well.</p>
 <p>Internally you can think of this:</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// nums is passed in by reference. (i.e., without making a copy)</span></span><br><span class="line"><span class="keyword">int</span> <span class="built_in">len</span> = removeElement(nums, val);</span><br><span class="line"></span><br><span class="line"><span class="comment">// any modification to nums in your function would be known by the caller.</span></span><br><span class="line"><span class="comment">// using the length returned by your function, it prints the first len elements.</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="built_in">len</span>; i++) &#123;</span><br><span class="line">    <span class="built_in">print</span>(nums[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// nums is passed in by reference. (i.e., without making a copy)</span></span><br><span class="line"><span class="type">int</span> <span class="built_in">len</span> = removeElement(nums, val);</span><br><span class="line"></span><br><span class="line"><span class="comment">// any modification to nums in your function would be known by the caller.</span></span><br><span class="line"><span class="comment">// using the length returned by your function, it prints the first len elements.</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="built_in">len</span>; i++) &#123;</span><br><span class="line">    <span class="built_in">print</span>(nums[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="生词如下"><a href="#生词如下" class="headerlink" title="生词如下:"></a>生词如下:</h2><p>instances    实例</p>
 <p>modifying    修饰</p>
 <h2 id="题目大意-2"><a href="#题目大意-2" class="headerlink" title="题目大意:"></a>题目大意:</h2><p>输入一组数和一个数,然后再这组数字中去掉这个数.就OK了.要求不能用数组,空间复杂度为1</p>
-<h2 id="我的代码如下"><a href="#我的代码如下" class="headerlink" title="我的代码如下:"></a>我的代码如下:</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">removeElement</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> length = nums.size();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; length; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[i] == val) &#123;</span><br><span class="line">                length = length - <span class="number">1</span>;</span><br><span class="line">                <span class="comment">//最基础的左移代码</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; nums.size(); j++) &#123;</span><br><span class="line">                    nums[j - <span class="number">1</span>] = nums[j];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//为了避免 两个重复的一起出现的情况</span></span><br><span class="line">            <span class="keyword">if</span> (nums[i] == val) i--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> length;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="我的代码如下"><a href="#我的代码如下" class="headerlink" title="我的代码如下:"></a>我的代码如下:</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">removeElement</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> val)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> length = nums.<span class="built_in">size</span>();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; length; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[i] == val) &#123;</span><br><span class="line">                length = length - <span class="number">1</span>;</span><br><span class="line">                <span class="comment">//最基础的左移代码</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> j = i + <span class="number">1</span>; j &lt; nums.<span class="built_in">size</span>(); j++) &#123;</span><br><span class="line">                    nums[j - <span class="number">1</span>] = nums[j];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//为了避免 两个重复的一起出现的情况</span></span><br><span class="line">            <span class="keyword">if</span> (nums[i] == val) i--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> length;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <h2 id="网上的优秀代码"><a href="#网上的优秀代码" class="headerlink" title="网上的优秀代码"></a>网上的优秀代码</h2><h3 id="①-简化版"><a href="#①-简化版" class="headerlink" title="①    简化版"></a>①    简化版</h3><p>地址:<a target="_blank" rel="noopener" href="https://leetcode.com/problems/remove-element/discuss/12680/A-simple-c%2B%2B-solution">https://leetcode.com/problems/remove-element/discuss/12680/A-simple-c%2B%2B-solution</a></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	核心思路,就是遍历,然后把不是的赋值给原数组</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">removeElement</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> idx=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;nums.size();i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(nums[i]!=val) &#123;</span><br><span class="line">            <span class="comment">//两句核心代码,你只有一个一个的给就OK了,不是的给原数组</span></span><br><span class="line">            nums[idx] = nums[i];</span><br><span class="line">            idx ++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> idx;</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	核心思路,就是遍历,然后把不是的赋值给原数组</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">removeElement</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> val)</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> idx=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;nums.<span class="built_in">size</span>();i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(nums[i]!=val) &#123;</span><br><span class="line">            <span class="comment">//两句核心代码,你只有一个一个的给就OK了,不是的给原数组</span></span><br><span class="line">            nums[idx] = nums[i];</span><br><span class="line">            idx ++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> idx;</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/remove-element/discuss/480364/C%2B%2B-100-using-STL">https://leetcode.com/problems/remove-element/discuss/480364/C%2B%2B-100-using-STL</a></p>
-<h3 id="②-STL版"><a href="#②-STL版" class="headerlink" title="②    STL版"></a>②    STL版</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	核心思路,就是遍历,然后直接删除不是的</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">removeElement</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; n, <span class="keyword">int</span> val)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    n.erase(<span class="built_in">std</span>::remove(n.begin(), n.end(), val), n.end());</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    	这一句的代码</span></span><br><span class="line"><span class="comment">    	std::remove(n.begin(),n.end(),val)	就是把n.begin到n.end()中的val都删除掉,但是那个空间还是在的而且返回的是我们</span></span><br><span class="line"><span class="comment">    	删除之后的最后一个位置</span></span><br><span class="line"><span class="comment">    	n.erase(it,n.end())	就是删除最后几个?的位置</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="keyword">return</span> n.size();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="②-STL版"><a href="#②-STL版" class="headerlink" title="②    STL版"></a>②    STL版</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	核心思路,就是遍历,然后直接删除不是的</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">removeElement</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; n, <span class="type">int</span> val)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    n.<span class="built_in">erase</span>(std::<span class="built_in">remove</span>(n.<span class="built_in">begin</span>(), n.<span class="built_in">end</span>(), val), n.<span class="built_in">end</span>());</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    	这一句的代码</span></span><br><span class="line"><span class="comment">    	std::remove(n.begin(),n.end(),val)	就是把n.begin到n.end()中的val都删除掉,但是那个空间还是在的而且返回的是我们</span></span><br><span class="line"><span class="comment">    	删除之后的最后一个位置</span></span><br><span class="line"><span class="comment">    	n.erase(it,n.end())	就是删除最后几个?的位置</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="keyword">return</span> n.<span class="built_in">size</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="Implement-strStr"><a href="#Implement-strStr" class="headerlink" title="Implement strStr()"></a>Implement strStr()</h1><h2 id="题目原文-3"><a href="#题目原文-3" class="headerlink" title="题目原文"></a>题目原文</h2><p>Implement <a target="_blank" rel="noopener" href="http://www.cplusplus.com/reference/cstring/strstr/">strStr()</a>.</p>
 <p>Return the index of the first occurrence of needle in haystack, or <strong>-1</strong> if needle is not part of haystack.</p>
 <p><strong>Example 1:</strong></p>
@@ -376,23 +264,23 @@
 <p>occurrence    出现</p>
 <p>Clarification    解释</p>
 <h2 id="题目大意-3"><a href="#题目大意-3" class="headerlink" title="题目大意"></a>题目大意</h2><p>就是给你两个String类型的数字,让你算第二个String在第一个String类型里第一次出现的地方，如果第二个String为空的话,默认返回为0</p>
-<h2 id="我的代码"><a href="#我的代码" class="headerlink" title="我的代码"></a>我的代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">strStr</span><span class="params">(<span class="built_in">string</span> haystack, <span class="built_in">string</span> needle)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (needle.size() == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;   <span class="comment">//特殊情况为空的时候</span></span><br><span class="line">        <span class="comment">//index用来表示在needle里面递增的下标,flag用来判断有没有出现</span></span><br><span class="line">        <span class="keyword">int</span> index = <span class="number">0</span>, flag = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; haystack.size(); i++) &#123;</span><br><span class="line">            index = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">if</span> (haystack[i] == needle[index]&amp;&amp;(i+needle.size()<span class="number">-1</span>)&lt;=haystack.size()) &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> j = i; j &lt;= needle.size() + i<span class="number">-1</span>; j++) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (haystack[j] == needle[index++])</span><br><span class="line">                        flag = <span class="number">0</span>;</span><br><span class="line">                    <span class="keyword">else</span> &#123;</span><br><span class="line">                        flag = <span class="number">1</span>;</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (flag == <span class="number">0</span>)</span><br><span class="line">                    <span class="keyword">return</span> i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="我的代码"><a href="#我的代码" class="headerlink" title="我的代码"></a>我的代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">strStr</span><span class="params">(string haystack, string needle)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (needle.<span class="built_in">size</span>() == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;   <span class="comment">//特殊情况为空的时候</span></span><br><span class="line">        <span class="comment">//index用来表示在needle里面递增的下标,flag用来判断有没有出现</span></span><br><span class="line">        <span class="type">int</span> index = <span class="number">0</span>, flag = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; haystack.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            index = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">if</span> (haystack[i] == needle[index]&amp;&amp;(i+needle.<span class="built_in">size</span>()<span class="number">-1</span>)&lt;=haystack.<span class="built_in">size</span>()) &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> j = i; j &lt;= needle.<span class="built_in">size</span>() + i<span class="number">-1</span>; j++) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (haystack[j] == needle[index++])</span><br><span class="line">                        flag = <span class="number">0</span>;</span><br><span class="line">                    <span class="keyword">else</span> &#123;</span><br><span class="line">                        flag = <span class="number">1</span>;</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (flag == <span class="number">0</span>)</span><br><span class="line">                    <span class="keyword">return</span> i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <h2 id="网上的优秀代码-1"><a href="#网上的优秀代码-1" class="headerlink" title="网上的优秀代码"></a>网上的优秀代码</h2><h3 id="①-一行的代码"><a href="#①-一行的代码" class="headerlink" title="①    一行的代码"></a>①    一行的代码</h3><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/implement-strstr/discuss/12982/3-different-solutions-1581-lines-C%2B%2B">https://leetcode.com/problems/implement-strstr/discuss/12982/3-different-solutions-1581-lines-C%2B%2B</a></p>
 <p>一个函数解决问题</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">strStr</span><span class="params">(<span class="built_in">string</span> haystack, <span class="built_in">string</span> needle)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> haystack.find(needle);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">strStr</span><span class="params">(string haystack, string needle)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> haystack.<span class="built_in">find</span>(needle);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <h3 id="②-KMP代码-快-好"><a href="#②-KMP代码-快-好" class="headerlink" title="②    KMP代码-快,好"></a>②    KMP代码-快,好</h3><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/implement-strstr/discuss/452070/C%2B%2B-0ms-less100-8.9MB-less95.71">https://leetcode.com/problems/implement-strstr/discuss/452070/C%2B%2B-0ms-less100-8.9MB-less95.71</a></p>
 <p>KMP我不理解,这里只是贴一下</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="keyword">auto</span> x = []() &#123;ios_base::sync_with_stdio(<span class="literal">false</span>); <span class="built_in">cin</span>.tie(<span class="literal">NULL</span>); <span class="keyword">return</span> <span class="literal">NULL</span>; &#125;();    <span class="comment">//可以让代码运行变快</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">strStr</span><span class="params">(<span class="built_in">string</span> haystack, <span class="built_in">string</span> needle)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (needle.empty()) &#123; <span class="keyword">return</span> <span class="number">0</span>; &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (needle.size() &gt; haystack.size()) &#123; <span class="keyword">return</span> <span class="number">-1</span>; &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">short</span> <span class="keyword">int</span> i = <span class="number">0</span>; i &lt; (haystack.size() - needle.size() + <span class="number">1</span>); ++i) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">short</span> <span class="keyword">int</span> j = <span class="number">0</span>; j &lt; needle.size(); ++j) &#123;</span><br><span class="line">                <span class="keyword">if</span> (haystack[i + j] != needle[j]) &#123; <span class="keyword">break</span>; &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (j + <span class="number">1</span> == needle.size()) &#123; <span class="keyword">return</span> i; &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">static</span> <span class="keyword">auto</span> x = []() &#123;ios_base::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>); cin.<span class="built_in">tie</span>(<span class="literal">NULL</span>); <span class="keyword">return</span> <span class="literal">NULL</span>; &#125;();    <span class="comment">//可以让代码运行变快</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">strStr</span><span class="params">(string haystack, string needle)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (needle.<span class="built_in">empty</span>()) &#123; <span class="keyword">return</span> <span class="number">0</span>; &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (needle.<span class="built_in">size</span>() &gt; haystack.<span class="built_in">size</span>()) &#123; <span class="keyword">return</span> <span class="number">-1</span>; &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">short</span> <span class="type">int</span> i = <span class="number">0</span>; i &lt; (haystack.<span class="built_in">size</span>() - needle.<span class="built_in">size</span>() + <span class="number">1</span>); ++i) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">short</span> <span class="type">int</span> j = <span class="number">0</span>; j &lt; needle.<span class="built_in">size</span>(); ++j) &#123;</span><br><span class="line">                <span class="keyword">if</span> (haystack[i + j] != needle[j]) &#123; <span class="keyword">break</span>; &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (j + <span class="number">1</span> == needle.<span class="built_in">size</span>()) &#123; <span class="keyword">return</span> i; &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <h1 id="Search-Insert-Position"><a href="#Search-Insert-Position" class="headerlink" title="Search Insert Position"></a>Search Insert Position</h1><p>Given a sorted array and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.</p>
 <p>You may assume no duplicates in the array.</p>
 <p><strong>Example 1:</strong></p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Input:</span> [<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">6</span>]<span class="string">,</span> <span class="number">5</span></span><br><span class="line"><span class="attr">Output:</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">Input:</span> [<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">6</span>], <span class="number">5</span></span><br><span class="line"><span class="symbol">Output:</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
 <p><strong>Example 2:</strong></p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Input:</span> [<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">6</span>]<span class="string">,</span> <span class="number">2</span></span><br><span class="line"><span class="attr">Output:</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">Input:</span> [<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">6</span>], <span class="number">2</span></span><br><span class="line"><span class="symbol">Output:</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
 <p><strong>Example 3:</strong></p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Input:</span> [<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">6</span>]<span class="string">,</span> <span class="number">7</span></span><br><span class="line"><span class="attr">Output:</span> <span class="number">4</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">Input:</span> [<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">6</span>], <span class="number">7</span></span><br><span class="line"><span class="symbol">Output:</span> <span class="number">4</span></span><br></pre></td></tr></table></figure>
 <p><strong>Example 4:</strong></p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Input:</span> [<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">6</span>]<span class="string">,</span> <span class="number">0</span></span><br><span class="line"><span class="attr">Output:</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">Input:</span> [<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">6</span>], <span class="number">0</span></span><br><span class="line"><span class="symbol">Output:</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
 <h2 id="题目大意-4"><a href="#题目大意-4" class="headerlink" title="题目大意"></a>题目大意</h2><p>给一个目标数,和一组排列好的数据,如果一组数据中,有这个目标数,</p>
 <p>那就返回它在数组中的下标</p>
 <p>如果没有,那就返回,如果插入这个数据的下标</p>
@@ -403,13 +291,13 @@
 <p>如果目标数为    :0</p>
 <p>那就应该返回    :    0</p>
 <p>我写的代码如下:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">searchInsert</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">if</span>(nums[<span class="number">0</span>]&gt;target)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(nums[nums.size()<span class="number">-1</span>]&lt;target)&#123;</span><br><span class="line">		<span class="keyword">return</span> nums.size();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;nums.size();i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(target == nums[i])&#123;</span><br><span class="line">			<span class="keyword">return</span> i;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(i!=nums.size()&amp;&amp;(target&gt;nums[i]&amp;&amp;target&lt;nums[i+<span class="number">1</span>]))&#123;</span><br><span class="line">			<span class="keyword">return</span> i+<span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">searchInsert</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> target)</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">if</span>(nums[<span class="number">0</span>]&gt;target)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(nums[nums.<span class="built_in">size</span>()<span class="number">-1</span>]&lt;target)&#123;</span><br><span class="line">		<span class="keyword">return</span> nums.<span class="built_in">size</span>();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;nums.<span class="built_in">size</span>();i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(target == nums[i])&#123;</span><br><span class="line">			<span class="keyword">return</span> i;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(i!=nums.<span class="built_in">size</span>()&amp;&amp;(target&gt;nums[i]&amp;&amp;target&lt;nums[i+<span class="number">1</span>]))&#123;</span><br><span class="line">			<span class="keyword">return</span> i+<span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <h2 id="别人的优秀代码"><a href="#别人的优秀代码" class="headerlink" title="别人的优秀代码"></a>别人的优秀代码</h2><p>参考地址</p>
 <p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/search-insert-position/discuss/680104/C%2B%2B-One-line-binary-search-solution-using-built-in-method-highly-efficient">地址一</a></p>
 <p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/search-insert-position/discuss/15391/A-simple-CPP-solution-with-lower_bound">地址二</a></p>
-<h3 id="一行地址决问题"><a href="#一行地址决问题" class="headerlink" title="一行地址决问题"></a>一行地址决问题</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">searchInsert</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> lower_bound(begin(nums), end(nums), target) - begin(nums);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="一行地址决问题"><a href="#一行地址决问题" class="headerlink" title="一行地址决问题"></a>一行地址决问题</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">searchInsert</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">lower_bound</span>(<span class="built_in">begin</span>(nums), <span class="built_in">end</span>(nums), target) - <span class="built_in">begin</span>(nums);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>lower_bound( begin,end,num)是一个二分查找的函数,从数组的begin位置到end-1位置二分查找第一个大于或等于num的数字，找到返回该数字的地址，不存在则返回end。通过返回的地址减去起始地址begin,得到找到数字在数组中的下标</p>
-<h2 id="二分查找的具体实现"><a href="#二分查找的具体实现" class="headerlink" title="二分查找的具体实现"></a>二分查找的具体实现</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">searchInsert</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">auto</span> first = nums.begin(), last = nums.end();</span><br><span class="line">        <span class="keyword">while</span> (first &lt; last) &#123;</span><br><span class="line">            <span class="keyword">auto</span> mid = first + ((last - first) &gt;&gt; <span class="number">1</span>);</span><br><span class="line">            <span class="keyword">if</span> (*mid &lt; target) &#123;</span><br><span class="line">                first = mid + <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                last = mid;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> first - nums.begin();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="二分查找的具体实现"><a href="#二分查找的具体实现" class="headerlink" title="二分查找的具体实现"></a>二分查找的具体实现</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">searchInsert</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">auto</span> first = nums.<span class="built_in">begin</span>(), last = nums.<span class="built_in">end</span>();</span><br><span class="line">        <span class="keyword">while</span> (first &lt; last) &#123;</span><br><span class="line">            <span class="keyword">auto</span> mid = first + ((last - first) &gt;&gt; <span class="number">1</span>);</span><br><span class="line">            <span class="keyword">if</span> (*mid &lt; target) &#123;</span><br><span class="line">                first = mid + <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                last = mid;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> first - nums.<span class="built_in">begin</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -426,12 +314,12 @@
           <div class="post-nav">
             <div class="post-nav-item">
                 <a href="/2020/12/14/LeedCode-Easy-1-7-9-13-14-20/" rel="prev" title="LeedCode-Easy    1,7,9,13,14,20">
-                  <i class="fa fa-chevron-left"></i> LeedCode-Easy    1,7,9,13,14,20
+                  <i class="fa fa-angle-left"></i> LeedCode-Easy    1,7,9,13,14,20
                 </a>
             </div>
             <div class="post-nav-item">
                 <a href="/2020/12/14/LeedCode-Easy-38-Count-and-Say/" rel="next" title="LeedCode-Easy 38. Count and Say">
-                  LeedCode-Easy 38. Count and Say <i class="fa fa-chevron-right"></i>
+                  LeedCode-Easy 38. Count and Say <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
@@ -444,82 +332,48 @@
 
 
 
-      
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      const commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-    </div>
+</div>
   </main>
 
   <footer class="footer">
     <div class="footer-inner">
-      
 
-      
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2023</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Camille</span>
-</div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Camille</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
 
     </div>
   </footer>
 
   
-  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
 
-  
-
-
-
-
-  <script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
 
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
-
+  
 
 
 
@@ -528,53 +382,9 @@
 
   
 
-  
-      <script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              const target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    const script = document.createElement('script');
-    script.src = '//cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
-    script.defer = true;
-    document.head.appendChild(script);
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.typesetClear();
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
 
-    
 
-  
+
 
 </body>
 </html>

@@ -2,27 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.2.0">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
+
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-fire-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-fire-16x16-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
 
 
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.0/css/all.min.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"camilleferros.top","root":"/","scheme":"Muse","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
-  </script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"camilleferros.top","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-  <meta property="og:type" content="article">
+    <meta property="og:type" content="article">
 <meta property="og:title" content="C++Primer_课后习题第四章">
 <meta property="og:url" content="https://camilleferros.top/2020/12/14/C++Primer-%E8%AF%BE%E5%90%8E%E4%B9%A0%E9%A2%98-04/index.html">
 <meta property="og:site_name" content="Camille">
@@ -41,18 +38,14 @@
 <link rel="canonical" href="https://camilleferros.top/2020/12/14/C++Primer-%E8%AF%BE%E5%90%8E%E4%B9%A0%E9%A2%98-04/">
 
 
-<script class="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'en'
-  };
-</script>
 
-  <title>C++Primer_课后习题第四章 | Camille</title>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://camilleferros.top/2020/12/14/C++Primer-%E8%AF%BE%E5%90%8E%E4%B9%A0%E9%A2%98-04/","path":"2020/12/14/C++Primer-课后习题-04/","title":"C++Primer_课后习题第四章"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>C++Primer_课后习题第四章 | Camille</title>
   
+
+
 
 
 
@@ -60,53 +53,18 @@
 
 
   <noscript>
-  <style>
-  body { margin-top: 2rem; }
-
-  .use-motion .menu-item,
-  .use-motion .sidebar,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header {
-    visibility: visible;
-  }
-
-  .use-motion .header,
-  .use-motion .site-brand-container .toggle,
-  .use-motion .footer { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle,
-  .use-motion .custom-logo-image {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line {
-    transform: scaleX(1);
-  }
-
-  .search-pop-overlay, .sidebar-nav { display: none; }
-  .sidebar-panel { display: block; }
-  </style>
-</noscript>
-
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
 
   <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
     </div>
   </div>
 
@@ -114,85 +72,27 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Camille</h1>
+      <p class="site-title">Camille</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">你得先看重自己,否则别人就会当你一钱不值</p>
   </div>
 
   <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-        <i class="fa fa-search fa-fw fa-lg"></i>
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
     </div>
   </div>
 </div>
 
 
 
-<nav class="site-nav">
-  <ul class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
-
-  </li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
-        </a>
-      </li>
-  </ul>
-</nav>
 
 
 
-  <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off" maxlength="80"
-           placeholder="Searching..." spellcheck="false"
-           type="search" class="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div class="search-result-container no-result">
-  <div class="search-result-icon">
-    <i class="fa fa-spinner fa-pulse fa-5x"></i>
-  </div>
-</div>
 
-    </div>
-  </div>
-
-</div>
+</header>
         
   
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-
   <aside class="sidebar">
 
     <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
@@ -205,67 +105,51 @@
         </li>
       </ul>
 
-      <!--noindex-->
-      <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%AD%94%E6%A1%88"><span class="nav-number">1.</span> <span class="nav-text">第一章答案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0%E7%AD%94%E6%A1%88"><span class="nav-number">2.</span> <span class="nav-text">第二章答案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0%E7%AD%94%E6%A1%88"><span class="nav-number">3.</span> <span class="nav-text">第三章答案</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-1"><span class="nav-number"></span> <span class="nav-text">4.1</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-2"><span class="nav-number"></span> <span class="nav-text">4.2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-3"><span class="nav-number"></span> <span class="nav-text">4.3</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-4"><span class="nav-number"></span> <span class="nav-text">4.4</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-5"><span class="nav-number"></span> <span class="nav-text">4.5</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#a"><span class="nav-number">1.</span> <span class="nav-text">(a)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b"><span class="nav-number">2.</span> <span class="nav-text">(b)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c"><span class="nav-number">3.</span> <span class="nav-text">(c)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#d"><span class="nav-number">4.</span> <span class="nav-text">(d)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-6"><span class="nav-number"></span> <span class="nav-text">4.6</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-7"><span class="nav-number"></span> <span class="nav-text">4.7</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-8"><span class="nav-number"></span> <span class="nav-text">4.8</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-9"><span class="nav-number"></span> <span class="nav-text">4.9</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-10"><span class="nav-number"></span> <span class="nav-text">4.10</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-11"><span class="nav-number"></span> <span class="nav-text">4.11</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-12"><span class="nav-number"></span> <span class="nav-text">4.12</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-13"><span class="nav-number"></span> <span class="nav-text">4.13</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#a-1"><span class="nav-number">1.</span> <span class="nav-text">(a)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b-1"><span class="nav-number">2.</span> <span class="nav-text">(b)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-14"><span class="nav-number"></span> <span class="nav-text">4.14</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-15"><span class="nav-number"></span> <span class="nav-text">4.15</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-16"><span class="nav-number"></span> <span class="nav-text">4.16</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-17"><span class="nav-number"></span> <span class="nav-text">4.17</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-18"><span class="nav-number"></span> <span class="nav-text">4.18</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-19"><span class="nav-number"></span> <span class="nav-text">4.19</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#a-2"><span class="nav-number">1.</span> <span class="nav-text">(a)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b-2"><span class="nav-number">2.</span> <span class="nav-text">(b)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c-1"><span class="nav-number">3.</span> <span class="nav-text">(c)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-20"><span class="nav-number"></span> <span class="nav-text">4.20</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#a-3"><span class="nav-number">1.</span> <span class="nav-text">(a)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b-3"><span class="nav-number">2.</span> <span class="nav-text">(b)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c-2"><span class="nav-number">3.</span> <span class="nav-text">(c)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#d-1"><span class="nav-number">4.</span> <span class="nav-text">(d)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#e"><span class="nav-number">5.</span> <span class="nav-text">(e)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#f"><span class="nav-number">6.</span> <span class="nav-text">(f)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-21"><span class="nav-number"></span> <span class="nav-text">4.21</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-22"><span class="nav-number"></span> <span class="nav-text">4.22</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-23"><span class="nav-number"></span> <span class="nav-text">4.23</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E7%9A%84%E5%8E%9F%E6%84%8F"><span class="nav-number">1.</span> <span class="nav-text">题目的原意</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-24"><span class="nav-number"></span> <span class="nav-text">4.24</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-25"><span class="nav-number"></span> <span class="nav-text">4.25</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-26"><span class="nav-number"></span> <span class="nav-text">4.26</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-27"><span class="nav-number"></span> <span class="nav-text">4.27</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#a-4"><span class="nav-number">1.</span> <span class="nav-text">(a)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b-4"><span class="nav-number">2.</span> <span class="nav-text">(b)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c-d"><span class="nav-number">3.</span> <span class="nav-text">(c)(d)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-28"><span class="nav-number"></span> <span class="nav-text">4.28</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-29"><span class="nav-number"></span> <span class="nav-text">4.29</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">1.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%87%BA"><span class="nav-number">2.</span> <span class="nav-text">输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E7%AD%94"><span class="nav-number">3.</span> <span class="nav-text">解答</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-30"><span class="nav-number"></span> <span class="nav-text">4.30</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#a-5"><span class="nav-number">1.</span> <span class="nav-text">(a)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b-5"><span class="nav-number">2.</span> <span class="nav-text">(b)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c-3"><span class="nav-number">3.</span> <span class="nav-text">(c)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#d-2"><span class="nav-number">4.</span> <span class="nav-text">(d)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-31"><span class="nav-number"></span> <span class="nav-text">4.31</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-32"><span class="nav-number"></span> <span class="nav-text">4.32</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-33"><span class="nav-number"></span> <span class="nav-text">4.33</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-34"><span class="nav-number"></span> <span class="nav-text">4.34</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#a-6"><span class="nav-number">1.</span> <span class="nav-text">(a)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b-6"><span class="nav-number">2.</span> <span class="nav-text">(b)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c-4"><span class="nav-number">3.</span> <span class="nav-text">(c)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-35"><span class="nav-number"></span> <span class="nav-text">4.35</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88a%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">（a）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b-7"><span class="nav-number">2.</span> <span class="nav-text">(b)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c-5"><span class="nav-number">3.</span> <span class="nav-text">(c)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#d-3"><span class="nav-number">4.</span> <span class="nav-text">(d)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-36"><span class="nav-number"></span> <span class="nav-text">4.36</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-37"><span class="nav-number"></span> <span class="nav-text">4.37</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-38"><span class="nav-number"></span> <span class="nav-text">4.38</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE"><span class="nav-number"></span> <span class="nav-text">思维导图</span></a></div>
-      </section>
-      <!--/noindex-->
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%AD%94%E6%A1%88"><span class="nav-number">1.</span> <span class="nav-text">第一章答案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0%E7%AD%94%E6%A1%88"><span class="nav-number">2.</span> <span class="nav-text">第二章答案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0%E7%AD%94%E6%A1%88"><span class="nav-number">3.</span> <span class="nav-text">第三章答案</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-1"><span class="nav-number"></span> <span class="nav-text">4.1</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-2"><span class="nav-number"></span> <span class="nav-text">4.2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-3"><span class="nav-number"></span> <span class="nav-text">4.3</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-4"><span class="nav-number"></span> <span class="nav-text">4.4</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-5"><span class="nav-number"></span> <span class="nav-text">4.5</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#a"><span class="nav-number">1.</span> <span class="nav-text">(a)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b"><span class="nav-number">2.</span> <span class="nav-text">(b)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c"><span class="nav-number">3.</span> <span class="nav-text">(c)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#d"><span class="nav-number">4.</span> <span class="nav-text">(d)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-6"><span class="nav-number"></span> <span class="nav-text">4.6</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-7"><span class="nav-number"></span> <span class="nav-text">4.7</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-8"><span class="nav-number"></span> <span class="nav-text">4.8</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-9"><span class="nav-number"></span> <span class="nav-text">4.9</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-10"><span class="nav-number"></span> <span class="nav-text">4.10</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-11"><span class="nav-number"></span> <span class="nav-text">4.11</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-12"><span class="nav-number"></span> <span class="nav-text">4.12</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-13"><span class="nav-number"></span> <span class="nav-text">4.13</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#a-1"><span class="nav-number">1.</span> <span class="nav-text">(a)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b-1"><span class="nav-number">2.</span> <span class="nav-text">(b)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-14"><span class="nav-number"></span> <span class="nav-text">4.14</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-15"><span class="nav-number"></span> <span class="nav-text">4.15</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-16"><span class="nav-number"></span> <span class="nav-text">4.16</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-17"><span class="nav-number"></span> <span class="nav-text">4.17</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-18"><span class="nav-number"></span> <span class="nav-text">4.18</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-19"><span class="nav-number"></span> <span class="nav-text">4.19</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#a-2"><span class="nav-number">1.</span> <span class="nav-text">(a)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b-2"><span class="nav-number">2.</span> <span class="nav-text">(b)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c-1"><span class="nav-number">3.</span> <span class="nav-text">(c)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-20"><span class="nav-number"></span> <span class="nav-text">4.20</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#a-3"><span class="nav-number">1.</span> <span class="nav-text">(a)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b-3"><span class="nav-number">2.</span> <span class="nav-text">(b)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c-2"><span class="nav-number">3.</span> <span class="nav-text">(c)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#d-1"><span class="nav-number">4.</span> <span class="nav-text">(d)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#e"><span class="nav-number">5.</span> <span class="nav-text">(e)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#f"><span class="nav-number">6.</span> <span class="nav-text">(f)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-21"><span class="nav-number"></span> <span class="nav-text">4.21</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-22"><span class="nav-number"></span> <span class="nav-text">4.22</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-23"><span class="nav-number"></span> <span class="nav-text">4.23</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E7%9A%84%E5%8E%9F%E6%84%8F"><span class="nav-number">1.</span> <span class="nav-text">题目的原意</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-24"><span class="nav-number"></span> <span class="nav-text">4.24</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-25"><span class="nav-number"></span> <span class="nav-text">4.25</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-26"><span class="nav-number"></span> <span class="nav-text">4.26</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-27"><span class="nav-number"></span> <span class="nav-text">4.27</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#a-4"><span class="nav-number">1.</span> <span class="nav-text">(a)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b-4"><span class="nav-number">2.</span> <span class="nav-text">(b)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c-d"><span class="nav-number">3.</span> <span class="nav-text">(c)(d)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-28"><span class="nav-number"></span> <span class="nav-text">4.28</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-29"><span class="nav-number"></span> <span class="nav-text">4.29</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">1.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%87%BA"><span class="nav-number">2.</span> <span class="nav-text">输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E7%AD%94"><span class="nav-number">3.</span> <span class="nav-text">解答</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-30"><span class="nav-number"></span> <span class="nav-text">4.30</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#a-5"><span class="nav-number">1.</span> <span class="nav-text">(a)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b-5"><span class="nav-number">2.</span> <span class="nav-text">(b)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c-3"><span class="nav-number">3.</span> <span class="nav-text">(c)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#d-2"><span class="nav-number">4.</span> <span class="nav-text">(d)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-31"><span class="nav-number"></span> <span class="nav-text">4.31</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-32"><span class="nav-number"></span> <span class="nav-text">4.32</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-33"><span class="nav-number"></span> <span class="nav-text">4.33</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-34"><span class="nav-number"></span> <span class="nav-text">4.34</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#a-6"><span class="nav-number">1.</span> <span class="nav-text">(a)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b-6"><span class="nav-number">2.</span> <span class="nav-text">(b)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c-4"><span class="nav-number">3.</span> <span class="nav-text">(c)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-35"><span class="nav-number"></span> <span class="nav-text">4.35</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88a%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">（a）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b-7"><span class="nav-number">2.</span> <span class="nav-text">(b)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c-5"><span class="nav-number">3.</span> <span class="nav-text">(c)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#d-3"><span class="nav-number">4.</span> <span class="nav-text">(d)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-36"><span class="nav-number"></span> <span class="nav-text">4.36</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-37"><span class="nav-number"></span> <span class="nav-text">4.37</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-38"><span class="nav-number"></span> <span class="nav-text">4.38</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE"><span class="nav-number"></span> <span class="nav-text">思维导图</span></a></div>
+        </div>
+        <!--/noindex-->
 
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Camille"
-      src="/images/Camille.jpg">
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">Camille</p>
   <div class="site-description" itemprop="description">效率，是成功的核心关键</div>
 </div>
-<div class="site-state-wrap site-overview-item animated">
+<div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives">
+        <a href="/archives/">
           <span class="site-state-item-count">237</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
+          <a href="/categories/">
         <span class="site-state-item-count">29</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
+          <a href="/tags/">
         <span class="site-state-item-count">67</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
 
-
-
-      </section>
+        </div>
+      </div>
     </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
-
-
-    </header>
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+  </aside>
 
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
 
+    </div>
 
     <div class="main-inner post posts-expand">
-      
 
-      
 
   
 
@@ -278,13 +162,18 @@
     <link itemprop="mainEntityOfPage" href="https://camilleferros.top/2020/12/14/C++Primer-%E8%AF%BE%E5%90%8E%E4%B9%A0%E9%A2%98-04/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/Camille.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Camille">
-      <meta itemprop="description" content="效率，是成功的核心关键">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Camille">
+      <meta itemprop="description" content="效率，是成功的核心关键">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="C++Primer_课后习题第四章 | Camille">
+      <meta itemprop="description" content=" ">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -322,14 +211,13 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-        <p>本文答案,部分参考于C++ Primer 习题集</p>
+    <div class="post-body" itemprop="articleBody"><p>本文答案,部分参考于C++ Primer 习题集</p>
 <p>@[toc]</p>
 <h2 id="第一章答案"><a href="#第一章答案" class="headerlink" title="第一章答案"></a>第一章答案</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Huangpengyu123/article/details/106605401">第一章</a></p>
 <h2 id="第二章答案"><a href="#第二章答案" class="headerlink" title="第二章答案"></a>第二章答案</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Huangpengyu123/article/details/106825290">第二章</a></p>
 <h2 id="第三章答案"><a href="#第三章答案" class="headerlink" title="第三章答案"></a>第三章答案</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Huangpengyu123/article/details/107029235">第三章</a></p>
 <h1 id="4-1"><a href="#4-1" class="headerlink" title="4.1"></a>4.1</h1><p>结果是105</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">5</span>+((<span class="number">10</span>*<span class="number">20</span>)/<span class="number">2</span>))=(<span class="number">5</span>+(<span class="number">200</span>/<span class="number">2</span>))=<span class="number">5</span>+<span class="number">100</span>=<span class="number">105</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(5+((10<span class="number">*20</span>)/2))=(5+(200/2))=5+<span class="attribute">100</span>=105</span><br></pre></td></tr></table></figure>
 <h1 id="4-2"><a href="#4-2" class="headerlink" title="4.2"></a>4.2</h1><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">*(<span class="name">vec</span>.begin())</span><br><span class="line">*(<span class="name">vec</span>.begin())<span class="number">+1</span></span><br></pre></td></tr></table></figure>
 <h1 id="4-3"><a href="#4-3" class="headerlink" title="4.3"></a>4.3</h1><p>这题参考与答案</p>
 <pre><code>正如题目所说,C++语言规定了非常少的二元运算符(逻辑与运算符,逻辑或运算符,逗号运算符)的求值顺序,其他绝大多数二元运算符的求值顺序并没有明确规定,这样做提高了代码的生成效率,但是可能引发潜在的缺陷.
@@ -341,16 +229,16 @@
 ①    搞不明白的时候用括号()
 
 ②    一旦改变了某个运算对象的值,在表达式的其他地方就不要再使用这个运算对象了.
-</code></pre><h1 id="4-4"><a href="#4-4" class="headerlink" title="4.4"></a>4.4</h1><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">((<span class="number">12</span>/<span class="number">3</span>)*<span class="number">4</span>)+(<span class="number">5</span>*<span class="number">15</span>)+((<span class="number">24</span>%<span class="number">4</span>)/<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+</code></pre><h1 id="4-4"><a href="#4-4" class="headerlink" title="4.4"></a>4.4</h1><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">((<span class="number">12/3</span>)*4)+(5*<span class="number">15</span>)+((<span class="number">24</span>%<span class="number">4</span>)/2)</span><br></pre></td></tr></table></figure>
 <p>测试程序</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a=<span class="number">0</span>;</span><br><span class="line">	a=<span class="number">12</span>/<span class="number">3</span>*<span class="number">4</span>+<span class="number">5</span>*<span class="number">15</span>+<span class="number">24</span>%<span class="number">4</span>/<span class="number">2</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;a;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> a=<span class="number">0</span>;</span><br><span class="line">	a=<span class="number">12</span>/<span class="number">3</span>*<span class="number">4</span>+<span class="number">5</span>*<span class="number">15</span>+<span class="number">24</span>%<span class="number">4</span>/<span class="number">2</span>;</span><br><span class="line">	cout&lt;&lt;a;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="4-5"><a href="#4-5" class="headerlink" title="4.5"></a>4.5</h1><h2 id="a"><a href="#a" class="headerlink" title="(a)"></a>(a)</h2><p>-86</p>
 <h2 id="b"><a href="#b" class="headerlink" title="(b)"></a>(b)</h2><p>-16</p>
 <h2 id="c"><a href="#c" class="headerlink" title="(c)"></a>(c)</h2><p>0</p>
 <h2 id="d"><a href="#d" class="headerlink" title="(d)"></a>(d)</h2><p>-2</p>
 <h1 id="4-6"><a href="#4-6" class="headerlink" title="4.6"></a>4.6</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a%<span class="number">2</span>==<span class="number">0</span></span><br></pre></td></tr></table></figure>
 <h1 id="4-7"><a href="#4-7" class="headerlink" title="4.7"></a>4.7</h1><p>溢出:是一种常见的算术运算cowu,因为再计算机中存储某种类型的内存空间有限,所以该类型的表示能力(范围)也是有限的,当计算机的结果超过范围时,就会产生未定义的数值,这种错误就叫溢出.</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i=<span class="number">2000</span>*<span class="number">2000</span>*<span class="number">2000</span>;</span><br><span class="line">	<span class="keyword">int</span> j=<span class="number">-100000</span>*<span class="number">2000000</span>;</span><br><span class="line">	<span class="keyword">int</span> z=<span class="number">-999999</span>*<span class="number">888888</span>*<span class="number">7888888</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> i=<span class="number">2000</span>*<span class="number">2000</span>*<span class="number">2000</span>;</span><br><span class="line">	<span class="type">int</span> j=<span class="number">-100000</span>*<span class="number">2000000</span>;</span><br><span class="line">	<span class="type">int</span> z=<span class="number">-999999</span>*<span class="number">888888</span>*<span class="number">7888888</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="4-8"><a href="#4-8" class="headerlink" title="4.8"></a>4.8</h1><p>参考答案</p>
 <pre><code>对于逻辑与运算符来说,当且仅当两个运算对象都为真时,结果为真;对于逻辑或运算符来说,只要两个运算对象中的一个为真结果就为真
 
@@ -358,15 +246,15 @@
 
 这种策略就是短路求值,其策略是:对于逻辑与运算来说,当且仅当左侧运算对象为真才计算右侧运算对象,对于逻辑或运算符来说,当且仅当左侧运算对象为假时,才计算右测运算对象
 </code></pre><p>PS:逻辑与运算和逻辑或运算符,是C++里面仅有的几个规定了求值顺序的运算符,相等性运算符的两个运算对象都需要值,C++没有规定求值顺序.</p>
-<h1 id="4-9"><a href="#4-9" class="headerlink" title="4.9"></a>4.9</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">char</span> *cp = <span class="string">&quot;Hello World&quot;</span>;</span><br><span class="line"><span class="keyword">if</span>(cp &amp;&amp; *cp)&#123;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;True&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="4-9"><a href="#4-9" class="headerlink" title="4.9"></a>4.9</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">char</span> *cp = <span class="string">&quot;Hello World&quot;</span>;</span><br><span class="line"><span class="keyword">if</span>(cp &amp;&amp; *cp)&#123;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;True&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>逻辑或运算符,先计算左边的,</p>
 <p>cp是一个char指针,if里面的cp就是判断这个指针是不是一个空指针,如果这个指针不是空指针,</p>
 <p>我们再来判断 *cp ,就是判断cp指针指向的那个字符串式不是一个空串.</p>
 <p>这个可以看到,不是空指针,指向的也不是空串.那马if里面的内容为true</p>
 <p>,可以输出</p>
-<h1 id="4-10"><a href="#4-10" class="headerlink" title="4.10"></a>4.10</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> t=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;t)&#123;</span><br><span class="line">		<span class="keyword">if</span>(t!=<span class="number">42</span>)</span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;t&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="4-10"><a href="#4-10" class="headerlink" title="4.10"></a>4.10</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> t=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(cin&gt;&gt;t)&#123;</span><br><span class="line">		<span class="keyword">if</span>(t!=<span class="number">42</span>)</span><br><span class="line">			cout&lt;&lt;t&lt;&lt;endl;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="4-11"><a href="#4-11" class="headerlink" title="4.11"></a>4.11</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(a&gt;b&amp;&amp;b&gt;c&amp;&amp;c&gt;d)</span><br></pre></td></tr></table></figure>
-<h1 id="4-12"><a href="#4-12" class="headerlink" title="4.12"></a>4.12</h1><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">//</span>如果j&lt;k 为真  那么就是i!=<span class="number">1</span>   </span><br><span class="line"><span class="regexp">//</span>如果j&lt;k 为假	那么就是i!=<span class="number">0</span></span><br></pre></td></tr></table></figure>
+<h1 id="4-12"><a href="#4-12" class="headerlink" title="4.12"></a>4.12</h1><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//如果j&lt;k 为真  那么就是i!=1   </span></span><br><span class="line"><span class="comment">//如果j&lt;k 为假	那么就是i!=0</span></span><br></pre></td></tr></table></figure>
 <h1 id="4-13"><a href="#4-13" class="headerlink" title="4.13"></a>4.13</h1><h2 id="a-1"><a href="#a-1" class="headerlink" title="(a)"></a>(a)</h2><p>d的值是3.0</p>
 <p>i 的值是3</p>
 <h2 id="b-1"><a href="#b-1" class="headerlink" title="(b)"></a>(b)</h2><p>i 的值是3</p>
@@ -378,8 +266,8 @@
 <p>我们可以改为同一类型</p>
 <p>或者把指针单独赋值</p>
 <p>例如:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> dval;</span><br><span class="line"><span class="keyword">int</span> ival,*pi;</span><br><span class="line">dval=ival=<span class="number">0</span>;</span><br><span class="line">*pi=<span class="number">0</span>;</span><br></pre></td></tr></table></figure>
-<h1 id="4-16"><a href="#4-16" class="headerlink" title="4.16"></a>4.16</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>((p=getPtr())!=<span class="number">0</span>)</span><br><span class="line"><span class="keyword">if</span>(i==<span class="number">1024</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">double</span> dval;</span><br><span class="line"><span class="type">int</span> ival,*pi;</span><br><span class="line">dval=ival=<span class="number">0</span>;</span><br><span class="line">*pi=<span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+<h1 id="4-16"><a href="#4-16" class="headerlink" title="4.16"></a>4.16</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>((p=<span class="built_in">getPtr</span>())!=<span class="number">0</span>)</span><br><span class="line"><span class="keyword">if</span>(i==<span class="number">1024</span>)</span><br></pre></td></tr></table></figure>
 <h1 id="4-17"><a href="#4-17" class="headerlink" title="4.17"></a>4.17</h1><p>答案就是P321页的注意事项</p>
 <p>一句话,前置版本可以节省空间和时间.</p>
 <h1 id="4-18"><a href="#4-18" class="headerlink" title="4.18"></a>4.18</h1><p>会出错,这样的话,我们无法输出第一个元素,而且会输出最后一个元素的下一个元素—也就是一个不存在的元素</p>
@@ -390,7 +278,7 @@
 <p>如果ptr指向的是一个数组,而且指向的数组的下一个地址元素是⑤意义的,那么ptr++就是非法的</p>
 <p>但是在不会报错,因为 <em>ptr++返回的还是 </em>ptr的值,但是ptr会指向一个错误的地方</p>
 <p>举个例子</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">3</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;,*ptr=<span class="number">0</span>,b=<span class="number">0</span>;</span><br><span class="line">	<span class="comment">//ptr = a;//这种情况是可以的</span></span><br><span class="line">	<span class="comment">//ptr = a+2;	//这种情况就不行了</span></span><br><span class="line">	ptr = &amp;b;	<span class="comment">//这种情况也是不行的</span></span><br><span class="line">	<span class="keyword">if</span>(*ptr++)&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;True&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	ptr = a;</span><br><span class="line">	<span class="keyword">if</span>(*ptr++)&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;True&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(*ptr)&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;True&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> a[<span class="number">3</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;,*ptr=<span class="number">0</span>,b=<span class="number">0</span>;</span><br><span class="line">	<span class="comment">//ptr = a;//这种情况是可以的</span></span><br><span class="line">	<span class="comment">//ptr = a+2;	//这种情况就不行了</span></span><br><span class="line">	ptr = &amp;b;	<span class="comment">//这种情况也是不行的</span></span><br><span class="line">	<span class="keyword">if</span>(*ptr++)&#123;</span><br><span class="line">		cout&lt;&lt;<span class="string">&quot;True&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	ptr = a;</span><br><span class="line">	<span class="keyword">if</span>(*ptr++)&#123;</span><br><span class="line">		cout&lt;&lt;<span class="string">&quot;True&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(*ptr)&#123;</span><br><span class="line">		cout&lt;&lt;<span class="string">&quot;True&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="b-2"><a href="#b-2" class="headerlink" title="(b)"></a>(b)</h2><p>先执行ival++  判断 ival 的值是不是大于0 如果大于0 </p>
 <p>判断  ival++完的值是不是大于0 </p>
 <p>如果都大于0 那么表达式结果就为0 </p>
@@ -399,7 +287,7 @@
 <p>然后再比较</p>
 <p>(b)和（c)的写法都不太好</p>
 <p>最好改为</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ival &amp;&amp; (ival+<span class="number">1</span>)</span><br><span class="line">vec[ival]&lt;=vec[ival+<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">ival</span> &amp;&amp; (ival+<span class="number">1</span>)</span><br><span class="line"><span class="attribute">vec</span>[ival]&lt;=vec[ival+<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
 <h1 id="4-20"><a href="#4-20" class="headerlink" title="4.20"></a>4.20</h1><h2 id="a-3"><a href="#a-3" class="headerlink" title="(a)"></a>(a)</h2><p>是合法的,后置的递增运算符的优先级高于解引用运算符,其含义是解引用当前迭代器所处位置的对象内容,然后把迭代器的位置向后移动一位.</p>
 <h2 id="b-3"><a href="#b-3" class="headerlink" title="(b)"></a>(b)</h2><p>是非法的,解引用iter 得到vector对象当前的元素,结果是一个string,显然string没有后置递增操作.</p>
 <h2 id="c-2"><a href="#c-2" class="headerlink" title="(c)"></a>(c)</h2><p>是非法的,解引用运算符的优先级低于点运算符,所以该式子先计算iter.empty(),迭代器是没有empty函数的</p>
@@ -409,20 +297,20 @@
 <h2 id="f"><a href="#f" class="headerlink" title="(f)"></a>(f)</h2><p>合法的</p>
 <p>iter++-&gt;empty()  等于  (*iter++).empty() </p>
 <p>就是引用迭代器当前对象的内容得到一个字符串,再判断它是不是空,然后在向下移动一位迭代器.</p>
-<h1 id="4-21"><a href="#4-21" class="headerlink" title="4.21"></a>4.21</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; arr&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>&#125;;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">auto</span> &amp;t:arr)&#123;</span><br><span class="line">		t=(t%<span class="number">2</span> == <span class="number">1</span>?t*<span class="number">2</span>:t);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">auto</span> t:arr)&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;t&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="4-21"><a href="#4-21" class="headerlink" title="4.21"></a>4.21</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span> </span>&#123;</span><br><span class="line">	vector&lt;<span class="type">int</span>&gt; arr&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>&#125;;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">auto</span> &amp;t:arr)&#123;</span><br><span class="line">		t=(t%<span class="number">2</span> == <span class="number">1</span>?t*<span class="number">2</span>:t);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">auto</span> t:arr)&#123;</span><br><span class="line">		cout&lt;&lt;t&lt;&lt;endl;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="4-22"><a href="#4-22" class="headerlink" title="4.22"></a>4.22</h1><p>只使用条件运算符</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> grade ;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;grade;</span><br><span class="line">	<span class="built_in">string</span> finalgrade;</span><br><span class="line">	finalgrade = (grade&gt;=<span class="number">90</span>)? <span class="string">&quot;high pass&quot;</span>:(grade&gt;=<span class="number">75</span>)?<span class="string">&quot;pass&quot;</span>:(grade&gt;=<span class="number">60</span>)?<span class="string">&quot;low pass&quot;</span>:<span class="string">&quot;fail&quot;</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;finalgrade;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> grade ;</span><br><span class="line">	cin&gt;&gt;grade;</span><br><span class="line">	string finalgrade;</span><br><span class="line">	finalgrade = (grade&gt;=<span class="number">90</span>)? <span class="string">&quot;high pass&quot;</span>:(grade&gt;=<span class="number">75</span>)?<span class="string">&quot;pass&quot;</span>:(grade&gt;=<span class="number">60</span>)?<span class="string">&quot;low pass&quot;</span>:<span class="string">&quot;fail&quot;</span>;</span><br><span class="line">	cout&lt;&lt;finalgrade;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>使用if和else</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> grade ;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;grade;</span><br><span class="line">	<span class="built_in">string</span> finalgrade;</span><br><span class="line">	<span class="keyword">if</span>(grade&gt;=<span class="number">90</span>)&#123;</span><br><span class="line">		finalgrade=<span class="string">&quot;high pass&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(grade&gt;=<span class="number">75</span>)&#123;</span><br><span class="line">		finalgrade=<span class="string">&quot;pass&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(grade&gt;=<span class="number">60</span>)&#123;</span><br><span class="line">		finalgrade=<span class="string">&quot;low pass&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span>&#123;</span><br><span class="line">		finalgrade=<span class="string">&quot;fail&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;finalgrade&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> grade ;</span><br><span class="line">	cin&gt;&gt;grade;</span><br><span class="line">	string finalgrade;</span><br><span class="line">	<span class="keyword">if</span>(grade&gt;=<span class="number">90</span>)&#123;</span><br><span class="line">		finalgrade=<span class="string">&quot;high pass&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(grade&gt;=<span class="number">75</span>)&#123;</span><br><span class="line">		finalgrade=<span class="string">&quot;pass&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(grade&gt;=<span class="number">60</span>)&#123;</span><br><span class="line">		finalgrade=<span class="string">&quot;low pass&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span>&#123;</span><br><span class="line">		finalgrade=<span class="string">&quot;fail&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;finalgrade&lt;&lt;endl;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>if  和else的更加容易理解</p>
 <p>但是条件运算符的代码更加的简洁.</p>
 <p>各有利弊吧.</p>
-<h1 id="4-23"><a href="#4-23" class="headerlink" title="4.23"></a>4.23</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> s=<span class="string">&quot;word&quot;</span>;</span><br><span class="line"><span class="built_in">string</span> p1=s+s[size()<span class="number">-1</span>]==<span class="string">&#x27;s&#x27;</span>?<span class="string">&quot;&quot;</span>:<span class="string">&quot;s&quot;</span>;</span><br></pre></td></tr></table></figure>
+<h1 id="4-23"><a href="#4-23" class="headerlink" title="4.23"></a>4.23</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string s=<span class="string">&quot;word&quot;</span>;</span><br><span class="line">string p1=s+s[<span class="built_in">size</span>()<span class="number">-1</span>]==<span class="string">&#x27;s&#x27;</span>?<span class="string">&quot;&quot;</span>:<span class="string">&quot;s&quot;</span>;</span><br></pre></td></tr></table></figure>
 <p>没有给条件运算符加上括号.</p>
-<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(s+s[<span class="built_in">size</span>()<span class="number">-1</span>])==<span class="string">&#x27;s&#x27;</span>?<span class="string">&quot;&quot;</span>:<span class="string">&quot;s&quot;</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">(s+s[size()</span><span class="number">-1</span>])==<span class="string">&#x27;s&#x27;</span>?<span class="string">&quot;&quot;</span>:<span class="string">&quot;s&quot;</span>;</span><br></pre></td></tr></table></figure>
 <p>这是非法的因为加起来的东西是一个字符串,’s’是一个字符</p>
 <p>正确的该法</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> s=<span class="string">&quot;word&quot;</span>;</span><br><span class="line"><span class="built_in">string</span> p1=s+(s[size()<span class="number">-1</span>]==<span class="string">&#x27;s&#x27;</span>?<span class="string">&quot;&quot;</span>:<span class="string">&quot;s&quot;</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string s=<span class="string">&quot;word&quot;</span>;</span><br><span class="line">string p1=s+(s[<span class="built_in">size</span>()<span class="number">-1</span>]==<span class="string">&#x27;s&#x27;</span>?<span class="string">&quot;&quot;</span>:<span class="string">&quot;s&quot;</span>);</span><br></pre></td></tr></table></figure>
 <h2 id="题目的原意"><a href="#题目的原意" class="headerlink" title="题目的原意"></a>题目的原意</h2><p>先判断字符串s的最后一个字符是否是’s’,如果是,什么也不做,如果不是,在s的末尾加一个字符’s’,我们应该添加括号强制限定运算符的执行顺序.</p>
 <h1 id="4-24"><a href="#4-24" class="headerlink" title="4.24"></a>4.24</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">finalgrade=((grade&gt;<span class="number">90</span>)?<span class="string">&quot;high pass&quot;</span>:(grade&lt;<span class="number">60</span>))?<span class="string">&quot;fail&quot;</span>:<span class="string">&quot;pass&quot;</span>;</span><br></pre></td></tr></table></figure>
 <h1 id="4-25"><a href="#4-25" class="headerlink" title="4.25"></a>4.25</h1><p><img src="https://img-blog.csdnimg.cn/20200702142739988.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
@@ -431,11 +319,11 @@
 <h1 id="4-27"><a href="#4-27" class="headerlink" title="4.27"></a>4.27</h1><h2 id="a-4"><a href="#a-4" class="headerlink" title="(a)"></a>(a)</h2><p>3</p>
 <h2 id="b-4"><a href="#b-4" class="headerlink" title="(b)"></a>(b)</h2><p>7</p>
 <h2 id="c-d"><a href="#c-d" class="headerlink" title="(c)(d)"></a>(c)(d)</h2><p>都是True</p>
-<h1 id="4-28"><a href="#4-28" class="headerlink" title="4.28"></a>4.28</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;类型名称\t&quot;</span>&lt;&lt;<span class="string">&quot;所占空间&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;bool\t\t&quot;</span>&lt;&lt;<span class="keyword">sizeof</span>(<span class="keyword">bool</span>)&lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;char\t\t&quot;</span>&lt;&lt;<span class="keyword">sizeof</span>(<span class="keyword">char</span>)&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;wchar_t\t\t&quot;</span>&lt;&lt;<span class="keyword">sizeof</span>(<span class="keyword">wchar_t</span>)&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;char16_t\t\t&quot;</span>&lt;&lt;<span class="keyword">sizeof</span>(<span class="keyword">char16_t</span>)&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;char32_t\t\t&quot;</span>&lt;&lt;<span class="keyword">sizeof</span>(<span class="keyword">char32_t</span>)&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;short\t\t&quot;</span>&lt;&lt;<span class="keyword">sizeof</span>(<span class="keyword">short</span>)&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;int\t\t&quot;</span>&lt;&lt;<span class="keyword">sizeof</span>(<span class="keyword">int</span>)&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;long\t\t&quot;</span>&lt;&lt;<span class="keyword">sizeof</span>(<span class="keyword">long</span>)&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;long long \t\t&quot;</span>&lt;&lt;<span class="keyword">sizeof</span>(<span class="keyword">long</span> <span class="keyword">long</span>)&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;float\t\t&quot;</span>&lt;&lt;<span class="keyword">sizeof</span>(<span class="keyword">float</span>)&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;double\t\t&quot;</span>&lt;&lt;<span class="keyword">sizeof</span>(<span class="keyword">double</span>)&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;long double\t\t&quot;</span>&lt;&lt;<span class="keyword">sizeof</span>(<span class="keyword">long</span> <span class="keyword">double</span>)&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="4-28"><a href="#4-28" class="headerlink" title="4.28"></a>4.28</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span> </span>&#123;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;类型名称\t&quot;</span>&lt;&lt;<span class="string">&quot;所占空间&quot;</span>&lt;&lt;endl;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;bool\t\t&quot;</span>&lt;&lt;<span class="built_in">sizeof</span>(<span class="type">bool</span>)&lt;&lt; endl;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;char\t\t&quot;</span>&lt;&lt;<span class="built_in">sizeof</span>(<span class="type">char</span>)&lt;&lt;endl;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;wchar_t\t\t&quot;</span>&lt;&lt;<span class="built_in">sizeof</span>(<span class="type">wchar_t</span>)&lt;&lt;endl;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;char16_t\t\t&quot;</span>&lt;&lt;<span class="built_in">sizeof</span>(<span class="type">char16_t</span>)&lt;&lt;endl;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;char32_t\t\t&quot;</span>&lt;&lt;<span class="built_in">sizeof</span>(<span class="type">char32_t</span>)&lt;&lt;endl;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;short\t\t&quot;</span>&lt;&lt;<span class="built_in">sizeof</span>(<span class="type">short</span>)&lt;&lt;endl;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;int\t\t&quot;</span>&lt;&lt;<span class="built_in">sizeof</span>(<span class="type">int</span>)&lt;&lt;endl;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;long\t\t&quot;</span>&lt;&lt;<span class="built_in">sizeof</span>(<span class="type">long</span>)&lt;&lt;endl;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;long long \t\t&quot;</span>&lt;&lt;<span class="built_in">sizeof</span>(<span class="type">long</span> <span class="type">long</span>)&lt;&lt;endl;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;float\t\t&quot;</span>&lt;&lt;<span class="built_in">sizeof</span>(<span class="type">float</span>)&lt;&lt;endl;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;double\t\t&quot;</span>&lt;&lt;<span class="built_in">sizeof</span>(<span class="type">double</span>)&lt;&lt;endl;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;long double\t\t&quot;</span>&lt;&lt;<span class="built_in">sizeof</span>(<span class="type">long</span> <span class="type">double</span>)&lt;&lt;endl;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>我的编译环境,的结果是</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">类型名称        所占空间</span><br><span class="line"><span class="keyword">bool</span>            <span class="number">1</span></span><br><span class="line"><span class="keyword">char</span>            <span class="number">1</span></span><br><span class="line"><span class="keyword">wchar_t</span>         <span class="number">2</span></span><br><span class="line"><span class="keyword">char16_t</span>                <span class="number">2</span></span><br><span class="line"><span class="keyword">char32_t</span>                <span class="number">4</span></span><br><span class="line"><span class="keyword">short</span>           <span class="number">2</span></span><br><span class="line"><span class="keyword">int</span>             <span class="number">4</span></span><br><span class="line"><span class="keyword">long</span>            <span class="number">4</span></span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span>               <span class="number">8</span></span><br><span class="line"><span class="keyword">float</span>           <span class="number">4</span></span><br><span class="line"><span class="keyword">double</span>          <span class="number">8</span></span><br><span class="line"><span class="keyword">long</span> <span class="keyword">double</span>             <span class="number">12</span></span><br><span class="line">请按任意键继续. . .</span><br></pre></td></tr></table></figure>
-<h1 id="4-29"><a href="#4-29" class="headerlink" title="4.29"></a>4.29</h1><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x[<span class="number">10</span>],*p=x;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="keyword">sizeof</span>(x)/<span class="keyword">sizeof</span>(*x)&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="keyword">sizeof</span>(p)/<span class="keyword">sizeof</span>(*p)&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">10</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line">请按任意键继续. . .</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">类型名称        所占空间</span><br><span class="line"><span class="type">bool</span>            <span class="number">1</span></span><br><span class="line"><span class="type">char</span>            <span class="number">1</span></span><br><span class="line"><span class="type">wchar_t</span>         <span class="number">2</span></span><br><span class="line"><span class="type">char16_t</span>                <span class="number">2</span></span><br><span class="line"><span class="type">char32_t</span>                <span class="number">4</span></span><br><span class="line"><span class="type">short</span>           <span class="number">2</span></span><br><span class="line"><span class="type">int</span>             <span class="number">4</span></span><br><span class="line"><span class="type">long</span>            <span class="number">4</span></span><br><span class="line"><span class="type">long</span> <span class="type">long</span>               <span class="number">8</span></span><br><span class="line"><span class="type">float</span>           <span class="number">4</span></span><br><span class="line"><span class="type">double</span>          <span class="number">8</span></span><br><span class="line"><span class="type">long</span> <span class="type">double</span>             <span class="number">12</span></span><br><span class="line">请按任意键继续. . .</span><br></pre></td></tr></table></figure>
+<h1 id="4-29"><a href="#4-29" class="headerlink" title="4.29"></a>4.29</h1><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> x[<span class="number">10</span>],*p=x;</span><br><span class="line">	cout&lt;&lt;<span class="built_in">sizeof</span>(x)/<span class="built_in">sizeof</span>(*x)&lt;&lt;endl;</span><br><span class="line">	cout&lt;&lt;<span class="built_in">sizeof</span>(p)/<span class="built_in">sizeof</span>(*p)&lt;&lt;endl;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">10</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line">请按任意键继续. . .</span><br></pre></td></tr></table></figure>
 <h2 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h2><p>①    sizeof(x)是对数组的所有的元素进行一个计算,然后相加,就相等于10个int相加</p>
 <p>②    sizeof(*x)是解引用,这里的x是指针,解引用指针,就是一个int,所以相除为10</p>
 <p>③    sizeof(p) p是一个指针,求的就是指针所占空间的大小</p>
@@ -468,8 +356,8 @@
 <h2 id="d-3"><a href="#d-3" class="headerlink" title="(d)"></a>(d)</h2><p>ival转换为float和fval相加的结果转换为double</p>
 <p>最后相加完的结果转换为char</p>
 <p>然后赋值</p>
-<h1 id="4-36"><a href="#4-36" class="headerlink" title="4.36"></a>4.36</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">i*=<span class="keyword">static_cast</span>&lt;<span class="keyword">int</span>&gt;(d);</span><br></pre></td></tr></table></figure>
-<h1 id="4-37"><a href="#4-37" class="headerlink" title="4.37"></a>4.37</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pv=<span class="keyword">static_cast</span>&lt;<span class="keyword">void</span>*&gt;(ps);		<span class="comment">//const_cast&lt;string*&gt;(ps)</span></span><br><span class="line">i=<span class="keyword">static_cast</span>&lt;<span class="keyword">int</span>&gt;(*pc);</span><br><span class="line">pv=<span class="keyword">static_cast</span>&lt;<span class="keyword">void</span>*&gt;(&amp;d);</span><br><span class="line">pc=<span class="keyword">static_cast</span>&lt;<span class="keyword">char</span>*&gt;(pv);</span><br></pre></td></tr></table></figure>
+<h1 id="4-36"><a href="#4-36" class="headerlink" title="4.36"></a>4.36</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">i*=<span class="built_in">static_cast</span>&lt;<span class="type">int</span>&gt;(d);</span><br></pre></td></tr></table></figure>
+<h1 id="4-37"><a href="#4-37" class="headerlink" title="4.37"></a>4.37</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pv=<span class="built_in">static_cast</span>&lt;<span class="type">void</span>*&gt;(ps);		<span class="comment">//const_cast&lt;string*&gt;(ps)</span></span><br><span class="line">i=<span class="built_in">static_cast</span>&lt;<span class="type">int</span>&gt;(*pc);</span><br><span class="line">pv=<span class="built_in">static_cast</span>&lt;<span class="type">void</span>*&gt;(&amp;d);</span><br><span class="line">pc=<span class="built_in">static_cast</span>&lt;<span class="type">char</span>*&gt;(pv);</span><br></pre></td></tr></table></figure>
 <h1 id="4-38"><a href="#4-38" class="headerlink" title="4.38"></a>4.38</h1><p>就是把</p>
 <p>j/i  的值转换成double</p>
 <h1 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h1><p>这一章的导图</p>
@@ -495,12 +383,12 @@
           <div class="post-nav">
             <div class="post-nav-item">
                 <a href="/2020/12/14/C++Primer-%E8%AF%BE%E5%90%8E%E4%B9%A0%E9%A2%98-03/" rel="prev" title="C++Primer_课后习题第三章">
-                  <i class="fa fa-chevron-left"></i> C++Primer_课后习题第三章
+                  <i class="fa fa-angle-left"></i> C++Primer_课后习题第三章
                 </a>
             </div>
             <div class="post-nav-item">
                 <a href="/2020/12/14/C++Primer-%E8%AF%BE%E5%90%8E%E4%B9%A0%E9%A2%98-05/" rel="next" title="C++Primer_课后习题第五章">
-                  C++Primer_课后习题第五章 <i class="fa fa-chevron-right"></i>
+                  C++Primer_课后习题第五章 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
@@ -513,82 +401,48 @@
 
 
 
-      
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      const commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-    </div>
+</div>
   </main>
 
   <footer class="footer">
     <div class="footer-inner">
-      
 
-      
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2023</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Camille</span>
-</div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Camille</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
 
     </div>
   </footer>
 
   
-  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
 
-  
-
-
-
-
-  <script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
 
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
-
+  
 
 
 
@@ -597,53 +451,9 @@
 
   
 
-  
-      <script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              const target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    const script = document.createElement('script');
-    script.src = '//cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
-    script.defer = true;
-    document.head.appendChild(script);
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.typesetClear();
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
 
-    
 
-  
+
 
 </body>
 </html>

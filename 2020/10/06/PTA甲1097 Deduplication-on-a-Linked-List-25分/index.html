@@ -2,27 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.2.0">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
+
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-fire-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-fire-16x16-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
 
 
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.0/css/all.min.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"camilleferros.top","root":"/","scheme":"Muse","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
-  </script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"camilleferros.top","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-  <meta name="description" content="强烈推荐,刷PTA的朋友都认识一下柳神—PTA解法大佬 本文由参考于柳神博客写成 柳神的CSDN博客,这个可以搜索文章 柳神的个人博客,这个没有广告,但是不能搜索 还有就是非常非常有用的 算法笔记 全名是 12算法笔记  上级训练实战指南		&#x2F;&#x2F;这本都是PTA的题解算法笔记 PS 今天也要加油鸭  题目原文Given a singly linked list L with integer keys">
+    <meta name="description" content="强烈推荐,刷PTA的朋友都认识一下柳神—PTA解法大佬 本文由参考于柳神博客写成 柳神的CSDN博客,这个可以搜索文章 柳神的个人博客,这个没有广告,但是不能搜索 还有就是非常非常有用的 算法笔记 全名是 12算法笔记  上级训练实战指南		&#x2F;&#x2F;这本都是PTA的题解算法笔记 PS 今天也要加油鸭  题目原文Given a singly linked list L with integer keys">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PTA 1097 Deduplication on a Linked List (25分)">
 <meta property="og:url" content="https://camilleferros.top/2020/10/06/PTA%E7%94%B21097%20Deduplication-on-a-Linked-List-25%E5%88%86/index.html">
@@ -42,18 +39,14 @@
 <link rel="canonical" href="https://camilleferros.top/2020/10/06/PTA%E7%94%B21097%20Deduplication-on-a-Linked-List-25%E5%88%86/">
 
 
-<script class="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'en'
-  };
-</script>
 
-  <title>PTA 1097 Deduplication on a Linked List (25分) | Camille</title>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://camilleferros.top/2020/10/06/PTA%E7%94%B21097%20Deduplication-on-a-Linked-List-25%E5%88%86/","path":"2020/10/06/PTA甲1097 Deduplication-on-a-Linked-List-25分/","title":"PTA 1097 Deduplication on a Linked List (25分)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>PTA 1097 Deduplication on a Linked List (25分) | Camille</title>
   
+
+
 
 
 
@@ -61,53 +54,18 @@
 
 
   <noscript>
-  <style>
-  body { margin-top: 2rem; }
-
-  .use-motion .menu-item,
-  .use-motion .sidebar,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header {
-    visibility: visible;
-  }
-
-  .use-motion .header,
-  .use-motion .site-brand-container .toggle,
-  .use-motion .footer { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle,
-  .use-motion .custom-logo-image {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line {
-    transform: scaleX(1);
-  }
-
-  .search-pop-overlay, .sidebar-nav { display: none; }
-  .sidebar-panel { display: block; }
-  </style>
-</noscript>
-
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
 
   <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
     </div>
   </div>
 
@@ -115,85 +73,27 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Camille</h1>
+      <p class="site-title">Camille</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">你得先看重自己,否则别人就会当你一钱不值</p>
   </div>
 
   <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-        <i class="fa fa-search fa-fw fa-lg"></i>
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
     </div>
   </div>
 </div>
 
 
 
-<nav class="site-nav">
-  <ul class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
-
-  </li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
-        </a>
-      </li>
-  </ul>
-</nav>
 
 
 
-  <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off" maxlength="80"
-           placeholder="Searching..." spellcheck="false"
-           type="search" class="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div class="search-result-container no-result">
-  <div class="search-result-icon">
-    <i class="fa fa-spinner fa-pulse fa-5x"></i>
-  </div>
-</div>
 
-    </div>
-  </div>
-
-</div>
+</header>
         
   
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-
   <aside class="sidebar">
 
     <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
@@ -206,67 +106,51 @@
         </li>
       </ul>
 
-      <!--noindex-->
-      <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%8E%9F%E6%96%87"><span class="nav-number">1.</span> <span class="nav-text">题目原文</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Input-Specification"><span class="nav-number">1.1.</span> <span class="nav-text">Input Specification:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Output-Specification"><span class="nav-number">1.2.</span> <span class="nav-text">Output Specification:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sample-Input"><span class="nav-number">1.3.</span> <span class="nav-text">Sample Input:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sample-Output"><span class="nav-number">1.4.</span> <span class="nav-text">Sample Output:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%9F%E8%AF%8D%E5%A6%82%E4%B8%8B"><span class="nav-number">2.</span> <span class="nav-text">生词如下:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%A4%A7%E6%84%8F%EF%BC%9A"><span class="nav-number">3.</span> <span class="nav-text">题目大意：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF%E5%A6%82%E4%B8%8B"><span class="nav-number">4.</span> <span class="nav-text">思路如下:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E7%82%B9%E4%BA%8C%E6%8A%A5%E9%94%99%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="nav-number">5.</span> <span class="nav-text">测试点二报错的解决方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%91%E7%9A%84%E4%BB%A3%E7%A0%81%E5%A6%82%E4%B8%8B"><span class="nav-number">6.</span> <span class="nav-text">我的代码如下:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%B3%E7%A5%9E%E7%9A%84%E5%88%86%E6%9E%90"><span class="nav-number">7.</span> <span class="nav-text">柳神的分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%B3%E7%A5%9E%E7%9A%84%E4%BB%A3%E7%A0%81%EF%BC%9A"><span class="nav-number">8.</span> <span class="nav-text">柳神的代码：</span></a></li></ol></div>
-      </section>
-      <!--/noindex-->
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%8E%9F%E6%96%87"><span class="nav-number">1.</span> <span class="nav-text">题目原文</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Input-Specification"><span class="nav-number">1.1.</span> <span class="nav-text">Input Specification:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Output-Specification"><span class="nav-number">1.2.</span> <span class="nav-text">Output Specification:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sample-Input"><span class="nav-number">1.3.</span> <span class="nav-text">Sample Input:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sample-Output"><span class="nav-number">1.4.</span> <span class="nav-text">Sample Output:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%9F%E8%AF%8D%E5%A6%82%E4%B8%8B"><span class="nav-number">2.</span> <span class="nav-text">生词如下:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%A4%A7%E6%84%8F%EF%BC%9A"><span class="nav-number">3.</span> <span class="nav-text">题目大意：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF%E5%A6%82%E4%B8%8B"><span class="nav-number">4.</span> <span class="nav-text">思路如下:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E7%82%B9%E4%BA%8C%E6%8A%A5%E9%94%99%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="nav-number">5.</span> <span class="nav-text">测试点二报错的解决方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%91%E7%9A%84%E4%BB%A3%E7%A0%81%E5%A6%82%E4%B8%8B"><span class="nav-number">6.</span> <span class="nav-text">我的代码如下:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%B3%E7%A5%9E%E7%9A%84%E5%88%86%E6%9E%90"><span class="nav-number">7.</span> <span class="nav-text">柳神的分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%B3%E7%A5%9E%E7%9A%84%E4%BB%A3%E7%A0%81%EF%BC%9A"><span class="nav-number">8.</span> <span class="nav-text">柳神的代码：</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
 
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Camille"
-      src="/images/Camille.jpg">
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">Camille</p>
   <div class="site-description" itemprop="description">效率，是成功的核心关键</div>
 </div>
-<div class="site-state-wrap site-overview-item animated">
+<div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives">
+        <a href="/archives/">
           <span class="site-state-item-count">237</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
+          <a href="/categories/">
         <span class="site-state-item-count">29</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
+          <a href="/tags/">
         <span class="site-state-item-count">67</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
 
-
-
-      </section>
+        </div>
+      </div>
     </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
-
-
-    </header>
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+  </aside>
 
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
 
+    </div>
 
     <div class="main-inner post posts-expand">
-      
 
-      
 
   
 
@@ -279,13 +163,18 @@
     <link itemprop="mainEntityOfPage" href="https://camilleferros.top/2020/10/06/PTA%E7%94%B21097%20Deduplication-on-a-Linked-List-25%E5%88%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/Camille.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Camille">
-      <meta itemprop="description" content="效率，是成功的核心关键">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Camille">
+      <meta itemprop="description" content="效率，是成功的核心关键">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="PTA 1097 Deduplication on a Linked List (25分) | Camille">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -302,13 +191,13 @@
 
       <time title="Created: 2020-10-06 14:51:29" itemprop="dateCreated datePublished" datetime="2020-10-06T14:51:29+08:00">2020-10-06</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-04-13 14:23:19" itemprop="dateModified" datetime="2021-04-13T14:23:19+08:00">2021-04-13</time>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
       </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2021-04-13 14:23:19" itemprop="dateModified" datetime="2021-04-13T14:23:19+08:00">2021-04-13</time>
+    </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -332,23 +221,22 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-        <p>强烈推荐,刷PTA的朋友都认识一下柳神—PTA解法大佬</p>
+    <div class="post-body" itemprop="articleBody"><p>强烈推荐,刷PTA的朋友都认识一下柳神—PTA解法大佬</p>
 <p>本文由参考于柳神博客写成</p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/liuchuo">柳神的CSDN博客,这个可以搜索文章</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.liuchuo.net/">柳神的个人博客,这个没有广告,但是不能搜索</a></p>
 <p>还有就是非常非常有用的 算法笔记 全名是</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">算法笔记  上级训练实战指南		<span class="regexp">//</span>这本都是PTA的题解</span><br><span class="line">算法笔记</span><br></pre></td></tr></table></figure>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">算法笔记  上级训练实战指南		<span class="comment">//这本都是PTA的题解</span></span><br><span class="line">算法笔记</span><br></pre></td></tr></table></figure>
 <p>PS 今天也要加油鸭</p>
 <p><img src="https://img-blog.csdnimg.cn/20200924160038229.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0h1YW5ncGVuZ3l1MTIz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
 <h2 id="题目原文"><a href="#题目原文" class="headerlink" title="题目原文"></a>题目原文</h2><p>Given a singly linked list <em>L</em> with integer keys, you are supposed to remove the nodes with duplicated absolute values of the keys. That is, for each value <em>K</em>, only the first node of which the value or absolute value of its key equals <em>K</em> will be kept. At the mean time, all the removed nodes must be kept in a separate list. For example, given <em>L</em> being 21→-15→-15→-7→15, you must output 21→-15→-7, and the removed list -15→15.</p>
 <h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>Each input file contains one test case. For each case, the first line contains the address of the first node, and a positive <em>N</em> (≤105) which is the total number of nodes. The address of a node is a 5-digit nonnegative integer, and NULL is represented by −1.</p>
 <p>Then <em>N</em> lines follow, each describes a node in the format:</p>
-<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Address <span class="keyword">Key</span> <span class="keyword">Next</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">Address</span> <span class="built_in">Key</span> <span class="built_in">Next</span></span><br></pre></td></tr></table></figure>
 <p>where <code>Address</code> is the position of the node, <code>Key</code> is an integer of which absolute value is no more than 104, and <code>Next</code> is the position of the next node.</p>
 <h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>For each case, output the resulting linked list first, then the removed list. Each node occupies a line, and is printed in the same format as in the input.</p>
-<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">00100 5</span><br><span class="line">99999 -7 87654</span><br><span class="line">23854 -15 00000</span><br><span class="line">87654 15 -1</span><br><span class="line">00000 -15 99999</span><br><span class="line">00100 21 23854</span><br></pre></td></tr></table></figure>
-<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">00100 21 23854</span><br><span class="line">23854 -15 99999</span><br><span class="line">99999 -7 -1</span><br><span class="line">00000 -15 87654</span><br><span class="line">87654 15 -1</span><br></pre></td></tr></table></figure>
+<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">00100 5</span><br><span class="line">99999 -7 87654</span><br><span class="line">23854 -15 00000</span><br><span class="line">87654 15 -1</span><br><span class="line">00000 -15 99999</span><br><span class="line">00100 21 23854</span><br></pre></td></tr></table></figure>
+<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">00100 21 23854</span><br><span class="line">23854 -15 99999</span><br><span class="line">99999 -7 -1</span><br><span class="line">00000 -15 87654</span><br><span class="line">87654 15 -1</span><br></pre></td></tr></table></figure>
 <h2 id="生词如下"><a href="#生词如下" class="headerlink" title="生词如下:"></a>生词如下:</h2><p>不用翻译看的有点懵懂-好像是猜出来了意思,但是又不敢确定.</p>
 <p>duplication 副本 +de 就是去除重复的</p>
 <p>absolute    绝对的</p>
@@ -367,10 +255,10 @@
 <h2 id="测试点二报错的解决方法"><a href="#测试点二报错的解决方法" class="headerlink" title="测试点二报错的解决方法"></a>测试点二报错的解决方法</h2><p>测试点二测试的就是没有重复元素怎么办</p>
 <p>可以试试这个测试点</p>
 <figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">00100 </span><span class="number">2</span></span><br><span class="line"><span class="symbol">00100 </span><span class="number">21</span> <span class="number">23857</span></span><br><span class="line"><span class="symbol">23857 </span>-<span class="number">1</span> -<span class="number">1</span></span><br></pre></td></tr></table></figure>
-<h2 id="我的代码如下"><a href="#我的代码如下" class="headerlink" title="我的代码如下:"></a>我的代码如下:</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line">	<span class="keyword">int</span> data;</span><br><span class="line">	<span class="keyword">int</span> next;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> <span class="title">Node</span>[100005], <span class="title">result</span>[100005], <span class="title">remain</span>[100005];</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">bool</span> Time[<span class="number">100005</span>] = &#123; <span class="literal">false</span> &#125;;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100005</span>; ++i)	Time[i] = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> N=<span class="number">0</span>, FirstAddress=<span class="number">0</span>,temp=<span class="number">0</span>,i=<span class="number">0</span>,j=<span class="number">0</span>,t=<span class="number">0</span>;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;FirstAddress, &amp;N);</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; N; ++i) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;temp);</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;Node[temp].data, &amp;Node[temp].next);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//cout &lt;&lt; &quot;\n\n\n&quot;;</span></span><br><span class="line">	i = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (FirstAddress != <span class="number">-1</span>) &#123;</span><br><span class="line">		<span class="keyword">if</span> (Time[(<span class="built_in">abs</span>(Node[FirstAddress].data))] == <span class="literal">false</span>) &#123;</span><br><span class="line">			result[i].data = Node[FirstAddress].data;</span><br><span class="line">			result[i].next = FirstAddress;</span><br><span class="line">			Time[(<span class="built_in">abs</span>(Node[FirstAddress].data))] = <span class="literal">true</span>;</span><br><span class="line">			FirstAddress = Node[FirstAddress].next;</span><br><span class="line">			++i;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> &#123;</span><br><span class="line">			remain[j].next = FirstAddress;</span><br><span class="line">			remain[j].data = Node[FirstAddress].data;</span><br><span class="line">			++j;</span><br><span class="line">			FirstAddress = Node[FirstAddress].next;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> ( t = <span class="number">0</span>; t &lt; i<span class="number">-1</span>; t++) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%05d %d %05d\n&quot;</span>, result[t].next, result[t].data, result[t + <span class="number">1</span>].next);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%05d %d -1\n&quot;</span>, result[t].next, result[t].data);</span><br><span class="line"></span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span> (t = <span class="number">0</span>; t &lt; j - <span class="number">1</span>; t++) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%05d %d %05d\n&quot;</span>, remain[t].next, remain[t].data, remain[t + <span class="number">1</span>].next);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(j!=<span class="number">0</span>)	<span class="built_in">printf</span>(<span class="string">&quot;%05d %d -1&quot;</span>, remain[t].next, remain[t].data);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="我的代码如下"><a href="#我的代码如下" class="headerlink" title="我的代码如下:"></a>我的代码如下:</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span> &#123;</span><br><span class="line">	<span class="type">int</span> data;</span><br><span class="line">	<span class="type">int</span> next;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span> Node[<span class="number">100005</span>], result[<span class="number">100005</span>], remain[<span class="number">100005</span>];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="type">bool</span> Time[<span class="number">100005</span>] = &#123; <span class="literal">false</span> &#125;;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100005</span>; ++i)	Time[i] = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> N=<span class="number">0</span>, FirstAddress=<span class="number">0</span>,temp=<span class="number">0</span>,i=<span class="number">0</span>,j=<span class="number">0</span>,t=<span class="number">0</span>;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;FirstAddress, &amp;N);</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; N; ++i) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;temp);</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;Node[temp].data, &amp;Node[temp].next);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//cout &lt;&lt; &quot;\n\n\n&quot;;</span></span><br><span class="line">	i = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (FirstAddress != <span class="number">-1</span>) &#123;</span><br><span class="line">		<span class="keyword">if</span> (Time[(<span class="built_in">abs</span>(Node[FirstAddress].data))] == <span class="literal">false</span>) &#123;</span><br><span class="line">			result[i].data = Node[FirstAddress].data;</span><br><span class="line">			result[i].next = FirstAddress;</span><br><span class="line">			Time[(<span class="built_in">abs</span>(Node[FirstAddress].data))] = <span class="literal">true</span>;</span><br><span class="line">			FirstAddress = Node[FirstAddress].next;</span><br><span class="line">			++i;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> &#123;</span><br><span class="line">			remain[j].next = FirstAddress;</span><br><span class="line">			remain[j].data = Node[FirstAddress].data;</span><br><span class="line">			++j;</span><br><span class="line">			FirstAddress = Node[FirstAddress].next;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> ( t = <span class="number">0</span>; t &lt; i<span class="number">-1</span>; t++) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%05d %d %05d\n&quot;</span>, result[t].next, result[t].data, result[t + <span class="number">1</span>].next);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%05d %d -1\n&quot;</span>, result[t].next, result[t].data);</span><br><span class="line"></span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span> (t = <span class="number">0</span>; t &lt; j - <span class="number">1</span>; t++) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%05d %d %05d\n&quot;</span>, remain[t].next, remain[t].data, remain[t + <span class="number">1</span>].next);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(j!=<span class="number">0</span>)	<span class="built_in">printf</span>(<span class="string">&quot;%05d %d -1&quot;</span>, remain[t].next, remain[t].data);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>老规矩了,下面是柳神的代码时间</p>
 <h2 id="柳神的分析"><a href="#柳神的分析" class="headerlink" title="柳神的分析"></a>柳神的分析</h2><p><strong>分析：用结构体数组存储这个链表，大小为maxn = 100000，node[i]表示地址为i的结点。在结构体中定义一个num变量，将num变量先初始化为2 * maxn。通过改变num变量的值最后sort排序来改变链表的顺序。</strong><br><strong>将没有删除的结点的num标记为cnt1，cnt1为当前没有删除的结点的个数；将需要删除的结点的num标记为maxn + cnt2，cnt2表示当前删除了的结点的个数，因为一开始初始化为了2 * maxn，所以我们可以通过对num排序达到：num = 0~maxn为不删除结点，num = maxn~2maxn为删除结点，num = 2maxn为无效结点</strong><br><strong>这样sort后就会按照需要输出的顺序将结点排序，我们只需要输出前cnt1+cnt2个结点即可～～</strong></p>
-<h2 id="柳神的代码："><a href="#柳神的代码：" class="headerlink" title="柳神的代码："></a>柳神的代码：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">100000</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">NODE</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> address, key, next, num = <span class="number">2</span> * maxn;</span><br><span class="line">&#125;node[maxn];</span><br><span class="line"><span class="keyword">bool</span> exist[maxn];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cmp1</span><span class="params">(NODE a, NODE b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.num &lt; b.num;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> begin, n, cnt1 = <span class="number">0</span>, cnt2 = <span class="number">0</span>, a;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;begin, &amp;n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;a);</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;node[a].key, &amp;node[a].next);</span><br><span class="line">        node[a].address = a;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = begin; i != <span class="number">-1</span>; i = node[i].next) &#123;</span><br><span class="line">        <span class="keyword">if</span>(exist[<span class="built_in">abs</span>(node[i].key)] == <span class="literal">false</span>) &#123;</span><br><span class="line">            exist[<span class="built_in">abs</span>(node[i].key)] = <span class="literal">true</span>;</span><br><span class="line">            node[i].num = cnt1;</span><br><span class="line">            cnt1++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            node[i].num = maxn + cnt2;</span><br><span class="line">            cnt2++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    sort(node, node + maxn, cmp1);</span><br><span class="line">    <span class="keyword">int</span> cnt = cnt1 + cnt2;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; cnt; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(i != cnt1 - <span class="number">1</span> &amp;&amp; i != cnt - <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%05d %d %05d\n&quot;</span>, node[i].address, node[i].key, node[i+<span class="number">1</span>].address);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%05d %d -1\n&quot;</span>, node[i].address, node[i].key);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="柳神的代码："><a href="#柳神的代码：" class="headerlink" title="柳神的代码："></a>柳神的代码：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> maxn = <span class="number">100000</span>;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">NODE</span> &#123;</span><br><span class="line">    <span class="type">int</span> address, key, next, num = <span class="number">2</span> * maxn;</span><br><span class="line">&#125;node[maxn];</span><br><span class="line"><span class="type">bool</span> exist[maxn];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">cmp1</span><span class="params">(NODE a, NODE b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.num &lt; b.num;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> begin, n, cnt1 = <span class="number">0</span>, cnt2 = <span class="number">0</span>, a;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;begin, &amp;n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;a);</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;node[a].key, &amp;node[a].next);</span><br><span class="line">        node[a].address = a;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = begin; i != <span class="number">-1</span>; i = node[i].next) &#123;</span><br><span class="line">        <span class="keyword">if</span>(exist[<span class="built_in">abs</span>(node[i].key)] == <span class="literal">false</span>) &#123;</span><br><span class="line">            exist[<span class="built_in">abs</span>(node[i].key)] = <span class="literal">true</span>;</span><br><span class="line">            node[i].num = cnt1;</span><br><span class="line">            cnt1++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            node[i].num = maxn + cnt2;</span><br><span class="line">            cnt2++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">sort</span>(node, node + maxn, cmp1);</span><br><span class="line">    <span class="type">int</span> cnt = cnt1 + cnt2;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; cnt; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(i != cnt1 - <span class="number">1</span> &amp;&amp; i != cnt - <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%05d %d %05d\n&quot;</span>, node[i].address, node[i].key, node[i+<span class="number">1</span>].address);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%05d %d -1\n&quot;</span>, node[i].address, node[i].key);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>如果这篇文章对你有张帮助的话,可以用你高贵的小手给我点一个免费的赞吗</p>
 <p>相信我，你也能变成光.</p>
 <p><img src="https://img-blog.csdnimg.cn/20200607184932978.bmp" alt="在这里插入图片描述"></p>
@@ -392,12 +280,12 @@
           <div class="post-nav">
             <div class="post-nav-item">
                 <a href="/2020/10/02/PTA%E7%94%B21022%20Digital%20Library%20(30%E5%88%86)/" rel="prev" title="PTA 1022 Digital Library (30分)">
-                  <i class="fa fa-chevron-left"></i> PTA 1022 Digital Library (30分)
+                  <i class="fa fa-angle-left"></i> PTA 1022 Digital Library (30分)
                 </a>
             </div>
             <div class="post-nav-item">
                 <a href="/2020/10/06/PTA%E7%94%B21103%20Integer-Factorization-30%E5%88%86/" rel="next" title="PTA甲1103 Integer Factorization (30分)">
-                  PTA甲1103 Integer Factorization (30分) <i class="fa fa-chevron-right"></i>
+                  PTA甲1103 Integer Factorization (30分) <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
@@ -410,82 +298,48 @@
 
 
 
-      
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      const commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-    </div>
+</div>
   </main>
 
   <footer class="footer">
     <div class="footer-inner">
-      
 
-      
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2023</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Camille</span>
-</div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Camille</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
 
     </div>
   </footer>
 
   
-  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
 
-  
-
-
-
-
-  <script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
 
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
-
+  
 
 
 
@@ -494,9 +348,9 @@
 
   
 
-  
 
-  
+
+
 
 </body>
 </html>
