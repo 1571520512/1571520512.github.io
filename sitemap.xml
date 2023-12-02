@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://camilleferros.top/2023/11/28/2023-11-08/</loc>
+    
+    <lastmod>2023-11-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://camilleferros.top/about/index.html</loc>
     
     <lastmod>2020-10-08</lastmod>
@@ -38,5 +47,12 @@
 
   
 
+  
+  <url>
+    <loc>https://camilleferros.top/categories/%E9%BB%84%E9%B9%8F%E5%AE%87/</loc>
+    <lastmod>2023-12-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 </urlset>
