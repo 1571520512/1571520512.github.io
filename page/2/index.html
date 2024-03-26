@@ -19,30 +19,26 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"camilleferros.top","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Char转换可以使用tolower(char c)转换为小写，toupper(char c)转换为大写 例子如下 123456789#include &lt;iostream&gt;#include &lt;cctype&gt;using namespace std;int main() &amp;#123;    char a &#x3D; &amp;#x27;a&amp;#x27;, b &#x3D; &amp;#x27;A&amp;#x27;;">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Char,String类型类型大小写转换的函数">
-<meta property="og:url" content="https://camilleferros.top/2020/10/08/C++%20%E9%87%8CChar-String%E7%B1%BB%E5%9E%8B%E7%B1%BB%E5%9E%8B%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%87%BD%E6%95%B0/index.html">
+    <meta name="description" content="效率，是成功的核心关键">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Camille">
+<meta property="og:url" content="https://camilleferros.top/page/2/index.html">
 <meta property="og:site_name" content="Camille">
-<meta property="og:description" content="Char转换可以使用tolower(char c)转换为小写，toupper(char c)转换为大写 例子如下 123456789#include &lt;iostream&gt;#include &lt;cctype&gt;using namespace std;int main() &amp;#123;    char a &#x3D; &amp;#x27;a&amp;#x27;, b &#x3D; &amp;#x27;A&amp;#x27;;">
+<meta property="og:description" content="效率，是成功的核心关键">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-10-08T08:37:56.000Z">
-<meta property="article:modified_time" content="2021-04-13T01:29:24.722Z">
 <meta property="article:author" content="Camille">
-<meta property="article:tag" content="C++">
-<meta property="article:tag" content="Char">
-<meta property="article:tag" content="String">
+<meta property="article:tag" content="C++,UE4,PTA,PAT">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://camilleferros.top/2020/10/08/C++%20%E9%87%8CChar-String%E7%B1%BB%E5%9E%8B%E7%B1%BB%E5%9E%8B%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%87%BD%E6%95%B0/">
+<link rel="canonical" href="https://camilleferros.top/page/2/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://camilleferros.top/2020/10/08/C++%20%E9%87%8CChar-String%E7%B1%BB%E5%9E%8B%E7%B1%BB%E5%9E%8B%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%87%BD%E6%95%B0/","path":"2020/10/08/C++ 里Char-String类型类型大小写转换的函数/","title":"Char,String类型类型大小写转换的函数"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"en","comments":"","permalink":"","path":"page/2/index.html","title":""}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Char,String类型类型大小写转换的函数 | Camille</title>
+<title>Camille</title>
   
 
 
@@ -72,7 +68,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <p class="site-title">Camille</p>
+      <h1 class="site-title">Camille</h1>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">你得先看重自己,否则别人就会当你一钱不值</p>
@@ -95,7 +91,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -108,7 +104,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Char%E8%BD%AC%E6%8D%A2"><span class="nav-number">1.</span> <span class="nav-text">Char转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String%E8%BD%AC%E6%8D%A2"><span class="nav-number">2.</span> <span class="nav-text">String转换</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -150,17 +145,16 @@
 
     </div>
 
-    <div class="main-inner post posts-expand">
+    <div class="main-inner index posts-expand">
 
-
-  
+    
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://camilleferros.top/2020/10/08/C++%20%E9%87%8CChar-String%E7%B1%BB%E5%9E%8B%E7%B1%BB%E5%9E%8B%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%87%BD%E6%95%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -174,13 +168,13 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Char,String类型类型大小写转换的函数 | Camille">
+      <meta itemprop="name" content="undefined | Camille">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          Char,String类型类型大小写转换的函数
-        </h1>
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/10/08/C++%20%E9%87%8CChar-String%E7%B1%BB%E5%9E%8B%E7%B1%BB%E5%9E%8B%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">Char,String类型类型大小写转换的函数</a>
+        </h2>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -218,13 +212,15 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h2 id="Char转换"><a href="#Char转换" class="headerlink" title="Char转换"></a>Char转换</h2><p>可以使用tolower(char c)转换为小写，toupper(char c)转换为大写</p>
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Char转换"><a href="#Char转换" class="headerlink" title="Char转换"></a>Char转换</h2><p>可以使用tolower(char c)转换为小写，toupper(char c)转换为大写</p>
 <p>例子如下</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">char</span> a = <span class="string">&#x27;a&#x27;</span>, b = <span class="string">&#x27;A&#x27;</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%c\n&quot;</span>,<span class="built_in">tolower</span>(b));<span class="comment">//把字符转换为小写</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>, <span class="built_in">toupper</span>(a)); <span class="comment">//把字符转换为大写 </span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="String转换"><a href="#String转换" class="headerlink" title="String转换"></a>String转换</h2><p>tolower 就是转换为小写</p>
 <p>toupper就是转换为大写</p>
 <p>例子如下</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    string s = <span class="string">&quot;ABCDEFGabcdefg&quot;</span>;</span><br><span class="line">    string result;</span><br><span class="line">    <span class="built_in">transform</span>(s.<span class="built_in">begin</span>(), s.<span class="built_in">end</span>(), s.<span class="built_in">begin</span>(),::tolower);</span><br><span class="line">    cout &lt;&lt; s &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">transform</span>(s.<span class="built_in">begin</span>(), s.<span class="built_in">end</span>(), s.<span class="built_in">begin</span>(),::toupper);</span><br><span class="line">    cout &lt;&lt; s &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
     </div>
 
     
@@ -232,23 +228,8 @@
     
 
     <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/C/" rel="tag"># C++</a>
-              <a href="/tags/Char/" rel="tag"># Char</a>
-              <a href="/tags/String/" rel="tag"># String</a>
-          </div>
-
-        
-
-          <div class="post-nav">
-            <div class="post-nav-item">
-            </div>
-            <div class="post-nav-item">
-                <a href="/2023/11/28/2023-11-08/" rel="next" title="2023 _11 _08">
-                  2023 _11 _08 <i class="fa fa-angle-right"></i>
-                </a>
-            </div>
-          </div>
+        <div class="post-eof"></div>
+      
     </footer>
   </article>
 </div>
@@ -256,7 +237,9 @@
 
 
 
-
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" title="Previous page" aria-label="Previous page" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
 
 </div>
   </main>
