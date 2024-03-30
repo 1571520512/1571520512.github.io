@@ -51,8 +51,138 @@
       </tags>
   </entry>
   <entry>
+    <title>程序设计入门——C语言</title>
+    <url>/2020/10/08/C%E8%AF%AD%E8%A8%80%E7%BD%91%E8%AF%BE%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="程序设计入门——C语言"><a href="#程序设计入门——C语言" class="headerlink" title="程序设计入门——C语言"></a>程序设计入门——C语言</h1><p>第一周 程序设计与C语言</p>
+<p> 程序的执行</p>
+<p>解释：借助一个程序，那个程序能试图理解你的程序，然后按照你的要求执行</p>
+<p>编译：借助一个程序，就像一个翻译，把你的程序翻译成计算机真正能懂的语言———机器语言——写的程序，然后，这个机器语言写的程序就能执行了</p>
+<p>一：语言本无编译/解释之分</p>
+<p>二：常用的执行方式而已</p>
+<p>三：解释语言有特殊的计算能力</p>
+<p>四：编译型语言有确定的运算性能</p>
+<p>现代的编程语言在语法上差异很小，几乎都是C-Like语言</p>
+<p>语言的能力/适用领域主要是由</p>
+<p>库</p>
+<p>传统所决定的</p>
+<h1 id="C语言的发展"><a href="#C语言的发展" class="headerlink" title="C语言的发展"></a>C语言的发展</h1><p>1989年ANSI发布了一个标准-ANSI-C</p>
+<p>1990年ISO接受了ANSI的标准-C89</p>
+<p>C的标桩在1995年和1999年两次更新-C95和C99</p>
+<h1 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h1><p>一个表达式是一系列运算符和算子的组合，用来计算一个值</p>
+<h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><h2 id="运算符-1"><a href="#运算符-1" class="headerlink" title="运算符"></a>运算符</h2><p>（operator)是指进行运算的动作，比如加法运算符”+”，减肥运算符“-”</p>
+<h2 id="算子"><a href="#算子" class="headerlink" title="算子"></a>算子</h2><p>算子，是指参与运算的值，这个值可能是常数，也可能是变量，还可能是一个方法的返回值</p>
+<p>举例：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">a=b+c</span><br></pre></td></tr></table></figure>
+<p>这里面的a,b,c,就是算子，=号和+号就是运算符</p>
+<p>这个运算符也是有一个优先级的</p>
+<p>下面有一张，运算符的优先级</p>
+<p>我也会写一下相对应的代码公式</p>
+<p>C语言常见运算符优先级</p>
+<p>这里a都等于2，b都等于3</p>
+<p>测试代码如下：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>优先级</th>
+<th>运算符</th>
+<th>运算</th>
+<th>结合关系</th>
+<th>举例</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>+</td>
+<td>单目不变</td>
+<td>自右向左</td>
+<td>a*+b</td>
+<td>6</td>
+</tr>
+<tr>
+<td>-9</td>
+<td>-</td>
+<td>单目取负</td>
+<td>自右向左</td>
+<td>a*-b</td>
+<td>-6</td>
+</tr>
+<tr>
+<td>2</td>
+<td>*</td>
+<td>乘</td>
+<td>自左向右</td>
+<td>a*b</td>
+<td>6</td>
+</tr>
+<tr>
+<td>2</td>
+<td>/</td>
+<td>除</td>
+<td>自左向右</td>
+<td>a/b</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>%</td>
+<td>取余</td>
+<td>自左向右</td>
+<td>a%b</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>+</td>
+<td>加</td>
+<td>自左向右</td>
+<td>a+b</td>
+<td>5</td>
+</tr>
+<tr>
+<td>3</td>
+<td>-</td>
+<td>减</td>
+<td>自左向右</td>
+<td>a-b</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>=</td>
+<td>赋值</td>
+<td>自右向左</td>
+<td>a=b</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span> &#123;</span><br><span class="line">	<span class="type">int</span> a = <span class="number">2</span>, b = <span class="number">3</span>;</span><br><span class="line">	<span class="type">int</span> c = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;a * +b =%d\n&quot;</span>, a * +b);<span class="comment">//a*+b=a*(+b)=a*b</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;a * -b =%d\n&quot;</span>, a * -b);<span class="comment">//a*-b=a*(-b)</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;a * b =%d\n&quot;</span>, a * b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;a / b =%d\n&quot;</span>, a / b);	</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;a % b =%d\n&quot;</span>, a % b);	</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot; a + b =%d\n&quot;</span>, a + b);	</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;a - b =%d\n&quot;</span>, a - b);	</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;a=b =%d\n&quot;</span>, a=b);	<span class="comment">//a=b,a=3</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>赋值也是一个运算符，这个和其他的语言不同</p>
+<h2 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h2><p>赋值也是运算，也有结果</p>
+<p>a=6的结果是a被赋予的值，也就是6</p>
+<p>a=b=6-&gt;a=(b=6)</p>
+]]></content>
+      <categories>
+        <category>C</category>
+        <category>Mooc</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PTA练习题</title>
+    <url>/2024/03/30/PTA%E7%BB%83%E4%B9%A0%E9%A2%98/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>Hello World</title>
-    <url>/2024/03/26/hello-world/</url>
+    <url>/2024/03/29/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
@@ -63,10 +193,5 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>Test</title>
-    <url>/2024/03/26/Test/</url>
-    <content><![CDATA[]]></content>
   </entry>
 </search>
