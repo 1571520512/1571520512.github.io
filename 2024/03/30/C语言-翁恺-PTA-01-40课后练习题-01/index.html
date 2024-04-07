@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"camilleferros.top","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta property="og:type" content="article">
+<meta property="og:title" content="C语言-翁恺-PTA-01-40课后练习题-01">
+<meta property="og:url" content="https://camilleferros.top/2024/03/30/C%E8%AF%AD%E8%A8%80-%E7%BF%81%E6%81%BA-PTA-01-40%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0%E9%A2%98-01/index.html">
+<meta property="og:site_name" content="Camille">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-03-30T03:42:28.000Z">
+<meta property="article:modified_time" content="2024-04-01T17:02:36.335Z">
+<meta property="article:author" content="Camille">
+<meta property="article:tag" content="PTA">
+<meta property="article:tag" content="C">
+<meta property="article:tag" content="中M24春C&amp;Java入门">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://camilleferros.top/2024/03/30/C%E8%AF%AD%E8%A8%80-%E7%BF%81%E6%81%BA-PTA-01-40%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0%E9%A2%98-01/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://camilleferros.top/2024/03/30/C%E8%AF%AD%E8%A8%80-%E7%BF%81%E6%81%BA-PTA-01-40%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0%E9%A2%98-01/","path":"2024/03/30/C语言-翁恺-PTA-01-40课后练习题-01/","title":"C语言-翁恺-PTA-01-40课后练习题-01"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>C语言-翁恺-PTA-01-40课后练习题-01 | Camille</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Camille</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">你得先看重自己,否则别人就会当你一钱不值</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#7-20-%E7%AE%80%E5%8D%95%E8%AE%A1%E7%AE%97%E5%99%A8%EF%BC%8820-%E5%88%86%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">7-20 简单计算器（20 分）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">输入格式:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">输出格式:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">输入样例:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">输出样例:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%96%E4%BA%BA%E4%BB%A3%E7%A0%81%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="nav-number">1.1.</span> <span class="nav-text">他人代码如下：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-27-%E5%85%94%E5%AD%90%E7%B9%81%E8%A1%8D%E9%97%AE%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">7-27 兔子繁衍问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-1"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">输入格式:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-1"><span class="nav-number">2.0.0.2.</span> <span class="nav-text">输出格式:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B-1"><span class="nav-number">2.0.0.3.</span> <span class="nav-text">输入样例:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-1"><span class="nav-number">2.0.0.4.</span> <span class="nav-text">输出样例:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="nav-number">2.1.</span> <span class="nav-text">代码如下：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-29-%E4%BA%8C%E5%88%86%E6%B3%95%E6%B1%82%E5%A4%9A%E9%A1%B9%E5%BC%8F%E5%8D%95%E6%A0%B9"><span class="nav-number">3.</span> <span class="nav-text">7-29 二分法求多项式单根</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%81"><span class="nav-number">3.1.</span> <span class="nav-text">错误代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%94%99%E8%AF%AF%E7%9A%84%E7%82%B9%EF%BC%9A"><span class="nav-number">3.2.</span> <span class="nav-text">错误的点：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%94%B9%E5%90%8E%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="nav-number">3.3.</span> <span class="nav-text">改后的代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%AB%E4%BA%BA%E7%9A%84%E4%BB%A3%E7%A0%81%E5%A5%BD%E5%9C%A8%E5%93%AA%E9%87%8C"><span class="nav-number">3.4.</span> <span class="nav-text">别人的代码好在哪里:</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-36-%E9%9F%A9%E4%BF%A1%E7%82%B9%E5%85%B5"><span class="nav-number">4.</span> <span class="nav-text">7-36 韩信点兵</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F%EF%BC%9A"><span class="nav-number">4.0.1.</span> <span class="nav-text">输入格式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%EF%BC%9A"><span class="nav-number">4.0.2.</span> <span class="nav-text">输出格式：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%91%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="nav-number">4.1.</span> <span class="nav-text">我的代码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-38-%E6%94%AF%E7%A5%A8%E9%9D%A2%E9%A2%9D"><span class="nav-number">5.</span> <span class="nav-text">7-38 支票面额</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F%EF%BC%9A-1"><span class="nav-number">5.0.1.</span> <span class="nav-text">输入格式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%EF%BC%9A-1"><span class="nav-number">5.0.2.</span> <span class="nav-text">输出格式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B1%EF%BC%9A"><span class="nav-number">5.0.3.</span> <span class="nav-text">输入样例1：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B1%EF%BC%9A"><span class="nav-number">5.0.4.</span> <span class="nav-text">输出样例1：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B2%EF%BC%9A"><span class="nav-number">5.0.5.</span> <span class="nav-text">输入样例2：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B2%EF%BC%9A"><span class="nav-number">5.0.6.</span> <span class="nav-text">输出样例2：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%94%99%E8%AF%AF%E5%8E%9F%E5%9B%A0%EF%BC%9A"><span class="nav-number">5.1.</span> <span class="nav-text">错误原因：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%BC%E4%B8%8A%E6%89%80%E8%BF%B0%EF%BC%8C%E4%BB%A3%E7%A0%81%E5%A6%82%E4%B8%8B"><span class="nav-number">5.2.</span> <span class="nav-text">综上所述，代码如下:</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-39-%E9%BE%9F%E5%85%94%E8%B5%9B%E8%B7%91"><span class="nav-number">6.</span> <span class="nav-text">7-39 龟兔赛跑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F%EF%BC%9A-2"><span class="nav-number">6.0.1.</span> <span class="nav-text">输入格式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%EF%BC%9A-2"><span class="nav-number">6.0.2.</span> <span class="nav-text">输出格式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B%EF%BC%9A"><span class="nav-number">6.0.3.</span> <span class="nav-text">输入样例：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B%EF%BC%9A"><span class="nav-number">6.0.4.</span> <span class="nav-text">输出样例：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%94%99%E8%AF%AF%E5%8E%9F%E5%9B%A0%EF%BC%8C"><span class="nav-number">6.1.</span> <span class="nav-text">错误原因，</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Camille"
+      src="/images/Camille.jpg">
+  <p class="site-author-name" itemprop="name">Camille</p>
+  <div class="site-description" itemprop="description">效率，是成功的核心关键</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://camilleferros.top/2024/03/30/C%E8%AF%AD%E8%A8%80-%E7%BF%81%E6%81%BA-PTA-01-40%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0%E9%A2%98-01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Camille.jpg">
+      <meta itemprop="name" content="Camille">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Camille">
+      <meta itemprop="description" content="效率，是成功的核心关键">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="C语言-翁恺-PTA-01-40课后练习题-01 | Camille">
+      <meta itemprop="description" content=" ">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          C语言-翁恺-PTA-01-40课后练习题-01
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2024-03-30 11:42:28" itemprop="dateCreated datePublished" datetime="2024-03-30T11:42:28+08:00">2024-03-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-04-02 01:02:36" itemprop="dateModified" datetime="2024-04-02T01:02:36+08:00">2024-04-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/PTA/" itemprop="url" rel="index"><span itemprop="name">PTA</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/PTA/C/" itemprop="url" rel="index"><span itemprop="name">C</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+            <div class="post-description"> </div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>  也是真的想吐槽，这个B练习题，网上一搜代码都是一样的，我是垃圾，不会写，所以上网抄别人的思路，不是，你们这些会写的，怎么思路都一摸一样啊。</p>
+<p>PTA真的拉跨，试卷也是拉跨。吐槽完了，记录一下别人的思路，毕竟我是最菜的</p>
+<h1 id="7-20-简单计算器（20-分）"><a href="#7-20-简单计算器（20-分）" class="headerlink" title="7-20 简单计算器（20 分）"></a>7-20 简单计算器（20 分）</h1><p>模拟简单运算器的工作。假设计算器只能进行加减乘除运算，运算数和结果都是整数，四种运算符的优先级相同，按从左到右的顺序计算。</p>
+<h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h4><p>输入在一行中给出一个四则运算算式，没有空格，且至少有一个操作数。遇等号”=”说明输入结束。</p>
+<h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h4><p>在一行中输出算式的运算结果，或者如果除法分母为0或有非法运算符，则输出错误信息“ERROR”。</p>
+<h4 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1+2*10-10/2=</span><br></pre></td></tr></table></figure>
+<h4 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10</span><br></pre></td></tr></table></figure>
+<h2 id="他人代码如下："><a href="#他人代码如下：" class="headerlink" title="他人代码如下："></a>他人代码如下：</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> n1, n2;</span><br><span class="line">    <span class="type">char</span> ch;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n1); <span class="comment">// 不管怎样先输入一个数</span></span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%c&quot;</span>, &amp;ch);</span><br><span class="line">        <span class="keyword">if</span>(ch==<span class="string">&#x27;=&#x27;</span>)&#123; </span><br><span class="line">        <span class="comment">// 如果输入的操作符为等号则直接输出而不必进行后续操作了</span></span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, n1);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="comment">// 否则继续输入第二个操作数</span></span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n2);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(ch==<span class="string">&#x27;+&#x27;</span>)</span><br><span class="line">            n1 += n2;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(ch==<span class="string">&#x27;-&#x27;</span>)</span><br><span class="line">            n1 -= n2;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(ch==<span class="string">&#x27;*&#x27;</span>)</span><br><span class="line">            n1 *= n2;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(ch==<span class="string">&#x27;/&#x27;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(n2==<span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;ERROR\n&quot;</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                n1 /= n2;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;ERROR\n&quot;</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="7-27-兔子繁衍问题"><a href="#7-27-兔子繁衍问题" class="headerlink" title="7-27 兔子繁衍问题"></a><em>7-27 兔子繁衍问题</em></h1><p><strong>7-27 兔子繁衍问题</strong></p>
+<p>分数 15</p>
+<p>作者 徐镜春</p>
+<p>单位 浙江大学</p>
+<p>一对兔子，从出生后第3个月起每个月都生一对兔子。小兔子长到第3个月后每个月又生一对兔子。假如兔子都不死，请问第1个月出生的一对兔子，至少需要繁衍到第几个月时兔子总数才可以达到<em>N</em>对？</p>
+<h4 id="输入格式-1"><a href="#输入格式-1" class="headerlink" title="输入格式:"></a>输入格式:</h4><p>输入在一行中给出一个不超过10000的正整数<em>N</em>。</p>
+<h4 id="输出格式-1"><a href="#输出格式-1" class="headerlink" title="输出格式:"></a>输出格式:</h4><p>在一行中输出兔子总数达到<em>N</em>最少需要的月数。</p>
+<h4 id="输入样例-1"><a href="#输入样例-1" class="headerlink" title="输入样例:"></a>输入样例:</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">30</span><br></pre></td></tr></table></figure>
+<h4 id="输出样例-1"><a href="#输出样例-1" class="headerlink" title="输出样例:"></a>输出样例:</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">9</span><br></pre></td></tr></table></figure>
+<p>代码长度限制</p>
+<p>16 KB</p>
+<p>时间限制</p>
+<p>400 ms</p>
+<p>内存限制</p>
+<p>这个题目我也不会做，我也是有点抽象的，这个本质是一个<strong><em>斐波那契数列</em></strong></p>
+<p>但是我没有发现，我也是一个纯纯的笨蛋了</p>
+<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span> &#123;</span><br><span class="line">    <span class="type">int</span> a = <span class="number">0</span>, b = <span class="number">1</span>, temp, N, month = <span class="number">1</span>;<span class="comment">//b 代表累加的和（总兔子的只数），初始值为1</span></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;N);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (b &lt; N) &#123;</span><br><span class="line">        month++;</span><br><span class="line">        temp = a;<span class="comment">//a 表示新生的兔子对数</span></span><br><span class="line">        a = b;</span><br><span class="line">        b = b + temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, month);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="7-29-二分法求多项式单根"><a href="#7-29-二分法求多项式单根" class="headerlink" title="7-29 二分法求多项式单根"></a><strong>7-29 二分法求多项式单根</strong></h1><p>这题的一开始写的代码，运行超时了</p>
+<p>这个是我写的代码，但是问题比较大，于是，学习一下，别人的代码</p>
+<h2 id="错误代码"><a href="#错误代码" class="headerlink" title="错误代码"></a>错误代码</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">float</span> <span class="title function_">funct</span><span class="params">(<span class="type">int</span> a3,<span class="type">int</span> a2 ,<span class="type">int</span> a1 ,<span class="type">int</span> a,<span class="type">float</span> num)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> a3 * num * num * num + a2 * num * num + a1 * num + a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span> &#123;</span><br><span class="line">    <span class="type">int</span> a3 = <span class="number">0</span>, a2 = <span class="number">0</span>, a1 = <span class="number">0</span>, a = <span class="number">0</span>;</span><br><span class="line">    <span class="type">float</span> left = <span class="number">0</span>, right = <span class="number">0</span>,mid=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d %d %d&quot;</span>, &amp;a3, &amp;a2, &amp;a1, &amp;a);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%f %f&quot;</span>, &amp;left, &amp;right);</span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>) &#123;</span><br><span class="line">        mid = (left + right) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span> (funct(a3, a2, a1, a, mid) == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%0.2f&quot;</span>, mid);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (funct(a3, a2, a1, a, left) * funct(a3, a2, a1, a, mid) &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            left = mid;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>  right = mid;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="错误的点："><a href="#错误的点：" class="headerlink" title="错误的点："></a>错误的点：</h2><p>这题，我确实是哈皮，这题也只能找一些无限接近于0的点，所以是要人为设置极限的，但是我没有明白，所以就错的蛮多的</p>
+<h2 id="改后的代码"><a href="#改后的代码" class="headerlink" title="改后的代码"></a>改后的代码</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="comment">//double a3 = 0, a2 = 0, a1 = 0, a = 0;</span></span><br><span class="line"><span class="type">double</span> <span class="title function_">funct</span><span class="params">(<span class="type">double</span> a3, <span class="type">double</span> a2, <span class="type">double</span> a1, <span class="type">double</span> a, <span class="type">double</span> x)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> a3 * x * x * x + a2 * x * x + a1 * x + a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span> &#123;</span><br><span class="line">    <span class="type">double</span> left = <span class="number">0</span>, right = <span class="number">0</span>, mid = <span class="number">0</span>;</span><br><span class="line">    <span class="type">double</span> a3 = <span class="number">0</span>, a2 = <span class="number">0</span>, a1 = <span class="number">0</span>, a = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%lf %lf %lf %lf %lf %lf&quot;</span>, &amp;a3, &amp;a2, &amp;a1, &amp;a, &amp;left, &amp;right);</span><br><span class="line">    <span class="keyword">while</span> (right - left &gt;= <span class="number">0.001</span> &amp;&amp; funct(a3,a2,a1,a,left) * funct(a3,a2,a1,a,right) &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="comment">//right-left&gt;=0.001，就是我们人为设置的极限</span></span><br><span class="line">        <span class="keyword">if</span> (funct(a3,a2,a1,a,left) == <span class="number">0</span>) &#123;</span><br><span class="line">            mid = left;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (funct(a3,a2,a1,a,right) == <span class="number">0</span>) &#123;</span><br><span class="line">            mid = right;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        mid = (left + right) / <span class="number">2.0</span>;</span><br><span class="line">        <span class="comment">//if (funct(a3,a2,a1,a,a3, a2, a1, a, mid) == 0) &#123;</span></span><br><span class="line">        <span class="comment">//    printf(&quot;%0.2f&quot;, mid);</span></span><br><span class="line">        <span class="comment">//    return 0;</span></span><br><span class="line">        <span class="comment">//&#125;</span></span><br><span class="line">        <span class="keyword">if</span> (funct(a3,a2,a1,a,left) * funct(a3,a2,a1,a,mid) &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            left = mid;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>  right = mid;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%.2lf&quot;</span>, mid);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="别人的代码好在哪里"><a href="#别人的代码好在哪里" class="headerlink" title="别人的代码好在哪里:"></a>别人的代码好在哪里:</h2><p>别人的代码，使用了一个全局变量，考虑到了这个人为设置极限的点：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">double</span> a3,a2,a1,a0;<span class="comment">//跨函数的变量弄成全局变量</span></span><br><span class="line"></span><br><span class="line"><span class="type">double</span> <span class="title function_">f</span><span class="params">(<span class="type">double</span> x)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a3*x*x*x+a2*x*x+a1*x+a0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">double</span> a,b,mid;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%lf %lf %lf %lf&quot;</span>,&amp;a3,&amp;a2,&amp;a1,&amp;a0);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%lf %lf&quot;</span>,&amp;a,&amp;b);</span><br><span class="line">    <span class="keyword">while</span>(b-a&gt;=<span class="number">1e-4</span> &amp;&amp; f(a)*f(b)&lt;=<span class="number">0</span>)&#123;<span class="comment">//1e-4是10的（-4）次方，小于这个数是因为想到</span></span><br><span class="line">        <span class="keyword">if</span>(f(a)==<span class="number">0</span>)&#123;<span class="comment">//某个时间结束，而不是无限进行下去，不加会TLE</span></span><br><span class="line">            mid=a;<span class="comment">//mid代表是根</span></span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(f(b)==<span class="number">0</span>)&#123;</span><br><span class="line">            mid=b;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        mid=(a+b)/<span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span>(f(mid)==<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(f(mid)*f(a)&gt;=<span class="number">0</span>)&#123;</span><br><span class="line">                a=mid;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                b=mid;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%.2f&quot;</span>,mid);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="7-36-韩信点兵"><a href="#7-36-韩信点兵" class="headerlink" title="7-36 韩信点兵"></a><strong>7-36 韩信点兵</strong></h1><p>在中国数学史上，广泛流传着一个“韩信点兵”的故事：韩信是汉高祖刘邦手下的大将，他英勇善战，智谋超群，为汉朝建立了卓越的功劳。据说韩信的数学水平也非常高超，他在点兵的时候，为了知道有多少兵，同时又能保住军事机密，便让士兵排队报数：</p>
+<ul>
+<li>按从1至5报数，记下最末一个士兵报的数为1；</li>
+<li>再按从1至6报数，记下最末一个士兵报的数为5；</li>
+<li>再按从1至7报数，记下最末一个士兵报的数为4；</li>
+<li>最后按从1至11报数，最末一个士兵报的数为10；</li>
+</ul>
+<p>请编写程序计算韩信至少有多少兵。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>本题无输入</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>输出韩信至少拥有的士兵人数。</p>
+<p>代码长度限制</p>
+<p>16 KB</p>
+<p>时间限制</p>
+<p>400 ms</p>
+<p>内存限制</p>
+<p>64 MB</p>
+<p>这题是简单的，但是我的直觉告诉我，应该有更好的代码，这是我的暴力算法</p>
+<h2 id="我的代码"><a href="#我的代码" class="headerlink" title="我的代码"></a>我的代码</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>*<span class="number">6</span>*<span class="number">7</span>*<span class="number">11</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (i % <span class="number">5</span> == <span class="number">1</span> &amp;&amp; i % <span class="number">6</span> == <span class="number">5</span> &amp;&amp; i % <span class="number">7</span> == <span class="number">4</span> &amp;&amp; i % <span class="number">11</span> == <span class="number">10</span>) &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>不过我简单的找了一下，不是LeetCode上，别人的好代码，没有显示出来</p>
+<p>找到的，都是和我差不多的垃圾代码</p>
+<h1 id="7-38-支票面额"><a href="#7-38-支票面额" class="headerlink" title="7-38 支票面额"></a><strong>7-38 支票面额</strong></h1><p>这题就是我不会的题目了，也是非常的讨厌的，这题就不会了，我也是一个纯纯的笨蛋</p>
+<p>一个采购员去银行兑换一张<em>y</em>元<em>f</em>分的支票，结果出纳员错给了<em>f</em>元<em>y</em>分。采购员用去了<em>n</em>分之后才发觉有错，于是清点了余额尚有2<em>y</em>元2<em>f</em>分，问该支票面额是多少？</p>
+<h3 id="输入格式：-1"><a href="#输入格式：-1" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出小于100的正整数<em>n</em>。</p>
+<h3 id="输出格式：-1"><a href="#输出格式：-1" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中按格式<code>y.f</code>输出该支票的原始面额。如果无解，则输出<code>No Solution</code>。</p>
+<h3 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">23</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">25.51</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">22</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h3><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">No Solution</span></span><br></pre></td></tr></table></figure>
+<p>代码长度限制</p>
+<p>16 KB</p>
+<p>时间限制</p>
+<p>400 ms</p>
+<p>内存限制</p>
+<p>64 MB</p>
+<h2 id="错误原因："><a href="#错误原因：" class="headerlink" title="错误原因："></a>错误原因：</h2><p>这题我确实是应该错的，这题我没有一点点的思路，是真的一点点都没有，换算也不清楚，所以查看其它人的代码。</p>
+<p>我真的是痴呆了，元和分的换算公式也能弄错，还有就是我考虑到了，兑换之前的和兑换之后的是两倍，但是我还是没有写出公式</p>
+<p>大喊30遍，我是哈皮，题目看错了，我以为的是</p>
+<p>采购员去银行兑换，出纳员给错了，然后出纳员用去了n元，余额也是出纳员的，这我怎么可能做的出来，这样有不等式的关系，其实就是可以做的，是我蠢猪了</p>
+<p>然后就是这个是有公式的</p>
+<script type="math/tex; mode=display">
+100*f+y-n=200*y+2*f
+\rightarrow</script><script type="math/tex; mode=display">
+98*f-199*y=n</script><p>又因为f是分，所以</p>
+<script type="math/tex; mode=display">
+0<f<100</script><script type="math/tex; mode=display">
+98*f-199*y=n</script><script type="math/tex; mode=display">
+0<n<100</script><p>上面两个式子一结合等于</p>
+<script type="math/tex; mode=display">
+y<\frac{98*f}{199}</script><p>f的最大值，是100（无法取到），一算就是</p>
+<script type="math/tex; mode=display">
+0<=y<49</script><h2 id="综上所述，代码如下"><a href="#综上所述，代码如下" class="headerlink" title="综上所述，代码如下:"></a>综上所述，代码如下:</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span> &#123;</span><br><span class="line">    <span class="type">int</span> y = <span class="number">0</span>, f = <span class="number">0</span>, n = <span class="number">0</span>,flag=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> y = <span class="number">0</span>; y &lt; <span class="number">49</span>; y++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> f = <span class="number">0</span>; f &lt; <span class="number">100</span>; f++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="number">98</span> * f - <span class="number">199</span> * y == n) &#123;</span><br><span class="line">                flag = <span class="number">1</span>;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;%d.%d&quot;</span>, y, f);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (!flag)   <span class="built_in">printf</span>(<span class="string">&quot;No Solution&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="7-39-龟兔赛跑"><a href="#7-39-龟兔赛跑" class="headerlink" title="7-39 龟兔赛跑"></a><strong>7-39 龟兔赛跑</strong></h1><p>乌龟与兔子进行赛跑，跑场是一个矩型跑道，跑道边可以随地进行休息。乌龟每分钟可以前进3米，兔子每分钟前进9米；兔子嫌乌龟跑得慢，觉得肯定能跑赢乌龟，于是，每跑10分钟回头看一下乌龟，若发现自己超过乌龟，就在路边休息，每次休息30分钟，否则继续跑10分钟；而乌龟非常努力，一直跑，不休息。假定乌龟与兔子在同一起点同一时刻开始起跑，请问T分钟后乌龟和兔子谁跑得快？</p>
+<h3 id="输入格式：-2"><a href="#输入格式：-2" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出比赛时间T（分钟）。</p>
+<h3 id="输出格式：-2"><a href="#输出格式：-2" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中输出比赛的结果：乌龟赢输出<code>@_@</code>，兔子赢输出<code>^_^</code>，平局则输出<code>-_-</code>；后跟1空格，再输出胜利者跑完的距离。</p>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">242</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@_@ 726</span><br></pre></td></tr></table></figure>
+<p>代码长度限制</p>
+<p>16 KB</p>
+<p>时间限制</p>
+<p>400 ms</p>
+<p>内存限制</p>
+<h2 id="错误原因，"><a href="#错误原因，" class="headerlink" title="错误原因，"></a>错误原因，</h2><p>这题我确实是一点思路都没有，这题，数学的问题，就感觉很头疼</p>
+<p>这题的代码和思路，主要是Copy这个大佬的，地址如下，代码也如下：</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/haimeng-lin/p/15427074.html">https://www.cnblogs.com/haimeng-lin/p/15427074.html</a></p>
+<p>本题乌龟的路程很简单，计算兔子的路程关键就在怎么区分兔子跑步的时间。引入两个参数，run参数显示兔子状态，为1则在跑步，为0则在睡觉；参数sleeptime显示开始睡觉的时间。</p>
+<p>当run = 1时，兔子路程计入；满足三个条件时开始睡觉：①时间为十的倍数；②兔子目前在跑步，也就是run = 1；③兔子路程大于乌龟路程。满足条件开始睡觉，记录睡觉时间，到时间后run改为1自动苏醒。</p>
+<p>代码如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span> &#123;</span><br><span class="line">    <span class="type">int</span> turtle = <span class="number">0</span>, rabbit = <span class="number">0</span>, t = <span class="number">0</span>, run = <span class="number">0</span>, sleeptime = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">//run代表兔子是否睡觉，兔子一开始不是睡觉的.sleeptime的意思是，一开始睡觉的时候</span></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;t);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= t; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        turtle += <span class="number">3</span>;        <span class="comment">//乌龟一定是在跑步的</span></span><br><span class="line">        <span class="keyword">if</span> (run == <span class="number">0</span>)       <span class="comment">//兔子不睡觉是0</span></span><br><span class="line">            rabbit += <span class="number">9</span>;</span><br><span class="line">        <span class="keyword">if</span> ((i % <span class="number">10</span> == <span class="number">0</span>) &amp;&amp; (rabbit &gt; turtle) &amp;&amp; (run == <span class="number">0</span>))   </span><br><span class="line">            <span class="comment">//如果兔子还在跑的状态，而且已经比乌龟快，正好在检查点上</span></span><br><span class="line">        &#123;</span><br><span class="line">            run = <span class="number">1</span>;    <span class="comment">//改变兔子的状态</span></span><br><span class="line">            sleeptime = i;  <span class="comment">//睡觉的时间，就等于i，目前的时间</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (i == sleeptime + <span class="number">30</span>)    <span class="comment">//如果已经过了30分钟的话</span></span><br><span class="line">        &#123;</span><br><span class="line">            run = <span class="number">0</span>;                <span class="comment">//设置兔子醒过来继续跑</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (rabbit &gt; turtle)   <span class="built_in">printf</span>(<span class="string">&quot;^_^ %d&quot;</span>, rabbit);</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (rabbit == turtle) <span class="built_in">printf</span>(<span class="string">&quot;-_- %d&quot;</span>, rabbit);</span><br><span class="line">    <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">&quot;@_@ %d&quot;</span>, turtle);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/PTA/" rel="tag"># PTA</a>
+              <a href="/tags/C/" rel="tag"># C</a>
+              <a href="/tags/%E4%B8%ADM24%E6%98%A5C-Java%E5%85%A5%E9%97%A8/" rel="tag"># 中M24春C&Java入门</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/11/28/2023-11-08/" rel="prev" title="2023 _11 _08">
+                  <i class="fa fa-angle-left"></i> 2023 _11 _08
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2024/04/02/C%E8%AF%AD%E8%A8%80-%E7%BF%81%E6%81%BA-PTA-41-80%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0%E9%A2%98-02/" rel="next" title="C语言-翁恺-PTA-41-80课后练习题-02">
+                  C语言-翁恺-PTA-41-80课后练习题-02 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Camille</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
