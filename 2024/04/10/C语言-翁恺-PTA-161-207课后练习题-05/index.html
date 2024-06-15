@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"camilleferros.top","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta property="og:type" content="article">
+<meta property="og:title" content="C语言-翁恺-PTA-161-207课后练习题-05">
+<meta property="og:url" content="https://camilleferros.top/2024/04/10/C%E8%AF%AD%E8%A8%80-%E7%BF%81%E6%81%BA-PTA-161-207%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0%E9%A2%98-05/index.html">
+<meta property="og:site_name" content="Camille">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://image.camilleferros.top/前世档案.jpg">
+<meta property="og:image" content="http://image.camilleferros.top/20240608214753.png">
+<meta property="article:published_time" content="2024-04-10T11:17:30.000Z">
+<meta property="article:modified_time" content="2024-06-08T13:50:49.262Z">
+<meta property="article:author" content="Camille">
+<meta property="article:tag" content="C++">
+<meta property="article:tag" content="PTA">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://image.camilleferros.top/前世档案.jpg">
+
+
+<link rel="canonical" href="https://camilleferros.top/2024/04/10/C%E8%AF%AD%E8%A8%80-%E7%BF%81%E6%81%BA-PTA-161-207%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0%E9%A2%98-05/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://camilleferros.top/2024/04/10/C%E8%AF%AD%E8%A8%80-%E7%BF%81%E6%81%BA-PTA-161-207%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0%E9%A2%98-05/","path":"2024/04/10/C语言-翁恺-PTA-161-207课后练习题-05/","title":"C语言-翁恺-PTA-161-207课后练习题-05"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>C语言-翁恺-PTA-161-207课后练习题-05 | Camille</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Camille</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">你得先看重自己,否则别人就会当你一钱不值</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#7-161-%E5%B8%85%E5%88%B0%E6%B2%A1%E6%9C%8B%E5%8F%8B"><span class="nav-number">1.</span> <span class="nav-text">7-161 帅到没朋友</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F%EF%BC%9A"><span class="nav-number">1.0.1.</span> <span class="nav-text">输入格式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%EF%BC%9A"><span class="nav-number">1.0.2.</span> <span class="nav-text">输出格式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B1%EF%BC%9A"><span class="nav-number">1.0.3.</span> <span class="nav-text">输入样例1：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B1%EF%BC%9A"><span class="nav-number">1.0.4.</span> <span class="nav-text">输出样例1：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B2%EF%BC%9A"><span class="nav-number">1.0.5.</span> <span class="nav-text">输入样例2：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B2%EF%BC%9A"><span class="nav-number">1.0.6.</span> <span class="nav-text">输出样例2：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%94%99%E8%AF%AF%E5%8E%9F%E5%9B%A0%EF%BC%9A"><span class="nav-number">1.1.</span> <span class="nav-text">错误原因：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%81%E5%9C%A8%E8%BF%99%E9%87%8C"><span class="nav-number">1.2.</span> <span class="nav-text">错误代码在这里</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E7%A1%AE%E7%9A%84%E4%BB%A3%E7%A0%81%EF%BC%9A"><span class="nav-number">1.3.</span> <span class="nav-text">正确的代码：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-163-%E8%B0%B7%E6%AD%8C%E7%9A%84%E6%8B%9B%E8%81%98"><span class="nav-number">2.</span> <span class="nav-text">7-163 谷歌的招聘</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F%EF%BC%9A-1"><span class="nav-number">2.0.1.</span> <span class="nav-text">输入格式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%EF%BC%9A-1"><span class="nav-number">2.0.2.</span> <span class="nav-text">输出格式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B-1%EF%BC%9A"><span class="nav-number">2.0.3.</span> <span class="nav-text">输入样例 1：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-1%EF%BC%9A"><span class="nav-number">2.0.4.</span> <span class="nav-text">输出样例 1：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B-2%EF%BC%9A"><span class="nav-number">2.0.5.</span> <span class="nav-text">输入样例 2：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B-2%EF%BC%9A"><span class="nav-number">2.0.6.</span> <span class="nav-text">输出样例 2：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%94%99%E8%AF%AF%E5%8E%9F%E5%9B%A0"><span class="nav-number">2.1.</span> <span class="nav-text">错误原因</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E7%A1%AE%E4%BB%A3%E7%A0%81"><span class="nav-number">2.1.1.</span> <span class="nav-text">正确代码</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-175-%E5%8F%A3%E7%BD%A9%E5%8F%91%E6%94%BE"><span class="nav-number">3.</span> <span class="nav-text">7-175 口罩发放</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F"><span class="nav-number">3.0.1.</span> <span class="nav-text">输入格式:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="nav-number">3.0.2.</span> <span class="nav-text">输出格式:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B"><span class="nav-number">3.0.3.</span> <span class="nav-text">输入样例:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B"><span class="nav-number">3.0.4.</span> <span class="nav-text">输出样例:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B%E8%A7%A3%E9%87%8A%EF%BC%9A"><span class="nav-number">3.0.5.</span> <span class="nav-text">样例解释：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F%EF%BC%9A-2"><span class="nav-number">3.0.6.</span> <span class="nav-text">输入格式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%EF%BC%9A-2"><span class="nav-number">3.0.7.</span> <span class="nav-text">输出格式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B%EF%BC%9A"><span class="nav-number">3.0.8.</span> <span class="nav-text">输入样例：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B%EF%BC%9A"><span class="nav-number">3.0.9.</span> <span class="nav-text">输出样例：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%AB%E4%BA%BA%E7%9A%84%E6%AD%A3%E7%A1%AE%E7%9A%84%E4%BB%A3%E7%A0%81%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="nav-number">3.1.</span> <span class="nav-text">别人的正确的代码如下：</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Camille"
+      src="/images/Camille.jpg">
+  <p class="site-author-name" itemprop="name">Camille</p>
+  <div class="site-description" itemprop="description">效率，是成功的核心关键</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://camilleferros.top/2024/04/10/C%E8%AF%AD%E8%A8%80-%E7%BF%81%E6%81%BA-PTA-161-207%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0%E9%A2%98-05/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Camille.jpg">
+      <meta itemprop="name" content="Camille">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Camille">
+      <meta itemprop="description" content="效率，是成功的核心关键">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="C语言-翁恺-PTA-161-207课后练习题-05 | Camille">
+      <meta itemprop="description" content=" ">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          C语言-翁恺-PTA-161-207课后练习题-05
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2024-04-10 19:17:30" itemprop="dateCreated datePublished" datetime="2024-04-10T19:17:30+08:00">2024-04-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-06-08 21:50:49" itemprop="dateModified" datetime="2024-06-08T21:50:49+08:00">2024-06-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/C/" itemprop="url" rel="index"><span itemprop="name">C</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/C/PTA/" itemprop="url" rel="index"><span itemprop="name">PTA</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+            <div class="post-description"> </div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="7-161-帅到没朋友"><a href="#7-161-帅到没朋友" class="headerlink" title="7-161 帅到没朋友"></a><strong>7-161 帅到没朋友</strong></h1><p>当芸芸众生忙着在朋友圈中发照片的时候，总有一些人因为太帅而没有朋友。本题就要求你找出那些帅到没有朋友的人。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入第一行给出一个正整数<code>N</code>（≤100），是已知朋友圈的个数；随后<code>N</code>行，每行首先给出一个正整数<code>K</code>（≤1000），为朋友圈中的人数，然后列出一个朋友圈内的所有人——为方便起见，每人对应一个ID号，为5位数字（从00000到99999），ID间以空格分隔；之后给出一个正整数<code>M</code>（≤10000），为待查询的人数；随后一行中列出<code>M</code>个待查询的ID，以空格分隔。</p>
+<p>注意：没有朋友的人可以是根本没安装“朋友圈”，也可以是只有自己一个人在朋友圈的人。虽然有个别自恋狂会自己把自己反复加进朋友圈，但题目保证所有<code>K</code>超过1的朋友圈里都至少有2个不同的人。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>按输入的顺序输出那些帅到没朋友的人。ID间用1个空格分隔，行的首尾不得有多余空格。如果没有人太帅，则输出<code>No one is handsome</code>。</p>
+<p>注意：同一个人可以被查询多次，但只输出一次。</p>
+<h3 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">3 11111 22222 55555</span><br><span class="line">2 33333 44444</span><br><span class="line">4 55555 66666 99999 77777</span><br><span class="line">8</span><br><span class="line">55555 44444 10000 88888 22222 11111 23333 88888</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10000 88888 23333</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h3><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3</span></span><br><span class="line"><span class="symbol">3 </span><span class="number">11111</span> <span class="number">22222</span> <span class="number">55555</span></span><br><span class="line"><span class="symbol">2 </span><span class="number">33333</span> <span class="number">44444</span></span><br><span class="line"><span class="symbol">4 </span><span class="number">55555</span> <span class="number">66666</span> <span class="number">99999</span> <span class="number">77777</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="symbol">55555 </span><span class="number">44444</span> <span class="number">22222</span> <span class="number">11111</span></span><br></pre></td></tr></table></figure>
+<h3 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h3><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">No</span> one <span class="keyword">is</span> handsome</span><br></pre></td></tr></table></figure>
+<h2 id="错误原因："><a href="#错误原因：" class="headerlink" title="错误原因："></a>错误原因：</h2><p>我不清楚，我这个还真不晓得，我哪里错了</p>
+<p>看了柳神的代码，才清楚，我错的多离谱，我这个都不晓得，</p>
+<p><strong>虽然有个别自恋狂会自己把自己反复加进朋友圈，但题目保证所有<code>K</code>超过1的朋友圈里都至少有2个不同的人</strong></p>
+<p>这句话的意思，就是K=1的时候，这个数字是没有用的，这个要注意</p>
+<h2 id="错误代码在这里"><a href="#错误代码在这里" class="headerlink" title="错误代码在这里"></a>错误代码在这里</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> people[<span class="number">1000000</span>] = &#123; <span class="number">0</span> &#125;;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000000</span>; ++i)   people[i] = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> n = <span class="number">0</span>, k = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;k);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>; j &lt;= k; ++j) &#123;</span><br><span class="line">            <span class="type">int</span>  temp = <span class="number">0</span>;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;temp);</span><br><span class="line">            people[temp] = <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> m = <span class="number">0</span>,flag=<span class="number">0</span>,judge=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;m);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= m; ++i) &#123;</span><br><span class="line">        <span class="type">int</span> temp = <span class="number">0</span>;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;temp);</span><br><span class="line">        <span class="keyword">if</span> (!people[temp]) &#123;</span><br><span class="line">            <span class="keyword">if</span> (flag)    <span class="built_in">printf</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">            <span class="keyword">else</span> flag = <span class="number">1</span>;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%05d&quot;</span>, temp);</span><br><span class="line">            people[temp] = <span class="number">1</span>;</span><br><span class="line">            judge = <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (!judge)  <span class="built_in">printf</span>(<span class="string">&quot;No one is handsome&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="正确的代码："><a href="#正确的代码：" class="headerlink" title="正确的代码："></a>正确的代码：</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> people[<span class="number">1000000</span>] = &#123; <span class="number">0</span> &#125;;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000000</span>; ++i)   people[i] = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> n = <span class="number">0</span>, k = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;k);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>; j &lt;= k; ++j) &#123;</span><br><span class="line">            <span class="type">int</span>  temp = <span class="number">0</span>;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;temp);</span><br><span class="line">            people[temp] = <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> m = <span class="number">0</span>,flag=<span class="number">0</span>,judge=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;m);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= m; ++i) &#123;</span><br><span class="line">        <span class="type">int</span> temp = <span class="number">0</span>;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;temp);</span><br><span class="line">        <span class="keyword">if</span> (!people[temp]) &#123;</span><br><span class="line">            <span class="keyword">if</span> (flag)    <span class="built_in">printf</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">            <span class="keyword">else</span> flag = <span class="number">1</span>;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%05d&quot;</span>, temp);</span><br><span class="line">            people[temp] = <span class="number">1</span>;</span><br><span class="line">            judge = <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (!judge)  <span class="built_in">printf</span>(<span class="string">&quot;No one is handsome&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="7-163-谷歌的招聘"><a href="#7-163-谷歌的招聘" class="headerlink" title="7-163 谷歌的招聘"></a><strong>7-163 谷歌的招聘</strong></h1><p>2004 年 7 月，谷歌在硅谷的 101 号公路边竖立了一块巨大的广告牌（如下图）用于招聘。内容超级简单，就是一个以 .com 结尾的网址，而前面的网址是一个 10 位素数，这个素数是自然常数 e 中最早出现的 10 位连续数字。能找出这个素数的人，就可以通过访问谷歌的这个网站进入招聘流程的下一步</p>
+<p>自然常数 e 是一个著名的超越数，前面若干位写出来是这样的：e = 2.71828182845904523536028747135266249775724709369995957496696762772407663035354759457138217852516642<strong>7427466391</strong>932003059921… 其中粗体标出的 10 位数就是答案。</p>
+<p>本题要求你编程解决一个更通用的问题：从任一给定的长度为 L 的数字中，找出最早出现的 K 位连续数字所组成的素数。</p>
+<h3 id="输入格式：-1"><a href="#输入格式：-1" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在第一行给出 2 个正整数，分别是 L（不超过 1000 的正整数，为数字长度）和 K（小于 10 的正整数）。接下来一行给出一个长度为 L 的正整数 N。</p>
+<h3 id="输出格式：-1"><a href="#输出格式：-1" class="headerlink" title="输出格式："></a>输出格式：</h3><p>在一行中输出 N 中最早出现的 K 位连续数字所组成的素数。如果这样的素数不存在，则输出 <code>404</code>。注意，原始数字中的前导零也计算在位数之内。例如在 200236 中找 4 位素数，0023 算是解；但第一位 2 不能被当成 0002 输出，因为在原始数字中不存在这个 2 的前导零。</p>
+<h3 id="输入样例-1："><a href="#输入样例-1：" class="headerlink" title="输入样例 1："></a>输入样例 1：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">20 5</span><br><span class="line">23654987725541023819</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例-1："><a href="#输出样例-1：" class="headerlink" title="输出样例 1："></a>输出样例 1：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">49877</span><br></pre></td></tr></table></figure>
+<h3 id="输入样例-2："><a href="#输入样例-2：" class="headerlink" title="输入样例 2："></a>输入样例 2：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">10 3</span><br><span class="line">2468001680</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例-2："><a href="#输出样例-2：" class="headerlink" title="输出样例 2："></a>输出样例 2：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">404</span><br></pre></td></tr></table></figure>
+<p><strong>鸣谢用户 大冰 补充数据！</strong></p>
+<p>代码长度限制</p>
+<p>16 KB</p>
+<p>时间限制</p>
+<p>200 ms</p>
+<p>内存限制</p>
+<h2 id="错误原因"><a href="#错误原因" class="headerlink" title="错误原因"></a>错误原因</h2><p>我是傻逼，我</p>
+<p>scanf(“%d %d”)    空格都能忘记掉，我确实是有点低能了</p>
+<h3 id="正确代码"><a href="#正确代码" class="headerlink" title="正确代码"></a>正确代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="comment">//1就代表是素数，0代表不是</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">prime</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (n &lt;<span class="number">2</span> )    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i*i&lt;= n ; ++i) &#123;</span><br><span class="line">        <span class="keyword">if</span> (n % i == <span class="number">0</span>)  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> temp = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> l = <span class="number">0</span>, k = <span class="number">0</span>, flag = <span class="number">0</span>;</span><br><span class="line">    <span class="type">char</span> str[<span class="number">1001</span>];</span><br><span class="line">    <span class="type">char</span> tc[<span class="number">1001</span>];</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d &quot;</span>, &amp;l, &amp;k);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>, str);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i + k &lt;= l; ++i) &#123;</span><br><span class="line">        <span class="built_in">strncpy</span>(tc, str + i, k);</span><br><span class="line">        tc[k]=<span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line">        <span class="keyword">if</span> (prime(atoi(tc))) &#123;</span><br><span class="line">            flag = <span class="number">1</span>;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%s&quot;</span>, tc);</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;404&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="7-175-口罩发放"><a href="#7-175-口罩发放" class="headerlink" title="7-175 口罩发放"></a><strong>7-175 口罩发放</strong></h1><p>为了抗击来势汹汹的 COVID19 新型冠状病毒，全国各地均启动了各项措施控制疫情发展，其中一个重要的环节是口罩的发放。</p>
+<p>某市出于给市民发放口罩的需要，推出了一款小程序让市民填写信息，方便工作的开展。小程序收集了各种信息，包括市民的姓名、身份证、身体情况、提交时间等，但因为数据量太大，需要根据一定规则进行筛选和处理，请你编写程序，按照给定规则输出口罩的寄送名单。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>输入第一行是两个正整数 <em>D</em> 和 <em>P</em>（1≤<em>D</em>,<em>P</em>≤30），表示有 <em>D</em> 天的数据，市民两次获得口罩的时间至少需要间隔 <em>P</em> 天。</p>
+<p>接下来 <em>D</em> 块数据，每块给出一天的申请信息。第 <em>i</em> 块数据（<em>i</em>=1,⋯,<em>D</em>）的第一行是两个整数 <em>T**i</em> 和 <em>S**i</em>（1≤<em>T**i</em>,<em>S**i</em>≤1000），表示在第 <em>i</em> 天有 <em>T**i</em> 条申请，总共有 <em>S**i</em> 个口罩发放名额。随后 <em>T**i</em> 行，每行给出一条申请信息，格式如下：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">姓名 身份证号 身体情况 提交时间</span><br></pre></td></tr></table></figure>
+<p>给定数据约束如下：</p>
+<ul>
+<li><code>姓名</code> 是一个长度不超过 10 的不包含空格的非空字符串；</li>
+<li><code>身份证号</code> 是一个长度不超过 20 的非空字符串；</li>
+<li><code>身体情况</code> 是 0 或者 1，0 表示自觉良好，1 表示有相关症状；</li>
+<li><code>提交时间</code> 是 hh:mm，为24小时时间（由 <code>00:00</code> 到 <code>23:59</code>。例如 09:08。）。注意，给定的记录的提交时间不一定有序；</li>
+<li><code>身份证号</code> 各不相同，同一个身份证号被认为是同一个人，数据保证同一个身份证号姓名是相同的。</li>
+</ul>
+<p>能发放口罩的记录要求如下：</p>
+<ul>
+<li><code>身份证号</code> 必须是 18 位的<strong>数字</strong>（可以包含前导0）；</li>
+<li>同一个身份证号若在第 <em>i</em> 天申请成功，则接下来的 <em>P</em> 天不能再次申请。也就是说，若第 <em>i</em> 天申请成功，则等到第 <em>i</em>+<em>P</em>+1 天才能再次申请；</li>
+<li>在上面两条都符合的情况下，按照提交时间的先后顺序发放，直至全部记录处理完毕或 <em>S**i</em> 个名额用完。如果提交时间相同，则按照在列表中出现的先后顺序决定。</li>
+</ul>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>对于每一天的申请记录，每行输出一位得到口罩的人的姓名及身份证号，用一个空格隔开。顺序按照发放顺序确定。</p>
+<p>在输出完发放记录后，你还需要输出有合法记录的、身体状况为 1 的申请人的姓名及身份证号，用空格隔开。顺序按照申请记录中出现的顺序确定，同一个人只需要输出一次。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">4 2</span><br><span class="line">5 3</span><br><span class="line">A 123456789012345670 1 13:58</span><br><span class="line">B 123456789012345671 0 13:58</span><br><span class="line">C 12345678901234567 0 13:22</span><br><span class="line">D 123456789012345672 0 03:24</span><br><span class="line">C 123456789012345673 0 13:59</span><br><span class="line">4 3</span><br><span class="line">A 123456789012345670 1 13:58</span><br><span class="line">E 123456789012345674 0 13:59</span><br><span class="line">C 123456789012345673 0 13:59</span><br><span class="line">F F 0 14:00</span><br><span class="line">1 3</span><br><span class="line">E 123456789012345674 1 13:58</span><br><span class="line">1 1</span><br><span class="line">A 123456789012345670 0 14:11</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">D 123456789012345672</span><br><span class="line">A 123456789012345670</span><br><span class="line">B 123456789012345671</span><br><span class="line">E 123456789012345674</span><br><span class="line">C 123456789012345673</span><br><span class="line">A 123456789012345670</span><br><span class="line">A 123456789012345670</span><br><span class="line">E 123456789012345674</span><br></pre></td></tr></table></figure>
+<h3 id="样例解释："><a href="#样例解释：" class="headerlink" title="样例解释："></a>样例解释：</h3><p>输出中，第一行到第三行是第一天的部分；第四、五行是第二天的部分；第三天没有符合要求的市民；第六行是第四天的部分。最后两行按照出现顺序输出了可能存在身体不适的人员。</p>
+<p>代码长度限制</p>
+<p>16 KB</p>
+<p>时间限制</p>
+<p>400 ms</p>
+<p>内存限制</p>
+<p>64 MB</p>
+<p>栈限制</p>
+<p>8192 KB</p>
+<p>这题是我花钱买的，所以我非常的重视：故记录：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdbool.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAX_PEOPLE 1010     <span class="comment">// 每天最多申请口罩的人数</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAX_MAYBE 30010     <span class="comment">// 总共可能有症状的人的最大数量</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAX_NAME 11         <span class="comment">// 姓名的最大长度</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAX_ID 21           <span class="comment">// 身份证号的最大长度</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> HASH_SIZE 10007     <span class="comment">// 哈希表的大小</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义存储每个申请人的信息的结构体</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">    <span class="type">char</span> name[MAX_NAME];  <span class="comment">// 申请人的姓名</span></span><br><span class="line">    <span class="type">char</span> id[MAX_ID];      <span class="comment">// 申请人的身份证号</span></span><br><span class="line">    <span class="type">int</span> st;               <span class="comment">// 身体状况 (0: 良好, 1: 有症状)</span></span><br><span class="line">    <span class="type">int</span> h;                <span class="comment">// 提交时间的小时部分</span></span><br><span class="line">    <span class="type">int</span> m;                <span class="comment">// 提交时间的分钟部分</span></span><br><span class="line">    <span class="type">int</span> no;               <span class="comment">// 申请人在当天的序号</span></span><br><span class="line">&#125; People;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义存储可能有症状的人的信息的结构体</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">    <span class="type">char</span> name[MAX_NAME];  <span class="comment">// 可能有症状的人的姓名</span></span><br><span class="line">    <span class="type">char</span> id[MAX_ID];      <span class="comment">// 可能有症状的人的身份证号</span></span><br><span class="line">&#125; Maybe;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义存储申请记录的结构体，用于哈希表</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Record</span> &#123;</span></span><br><span class="line">    <span class="type">char</span> id[MAX_ID];      <span class="comment">// 申请人的身份证号</span></span><br><span class="line">    <span class="type">int</span> day;              <span class="comment">// 最后一次领取口罩的天数</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Record</span> *<span class="title">next</span>;</span>  <span class="comment">// 指向下一个记录的指针</span></span><br><span class="line">&#125; Record;</span><br><span class="line"></span><br><span class="line">People people[MAX_PEOPLE];      <span class="comment">// 存储每天申请人的信息</span></span><br><span class="line">Maybe maybe[MAX_MAYBE];         <span class="comment">// 存储所有可能有症状的人的信息</span></span><br><span class="line">Record *hash_table[HASH_SIZE];  <span class="comment">// 哈希表，用于快速查找申请记录</span></span><br><span class="line"><span class="type">int</span> idx = <span class="number">0</span>;                    <span class="comment">// 记录可能有症状的人的数量</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 比较函数，用于qsort对申请人按时间和序号进行排序</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">compare_people</span><span class="params">(<span class="type">const</span> <span class="type">void</span> *a, <span class="type">const</span> <span class="type">void</span> *b)</span> &#123;</span><br><span class="line">    People *pa = (People *)a;</span><br><span class="line">    People *pb = (People *)b;</span><br><span class="line">    <span class="comment">// 先按小时排序</span></span><br><span class="line">    <span class="keyword">if</span> (pa-&gt;h != pb-&gt;h) <span class="keyword">return</span> pa-&gt;h - pb-&gt;h;</span><br><span class="line">    <span class="comment">// 小时相同则按分钟排序</span></span><br><span class="line">    <span class="keyword">if</span> (pa-&gt;m != pb-&gt;m) <span class="keyword">return</span> pa-&gt;m - pb-&gt;m;</span><br><span class="line">    <span class="comment">// 时间相同则按当天的序号排序</span></span><br><span class="line">    <span class="keyword">return</span> pa-&gt;no - pb-&gt;no;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 检查身份证号是否有效，必须为18位且全为数字</span></span><br><span class="line"><span class="type">bool</span> <span class="title function_">check</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *id)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">strlen</span>(id) != <span class="number">18</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">18</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (id[i] &lt; <span class="string">&#x27;0&#x27;</span> || id[i] &gt; <span class="string">&#x27;9&#x27;</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将时间字符串转换为小时和分钟</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">convert</span><span class="params">(<span class="type">int</span> *h, <span class="type">int</span> *m, <span class="type">const</span> <span class="type">char</span> *str)</span> &#123;</span><br><span class="line">    <span class="built_in">sscanf</span>(str, <span class="string">&quot;%d:%d&quot;</span>, h, m);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 哈希函数，将字符串转换为哈希值</span></span><br><span class="line"><span class="type">unsigned</span> <span class="type">int</span> <span class="title function_">hash</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *str)</span> &#123;</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> hash = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (*str) &#123;</span><br><span class="line">        hash = (hash * <span class="number">31</span>) + *str++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> hash % HASH_SIZE;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在哈希表中查找记录</span></span><br><span class="line">Record* <span class="title function_">find_record</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *id)</span> &#123;</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> index = hash(id);</span><br><span class="line">    Record *entry = hash_table[index];</span><br><span class="line">    <span class="keyword">while</span> (entry != <span class="literal">NULL</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">strcmp</span>(entry-&gt;id, id) == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> entry;</span><br><span class="line">        &#125;</span><br><span class="line">        entry = entry-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 向哈希表中插入记录</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">insert_record</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *id, <span class="type">int</span> day)</span> &#123;</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> index = hash(id);</span><br><span class="line">    Record *entry = (Record *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Record));</span><br><span class="line">    <span class="built_in">strcpy</span>(entry-&gt;id, id);</span><br><span class="line">    entry-&gt;day = day;</span><br><span class="line">    entry-&gt;next = hash_table[index];</span><br><span class="line">    hash_table[index] = entry;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 清空哈希表，释放内存</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">clear_records</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; HASH_SIZE; i++) &#123;</span><br><span class="line">        Record *entry = hash_table[i];</span><br><span class="line">        <span class="keyword">while</span> (entry != <span class="literal">NULL</span>) &#123;</span><br><span class="line">            Record *temp = entry;</span><br><span class="line">            entry = entry-&gt;next;</span><br><span class="line">            <span class="built_in">free</span>(temp);</span><br><span class="line">        &#125;</span><br><span class="line">        hash_table[i] = <span class="literal">NULL</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span> d = <span class="number">0</span>, p = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// 读取天数d和最少间隔天数p</span></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;d, &amp;p);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 处理每一天的数据</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= d; i++) &#123;</span><br><span class="line">        <span class="type">int</span> n = <span class="number">0</span>, cnt = <span class="number">0</span>;</span><br><span class="line">        <span class="comment">// 读取当天申请人数n和可发放口罩的数量cnt</span></span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;n, &amp;cnt);</span><br><span class="line">        <span class="type">int</span> k = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 读取每个申请人的信息</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">            <span class="type">char</span> name[MAX_NAME], id[MAX_ID], str[<span class="number">10</span>];</span><br><span class="line">            <span class="type">int</span> h = <span class="number">0</span>, m = <span class="number">0</span>, st = <span class="number">0</span>;</span><br><span class="line">            <span class="comment">// 读取申请人的姓名、身份证号、身体状况和提交时间</span></span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%s %s %d %s&quot;</span>, name, id, &amp;st, str);</span><br><span class="line">            <span class="comment">// 将时间字符串转换为小时和分钟</span></span><br><span class="line">            convert(&amp;h, &amp;m, str);</span><br><span class="line">            <span class="comment">// 检查身份证号是否有效</span></span><br><span class="line">            <span class="keyword">if</span> (check(id)) &#123;</span><br><span class="line">                <span class="comment">// 将有效申请人的信息存储到people数组中</span></span><br><span class="line">                <span class="built_in">strcpy</span>(people[k].name, name);</span><br><span class="line">                <span class="built_in">strcpy</span>(people[k].id, id);</span><br><span class="line">                people[k].st = st;</span><br><span class="line">                people[k].h = h;</span><br><span class="line">                people[k].m = m;</span><br><span class="line">                people[k].no = j;</span><br><span class="line">                k++;</span><br><span class="line">                <span class="comment">// 如果有症状，将信息存储到maybe数组中</span></span><br><span class="line">                <span class="keyword">if</span> (st) &#123;</span><br><span class="line">                    <span class="built_in">strcpy</span>(maybe[idx].name, name);</span><br><span class="line">                    <span class="built_in">strcpy</span>(maybe[idx].id, id);</span><br><span class="line">                    idx++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 按提交时间和顺序对申请人进行排序</span></span><br><span class="line">        qsort(people, k, <span class="keyword">sizeof</span>(People), compare_people);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 发放口罩</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; k &amp;&amp; cnt &gt; <span class="number">0</span>; j++) &#123;</span><br><span class="line">            Record *record = find_record(people[j].id);</span><br><span class="line">            <span class="comment">// 检查是否符合发放条件</span></span><br><span class="line">            <span class="keyword">if</span> (record == <span class="literal">NULL</span> || i &gt;= record-&gt;day + p + <span class="number">1</span>) &#123;</span><br><span class="line">                <span class="comment">// 打印领取口罩的人的姓名和身份证号</span></span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;%s %s\n&quot;</span>, people[j].name, people[j].id);</span><br><span class="line">                <span class="keyword">if</span> (record == <span class="literal">NULL</span>) &#123;</span><br><span class="line">                    insert_record(people[j].id, i);</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    record-&gt;day = i;</span><br><span class="line">                &#125;</span><br><span class="line">                cnt--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 输出可能有症状的人的信息，去重</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; idx; j++) &#123;</span><br><span class="line">        Record *record = find_record(maybe[j].id);</span><br><span class="line">        <span class="keyword">if</span> (record == <span class="literal">NULL</span> || record-&gt;day != d + <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="comment">// 打印可能有症状的人的姓名和身份证号</span></span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%s %s\n&quot;</span>, maybe[j].name, maybe[j].id);</span><br><span class="line">            <span class="keyword">if</span> (record == <span class="literal">NULL</span>) &#123;</span><br><span class="line">                insert_record(maybe[j].id, d + <span class="number">1</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                record-&gt;day = d + <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 清空记录，释放内存</span></span><br><span class="line">    clear_records();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>这是我花了钱的，日了狗的</p>
+<p><strong>7-186 前世档案</strong></p>
+<p>分数 20</p>
+<p>作者 陈越</p>
+<p>单位 浙江大学</p>
+<p><img src="http://image.camilleferros.top/前世档案.jpg" alt=""></p>
+<p>网络世界中时常会遇到这类滑稽的算命小程序，实现原理很简单，随便设计几个问题，根据玩家对每个问题的回答选择一条判断树中的路径（如下图所示），结论就是路径终点对应的那个结点。</p>
+<p><img src="http://image.camilleferros.top/20240608214753.png" alt=""></p>
+<p>现在我们把结论从左到右顺序编号，编号从 1 开始。这里假设回答都是简单的“是”或“否”，又假设回答“是”对应向左的路径，回答“否”对应向右的路径。给定玩家的一系列回答，请你返回其得到的结论的编号。</p>
+<h3 id="输入格式：-2"><a href="#输入格式：-2" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入第一行给出两个正整数：<em>N</em>（≤30）为玩家做一次测试要回答的问题数量；<em>M</em>（≤100）为玩家人数。</p>
+<p>随后 <em>M</em> 行，每行顺次给出玩家的 <em>N</em> 个回答。这里用 <code>y</code> 代表“是”，用 <code>n</code> 代表“否”。</p>
+<h3 id="输出格式：-2"><a href="#输出格式：-2" class="headerlink" title="输出格式："></a>输出格式：</h3><p>对每个玩家，在一行中输出其对应的结论的编号。</p>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">3 4</span><br><span class="line">yny</span><br><span class="line">nyy</span><br><span class="line">nyn</span><br><span class="line">yyn</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">2</span><br></pre></td></tr></table></figure>
+<p>大佬的思路<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/dream_aleaf/article/details/127573572">地址</a></p>
+<p>我要使用小黄鸭方法来分析这道题目。首先按照题目要求输入玩家做一次测试要回答的问题数量和玩家人数。然后针对每一个玩家输入其N个回答，显然的是，这些回答构成了一颗二叉树，题目要求输出其对应的结论的编号，也就是二叉树的叶子结点的编号（从左往右依次是1、2、3……）。以某玩家为例，假设他的回答是“yny”，那么可以理解为对应二进制代码010，转换为十进制数是2。由于叶子结点是从1开始编号，所以十进制数需要加1，最终结果是3。</p>
+<h2 id="别人的正确的代码如下："><a href="#别人的正确的代码如下：" class="headerlink" title="别人的正确的代码如下："></a>别人的正确的代码如下：</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// input</span></span><br><span class="line">    <span class="type">int</span> n, m; <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;n, &amp;m);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">0</span>; i&lt;m; i++)&#123;</span><br><span class="line">        <span class="comment">// 读走换行符</span></span><br><span class="line">        getchar();</span><br><span class="line">        <span class="comment">// input + process</span></span><br><span class="line">        <span class="comment">// 叶子结点从1开始编号</span></span><br><span class="line">        <span class="type">int</span> sum = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j=<span class="number">0</span>; j&lt;n; j++)&#123;</span><br><span class="line">            <span class="type">char</span> ch = getchar();</span><br><span class="line">            <span class="keyword">if</span> (ch == <span class="string">&#x27;n&#x27;</span>)</span><br><span class="line">              sum += <span class="built_in">pow</span>(<span class="number">2</span>, n<span class="number">-1</span>-j); <span class="comment">// 计数</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// output</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, sum);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/C/" rel="tag"># C++</a>
+              <a href="/tags/PTA/" rel="tag"># PTA</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/04/09/C%E8%AF%AD%E8%A8%80-%E7%BF%81%E6%81%BA-PTA-121-160%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0%E9%A2%98-04/" rel="prev" title="C语言-翁恺-PTA-121-160课后练习题-04">
+                  <i class="fa fa-angle-left"></i> C语言-翁恺-PTA-121-160课后练习题-04
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2024/06/15/hello-world/" rel="next" title="Hello World">
+                  Hello World <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Camille</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
