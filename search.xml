@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Char,String类型类型大小写转换的函数</title>
+    <url>/2020/10/08/C++%20%E9%87%8CChar-String%E7%B1%BB%E5%9E%8B%E7%B1%BB%E5%9E%8B%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<h2 id="Char转换"><a href="#Char转换" class="headerlink" title="Char转换"></a>Char转换</h2><p>可以使用tolower(char c)转换为小写，toupper(char c)转换为大写</p>
+<p>例子如下</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">char</span> a = <span class="string">&#x27;a&#x27;</span>, b = <span class="string">&#x27;A&#x27;</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%c\n&quot;</span>,<span class="built_in">tolower</span>(b));<span class="comment">//把字符转换为小写</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>, <span class="built_in">toupper</span>(a)); <span class="comment">//把字符转换为大写 </span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="String转换"><a href="#String转换" class="headerlink" title="String转换"></a>String转换</h2><p>tolower 就是转换为小写</p>
+<p>toupper就是转换为大写</p>
+<p>例子如下</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    string s = <span class="string">&quot;ABCDEFGabcdefg&quot;</span>;</span><br><span class="line">    string result;</span><br><span class="line">    <span class="built_in">transform</span>(s.<span class="built_in">begin</span>(), s.<span class="built_in">end</span>(), s.<span class="built_in">begin</span>(),::tolower);</span><br><span class="line">    cout &lt;&lt; s &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">transform</span>(s.<span class="built_in">begin</span>(), s.<span class="built_in">end</span>(), s.<span class="built_in">begin</span>(),::toupper);</span><br><span class="line">    cout &lt;&lt; s &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>刷题小技巧</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>Char</tag>
+        <tag>String</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2023 _11 _08</title>
     <url>/2023/11/28/2023-11-08/</url>
     <content><![CDATA[<p>今天也是开心的一天</p>
@@ -30,25 +49,6 @@
       <categories>
         <category>-黄鹏宇</category>
       </categories>
-  </entry>
-  <entry>
-    <title>Char,String类型类型大小写转换的函数</title>
-    <url>/2020/10/08/C++%20%E9%87%8CChar-String%E7%B1%BB%E5%9E%8B%E7%B1%BB%E5%9E%8B%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<h2 id="Char转换"><a href="#Char转换" class="headerlink" title="Char转换"></a>Char转换</h2><p>可以使用tolower(char c)转换为小写，toupper(char c)转换为大写</p>
-<p>例子如下</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">char</span> a = <span class="string">&#x27;a&#x27;</span>, b = <span class="string">&#x27;A&#x27;</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%c\n&quot;</span>,<span class="built_in">tolower</span>(b));<span class="comment">//把字符转换为小写</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>, <span class="built_in">toupper</span>(a)); <span class="comment">//把字符转换为大写 </span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="String转换"><a href="#String转换" class="headerlink" title="String转换"></a>String转换</h2><p>tolower 就是转换为小写</p>
-<p>toupper就是转换为大写</p>
-<p>例子如下</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    string s = <span class="string">&quot;ABCDEFGabcdefg&quot;</span>;</span><br><span class="line">    string result;</span><br><span class="line">    <span class="built_in">transform</span>(s.<span class="built_in">begin</span>(), s.<span class="built_in">end</span>(), s.<span class="built_in">begin</span>(),::tolower);</span><br><span class="line">    cout &lt;&lt; s &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">transform</span>(s.<span class="built_in">begin</span>(), s.<span class="built_in">end</span>(), s.<span class="built_in">begin</span>(),::toupper);</span><br><span class="line">    cout &lt;&lt; s &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>刷题小技巧</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>Char</tag>
-        <tag>String</tag>
-      </tags>
   </entry>
   <entry>
     <title>C语言-翁恺-PTA-121-160课后练习题-04</title>
