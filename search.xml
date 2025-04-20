@@ -51,6 +51,123 @@
       </tags>
   </entry>
   <entry>
+    <title>CS61A自学之前的一些准备</title>
+    <url>/2025/04/20/CS61A%E8%87%AA%E5%AD%A6%E4%B9%8B%E5%89%8D%E7%9A%84%E4%B8%80%E4%BA%9B%E5%87%86%E5%A4%87/</url>
+    <content><![CDATA[<p>CS61A是一门很吊的课</p>
+<p>CS61A的官网</p>
+<p><a href="https://cs61a.org/">https://cs61a.org/</a></p>
+<p>CS61A阅读前的一些准备</p>
+<p>首先电脑要下载一个Chorm浏览器，然后在下载好一个这个软件</p>
+<p><a href="https://immersivetranslate.com/zh-Hans/">https://immersivetranslate.com/zh-Hans/</a> 浏览器下载好这样的一个插件</p>
+<p>然后我们还需要配置这个课程的代码系统</p>
+<p>配置系统的教程如下：</p>
+<p><a href="https://www.bilibili.com/video/BV1nkizY5E45/?spm_id_from=333.1387.search.video_card.click&amp;vd_source=49938650264085cb843c35216c6cec0d">https://www.bilibili.com/video/BV1nkizY5E45/?spm_id_from=333.1387.search.video_card.click&amp;vd_source=49938650264085cb843c35216c6cec0d</a></p>
+<p>配置系统比较的麻烦，所以我还是要给自己在记录一下</p>
+<p>主要就是下载Python 3.9</p>
+<p>Python的官网如下</p>
+<p><a href="https://www.python.org/">https://www.python.org/</a></p>
+<p>然后再</p>
+<p>Downloads-&gt;windows</p>
+<p>下载的时候，注意自己选择一下是Windows3.9</p>
+<p>然后找到PY3.9</p>
+<p>然含安装</p>
+<p>然含测试自己写的文件</p>
+<p>这里的所有的代码</p>
+<p>都要加上 </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">--<span class="built_in">local</span>		</span><br></pre></td></tr></table></figure>
+<p>然后这个是一般的测试代码</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">py ok --<span class="built_in">local</span> -q python-basics -u</span><br></pre></td></tr></table></figure>
+<p>这个就是测试的代码</p>
+<p>接下来是一些我自己整理的辅助网站，</p>
+<p>有些我自己还不清楚怎么使用</p>
+<p><a href="https://code.cs61a.org/">https://code.cs61a.org/</a></p>
+<p><a href="https://www.composingprograms.com/pages/12-elements-of-programming.html">https://www.composingprograms.com/pages/12-elements-of-programming.html</a></p>
+<p>这个是对应的教材，英语好的，可以啃一啃，非常的有用</p>
+<p>还有一点，如何在命令行里使用别的Python文件</p>
+<p>这个是测试的命令行</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">py -m doctest -v Test.py</span><br><span class="line">Py -I ex.py</span><br></pre></td></tr></table></figure>
+<p>这个是单纯的引用的命令行</p>
+]]></content>
+      <categories>
+        <category>CS61A</category>
+      </categories>
+      <tags>
+        <tag>CS61A</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C语言-翁恺-PTA-121-160课后练习题-04</title>
+    <url>/2024/04/09/C%E8%AF%AD%E8%A8%80-%E7%BF%81%E6%81%BA-PTA-121-160%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0%E9%A2%98-04/</url>
+    <content><![CDATA[<h1 id="7-137-Average"><a href="#7-137-Average" class="headerlink" title="7-137 Average"></a><strong>7-137 Average</strong></h1><p>You are going to read a serial of none-negative integers, which ends with a negative number that does not count as one of the data. Your program calculates the average of all the none-negative integers, and prints the average which rounds to two decimal places.</p>
+<p>When there’s no valid data at all, your program prints out:</p>
+<figure class="highlight arcade"><table><tr><td class="code"><pre><span class="line"><span class="built_in">None</span></span><br></pre></td></tr></table></figure>
+<h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>A serial of none-negative integers, ending with a negative number, which is not one of the valide data.</p>
+<h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>A number rounds to two decimal places, which is the average of the serial.</p>
+<p>The printf for this case is:</p>
+<figure class="highlight axapta"><table><tr><td class="code"><pre><span class="line">printf(<span class="string">&quot;%.2f\n&quot;</span>, (<span class="built_in">double</span>)<span class="keyword">sum</span>/<span class="keyword">count</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子"></a>输入例子</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1 2 3 4 5 6 -1</span><br></pre></td></tr></table></figure>
+<h2 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子"></a>输出例子</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">3.50</span><br></pre></td></tr></table></figure>
+<p>代码长度限制</p>
+<p>16 KB</p>
+<p>时间限制</p>
+<p>400 ms</p>
+<p>内存限制</p>
+<h2 id="错误原因"><a href="#错误原因" class="headerlink" title="错误原因"></a>错误原因</h2><p>这题失败的原因，就是纯纯的语言问题了，没别的好说的</p>
+<p>You are going to read a serial of none-negative integers</p>
+<p>猜测翻译 ：<strong>我们要读一串非负数的整数</strong></p>
+<p>机器翻译：<strong>您将读取一个非负整数序列</strong></p>
+<p>which ends with a negative number that does not count as one of the data. </p>
+<p>猜测翻译：<strong>当读取负数的时候，这个将不再记录在数据之中</strong></p>
+<p>机器翻译：</p>
+<p><strong>以负数结尾，不作为数据之一。</strong></p>
+<p>Your program calculates the average of all the none-negative integers</p>
+<p>猜测翻译：<strong>你的程序要计算</strong>，<strong>这一串非数据的平均值</strong></p>
+<p>机器翻译：<strong>你的程序计算所有非负整数的平均数</strong></p>
+<p> and prints the average which rounds to two decimal places.</p>
+<p>猜测翻译：这个我不太会</p>
+<p>机器翻译： <strong>并打印出四舍五入到小数点后两位的平均值</strong>。</p>
+<p>理解了题目之后，就非常非常非常好些了</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;limits.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;float.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> sum = <span class="number">0</span>, count = <span class="number">0</span>, n = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">	<span class="keyword">while</span> (n &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">		sum += n;</span><br><span class="line">		count++;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (sum == <span class="number">0</span>)<span class="built_in">printf</span>(<span class="string">&quot;None&quot;</span>);</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%.2f\n&quot;</span>, (<span class="type">double</span>)sum / count);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="7-139-手机话费"><a href="#7-139-手机话费" class="headerlink" title="7-139 手机话费"></a><strong>7-139 手机话费</strong></h1><p>小明的手机每天消费1元，每消费K元就可以获赠1元，一开始小明有M元，问最多可以用多少天？</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>每个测试实例包括2个整数M，K（2&lt;=k&lt;=M&lt;=1000)。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>对于每个测试实例输出一个整数，表示M元可以用的天数。</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">2 2</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
+<p>代码长度限制</p>
+<p>16 KB</p>
+<p>时间限制</p>
+<p>400 ms</p>
+<p>内存限制</p>
+<p>64 MB</p>
+<p>栈限制</p>
+<h2 id="错误原因-1"><a href="#错误原因-1" class="headerlink" title="错误原因"></a>错误原因</h2><p>这个思路有问题</p>
+<p>抄一下别人的思路</p>
+<p>正确代码如下：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> m,k,i=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>,&amp;m,&amp;k);</span><br><span class="line">    <span class="keyword">while</span>(m&gt;<span class="number">0</span>)&#123;</span><br><span class="line">        m--;</span><br><span class="line">        i++;</span><br><span class="line">        <span class="keyword">if</span>(i%k==<span class="number">0</span>)m++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,i);</span><br><span class="line">   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="7-144-藏头诗"><a href="#7-144-藏头诗" class="headerlink" title="7-144 藏头诗"></a><strong>7-144 藏头诗</strong></h1><p>本题要求编写一个解密藏头诗的程序。</p>
+<p><em>注：在 2022 年 7 月 14 日 16 点 50 分以后，该题数据修改为 UTF-8 编码。</em></p>
+<h3 id="输入格式：-1"><a href="#输入格式：-1" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入为一首中文藏头诗，一共四句，每句一行。注意：一个汉字占三个字节。</p>
+<h3 id="输出格式：-1"><a href="#输出格式：-1" class="headerlink" title="输出格式："></a>输出格式：</h3><p>取出每句的第一个汉字并连接在一起形成一个字符串并输出。同时在末尾输入一个换行符。</p>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">一叶轻舟向东流</span><br><span class="line">帆稍轻握杨柳手</span><br><span class="line">风纤碧波微起舞</span><br><span class="line">顺水任从雅客流</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">一帆风顺</span><br></pre></td></tr></table></figure>
+<p>代码长度限制</p>
+<p>16 KB</p>
+<p>时间限制</p>
+<p>400 ms</p>
+<p>内存限制</p>
+<h2 id="错误原因-2"><a href="#错误原因-2" class="headerlink" title="错误原因"></a>错误原因</h2><p>不理解中文字符的占比，不理解如何输出输出</p>
+<h2 id="正确代码"><a href="#正确代码" class="headerlink" title="正确代码"></a>正确代码</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">char</span> c[<span class="number">100</span>][<span class="number">3</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">4</span>; ++i) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>, c);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%c%c%c&quot;</span>, c[<span class="number">0</span>][<span class="number">0</span>], c[<span class="number">0</span>][<span class="number">1</span>], c[<span class="number">0</span>][<span class="number">2</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>C</category>
+        <category>PTA</category>
+      </categories>
+      <tags>
+        <tag>C</tag>
+        <tag>PTA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C语言-翁恺-PTA-01-40课后练习题-01</title>
     <url>/2024/03/30/C%E8%AF%AD%E8%A8%80-%E7%BF%81%E6%81%BA-PTA-01-40%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0%E9%A2%98-01/</url>
     <content><![CDATA[<p>  也是真的想吐槽，这个B练习题，网上一搜代码都是一样的，我是垃圾，不会写，所以上网抄别人的思路，不是，你们这些会写的，怎么思路都一摸一样啊。</p>
@@ -159,81 +276,9 @@ y<\frac{98*f}{199}</script><p>f的最大值，是100（无法取到），一算�
         <category>C</category>
       </categories>
       <tags>
-        <tag>PTA</tag>
         <tag>C</tag>
+        <tag>PTA</tag>
         <tag>中M24春C&amp;Java入门</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C语言-翁恺-PTA-121-160课后练习题-04</title>
-    <url>/2024/04/09/C%E8%AF%AD%E8%A8%80-%E7%BF%81%E6%81%BA-PTA-121-160%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0%E9%A2%98-04/</url>
-    <content><![CDATA[<h1 id="7-137-Average"><a href="#7-137-Average" class="headerlink" title="7-137 Average"></a><strong>7-137 Average</strong></h1><p>You are going to read a serial of none-negative integers, which ends with a negative number that does not count as one of the data. Your program calculates the average of all the none-negative integers, and prints the average which rounds to two decimal places.</p>
-<p>When there’s no valid data at all, your program prints out:</p>
-<figure class="highlight arcade"><table><tr><td class="code"><pre><span class="line"><span class="built_in">None</span></span><br></pre></td></tr></table></figure>
-<h2 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h2><p>A serial of none-negative integers, ending with a negative number, which is not one of the valide data.</p>
-<h2 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h2><p>A number rounds to two decimal places, which is the average of the serial.</p>
-<p>The printf for this case is:</p>
-<figure class="highlight axapta"><table><tr><td class="code"><pre><span class="line">printf(<span class="string">&quot;%.2f\n&quot;</span>, (<span class="built_in">double</span>)<span class="keyword">sum</span>/<span class="keyword">count</span>);</span><br></pre></td></tr></table></figure>
-<h2 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子"></a>输入例子</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1 2 3 4 5 6 -1</span><br></pre></td></tr></table></figure>
-<h2 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子"></a>输出例子</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">3.50</span><br></pre></td></tr></table></figure>
-<p>代码长度限制</p>
-<p>16 KB</p>
-<p>时间限制</p>
-<p>400 ms</p>
-<p>内存限制</p>
-<h2 id="错误原因"><a href="#错误原因" class="headerlink" title="错误原因"></a>错误原因</h2><p>这题失败的原因，就是纯纯的语言问题了，没别的好说的</p>
-<p>You are going to read a serial of none-negative integers</p>
-<p>猜测翻译 ：<strong>我们要读一串非负数的整数</strong></p>
-<p>机器翻译：<strong>您将读取一个非负整数序列</strong></p>
-<p>which ends with a negative number that does not count as one of the data. </p>
-<p>猜测翻译：<strong>当读取负数的时候，这个将不再记录在数据之中</strong></p>
-<p>机器翻译：</p>
-<p><strong>以负数结尾，不作为数据之一。</strong></p>
-<p>Your program calculates the average of all the none-negative integers</p>
-<p>猜测翻译：<strong>你的程序要计算</strong>，<strong>这一串非数据的平均值</strong></p>
-<p>机器翻译：<strong>你的程序计算所有非负整数的平均数</strong></p>
-<p> and prints the average which rounds to two decimal places.</p>
-<p>猜测翻译：这个我不太会</p>
-<p>机器翻译： <strong>并打印出四舍五入到小数点后两位的平均值</strong>。</p>
-<p>理解了题目之后，就非常非常非常好些了</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;limits.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;float.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> sum = <span class="number">0</span>, count = <span class="number">0</span>, n = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">	<span class="keyword">while</span> (n &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">		sum += n;</span><br><span class="line">		count++;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (sum == <span class="number">0</span>)<span class="built_in">printf</span>(<span class="string">&quot;None&quot;</span>);</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%.2f\n&quot;</span>, (<span class="type">double</span>)sum / count);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h1 id="7-139-手机话费"><a href="#7-139-手机话费" class="headerlink" title="7-139 手机话费"></a><strong>7-139 手机话费</strong></h1><p>小明的手机每天消费1元，每消费K元就可以获赠1元，一开始小明有M元，问最多可以用多少天？</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>每个测试实例包括2个整数M，K（2&lt;=k&lt;=M&lt;=1000)。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>对于每个测试实例输出一个整数，表示M元可以用的天数。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">2 2</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
-<p>代码长度限制</p>
-<p>16 KB</p>
-<p>时间限制</p>
-<p>400 ms</p>
-<p>内存限制</p>
-<p>64 MB</p>
-<p>栈限制</p>
-<h2 id="错误原因-1"><a href="#错误原因-1" class="headerlink" title="错误原因"></a>错误原因</h2><p>这个思路有问题</p>
-<p>抄一下别人的思路</p>
-<p>正确代码如下：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> m,k,i=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>,&amp;m,&amp;k);</span><br><span class="line">    <span class="keyword">while</span>(m&gt;<span class="number">0</span>)&#123;</span><br><span class="line">        m--;</span><br><span class="line">        i++;</span><br><span class="line">        <span class="keyword">if</span>(i%k==<span class="number">0</span>)m++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,i);</span><br><span class="line">   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="7-144-藏头诗"><a href="#7-144-藏头诗" class="headerlink" title="7-144 藏头诗"></a><strong>7-144 藏头诗</strong></h1><p>本题要求编写一个解密藏头诗的程序。</p>
-<p><em>注：在 2022 年 7 月 14 日 16 点 50 分以后，该题数据修改为 UTF-8 编码。</em></p>
-<h3 id="输入格式：-1"><a href="#输入格式：-1" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入为一首中文藏头诗，一共四句，每句一行。注意：一个汉字占三个字节。</p>
-<h3 id="输出格式：-1"><a href="#输出格式：-1" class="headerlink" title="输出格式："></a>输出格式：</h3><p>取出每句的第一个汉字并连接在一起形成一个字符串并输出。同时在末尾输入一个换行符。</p>
-<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">一叶轻舟向东流</span><br><span class="line">帆稍轻握杨柳手</span><br><span class="line">风纤碧波微起舞</span><br><span class="line">顺水任从雅客流</span><br></pre></td></tr></table></figure>
-<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">一帆风顺</span><br></pre></td></tr></table></figure>
-<p>代码长度限制</p>
-<p>16 KB</p>
-<p>时间限制</p>
-<p>400 ms</p>
-<p>内存限制</p>
-<h2 id="错误原因-2"><a href="#错误原因-2" class="headerlink" title="错误原因"></a>错误原因</h2><p>不理解中文字符的占比，不理解如何输出输出</p>
-<h2 id="正确代码"><a href="#正确代码" class="headerlink" title="正确代码"></a>正确代码</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">char</span> c[<span class="number">100</span>][<span class="number">3</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">4</span>; ++i) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>, c);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%c%c%c&quot;</span>, c[<span class="number">0</span>][<span class="number">0</span>], c[<span class="number">0</span>][<span class="number">1</span>], c[<span class="number">0</span>][<span class="number">2</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>C</category>
-        <category>PTA</category>
-      </categories>
-      <tags>
-        <tag>PTA</tag>
-        <tag>C</tag>
       </tags>
   </entry>
   <entry>
@@ -331,151 +376,6 @@ y<\frac{98*f}{199}</script><p>f的最大值，是100（无法取到），一算�
       <tags>
         <tag>C++</tag>
         <tag>PTA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>程序设计入门——C语言</title>
-    <url>/2020/10/08/C%E8%AF%AD%E8%A8%80%E7%BD%91%E8%AF%BE%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="程序设计入门——C语言"><a href="#程序设计入门——C语言" class="headerlink" title="程序设计入门——C语言"></a>程序设计入门——C语言</h1><p>第一周 程序设计与C语言</p>
-<p> 程序的执行</p>
-<p>解释：借助一个程序，那个程序能试图理解你的程序，然后按照你的要求执行</p>
-<p>编译：借助一个程序，就像一个翻译，把你的程序翻译成计算机真正能懂的语言———机器语言——写的程序，然后，这个机器语言写的程序就能执行了</p>
-<p>一：语言本无编译/解释之分</p>
-<p>二：常用的执行方式而已</p>
-<p>三：解释语言有特殊的计算能力</p>
-<p>四：编译型语言有确定的运算性能</p>
-<p>现代的编程语言在语法上差异很小，几乎都是C-Like语言</p>
-<p>语言的能力/适用领域主要是由</p>
-<p>库</p>
-<p>传统所决定的</p>
-<h1 id="C语言的发展"><a href="#C语言的发展" class="headerlink" title="C语言的发展"></a>C语言的发展</h1><p>1989年ANSI发布了一个标准-ANSI-C</p>
-<p>1990年ISO接受了ANSI的标准-C89</p>
-<p>C的标桩在1995年和1999年两次更新-C95和C99</p>
-<h1 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h1><p>一个表达式是一系列运算符和算子的组合，用来计算一个值</p>
-<h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><h2 id="运算符-1"><a href="#运算符-1" class="headerlink" title="运算符"></a>运算符</h2><p>（operator)是指进行运算的动作，比如加法运算符”+”，减肥运算符“-”</p>
-<h2 id="算子"><a href="#算子" class="headerlink" title="算子"></a>算子</h2><p>算子，是指参与运算的值，这个值可能是常数，也可能是变量，还可能是一个方法的返回值</p>
-<p>举例：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">a=b+c</span><br></pre></td></tr></table></figure>
-<p>这里面的a,b,c,就是算子，=号和+号就是运算符</p>
-<p>这个运算符也是有一个优先级的</p>
-<p>下面有一张，运算符的优先级</p>
-<p>我也会写一下相对应的代码公式</p>
-<p>C语言常见运算符优先级</p>
-<p>这里a都等于2，b都等于3</p>
-<p>测试代码如下：</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>优先级</th>
-<th>运算符</th>
-<th>运算</th>
-<th>结合关系</th>
-<th>举例</th>
-<th>结果</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>+</td>
-<td>单目不变</td>
-<td>自右向左</td>
-<td>a*+b</td>
-<td>6</td>
-</tr>
-<tr>
-<td>-9</td>
-<td>-</td>
-<td>单目取负</td>
-<td>自右向左</td>
-<td>a*-b</td>
-<td>-6</td>
-</tr>
-<tr>
-<td>2</td>
-<td>*</td>
-<td>乘</td>
-<td>自左向右</td>
-<td>a*b</td>
-<td>6</td>
-</tr>
-<tr>
-<td>2</td>
-<td>/</td>
-<td>除</td>
-<td>自左向右</td>
-<td>a/b</td>
-<td>0</td>
-</tr>
-<tr>
-<td>2</td>
-<td>%</td>
-<td>取余</td>
-<td>自左向右</td>
-<td>a%b</td>
-<td>2</td>
-</tr>
-<tr>
-<td>3</td>
-<td>+</td>
-<td>加</td>
-<td>自左向右</td>
-<td>a+b</td>
-<td>5</td>
-</tr>
-<tr>
-<td>3</td>
-<td>-</td>
-<td>减</td>
-<td>自左向右</td>
-<td>a-b</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>4</td>
-<td>=</td>
-<td>赋值</td>
-<td>自右向左</td>
-<td>a=b</td>
-<td>3</td>
-</tr>
-</tbody>
-</table>
-</div>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span> &#123;</span><br><span class="line">	<span class="type">int</span> a = <span class="number">2</span>, b = <span class="number">3</span>;</span><br><span class="line">	<span class="type">int</span> c = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;a * +b =%d\n&quot;</span>, a * +b);<span class="comment">//a*+b=a*(+b)=a*b</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;a * -b =%d\n&quot;</span>, a * -b);<span class="comment">//a*-b=a*(-b)</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;a * b =%d\n&quot;</span>, a * b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;a / b =%d\n&quot;</span>, a / b);	</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;a % b =%d\n&quot;</span>, a % b);	</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot; a + b =%d\n&quot;</span>, a + b);	</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;a - b =%d\n&quot;</span>, a - b);	</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;a=b =%d\n&quot;</span>, a=b);	<span class="comment">//a=b,a=3</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>赋值也是一个运算符，这个和其他的语言不同</p>
-<h2 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h2><p>赋值也是运算，也有结果</p>
-<p>a=6的结果是a被赋予的值，也就是6</p>
-<p>a=b=6-&gt;a=(b=6)</p>
-<h1 id="Switch"><a href="#Switch" class="headerlink" title="Switch"></a>Switch</h1><p>Switch里面的Case</p>
-<p>有一个很重要的点，Case只是在一开始的时候，起到一个判断的作用，然后就会一直默认的执行下去，所以break是Switch的一个非常好用的小伙伴</p>
-<p>举一个例子：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span> i=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;i);</span><br><span class="line">    <span class="keyword">switch</span> (i) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;我是case1\n&quot;</span>);</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;我是case2\n&quot;</span>);</span><br><span class="line">    <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;我是case3\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>如果你输入1的画</p>
-<p>就是输出</p>
-<figure class="highlight ceylon"><table><tr><td class="code"><pre><span class="line">我是<span class="keyword">case</span><span class="number">1</span></span><br><span class="line">我是<span class="keyword">case</span><span class="number">2</span></span><br><span class="line">我是<span class="keyword">case</span><span class="number">3</span></span><br></pre></td></tr></table></figure>
-<p>所以就要加一个Break，然后代码如下：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> i=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;i);</span><br><span class="line">    <span class="keyword">switch</span> (i) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;我是case1\n&quot;</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;我是case2\n&quot;</span>);</span><br><span class="line">    <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;我是case3\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>结果如下：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line">我是case1</span><br></pre></td></tr></table></figure>
-<p>一句话总结就是，Switch是没有自己跳出的，Switch，只能进行第一次的跳转，然后就是默认语句执行。如果没有加Break的话，就会这样</p>
-<p>还有Goto语句，就是跳出代码的，这个一般不适用，所以不继续说</p>
-<h1 id="Goto"><a href="#Goto" class="headerlink" title="Goto"></a>Goto</h1><p>数组</p>
-<p>是一种容器，特点是：</p>
-<p>1 其中所有的元素都具有相同的数据类型</p>
-<p>2 一旦创建，不能改变大小</p>
-<p>3 数组中的元素在内存中是连续一次排列的</p>
-<p>数组的下标是从0开始编写</p>
-<h1 id="不要复用代码，代码复用是质量不好的表现"><a href="#不要复用代码，代码复用是质量不好的表现" class="headerlink" title="不要复用代码，代码复用是质量不好的表现"></a>不要复用代码，代码复用是质量不好的表现</h1><p>C语言的函数最好不要有太多可以返回值的地方</p>
-]]></content>
-      <categories>
-        <category>C</category>
-        <category>Mooc</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>C</tag>
       </tags>
   </entry>
   <entry>
@@ -623,7 +523,178 @@ y<\frac{98*f}{199}</script><p>f的最大值，是100（无法取到），一算�
         <category>C</category>
       </categories>
       <tags>
+        <tag>C</tag>
         <tag>PTA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LeetCode-1-Two Sum</title>
+    <url>/2024/12/26/LeetCode-1-Two-Sum/</url>
+    <content><![CDATA[<p>Given an array of integers <code>nums</code> and an integer <code>target</code>, return <em>indices of the two numbers such that they add up to <code>target</code></em>.</p>
+<p>You may assume that each input would have <strong><em>exactly\</em> one solution</strong>, and you may not use the <em>same</em> element twice.</p>
+<p>You can return the answer in any order.</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight prolog"><table><tr><td class="code"><pre><span class="line"><span class="symbol">Input</span>: nums = [<span class="number">2</span>,<span class="number">7</span>,<span class="number">11</span>,<span class="number">15</span>], target = <span class="number">9</span></span><br><span class="line"><span class="symbol">Output</span>: [<span class="number">0</span>,<span class="number">1</span>]</span><br><span class="line"><span class="symbol">Explanation</span>: <span class="symbol">Because</span> nums[<span class="number">0</span>] + nums[<span class="number">1</span>] == <span class="number">9</span>, we return [<span class="number">0</span>, <span class="number">1</span>].</span><br></pre></td></tr></table></figure>
+<p><strong>Example 2:</strong></p>
+<figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line"><span class="symbol">Input:</span> nums = [<span class="number">3</span>,<span class="number">2</span>,<span class="number">4</span>], target = <span class="number">6</span></span><br><span class="line"><span class="symbol">Output:</span> [<span class="number">1</span>,<span class="number">2</span>]</span><br></pre></td></tr></table></figure>
+<p><strong>Example 3:</strong></p>
+<figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line"><span class="symbol">Input:</span> nums = [<span class="number">3</span>,<span class="number">3</span>], target = <span class="number">6</span></span><br><span class="line"><span class="symbol">Output:</span> [<span class="number">0</span>,<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li><code>2 &lt;= nums.length &lt;= 104</code></li>
+<li><code>-109 &lt;= nums[i] &lt;= 109</code></li>
+<li><code>-109 &lt;= target &lt;= 109</code></li>
+<li><strong>Only one valid answer exists.</strong></li>
+</ul>
+<p><strong>Follow-up:</strong> Can you come up with an algorithm that is less than <code>O(n2)</code> time complexity?</p>
+<p>自己写的代码：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">twoSum</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> target)</span> </span>&#123;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; result;</span><br><span class="line">        <span class="type">int</span> e = nums.<span class="built_in">size</span>()<span class="number">-1</span>;</span><br><span class="line">        <span class="type">int</span> flag = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt;= e; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = i+<span class="number">1</span>; j &lt;= e; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (nums[i] + nums[j] == target) &#123;</span><br><span class="line">                    result.<span class="built_in">push_back</span>(i);</span><br><span class="line">                    result.<span class="built_in">push_back</span>(j);</span><br><span class="line">                    flag = <span class="number">1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (flag)    <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>别的大佬写的代码</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">twoSum</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> target)</span> </span>&#123;</span><br><span class="line">        map&lt;<span class="type">int</span>,<span class="type">int</span>&gt; a;<span class="comment">//提供一对一的hash</span></span><br><span class="line">        <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">b</span><span class="params">(<span class="number">2</span>,<span class="number">-1</span>)</span></span>;<span class="comment">//用来承载结果，初始化一个大小为2，值为-1的容器b</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;nums.<span class="built_in">size</span>();i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(a.<span class="built_in">count</span>(target-nums[i])&gt;<span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                b[<span class="number">0</span>]=a[target-nums[i]];</span><br><span class="line">                b[<span class="number">1</span>]=i;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            a[nums[i]]=i;<span class="comment">//反过来放入map中，用来获取结果下标</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> b;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">作者：陈乐乐</span><br><span class="line">链接：https:<span class="comment">//leetcode.cn/problems/two-sum/solutions/4361/liang-shu-zhi-he-by-gpe3dbjds1/</span></span><br><span class="line">来源：力扣（LeetCode）</span><br><span class="line">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
+    <title>程序设计入门——C语言</title>
+    <url>/2020/10/08/C%E8%AF%AD%E8%A8%80%E7%BD%91%E8%AF%BE%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="程序设计入门——C语言"><a href="#程序设计入门——C语言" class="headerlink" title="程序设计入门——C语言"></a>程序设计入门——C语言</h1><p>第一周 程序设计与C语言</p>
+<p> 程序的执行</p>
+<p>解释：借助一个程序，那个程序能试图理解你的程序，然后按照你的要求执行</p>
+<p>编译：借助一个程序，就像一个翻译，把你的程序翻译成计算机真正能懂的语言———机器语言——写的程序，然后，这个机器语言写的程序就能执行了</p>
+<p>一：语言本无编译/解释之分</p>
+<p>二：常用的执行方式而已</p>
+<p>三：解释语言有特殊的计算能力</p>
+<p>四：编译型语言有确定的运算性能</p>
+<p>现代的编程语言在语法上差异很小，几乎都是C-Like语言</p>
+<p>语言的能力/适用领域主要是由</p>
+<p>库</p>
+<p>传统所决定的</p>
+<h1 id="C语言的发展"><a href="#C语言的发展" class="headerlink" title="C语言的发展"></a>C语言的发展</h1><p>1989年ANSI发布了一个标准-ANSI-C</p>
+<p>1990年ISO接受了ANSI的标准-C89</p>
+<p>C的标桩在1995年和1999年两次更新-C95和C99</p>
+<h1 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h1><p>一个表达式是一系列运算符和算子的组合，用来计算一个值</p>
+<h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><h2 id="运算符-1"><a href="#运算符-1" class="headerlink" title="运算符"></a>运算符</h2><p>（operator)是指进行运算的动作，比如加法运算符”+”，减肥运算符“-”</p>
+<h2 id="算子"><a href="#算子" class="headerlink" title="算子"></a>算子</h2><p>算子，是指参与运算的值，这个值可能是常数，也可能是变量，还可能是一个方法的返回值</p>
+<p>举例：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">a=b+c</span><br></pre></td></tr></table></figure>
+<p>这里面的a,b,c,就是算子，=号和+号就是运算符</p>
+<p>这个运算符也是有一个优先级的</p>
+<p>下面有一张，运算符的优先级</p>
+<p>我也会写一下相对应的代码公式</p>
+<p>C语言常见运算符优先级</p>
+<p>这里a都等于2，b都等于3</p>
+<p>测试代码如下：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>优先级</th>
+<th>运算符</th>
+<th>运算</th>
+<th>结合关系</th>
+<th>举例</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>+</td>
+<td>单目不变</td>
+<td>自右向左</td>
+<td>a*+b</td>
+<td>6</td>
+</tr>
+<tr>
+<td>-9</td>
+<td>-</td>
+<td>单目取负</td>
+<td>自右向左</td>
+<td>a*-b</td>
+<td>-6</td>
+</tr>
+<tr>
+<td>2</td>
+<td>*</td>
+<td>乘</td>
+<td>自左向右</td>
+<td>a*b</td>
+<td>6</td>
+</tr>
+<tr>
+<td>2</td>
+<td>/</td>
+<td>除</td>
+<td>自左向右</td>
+<td>a/b</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>%</td>
+<td>取余</td>
+<td>自左向右</td>
+<td>a%b</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>+</td>
+<td>加</td>
+<td>自左向右</td>
+<td>a+b</td>
+<td>5</td>
+</tr>
+<tr>
+<td>3</td>
+<td>-</td>
+<td>减</td>
+<td>自左向右</td>
+<td>a-b</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>=</td>
+<td>赋值</td>
+<td>自右向左</td>
+<td>a=b</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span> &#123;</span><br><span class="line">	<span class="type">int</span> a = <span class="number">2</span>, b = <span class="number">3</span>;</span><br><span class="line">	<span class="type">int</span> c = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;a * +b =%d\n&quot;</span>, a * +b);<span class="comment">//a*+b=a*(+b)=a*b</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;a * -b =%d\n&quot;</span>, a * -b);<span class="comment">//a*-b=a*(-b)</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;a * b =%d\n&quot;</span>, a * b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;a / b =%d\n&quot;</span>, a / b);	</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;a % b =%d\n&quot;</span>, a % b);	</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot; a + b =%d\n&quot;</span>, a + b);	</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;a - b =%d\n&quot;</span>, a - b);	</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;a=b =%d\n&quot;</span>, a=b);	<span class="comment">//a=b,a=3</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>赋值也是一个运算符，这个和其他的语言不同</p>
+<h2 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h2><p>赋值也是运算，也有结果</p>
+<p>a=6的结果是a被赋予的值，也就是6</p>
+<p>a=b=6-&gt;a=(b=6)</p>
+<h1 id="Switch"><a href="#Switch" class="headerlink" title="Switch"></a>Switch</h1><p>Switch里面的Case</p>
+<p>有一个很重要的点，Case只是在一开始的时候，起到一个判断的作用，然后就会一直默认的执行下去，所以break是Switch的一个非常好用的小伙伴</p>
+<p>举一个例子：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span> i=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;i);</span><br><span class="line">    <span class="keyword">switch</span> (i) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;我是case1\n&quot;</span>);</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;我是case2\n&quot;</span>);</span><br><span class="line">    <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;我是case3\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果你输入1的画</p>
+<p>就是输出</p>
+<figure class="highlight ceylon"><table><tr><td class="code"><pre><span class="line">我是<span class="keyword">case</span><span class="number">1</span></span><br><span class="line">我是<span class="keyword">case</span><span class="number">2</span></span><br><span class="line">我是<span class="keyword">case</span><span class="number">3</span></span><br></pre></td></tr></table></figure>
+<p>所以就要加一个Break，然后代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> i=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;i);</span><br><span class="line">    <span class="keyword">switch</span> (i) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;我是case1\n&quot;</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;我是case2\n&quot;</span>);</span><br><span class="line">    <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;我是case3\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>结果如下：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line">我是case1</span><br></pre></td></tr></table></figure>
+<p>一句话总结就是，Switch是没有自己跳出的，Switch，只能进行第一次的跳转，然后就是默认语句执行。如果没有加Break的话，就会这样</p>
+<p>还有Goto语句，就是跳出代码的，这个一般不适用，所以不继续说</p>
+<h1 id="Goto"><a href="#Goto" class="headerlink" title="Goto"></a>Goto</h1><p>数组</p>
+<p>是一种容器，特点是：</p>
+<p>1 其中所有的元素都具有相同的数据类型</p>
+<p>2 一旦创建，不能改变大小</p>
+<p>3 数组中的元素在内存中是连续一次排列的</p>
+<p>数组的下标是从0开始编写</p>
+<h1 id="不要复用代码，代码复用是质量不好的表现"><a href="#不要复用代码，代码复用是质量不好的表现" class="headerlink" title="不要复用代码，代码复用是质量不好的表现"></a>不要复用代码，代码复用是质量不好的表现</h1><p>C语言的函数最好不要有太多可以返回值的地方</p>
+]]></content>
+      <categories>
+        <category>C</category>
+        <category>Mooc</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
         <tag>C</tag>
       </tags>
   </entry>
@@ -713,22 +784,29 @@ y<\frac{98*f}{199}</script><p>f的最大值，是100（无法取到），一算�
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2024/12/01/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    <title>LeetCode-9-Palindrome Number</title>
+    <url>/2024/12/26/LeetCode-9-Palindrome-Number/</url>
+    <content><![CDATA[<p>   题目原文</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight vbnet"><table><tr><td class="code"><pre><span class="line"><span class="symbol">Input:</span> x = <span class="number">121</span></span><br><span class="line"><span class="symbol">Output:</span> <span class="literal">true</span></span><br><span class="line"><span class="symbol">Explanation:</span> <span class="number">121</span> reads <span class="keyword">as</span> <span class="number">121</span> <span class="keyword">from</span> left <span class="keyword">to</span> right <span class="built_in">and</span> <span class="keyword">from</span> right <span class="keyword">to</span> left.</span><br></pre></td></tr></table></figure>
+<p><strong>Example 2:</strong></p>
+<figure class="highlight livecodeserver"><table><tr><td class="code"><pre><span class="line">Input: x = <span class="number">-121</span></span><br><span class="line">Output: <span class="literal">false</span></span><br><span class="line">Explanation: From left <span class="built_in">to</span> <span class="literal">right</span>, <span class="keyword">it</span> reads <span class="number">-121.</span> From <span class="literal">right</span> <span class="built_in">to</span> left, <span class="keyword">it</span> becomes <span class="number">121</span>-. Therefore <span class="keyword">it</span> is <span class="keyword">not</span> <span class="keyword">a</span> palindrome.</span><br></pre></td></tr></table></figure>
+<p><strong>Example 3:</strong></p>
+<figure class="highlight vbnet"><table><tr><td class="code"><pre><span class="line"><span class="symbol">Input:</span> x = <span class="number">10</span></span><br><span class="line"><span class="symbol">Output:</span> <span class="literal">false</span></span><br><span class="line"><span class="symbol">Explanation:</span> Reads <span class="number">01</span> <span class="keyword">from</span> right <span class="keyword">to</span> left. Therefore it <span class="built_in">is</span> <span class="built_in">not</span> a palindrome.</span><br></pre></td></tr></table></figure>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li><code>-231 &lt;= x &lt;= 231 - 1</code></li>
+</ul>
+<p><strong>Follow up:</strong> Could you solve it without converting the integer to a string?</p>
+<p>我的代码：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="symbol">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">bool</span> isPalindrome(<span class="built_in">int</span> x) &#123;</span><br><span class="line">        <span class="keyword">if</span> (x == <span class="number">0</span>)    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (x &lt; <span class="number">0</span>)    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="built_in">int</span> z = x;</span><br><span class="line">            <span class="built_in">string</span> t ;</span><br><span class="line">            <span class="keyword">while</span> (x) &#123;</span><br><span class="line">                <span class="built_in">int</span> p = x % <span class="number">10</span>;</span><br><span class="line">                x = x / <span class="number">10</span>;</span><br><span class="line">                t = t + to_string(p);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (to_string(z) == t) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>大佬的代码：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">isPalindrome</span><span class="params">(<span class="type">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 特殊情况：</span></span><br><span class="line">        <span class="comment">// 如上所述，当 x &lt; 0 时，x 不是回文数。</span></span><br><span class="line">        <span class="comment">// 同样地，如果数字的最后一位是 0，为了使该数字为回文，</span></span><br><span class="line">        <span class="comment">// 则其第一位数字也应该是 0</span></span><br><span class="line">        <span class="comment">// 只有 0 满足这一属性</span></span><br><span class="line">        <span class="keyword">if</span> (x &lt; <span class="number">0</span> || (x % <span class="number">10</span> == <span class="number">0</span> &amp;&amp; x != <span class="number">0</span>)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> revertedNumber = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (x &gt; revertedNumber) &#123;</span><br><span class="line">            revertedNumber = revertedNumber * <span class="number">10</span> + x % <span class="number">10</span>;</span><br><span class="line">            x /= <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 当数字长度为奇数时，我们可以通过 revertedNumber/10 去除处于中位的数字。</span></span><br><span class="line">        <span class="comment">// 例如，当输入为 12321 时，在 while 循环的末尾我们可以得到 x = 12，revertedNumber = 123，</span></span><br><span class="line">        <span class="comment">// 由于处于中位的数字不影响回文（它总是与自己相等），所以我们可以简单地将其去除。</span></span><br><span class="line">        <span class="keyword">return</span> x == revertedNumber || x == revertedNumber / <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">作者：御三五 🥇</span><br><span class="line">链接：https:<span class="comment">//leetcode.cn/problems/palindrome-number/solutions/657549/tu-jie-guan-fang-tui-jian-ti-jie-hui-wen-pqvq/</span></span><br><span class="line">来源：力扣（LeetCode）</span><br><span class="line">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure>
 ]]></content>
   </entry>
   <entry>
     <title></title>
-    <url>/2024/12/01/%E4%B8%ADM24%E6%98%A5C&amp;Java%E5%85%A5%E9%97%A8/</url>
+    <url>/2025/04/19/%E4%B8%ADM24%E6%98%A5C&amp;Java%E5%85%A5%E9%97%A8/</url>
     <content><![CDATA[<h1 id="7-1-重要的话说三遍"><a href="#7-1-重要的话说三遍" class="headerlink" title="7-1 重要的话说三遍"></a><strong>7-1 重要的话说三遍</strong></h1><p>分数 5</p>
 <p>作者 陈越</p>
 <p>单位 浙江大学</p>
