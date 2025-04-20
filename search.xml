@@ -4071,4 +4071,283 @@ y<\frac{98*f}{199}</script><p>f的最大值，是100（无法取到），一算�
 <h2 id="代码如下：-203"><a href="#代码如下：-203" class="headerlink" title="代码如下："></a>代码如下：</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">	<span class="type">int</span> line[<span class="number">100005</span>], fox[<span class="number">100005</span>];</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100005</span>; i++) &#123;</span><br><span class="line">		line[i] = <span class="number">0</span>;</span><br><span class="line">		fox[i] = <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="type">int</span> n = <span class="number">0</span>, m = <span class="number">0</span>, q = <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> a = <span class="number">0</span>, b = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d&quot;</span>, &amp;n, &amp;m, &amp;q);</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= q; ++i) &#123;</span><br><span class="line">		<span class="type">int</span> c = <span class="number">0</span>, q = <span class="number">0</span>;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;c, &amp;q);</span><br><span class="line">		<span class="keyword">if</span> (c == <span class="number">0</span> &amp;&amp; line[q] == <span class="number">0</span>) &#123;</span><br><span class="line">			a++;</span><br><span class="line">			line[q] = <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (c == <span class="number">1</span> &amp;&amp; fox[q] == <span class="number">0</span>) &#123;</span><br><span class="line">			b++;</span><br><span class="line">			fox[q] = <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//printf(&quot;a is %d\n&quot;, a);</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, n * m - (a * m + b * n) + a * b);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
   </entry>
+  <entry>
+    <title>CS61A Expressions调用表达式</title>
+    <url>/2025/04/20/CS61A-Expressions%E8%B0%83%E7%94%A8%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
+    <content><![CDATA[<p> 调用表达式</p>
+<p>add                (1+1,             3)</p>
+<p>operator        operand     operand</p>
+<p>operator  操作符  operand 操作数</p>
+<p>operator and operands are also  expressions </p>
+<p>Expressions evaluate to values </p>
+<p>通常，一个表达式是由一个操作符和多个操作数一起构成的</p>
+<p>如果是多个操作数，操作数里本身可以调用表达式，然后根据规则，从左到右一步一步的操作</p>
+<p>这个过程其实是会用到递归的过程，自己调用自己（个人简单的理解）</p>
+<p>举例</p>
+<p>mul(                    add(        4,                 mul(4,6)            ),         add(3,5)        ) </p>
+<p>第一次mul    add(      4,         mul(4,6 ) )            add（3，5）</p>
+<p>一层一层的嵌套</p>
+<p>一层一层的运行</p>
+]]></content>
+      <categories>
+        <category>CS61A</category>
+      </categories>
+      <tags>
+        <tag>CS61A</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Defining Functions定义函数</title>
+    <url>/2025/04/20/Defining-Functions%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<p>这个是最重要的</p>
+<p>python是一个抽象的</p>
+<p>函数定义是一个复杂的抽象过程，函数的功能是非常大</p>
+<p>这个也是非常的难懂的，看的我脑壳痛</p>
+<p>def <name> (<formal parameter>)</p>
+<p>return <return expression></p>
+<p>def 就是python中的一个关键字，name就是这个函数的名字，formal parameters就是函数的形参，可能有多个</p>
+<p>这个是指代传输</p>
+<p>return expression 返回表达式</p>
+<p> <name> (<formal parameter>) 这个就是函数签名</p>
+<p>这个创建的过程就是，1 我们根据def 创建一个函数</p>
+<p>2 然后赋值给中间的内容</p>
+<p>3 我们 将赋予函数的名称绑定到，我们在环境当前框架中创建的新函数</p>
+<p> 我们创建这个函数的时候，并没有执行这个函数</p>
+<p>只有在调用的时候，才会执行这个部分</p>
+<p>这个的概念真的非常的难以理解，我觉得特别的难</p>
+<p>有一个比较难理解的代码</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> operator <span class="keyword">import</span> mul</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">square</span>(<span class="params">square</span>):</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> mul(square,square)</span><br><span class="line"></span><br><span class="line">x=square(-<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure>
+<p>这个代码的我理解是，PY这个环境真的很有意思</p>
+<p>我们创造函数的时候，就只是给函数创造一个壳子</p>
+<p>只有在调用这个函数的时候，才会生成实际的内存</p>
+<p>然后调用的时候，square(square) 括号里的直接被-2给取代了</p>
+<p>就不会发生冲突了</p>
+<p>但是这个命名，我觉得不是很好的方法</p>
+]]></content>
+      <categories>
+        <category>CS61A</category>
+      </categories>
+      <tags>
+        <tag>CS61A</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Enviroment Diagrams 环境图</title>
+    <url>/2025/04/20/Enviroment-Diagrams-%E7%8E%AF%E5%A2%83%E5%9B%BE/</url>
+    <content><![CDATA[<p>这个就是程序的迭代，就是你没走一步，在程序中是怎么运行的</p>
+<p>这个也是非常有趣的一个地方</p>
+<p>你要清楚，这个代码，每一</p>
+<p>一句话总结，就是，需要自己会人工打断点，自己分析这些数据那一步是多少</p>
+<p>而且也说了一个观点（虽然是老生常谈，就是我们的变量名字不要重复）</p>
+]]></content>
+      <categories>
+        <category>CS61A</category>
+      </categories>
+      <tags>
+        <tag>CS61A</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Names Assignment User-Defined Functio名称，赋值，用户定义的函数</title>
+    <url>/2025/04/20/Names-Assignment-User-Defined-Functio%E5%90%8D%E7%A7%B0%EF%BC%8C%E8%B5%8B%E5%80%BC%EF%BC%8C%E7%94%A8%E6%88%B7%E5%AE%9A%E4%B9%89%E7%9A%84%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<p>python 自己是定义了一些比较常用的常数的</p>
+<p>比如说pi</p>
+<p>但是这个需要我们自己引用</p>
+<p>引用格式</p>
+<p>from math import pi</p>
+<p>然后我们就可以在自己的代码里自由的使用pi</p>
+<p>还有就是一些类似函数</p>
+<p>比如说sin</p>
+<p>引用格式</p>
+<figure class="highlight moonscript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> <span class="built_in">math</span> <span class="keyword">import</span> sin</span><br></pre></td></tr></table></figure>
+<p>然后我们就可以在自己的代码里使用sin</p>
+<p>也可以自己定义一个变量</p>
+<p>比如</p>
+<figure class="highlight abnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">radius</span><span class="operator">=</span><span class="number">10</span></span><br></pre></td></tr></table></figure>
+<p>这样就可以在自己的代码里使用radius这个变量</p>
+<p>python里赋值是非常的简单的，比如说，我们可以在一行里给两个不同的变量初始化赋值，代码如下：</p>
+<figure class="highlight arcade"><table><tr><td class="code"><pre><span class="line">from math import <span class="literal">pi</span></span><br><span class="line"></span><br><span class="line">radius=<span class="number">10</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">area</span>, circ = <span class="literal">pi</span> *radius * radius, <span class="number">2</span>*<span class="literal">pi</span>*radius</span><br><span class="line"></span><br><span class="line">print(<span class="built_in">area</span>,circ)</span><br></pre></td></tr></table></figure>
+<p>python 里会有一些自带的函数，比如max，min等</p>
+<p>你可以直接给创建一个函数</p>
+<p>比如</p>
+<p>f=max</p>
+<p>f 就等于这个max函数了</p>
+<p>这两个就是一样的了</p>
+<p>def就是我们可以自己创造的函数</p>
+<p>这个简单的代码如下：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">from</span> operator <span class="keyword">import</span> add,mul  <span class="comment">#this is add,mul is come from operator</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">square</span>(<span class="params">x</span>):                 <span class="comment"># define（定义） function name is suare</span></span><br><span class="line">        <span class="keyword">return</span> mul(x,x)         <span class="comment"># return mul(x,x) </span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>老师留的问题是这个</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">f=<span class="built_in">min</span></span><br><span class="line">f=<span class="built_in">max</span></span><br><span class="line">g,h=<span class="built_in">min</span>,<span class="built_in">max</span></span><br><span class="line"><span class="built_in">max</span>=g</span><br><span class="line"><span class="built_in">max</span>(f(<span class="number">2</span>,g(h,<span class="number">1</span>,<span class="number">5</span>),<span class="number">3</span>),<span class="number">4</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><strong>问最后的答案是什么</strong></p>
+<p><strong>最后的答案是**</strong>3**</p>
+<p><strong>代码如下：</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">f = min </span></span><br><span class="line"><span class="string">f = max </span></span><br><span class="line"><span class="string">g, h = min, max</span></span><br><span class="line"><span class="string">max = g</span></span><br><span class="line"><span class="string">c = h(1,5)</span></span><br><span class="line"><span class="string">print(c)</span></span><br><span class="line"><span class="string">c = g(h(1, 5), 3)</span></span><br><span class="line"><span class="string">print(c)</span></span><br><span class="line"><span class="string">c = f(2, g(h(1, 5),3)), 4</span></span><br><span class="line"><span class="string">print(c)</span></span><br><span class="line"><span class="string">c = max(f(2, g(h(1, 5),3)), 4)</span></span><br><span class="line"><span class="string">print(c)&#x27;</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>CS61A</category>
+      </categories>
+      <tags>
+        <tag>CS61A</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Print and None 输出和无</title>
+    <url>/2025/04/20/Print-and-None-%E8%BE%93%E5%87%BA%E5%92%8C%E6%97%A0/</url>
+    <content><![CDATA[<p>Python，想vsstuido里就是集成</p>
+<p>但是git里也可以写Py，</p>
+<p>Git里写的Python叫做 Python interpreter Python解释器</p>
+<p>下面是运行图</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">内容</th>
+<th style="text-align:center">详情</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>路径</strong></td>
+<td style="text-align:center">MINGW64:/g/File/HPY/CS61A</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>用户及终端</strong></td>
+<td style="text-align:center">15715@SGin MINGW64</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Python版本</strong></td>
+<td style="text-align:center">Python 3.9.11 (tags/v3.9.11:2de452f, Mar 16 2022, AMD64) on win32</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>提示信息</strong></td>
+<td style="text-align:center">Type “help”, “copyright”, “creates” or “license”</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>命令及输出</strong></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&gt;&gt;&gt; -2</code></td>
+<td style="text-align:center">-2</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&gt;&gt;&gt; print(-2)</code></td>
+<td style="text-align:center">-2</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&gt;&gt;&gt; &#39;Day and Day&#39;</code></td>
+<td style="text-align:center">‘Day and Day’</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&gt;&gt;&gt; print(&#39;Day and Day&#39;)</code></td>
+<td style="text-align:center">Day and Day</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&gt;&gt;&gt; None</code></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&gt;&gt;&gt; print(None)</code></td>
+<td style="text-align:center">None</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>界面设计</strong></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">背景颜色</td>
+<td style="text-align:center">黑色</td>
+</tr>
+<tr>
+<td style="text-align:center">文字颜色</td>
+<td style="text-align:center">路径信息为白色，Python版本中括号和标签为彩色</td>
+</tr>
+<tr>
+<td style="text-align:center">命令行排版</td>
+<td style="text-align:center">左侧为输入命令（<code>&gt;&gt;&gt;</code>开头），右侧对齐输出结果</td>
+</tr>
+<tr>
+<td style="text-align:center">分隔符</td>
+<td style="text-align:center">使用<code>---</code>分隔不同部分</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>PY里你输入什么，Py就会直接输出什么</p>
+<p>但是None比较特殊，None本身就表示的是空类型，不代表任何的输出</p>
+<p>Print则是完全的全部打印，这时，不把None所谓一个特殊的空类</p>
+<p>还有一个好玩的点</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th><strong>输入的Python代码</strong></th>
+<th><code>&gt;&gt;&gt; print(print(1), print(2))</code> （紫色字体，位于框内上方）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>执行输出</strong></td>
+<td>1</td>
+</tr>
+<tr>
+<td></td>
+<td>2</td>
+</tr>
+<tr>
+<td></td>
+<td>None None</td>
+</tr>
+<tr>
+<td><strong>背景与边框</strong></td>
+<td>白色背景，长方形边框</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>这个就是好玩的点</p>
+<p>这个可以画一个表达树，先调用pinrt(1),然后输出1</p>
+<p>然后调用print(2)，然后输出2，然后在调用pirnt(None,None)</p>
+<p>因为Print的返回值是None，所以答案是最后的这样</p>
+<p>None注意的三点</p>
+<p>None Indicates that Nothing is Returned</p>
+<p>None 表示没有返回任何内容</p>
+<p>The special value None represents nothing in python </p>
+<p>在Python中，特殊值 None 代表”无”</p>
+<p>A function that does not explicitly return a value will return None</p>
+<p>如果一个函数没有显式地返回值，它将返回 None</p>
+<p>Careful: None is not displayed by the interpreter as the value of an expression</p>
+<p>注意：解释器不会将 None 显示为表达式的值</p>
+<p>Python你只要不给函数返回值，这个函数就是返回None</p>
+<p>而且可以给None起一个别名</p>
+<p>类似</p>
+<p>six=None，是合法的</p>
+<p>six后面就可以起到None的作用</p>
+<p>Pure Funcions 纯函数，没有副作用，只是返回一个具体的值或表达式的函数</p>
+<p>Non-pure Functions 有副作用的函数</p>
+<p>比如</p>
+<p>就是你没有返回值，但是这个函数里面有输出，这样，只要你调用这个函数，就会产生输出</p>
+]]></content>
+      <categories>
+        <category>CS61A</category>
+      </categories>
+      <tags>
+        <tag>CS61A</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HW01  答案</title>
+    <url>/2025/04/20/HW01-%E7%AD%94%E6%A1%88/</url>
+    <content><![CDATA[<p>这个相对来说，还是比较的简单的</p>
+<p>下面是我写的一些代码</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> operator <span class="keyword">import</span> add, sub</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">a_plus_abs_b</span>(<span class="params">a, b</span>):</span><br><span class="line"></span><br><span class="line">  <span class="string">&quot;&quot;&quot;Return a+abs(b), but without calling abs.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  \&gt;&gt;&gt; a_plus_abs_b(2, 3)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  5</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  \&gt;&gt;&gt; a_plus_abs_b(2, -3)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  5</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  \&gt;&gt;&gt; a_plus_abs_b(-1, 4)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  3</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  \&gt;&gt;&gt; a_plus_abs_b(-1, -4)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  3</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  &quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> b &lt; <span class="number">0</span>:</span><br><span class="line"></span><br><span class="line">​    f = add</span><br><span class="line"></span><br><span class="line">​    b=-b</span><br><span class="line"></span><br><span class="line">  <span class="keyword">else</span>:</span><br><span class="line"></span><br><span class="line">​    f = add</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> f(a, b)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">a_plus_abs_b_syntax_check</span>():</span><br><span class="line"></span><br><span class="line">  <span class="string">&quot;&quot;&quot;Check that you didn&#x27;t change the return statement of a_plus_abs_b.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  \&gt;&gt;&gt; # You aren&#x27;t expected to understand the code of this test.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  \&gt;&gt;&gt; import inspect, re</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  \&gt;&gt;&gt; re.findall(r&#x27;^\s*(return .*)&#x27;, inspect.getsource(a_plus_abs_b), re.M)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  [&#x27;return f(a, b)&#x27;]</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  &quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">  \<span class="comment"># You don&#x27;t need to edit this function. It&#x27;s just here to check your work.</span></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">two_of_three</span>(<span class="params">i, j, k</span>):</span><br><span class="line"></span><br><span class="line">  <span class="string">&quot;&quot;&quot;Return m*m + n*n, where m and n are the two smallest members of the</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  positive numbers i, j, and k.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  \&gt;&gt;&gt; two_of_three(1, 2, 3)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  5</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  \&gt;&gt;&gt; two_of_three(5, 3, 1)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  10</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  \&gt;&gt;&gt; two_of_three(10, 2, 8)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  68</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  \&gt;&gt;&gt; two_of_three(5, 5, 5)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  50</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  &quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span>  i*i+j*j+k*k-(<span class="built_in">max</span>(i,j,k)*<span class="built_in">max</span>(i,j,k))</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">two_of_three_syntax_check</span>():</span><br><span class="line"></span><br><span class="line">  <span class="string">&quot;&quot;&quot;Check that your two_of_three code consists of nothing but a return statement.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  \&gt;&gt;&gt; # You aren&#x27;t expected to understand the code of this test.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  \&gt;&gt;&gt; import inspect, ast</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  \&gt;&gt;&gt; [type(x).__name__ for x in ast.parse(inspect.getsource(two_of_three)).body[0].body]</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  [&#x27;Expr&#x27;, &#x27;Return&#x27;]</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  &quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">  \<span class="comment"># You don&#x27;t need to edit this function. It&#x27;s just here to check your work.</span></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">largest_factor</span>(<span class="params">n</span>):</span><br><span class="line"></span><br><span class="line">  <span class="string">&quot;&quot;&quot;Return the largest factor of n that is smaller than n.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  \&gt;&gt;&gt; largest_factor(15) # factors are 1, 3, 5</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  5</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  \&gt;&gt;&gt; largest_factor(80) # factors are 1, 2, 4, 5, 8, 10, 16, 20, 40</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  40</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  \&gt;&gt;&gt; largest_factor(13) # factor is 1 since 13 is prime</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  &quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="string">&quot;*** YOUR CODE HERE ***&quot;</span></span><br><span class="line"></span><br><span class="line">  i=<span class="number">2</span></span><br><span class="line"></span><br><span class="line">  max_factor=<span class="number">1</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> i&lt;n:</span><br><span class="line"></span><br><span class="line">​    <span class="keyword">if</span> (n%i==<span class="number">0</span>):</span><br><span class="line"></span><br><span class="line">​      <span class="keyword">if</span>(i&gt;max_factor):</span><br><span class="line"></span><br><span class="line">​        max_factor=i</span><br><span class="line"></span><br><span class="line">​    i=i+<span class="number">1</span></span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> max_factor</span><br><span class="line"></span><br><span class="line">​    </span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">hailstone</span>(<span class="params">n</span>):</span><br><span class="line"></span><br><span class="line">  <span class="string">&quot;&quot;&quot;Print the hailstone sequence starting at n and return its</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  length.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  \&gt;&gt;&gt; a = hailstone(10)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  10</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  5</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  16</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  8</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  4</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  2</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  \&gt;&gt;&gt; a</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  7</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  \&gt;&gt;&gt; b = hailstone(1)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  \&gt;&gt;&gt; b</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  &quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="string">&quot;*** YOUR CODE HERE ***&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">sum</span>=<span class="number">1</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">print</span>(n)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> n!=<span class="number">1</span>:</span><br><span class="line"></span><br><span class="line">​    <span class="keyword">if</span>(n%<span class="number">2</span>==<span class="number">0</span>):</span><br><span class="line"></span><br><span class="line">​      n=n/<span class="number">2</span></span><br><span class="line"></span><br><span class="line">​    <span class="keyword">else</span>: </span><br><span class="line"></span><br><span class="line">​      n=n*<span class="number">3</span>+<span class="number">1</span></span><br><span class="line"></span><br><span class="line">​    n=<span class="built_in">int</span>(n)</span><br><span class="line"></span><br><span class="line">​    <span class="built_in">sum</span>=<span class="built_in">sum</span>+<span class="number">1</span></span><br><span class="line"></span><br><span class="line">​    <span class="built_in">print</span>(n)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">sum</span></span><br></pre></td></tr></table></figure>
+<p>本地测试，都是能通过的</p>
+]]></content>
+      <categories>
+        <category>CS61A</category>
+      </categories>
+      <tags>
+        <tag>CS61A</tag>
+      </tags>
+  </entry>
 </search>
