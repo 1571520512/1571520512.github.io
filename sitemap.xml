@@ -167,14 +167,14 @@
   </url>
   
   <url>
-    <loc>https://camilleferros.top/tags/PTA/</loc>
+    <loc>https://camilleferros.top/tags/C/</loc>
     <lastmod>2025-05-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://camilleferros.top/tags/C/</loc>
+    <loc>https://camilleferros.top/tags/PTA/</loc>
     <lastmod>2025-05-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -197,13 +197,6 @@
 
   
   <url>
-    <loc>https://camilleferros.top/categories/%E9%BB%84%E9%B9%8F%E5%AE%87/</loc>
-    <lastmod>2025-05-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://camilleferros.top/categories/%E5%88%B7%E9%A2%98%E5%B0%8F%E6%8A%80%E5%B7%A7/</loc>
     <lastmod>2025-05-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -211,7 +204,7 @@
   </url>
   
   <url>
-    <loc>https://camilleferros.top/categories/PTA/</loc>
+    <loc>https://camilleferros.top/categories/%E9%BB%84%E9%B9%8F%E5%AE%87/</loc>
     <lastmod>2025-05-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -225,7 +218,7 @@
   </url>
   
   <url>
-    <loc>https://camilleferros.top/categories/PTA/C/</loc>
+    <loc>https://camilleferros.top/categories/PTA/</loc>
     <lastmod>2025-05-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -240,6 +233,13 @@
   
   <url>
     <loc>https://camilleferros.top/categories/Mooc/</loc>
+    <lastmod>2025-05-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://camilleferros.top/categories/PTA/C/</loc>
     <lastmod>2025-05-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
